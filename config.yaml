@@ -79,12 +79,12 @@ params:
     height: 50
     url: logo.png
     width: 50
-  markup:
+    
+markup:
   defaultMarkdownHandler: goldmark
   goldmark:
     renderer:
       unsafe: yes
-
 
 
   social:

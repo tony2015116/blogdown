@@ -15,10 +15,11 @@ description: ''
 #reward: no
 #mathjax: no
 ---
+<!--more-->
 ```{r}
 summary(Orange)
 ```
-```{r echo=FALSE}
+```{r echo=TRUE}
 library(ggplot2)
 plot <- ggplot(Orange, aes(x = age, 
                    y = circumference, 
@@ -28,4 +29,14 @@ plot <- ggplot(Orange, aes(x = age,
   theme_bw()
 plot
 ```
+
 <!--more-->
+```{r pie, fig.cap='A fancy pie chart.', tidy=FALSE}
+par(mar = c(0, 1, 0, 1))
+pie(
+  c(280, 60, 20),
+  c('Sky', 'Sunny side of pyramid', 'Shady side of pyramid'),
+  col = c('#0292D8', '#F7EA39', '#C4B632'),
+  init.angle = -50, border = NA
+)
+```
