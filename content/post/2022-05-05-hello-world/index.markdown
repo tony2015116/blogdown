@@ -36,4 +36,62 @@ summary(iris)
 ##                 
 ## 
 ```
+
+```r
+library(tidyverse)
+```
+
+```
+## -- Attaching packages --------------------------------------- tidyverse 1.3.1 --
+```
+
+```
+## v ggplot2 3.3.5     v purrr   0.3.4
+## v tibble  3.1.6     v dplyr   1.0.7
+## v tidyr   1.1.4     v stringr 1.4.0
+## v readr   1.4.0     v forcats 0.5.1
+```
+
+```
+## Warning: 程辑包'ggplot2'是用R版本4.1.1 来建造的
+```
+
+```
+## Warning: 程辑包'tibble'是用R版本4.1.2 来建造的
+```
+
+```
+## Warning: 程辑包'tidyr'是用R版本4.1.2 来建造的
+```
+
+```
+## Warning: 程辑包'dplyr'是用R版本4.1.2 来建造的
+```
+
+```
+## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()
+```
+
+```r
+library(data.table)
+```
+
+```
+## 
+## 载入程辑包：'data.table'
+```
+
+```
+## The following objects are masked from 'package:dplyr':
+## 
+##     between, first, last
+```
+
+```
+## The following object is masked from 'package:purrr':
+## 
+##     transpose
+```
 <!--more-->

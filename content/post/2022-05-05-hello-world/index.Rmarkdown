@@ -17,5 +17,10 @@ mathjax: no
 ---
 ```{r}
 summary(iris)
+
+```
+```{r}
+library(tidyverse)
+library(data.table)
 ```
 <!--more-->
