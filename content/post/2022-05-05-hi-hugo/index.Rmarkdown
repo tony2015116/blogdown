@@ -1,0 +1,31 @@
+---
+title: Hi Hugo
+author: tony
+date: '2022-05-05'
+slug: []
+categories: []
+tags: []
+lastmod: '2022-05-05T19:59:59+08:00'
+keywords: []
+description: ''
+#comment: yes
+#toc: no
+#autoCollapseToc: no
+#contentCopyright: no
+#reward: no
+#mathjax: no
+---
+```{r}
+summary(Orange)
+```
+```{r echo=FALSE}
+library(ggplot2)
+plot <- ggplot(Orange, aes(x = age, 
+                   y = circumference, 
+                   colour = Tree)) +
+  geom_point() +
+  geom_line() +
+  theme_bw()
+plot
+```
+<!--more-->

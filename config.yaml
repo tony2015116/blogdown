@@ -1,0 +1,96 @@
+baseURL: /
+title: Tony - A super concise theme for Hugo
+# enableRobotsTXT: yes
+# enableEmoji: yes
+theme: hugo-theme-jane
+# hasCJKLanguage: yes
+paginate: 3
+rssLimit: 20
+disqusShortname: ''
+googleAnalytics: ''
+#copyright: ''
+#comment: yes
+
+ignoreFiles:
+  - \.Rmd$
+  - \.Rmarkdown$
+  - _cache$
+  - \.knit\.md$
+  - \.utf8\.md$
+
+permalinks:
+  post: /:year/:month/:day/:slug/
+
+#defaultContentLanguage: en
+defaultContentLanguage: zh-cn
+languageCode: zh-cn
+
+author:
+  name: tony
+
+menu:
+  main:
+    - name: Twitter
+      url: https://twitter.com/rstudio
+    - identifier: home
+      name: 主页
+      url: /
+      weight: 10
+    - identifier: archives
+      name: 归档
+      url: /post/
+      weight: 20
+    - identifier: tags
+      name: 标签
+      url: /tags/
+      weight: 30
+    - identifier: categories
+      name: 分类
+      url: /categories/
+      weight: 40
+
+params:
+  #customCSS: []
+  #customJS: []
+  #dateFormatToUse: '2006-01-02'
+  #description: Hugo theme jane example site.
+  #homeFullContent: no
+  #keywords:
+  #  - Hugo
+  #  - theme
+  #  - jane
+  logoTitle: 往事随风
+  photoswipe: no
+  #rssFullContent: yes
+  #since: '2017'
+  #add
+  MathJaxCDN: //cdnjs.cloudflare.com/ajax/libs
+  MathJaxVersion: 2.7.5
+  description: A website built through Hugo and blogdown.
+  favicon: favicon.ico
+  highlightjsCDN: //cdnjs.cloudflare.com/ajax/libs
+  highlightjsLang:
+    - r
+    - yaml
+  highlightjsTheme: github
+  highlightjsVersion: 9.12.0
+  logo:
+    alt: Logo
+    height: 50
+    url: logo.png
+    width: 50
+  markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    renderer:
+      unsafe: yes
+
+
+
+  social:
+    a-email: mailto:your@email.com
+    g-github: http://localhost:1313
+    i-zhihu: http://localhost:1313
+    q-bilibili: http://localhost:1313
+    t-youtube: http://localhost:1313
+  toc: no
