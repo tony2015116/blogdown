@@ -1,4 +1,4 @@
-baseURL: /
+baseURL: https://rabc.netlify.app
 title: Tony - A super concise theme for Hugo
 # enableRobotsTXT: yes
 # enableEmoji: yes
