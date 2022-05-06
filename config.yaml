@@ -4,8 +4,9 @@ title: Tony - A super concise theme for Hugo
 # enableEmoji: yes
 theme: hugo-theme-jane
 # hasCJKLanguage: yes
-paginate: 3
+paginate: 10
 rssLimit: 20
+enableGitInfo: yes
 disqusShortname: ''
 googleAnalytics: ''
 #copyright: ''
@@ -21,6 +22,13 @@ ignoreFiles:
 permalinks:
   post: /:year/:month/:day/:slug/
 
+
+PygmentsCodeFences: yes # Enable syntax highlighting with GitHub flavoured code fences
+PygmentsUseClasses: yes # Use CSS classes to format highlighted code
+PygmentsCodefencesGuessSyntax: yes
+#PygmentsOptions: linenos=table
+
+
 #defaultContentLanguage: en
 defaultContentLanguage: zh-cn
 languageCode: zh-cn
@@ -30,8 +38,8 @@ author:
 
 menu:
   main:
-    - name: Twitter
-      url: https://twitter.com/rstudio
+    # - name: Twitter
+    #   url: https://twitter.com/rstudio
     - identifier: home
       name: 主页
       url: /
@@ -44,14 +52,14 @@ menu:
       name: 标签
       url: /tags/
       weight: 30
-    - identifier: categories
-      name: 分类
-      url: /categories/
-      weight: 40
+    # - identifier: categories
+    #   name: 分类
+    #   url: /categories/
+    #   weight: 40
 
 params:
-  #customCSS: []
-  #customJS: []
+  customCSS: []
+  customJS: []
   #dateFormatToUse: '2006-01-02'
   #description: Hugo theme jane example site.
   #homeFullContent: no
@@ -59,7 +67,7 @@ params:
   #  - Hugo
   #  - theme
   #  - jane
-  logoTitle: 往事随风
+  logoTitle: guoguo
   photoswipe: no
   #rssFullContent: yes
   #since: '2017'
@@ -79,6 +87,11 @@ params:
     height: 50
     url: logo.png
     width: 50
+  
+  moreMeta: yes
+  
+  params.counter.busuanzi:
+    enable: yes
     
 markup:
   defaultMarkdownHandler: goldmark
@@ -88,8 +101,8 @@ markup:
 
 
   social:
-    a-email: mailto:your@email.com
-    g-github: http://localhost:1313
+    a-email: mailto:tony2015116@163.com
+    g-github: https://github.com/tony2015116
     i-zhihu: http://localhost:1313
     q-bilibili: http://localhost:1313
     t-youtube: http://localhost:1313
