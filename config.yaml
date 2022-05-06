@@ -92,13 +92,6 @@ params:
   
   params.counter.busuanzi:
     enable: yes
-    
-markup:
-  defaultMarkdownHandler: goldmark
-  goldmark:
-    renderer:
-      unsafe: yes
-
 
   social:
     a-email: mailto:tony2015116@163.com
@@ -107,3 +100,9 @@ markup:
     q-bilibili: http://localhost:1313
     t-youtube: http://localhost:1313
   toc: no
+
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    renderer:
+      unsafe: yes
