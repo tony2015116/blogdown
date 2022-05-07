@@ -1,0 +1,37 @@
+---
+title: hello world2
+author: tony
+date: '2022-05-07'
+slug: hello-world2
+categories: []
+tags: []
+lastmod: '2022-05-07T15:29:34+08:00'
+keywords: []
+description: ''
+comment: no
+toc: no
+autoCollapseToc: no
+contentCopyright: no
+reward: no
+mathjax: no
+---
+
+# 标题一
+该次仅测试用
+love 33
+```{r}
+summary(iris)
+plot(iris$Sepal.Length ~ iris$Sepal.Width)
+```
+
+## Footnote-2
+
+<!--more-->
+<script src="https://utteranc.es/client.js"
+repo="tony2015116/blog_comments"
+issue-term="pathname"
+label="💬"
+theme="github-light"
+crossorigin="anonymous"
+async>
+  </script>

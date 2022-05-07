@@ -1,7 +1,7 @@
 baseURL: https://rabc.netlify.app
 title: Tony - A super concise theme for Hugo
-# enableRobotsTXT: yes
-# enableEmoji: yes
+enableRobotsTXT: yes
+enableEmoji: yes
 theme: hugo-theme-jane
 # hasCJKLanguage: yes
 paginate: 10
@@ -9,8 +9,8 @@ rssLimit: 20
 enableGitInfo: yes
 disqusShortname: ''
 googleAnalytics: ''
-#copyright: ''
-#comment: yes
+copyright: ''
+comment: yes
 
 ignoreFiles:
   - \.Rmd$
@@ -23,10 +23,14 @@ permalinks:
   post: /:year/:month/:day/:slug/
 
 
-PygmentsCodeFences: yes # Enable syntax highlighting with GitHub flavoured code fences
-PygmentsUseClasses: yes # Use CSS classes to format highlighted code
-PygmentsCodefencesGuessSyntax: yes
-#PygmentsOptions: linenos=table
+
+pygmentsOptions: linenos=table
+pygmentsCodefences: yes
+pygmentsUseClasses: yes
+pygmentsCodefencesGuessSyntax: no
+
+
+
 
 
 #defaultContentLanguage: en
@@ -35,11 +39,14 @@ languageCode: zh-cn
 
 author:
   name: tony
+  
+# sitemap: 
+#   changefreq: weekly
+#   priority: 0.5
+#   filename: sitemap.xml
 
 menu:
   main:
-    # - name: Twitter
-    #   url: https://twitter.com/rstudio
     - identifier: home
       name: 主页
       url: /
@@ -52,54 +59,48 @@ menu:
       name: 标签
       url: /tags/
       weight: 30
-    # - identifier: categories
-    #   name: 分类
-    #   url: /categories/
-    #   weight: 40
+    - identifier: categories
+      name: 分类
+      url: /categories/
+      weight: 40
+    # - name: Twitter
+    #   url: https://twitter.com/rstudio
 
 params:
   customCSS: []
   customJS: []
-  #dateFormatToUse: '2006-01-02'
-  #description: Hugo theme jane example site.
-  #homeFullContent: no
-  #keywords:
-  #  - Hugo
-  #  - theme
-  #  - jane
+  dateFormatToUse: '2006-01-02'
+
   logoTitle: guoguo
   photoswipe: no
   #rssFullContent: yes
-  #since: '2017'
-  #add
-  MathJaxCDN: //cdnjs.cloudflare.com/ajax/libs
-  MathJaxVersion: 2.7.5
-  description: A website built through Hugo and blogdown.
-  favicon: favicon.ico
-  highlightjsCDN: //cdnjs.cloudflare.com/ajax/libs
-  highlightjsLang:
-    - r
-    - yaml
-  highlightjsTheme: github
-  highlightjsVersion: 9.12.0
-  logo:
-    alt: Logo
-    height: 50
-    url: logo.png
-    width: 50
+  
+  since: '2022'
   
   moreMeta: yes
   
-  params.counter.busuanzi:
-    enable: yes
+  # counter:
+  #   busuanzi:
+  #     enable: yes
 
   social:
     a-email: mailto:tony2015116@163.com
     g-github: https://github.com/tony2015116
     i-zhihu: http://localhost:1313
-    q-bilibili: http://localhost:1313
-    t-youtube: http://localhost:1313
-  toc: no
+    #c-twitter: http://localhost:1313
+    #q-bilibili: http://localhost:1313
+    #t-youtube: http://localhost:1313
+  
+  # utteranc:
+  # enable: yes
+  # repo: tony2015116/blog_comments   # The repo to store comments
+  # issueTerm: pathname
+  
+  toc: yes                                                                            # 是否开启目录
+  autoCollapseToc: no   # Auto expand and collapse toc                              # 目录自动展开/折叠
+  fancybox: yes           # see https://github.com/fancyapps/fancybox                 # 是否启用fancybox（图片可点击）
+
+
 
 markup:
   defaultMarkdownHandler: goldmark
