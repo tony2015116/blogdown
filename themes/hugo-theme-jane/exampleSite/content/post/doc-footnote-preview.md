@@ -32,6 +32,7 @@ Mouse on the ‘footnote’ superscript to see content of the footnote.
 
 ## Footnote-2
 
+
 ``` markdown
 You can create footnotes like this[^footnote2].
 

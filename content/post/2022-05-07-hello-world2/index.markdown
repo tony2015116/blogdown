@@ -49,6 +49,16 @@ plot(iris$Sepal.Length ~ iris$Sepal.Width)
 
 ## Footnote-2
 
+```
+## Warning: 程辑包'ggplot2'是用R版本4.1.1 来建造的
+```
+
+```
+## Warning: `guides(<scale> = FALSE)` is deprecated. Please use `guides(<scale> =
+## "none")` instead.
+```
+
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="672" />
 <!--more-->
 <script src="https://utteranc.es/client.js"
 repo="tony2015116/blog_comments"

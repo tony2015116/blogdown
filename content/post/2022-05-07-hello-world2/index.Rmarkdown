@@ -25,7 +25,17 @@ plot(iris$Sepal.Length ~ iris$Sepal.Width)
 ```
 
 ## Footnote-2
-
+```{r echo=FALSE}
+library(ggplot2)
+oplot <- ggplot(Orange, aes(x = age, 
+                   y = circumference, 
+                   colour = Tree)) +
+  geom_point() +
+  geom_line() +
+  guides(colour = FALSE) +
+  theme_bw()
+oplot
+```
 <!--more-->
 <script src="https://utteranc.es/client.js"
 repo="tony2015116/blog_comments"
