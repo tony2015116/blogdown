@@ -20,4 +20,5 @@ love 33
 summary(iris)
 plot(iris$Sepal.Length ~ iris$Sepal.Width)
 ```
+![](images/image40962.png)
 <!--more-->
