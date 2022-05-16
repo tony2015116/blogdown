@@ -111,7 +111,7 @@ setCookie("counter", visits, now)
 document.write("您是第" + visits + "位访问本专题的！")
 // -->
 </script>
-
+![](index_files/figure-html/unnamed-chunk-1-1.png)
 
 <!--more-->
 <script src="https://utteranc.es/client.js"

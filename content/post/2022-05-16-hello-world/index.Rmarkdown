@@ -8,7 +8,7 @@ tags: []
 lastmod: '2022-05-16T23:59:13+08:00'
 keywords: []
 description: ''
-comment: no
+comment: yes
 toc: no
 autoCollapseToc: no
 contentCopyright: no
@@ -20,5 +20,7 @@ love 33
 summary(iris)
 plot(iris$Sepal.Length ~ iris$Sepal.Width)
 ```
+
+![](images/Rplot.png)
 ![](images/image40962.png)
 <!--more-->
