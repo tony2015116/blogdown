@@ -35,9 +35,13 @@
 
   <!-- Counter busuanzi -->
   {{ if .Site.Params.counter.busuanzi.enable }}
-    <span id="busuanzi_container">
-      访客数/访问量：<span id="busuanzi_value_site_uv"></span>/<span id="busuanzi_value_site_pv"></span>
-    </span>
+  
+	
+    <!--这一段是不蒜子的访问量统计代码-->
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次 &nbsp;   </span>
+    <span id="busuanzi_container_site_uv">访客数<span id="busuanzi_value_site_uv"></span>人次</span>
+
   {{ end }}
 
   {{ if .Site.Params.customFooter }}

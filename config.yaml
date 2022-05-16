@@ -79,9 +79,9 @@ params:
   
   moreMeta: yes
   
-  # counter:
-  #   busuanzi:
-  #     enable: yes
+  counter:
+    busuanzi:
+      enable: yes
 
   social:
     a-email: mailto:tony2015116@163.com
