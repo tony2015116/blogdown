@@ -96,10 +96,10 @@ params:
     #q-bilibili: http://localhost:1313
     #t-youtube: http://localhost:1313
   
-  # utteranc:
-  # enable: yes
-  # repo: tony2015116/blog_comments   # The repo to store comments
-  # issueTerm: pathname
+  utteranc:
+   enable: yes
+   repo: tony2015116/blog_comments   # The repo to store comments
+   issueTerm: pathname
   
   toc: yes                                                                            # 是否开启目录
   autoCollapseToc: no   # Auto expand and collapse toc                              # 目录自动展开/折叠
