@@ -8,7 +8,7 @@ tags: []
 lastmod: '2022-05-07T15:29:34+08:00'
 keywords: []
 description: ''
-comment: no
+comment: yes
 toc: no
 autoCollapseToc: no
 contentCopyright: no
@@ -91,11 +91,3 @@ document.write("您是第" + visits + "位访问本专题的！")
 
 
 <!--more-->
-<script src="https://utteranc.es/client.js"
-repo="tony2015116/blog_comments"
-issue-term="pathname"
-label="💬"
-theme="github-light"
-crossorigin="anonymous"
-async>
-  </script>
