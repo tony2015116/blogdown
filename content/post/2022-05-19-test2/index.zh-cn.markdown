@@ -1,13 +1,11 @@
 ---
-title: test
+title: test2
 author: tony
-date: '2022-05-17'
+date: '2022-05-19'
 slug: index.zh-cn
-categories:
-  - 技能
-tags:
-  - R
-lastmod: '2022-05-17T15:57:34+08:00'
+categories: []
+tags: []
+lastmod: '2022-05-19T18:03:17+08:00'
 keywords: []
 description: ''
 comment: yes
@@ -17,6 +15,8 @@ contentCopyright: no
 reward: no
 mathjax: no
 ---
+
+### test3
 
 ```r
 summary(iris)
@@ -38,3 +38,4 @@ summary(iris)
 ##                 
 ## 
 ```
+<!--more-->

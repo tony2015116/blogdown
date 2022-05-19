@@ -44,6 +44,4 @@ plot(iris$Sepal.Length ~ iris$Sepal.Width)
 
 <img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-1-1.png" width="672" />
 
-![](images/Rplot.png)
-![](images/image40962.png)
 <!--more-->
