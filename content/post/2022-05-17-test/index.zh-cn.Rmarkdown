@@ -1,0 +1,22 @@
+---
+title: test
+author: tony
+date: '2022-05-17'
+slug: index.zh-cn
+categories:
+  - 技能
+tags:
+  - R
+lastmod: '2022-05-17T15:57:34+08:00'
+keywords: []
+description: ''
+comment: no
+toc: no
+autoCollapseToc: no
+contentCopyright: no
+reward: no
+mathjax: no
+---
+```{r}
+summary(iris)
+```

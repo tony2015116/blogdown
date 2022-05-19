@@ -21,6 +21,4 @@ summary(iris)
 plot(iris$Sepal.Length ~ iris$Sepal.Width)
 ```
 
-![](images/Rplot.png)
-![](images/image40962.png)
 <!--more-->

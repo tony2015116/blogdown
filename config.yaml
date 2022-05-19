@@ -40,10 +40,10 @@ languageCode: zh-cn
 author:
   name: tony
   
-# sitemap: 
-#   changefreq: weekly
-#   priority: 0.5
-#   filename: sitemap.xml
+sitemap:
+  changefreq: weekly
+  priority: 0.5
+  filename: sitemap.xml
 
 menu:
   main:
@@ -78,6 +78,11 @@ params:
   since: '2022'
   
   moreMeta: yes
+  
+  baidu_push: yes        # baidu push                  # 百度
+  baidu_analytics: ""      # Baidu Analytics
+  baidu_verification: ""   # Baidu Verification
+  google_verification: ""  # Google_Verification         # 谷歌
   
   counter:
     busuanzi:
