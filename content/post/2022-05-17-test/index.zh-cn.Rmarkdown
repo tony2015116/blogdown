@@ -18,5 +18,8 @@ reward: no
 mathjax: no
 ---
 ```{r}
-summary(iris)
+knitr::kable(
+  head(mtcars[, 1:8], 10), booktabs = TRUE,
+  caption = 'A table of the first 10 rows of the mtcars data.'
+)
 ```

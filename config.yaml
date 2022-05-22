@@ -1,4 +1,5 @@
-baseURL: https://rabc.netlify.app
+baseURL: http://www.rusersplace.com
+#https://rabc.netlify.app
 title: Tony - A super concise theme for Hugo
 enableRobotsTXT: yes
 enableEmoji: yes
@@ -76,6 +77,9 @@ params:
   #rssFullContent: yes
   
   since: '2022'
+  
+  mathjax: no 
+  katex: no
   
   moreMeta: yes
   

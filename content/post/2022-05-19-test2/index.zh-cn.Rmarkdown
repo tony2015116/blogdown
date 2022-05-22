@@ -9,15 +9,97 @@ lastmod: '2022-05-19T18:03:17+08:00'
 keywords: []
 description: ''
 comment: yes
-toc: no
-autoCollapseToc: no
+toc: yes
+autoCollapseToc: yes
 contentCopyright: no
 reward: no
-mathjax: no
+mathjax: yes
 ---
 
 ### test3
+
 ```{r}
 summary(iris)
 ```
+
+### test4
+
+##### test5
+
+#### test6
+
+-   abc
+
+-   efg
+
+1.  abc
+
+2.  fac
+
+> fsad;f
+>
+> fsdaf
+
+------------------------------------------------------------------------
+
+$$
+a/b
+$$
+
+~~jldsfjlfasdf~~
+
+heihei
+
+🤣
+
+<!--# good! -->
+
+µ
+
+$$
+y = f(x)/t^2*log2
+$$
+
 <!--more-->
+
+term
+
+:   a
+
+    b
+
+    c
+
+--
+
+------------------------------------------------------------------------
+
+| Col1 | Col2 | Col3 |
+|------|:----:|------|
+| a    |      |      |
+| bc   |      |      |
+| c    |      |      |
+
+[百度](www.baidu.com "众里寻他千百度")
+
+```{r}
+summary(iris)
+```
+
+```{python}
+import pandas as pd
+```
+
+**abc**
+
+**abc**
+
+**abc**
+
+<p style="text-indent:32px;">
+间发生的看风景但是放假啦士大夫就上的飞机<span style="color:red;">红色文字</span> 发生了卡大家分厘卡的是否第三方首行缩进附件是大楼附近发生巨大浪费就
+</p>
+
+> **Note**
+
+x\~1\~^2^ \@cite
