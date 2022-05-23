@@ -9,9 +9,9 @@ lastmod: '2022-05-19T18:03:17+08:00'
 keywords: []
 description: ''
 comment: yes
-toc: yes
-autoCollapseToc: yes
-contentCopyright: no
+toc: no
+autoCollapseToc: no
+contentCopyright: yes
 reward: no
 mathjax: yes
 ---
@@ -88,6 +88,8 @@ summary(iris)
 
 ```{python}
 import pandas as pd
+df = pd.read_excel("C:/Users/Dell/Desktop/选配母猪档案/金泰一场/金泰一场7线-5.21-5.27断奶母猪档案.xlsx")
+print(df)
 ```
 
 **abc**
@@ -103,3 +105,9 @@ import pandas as pd
 > **Note**
 
 x\~1\~^2^ \@cite
+
+---
+杰拉德发撒旦
+---
+
+    国安发生的几率收到房间里上的飞机水电开发经理士大夫艰苦拉萨地方点十六分就开始了的风景开始了的房间昆仑山搭街坊立刻附件是考虑打飞机了啥的开发空手道解放卢卡斯的附近开了

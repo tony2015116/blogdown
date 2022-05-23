@@ -13,6 +13,7 @@ googleAnalytics: ''
 copyright: ''
 comment: yes
 
+
 ignoreFiles:
   - \.Rmd$
   - \.Rmarkdown$
@@ -75,6 +76,7 @@ params:
   logoTitle: guoguo
   photoswipe: no
   #rssFullContent: yes
+  homeFullContent: no
   
   since: '2022'
   
@@ -87,6 +89,9 @@ params:
   baidu_analytics: ""      # Baidu Analytics
   baidu_verification: ""   # Baidu Verification
   google_verification: ""  # Google_Verification         # 谷歌
+  
+  #contentCopyright: '<a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a>'
+  contentCopyright: '原创文章，如需转载请注明文章作者和出处。谢谢！'
   
   counter:
     busuanzi:
@@ -105,7 +110,9 @@ params:
    repo: tony2015116/blog_comments   # The repo to store comments
    issueTerm: pathname
   
-  toc: yes                                                                            # 是否开启目录
+  showAuthorInfo: yes
+  
+  toc: no                                                                            # 是否开启目录
   autoCollapseToc: no   # Auto expand and collapse toc                              # 目录自动展开/折叠
   fancybox: yes           # see https://github.com/fancyapps/fancybox                 # 是否启用fancybox（图片可点击）
 
