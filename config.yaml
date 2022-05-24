@@ -84,6 +84,7 @@ params:
   
   mathjax: no 
   katex: no
+  contentCopyright: '<a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a>'
   
   moreMeta: yes
   
@@ -92,8 +93,6 @@ params:
   baidu_verification: ""   # Baidu Verification
   google_verification: ""  # Google_Verification         # 谷歌
   
-  #contentCopyright: '<a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a>'
-  #contentCopyright: '原创文章，如需转载请注明文章作者和出处。谢谢！'
   
   counter:
     busuanzi:
@@ -120,7 +119,7 @@ params:
 
   reward:                                         # 文章打赏
     enable: no
-#    wechat: "/path/to/your/wechat-qr-code.png"           # 微信二维码
+    wechat: "/image/wechat-qr-code.jpg"           # 微信二维码
 #    alipay: "/path/to/your/alipay-qr-code.png"           # 支付宝二维码
 
 markup:
