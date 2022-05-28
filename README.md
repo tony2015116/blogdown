@@ -66,3 +66,8 @@
 <p style="text-indent:32px;">
 我的博客是基于**Rstudio + blogdown**构架搭建。[Hugo-theme-jane](https://github.com/xianmin/hugo-theme-jane)👍🏻精美简洁，同时又与blogdown比较契合的博客主题。我的博客在次基础上做了少许修改。我的博客访问地址:point_left::[https://www.rusersplace.com](https://www.rusersplace.com)。
 </p>
+
+<p style="text-indent:32px;">
+我的博客是基于**Rstudio + blogdown**构架搭建。[Hugo-theme-jane](https://github.com/xianmin/hugo-theme-jane)👍🏻精美简洁，同时又与blogdown比较契合的博客主题。我的博客在次基础上做了少许修改。
+</p>
+
