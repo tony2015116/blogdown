@@ -20,8 +20,8 @@
     <a href="https://github.com/tony2015116/blogdown/network/members">
         <img src="https://img.shields.io/github/forks/tony2015116/blogdown" alt="Forks Badge"/>
     </a>
-    <a href="https://github.com/tony2015116/bookdown" target="_blank">
-        <img alt="GitHub" src="https://img.shields.io/github/license/tony2015116/bookdown"/>
+    <a href="https://github.com/tony2015116/blogdown" target="_blank">
+        <img alt="GitHub" src="https://img.shields.io/github/license/tony2015116/blogdown"/>
     </a>
     <a href="#" target="_blank">
         <img src="https://jaywcjlove.github.io/sb/lang/chinese.svg" alt="jaywcjlove/sb"/>
