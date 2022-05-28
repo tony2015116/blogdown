@@ -61,11 +61,16 @@
 <p align="center">如果你喜欢这个博客，可以考虑给个打赏嘛:pleading_face: :point_right: <a href="https://rusersplace.com/image/wechat-qr-code.jpg" target="_blank"><img src="https://img.shields.io/badge/Wechat-5fcd72.svg?logo=wechat&amp;logoColor=white" alt="wechat"/></a> :point_left:
 </p>
 
-#### 关于我的博客
+#### **关于我的博客**
 我的博客是基于<font color=red>**Rstudio + blogdown + GitHub + Netlify**</font>构架搭建。[Hugo-theme-jane](https://github.com/xianmin/hugo-theme-jane)精美简洁👍🏻，同时又与blogdown比较契合的博客主题。我的博客在此基础上做了少许修改。我的博客访问地址:point_right::[https://www.rusersplace.com](https://www.rusersplace.com)。
 
-#### 如何搭建和我一模一样的博客？
-1. 相关软件及网站介绍
+#### **如何搭建和我一模一样的博客？**
+**1. 该博客适合什么样的同志使用？**
+- 特别想拥有一个自己的静态博客
+- 对R语言接触比较多，能熟练的使用Rstudio
+- 可以使用Git进行基础操作
+- 什么都不用想，直接开干
+**2. 相关软件及网站介绍**
 - R版本为：Version 4.1.0 (2021-05-18)
 - Rstudio版本为：Version 1.4.1717
 - R包blogdown版本为：Version 1.9.1
