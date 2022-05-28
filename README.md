@@ -1,5 +1,3 @@
-## Hi, welcome to my blogdown👏🏻
-
 <p align="center">
     <h1 align="center"><a href="https://www.rusersplace.com">Tony's blog</a></h1>
     <p align="center">头圆脸方，终身学习的数据分析爱好者 😘</p>
@@ -20,8 +18,8 @@
     <a href="https://github.com/tony2015116/blogdown/network/members">
         <img src="https://img.shields.io/github/forks/tony2015116/blogdown" alt="Forks Badge"/>
     </a>
-    <a href="https://github.com/tony2015116/bookdown" target="_blank">
-        <img alt="GitHub" src="https://img.shields.io/github/license/tony2015116/bookdown"/>
+    <a href="https://github.com/tony2015116/blogdown" target="_blank">
+        <img alt="GitHub" src="https://img.shields.io/github/license/tony2015116/blogdown"/>
     </a>
     <a href="#" target="_blank">
         <img src="https://jaywcjlove.github.io/sb/lang/chinese.svg" alt="jaywcjlove/sb"/>
