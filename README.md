@@ -70,6 +70,7 @@
 - 对R语言接触比较多，能熟练的使用Rstudio
 - 可以使用Git进行基础操作
 - 什么都不用想，直接开干
+
 **2. 相关软件及网站介绍**
 - R版本为：Version 4.1.0 (2021-05-18)
 - Rstudio版本为：Version 1.4.1717
@@ -79,4 +80,4 @@
 - Git版本为: version 2.31.1.windows.1
 - Netlify: 将你的博客内容静态部署到Netlify，使用GitHub账号登录部署即可
 - Cloudflare： 加快你的博客访问速度
-- name.com：购买.com域名,方便的是可以使用支付宝付款
+- name.com：购买.com域名,可以使用支付宝付款
