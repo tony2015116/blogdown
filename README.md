@@ -62,17 +62,6 @@
 </p>
 
 #### 关于我的博客
-我的博客是基于**Rstudio + blogdown**构架搭建。[Hugo-theme-jane](https://github.com/xianmin/hugo-theme-jane)👍🏻精美简洁，同时又与blogdown比较契合的博客主题。我的博客在次基础上做了少许修改。我的博客访问地址:point_left::[https://www.rusersplace.com](https://www.rusersplace.com)。
+我的博客是基于**Rstudio + blogdown**构架搭建。[Hugo-theme-jane](https://github.com/xianmin/hugo-theme-jane)👍🏻精美简洁，又与blogdown比较契合的博客主题。我的博客在此基础上做了少许修改。我的博客访问地址:point_right::[https://www.rusersplace.com](https://www.rusersplace.com)。
 
-<p style="text-indent:32px;">
-我的博客是基于**Rstudio + blogdown**构架搭建。[Hugo-theme-jane](https://github.com/xianmin/hugo-theme-jane)👍🏻精美简洁，同时又与blogdown比较契合的博客主题。我的博客在次基础上做了少许修改。我的博客访问地址:point_left::[https://www.rusersplace.com](https://www.rusersplace.com)。
-</p>
 
-<p style="text-indent:32px;">
-我的博客是基于**Rstudio + blogdown**构架搭建。👍🏻精美简洁，同时又与blogdown比较契合的博客主题。我的博客在次基础上做了少许修改。
-</p>
-
-<p style="text-indent:32px;">
-间发生的看风景但是放假啦士大夫就上的飞机<span style="color:red;">红色文字</span> 发生了卡大家分厘卡的是否第三方首行缩进附件是大楼附近发生巨大浪费就
-建立饭卡手动阀距离喀什地方就啊圣诞快乐房价看了撒打发就经理尽量发撒地方记录房间里啊士大夫艰苦撒旦解放；螺丝钉解放立刻撒旦
-</p>
