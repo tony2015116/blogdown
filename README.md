@@ -64,4 +64,14 @@
 #### 关于我的博客
 我的博客是基于<font color=red>**Rstudio + blogdown + GitHub + Netlify**</font>构架搭建。[Hugo-theme-jane](https://github.com/xianmin/hugo-theme-jane)精美简洁👍🏻，同时又与blogdown比较契合的博客主题。我的博客在此基础上做了少许修改。我的博客访问地址:point_right::[https://www.rusersplace.com](https://www.rusersplace.com)。
 
-
+#### 如何搭建和我一模一样的博客？
+1. 相关软件及网站介绍
+- R版本为：Version 4.1.0 (2021-05-18)
+- Rstudio版本为：Version 1.4.1717
+- R包blogdown版本为：Version 1.9.1
+- Hugo版本为：Version 0.92.0
+- GitHub：将你的博客内容托管到GitHub
+- Git版本为: version 2.31.1.windows.1
+- Netlify: 将你的博客内容静态部署到Netlify，使用GitHub账号登录部署即可
+- Cloudflare： 加快你的博客访问速度
+- name.com：购买.com域名,方便的是可以使用支付宝付款
