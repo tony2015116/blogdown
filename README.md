@@ -26,19 +26,37 @@
     <a href="#" target="_blank">
         <img src="https://jaywcjlove.github.io/sb/lang/chinese.svg" alt="jaywcjlove/sb"/>
     </a>
+    <br/>
     <a href="#" target="_blank">
-        <img src="[https://img.shields.io/badge/-Hugo-black?](https://img.shields.io/badge/-Hugo-black?style=plastic&logo=Hugo&labelColor=5c5c5c&color=1182c3)" alt="Hugo"/>
+        <img src="https://img.shields.io/badge/-Hugo-black?style=plastic&logo=Hugo&labelColor=5c5c5c&color=1182c3" alt="Hugo"/>
     </a>
-   
+    <a href="#" target="_blank">
+        <img src="https://img.shields.io/badge/-GitHub-black?style=plastic&logo=GitHub&labelColor=5c5c5c&color=1182c3" alt="GitHub"/>
+    </a>
+    <a href="#" target="_blank">
+        <img src="https://img.shields.io/badge/-Rstudio-black?style=plastic&logo=Rstudio&labelColor=5c5c5c&color=1182c3" alt="Rstudio"/>
+    </a>
+     </a>
+    <a href="#" target="_blank">
+        <img src="https://img.shields.io/badge/-Netlify-black?style=plastic&logo=Netlify&labelColor=5c5c5c&color=1182c3" alt="Netlify"/>
+    </a>
+    <a href="#" target="_blank">
+        <img src="https://img.shields.io/badge/-Cloudflare-black?style=plastic&logo=Cloudflare&labelColor=5c5c5c&color=1182c3" alt="Cloudflare"/>
+    </a>
+    <a href="https://www.name.com/zh-cn/" target="_blank"><img src="https://img.shields.io/badge/website-name.com-1182c3"></a>
  </p>
  
- <!--- #整段注释
- ![jaywcjlove/sb](https://jaywcjlove.github.io/sb/lang/chinese.svg) #国旗badge
+<!--- #整段注释
+![jaywcjlove/sb](https://jaywcjlove.github.io/sb/lang/chinese.svg) #国旗badge
  <a href="https://github.com/pudongping/pudongping.github.io/pulls" target="_blank"><img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/pudongping/pudongping.github.io" /></a> #github pull request badge
- --->
 
-
-![Hugo](https://img.shields.io/badge/-Hugo-black?style=plastic&logo=Hugo&labelColor=5c5c5c&color=1182c3) ![GitHub](https://img.shields.io/badge/-GitHub-black?style=plastic&logo=GitHub&labelColor=5c5c5c&color=1182c3) ![Rstudio](https://img.shields.io/badge/-Rstudio-black?style=plastic&logo=Rstudio&labelColor=5c5c5c&color=1182c3) ![Netlify](https://img.shields.io/badge/-Netlify-black?style=plastic&logo=Netlify&labelColor=5c5c5c&color=1182c3) ![cloudflare](https://img.shields.io/badge/-Cloudflare-black?style=plastic&logo=Cloudflare&labelColor=5c5c5c&color=1182c3) 
+#不考虑对齐的badge
+![Hugo](https://img.shields.io/badge/-Hugo-black?style=plastic&logo=Hugo&labelColor=5c5c5c&color=1182c3) 
+![GitHub](https://img.shields.io/badge/-GitHub-black?style=plastic&logo=GitHub&labelColor=5c5c5c&color=1182c3) 
+![Rstudio](https://img.shields.io/badge/-Rstudio-black?style=plastic&logo=Rstudio&labelColor=5c5c5c&color=1182c3) 
+![Netlify](https://img.shields.io/badge/-Netlify-black?style=plastic&logo=Netlify&labelColor=5c5c5c&color=1182c3) 
+![cloudflare](https://img.shields.io/badge/-Cloudflare-black?style=plastic&logo=Cloudflare&labelColor=5c5c5c&color=1182c3) 
 <a href="https://www.name.com/zh-cn/" target="_blank"><img src="https://img.shields.io/badge/website-name.com-1182c3"></a>
+ --->
 
 my blog is based on [Hugo-theme-jane](https://github.com/xianmin/hugo-theme-jane) 👍🏻
