@@ -2,6 +2,7 @@
     <h1 align="center"><a href="https://www.rusersplace.com">Tony's blog</a></h1>
     <p align="center">头圆脸方，终身学习的数据分析爱好者 😘</p>
 </p>
+
 <p align="center">
     <a href="https://github.com/xianmin/hugo-theme-jane" target="_blank">
         <img alt="GitHub Workflow Status" src="https://img.shields.io/badge/blog%20theme-Hugo--theme--jane-orange">
@@ -43,7 +44,7 @@
     </a>
     <a href="https://www.name.com/zh-cn/" target="_blank"><img src="https://img.shields.io/badge/website-name.com-1182c3"></a>
  </p>
- 
+
 <!--- #整段注释
 ![jaywcjlove/sb](https://jaywcjlove.github.io/sb/lang/chinese.svg) #国旗badge
  <a href="https://github.com/pudongping/pudongping.github.io/pulls" target="_blank"><img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/pudongping/pudongping.github.io" /></a> #github pull request badge
@@ -57,4 +58,11 @@
 <a href="https://www.name.com/zh-cn/" target="_blank"><img src="https://img.shields.io/badge/website-name.com-1182c3"></a>
  --->
 
-my blog is based on [Hugo-theme-jane](https://github.com/xianmin/hugo-theme-jane) 👍🏻
+<p align="center">如果你喜欢这个博客，可以考虑给个打赏嘛:pleading_face: :point_right: <a href="https://rusersplace.com/image/wechat-qr-code.jpg" target="_blank"><img src="https://img.shields.io/badge/Wechat-5fcd72.svg?logo=wechat&amp;logoColor=white" alt="wechat"/></a> :point_left:
+</p>
+
+#### 关于我的博客
+
+<p style="text-indent:32px;">
+我的博客是基于**Rstudio + blogdown**构架搭建。我试了很多主题才找到符合我预期的、比较精美简洁又与blogdown比较契合的博客主题——[Hugo-theme-jane](https://github.com/xianmin/hugo-theme-jane)👍🏻。在次基础上做了少许修改。我的博客访问地址为：[https://www.rusersplace.com](https://www.rusersplace.com)。
+</p>
