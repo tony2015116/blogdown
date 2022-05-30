@@ -46,6 +46,8 @@
         <img src="https://img.shields.io/badge/-Cloudflare-black?style=plastic&logo=Cloudflare&labelColor=5c5c5c&color=1182c3" alt="Cloudflare"/>
     </a>
     <a href="https://www.name.com/zh-cn/" target="_blank"><img src="https://img.shields.io/badge/website-name.com-1182c3"></a>
+    <br/>
+    <img alt="Uptime Robot ratio (7 days)" src="https://img.shields.io/uptimerobot/ratio/7/m791900776-81b654490f8261dfd9fefb9e">
  </p>
 
 <!--- #整段注释
