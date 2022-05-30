@@ -10,6 +10,9 @@
     <a href="https://github.com/tony2015116/blogdown" target="_blank">
         <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/tony2015116/blogdown">
     </a>
+    <a href="#">
+        <img src="https://img.shields.io/github/last-commit/tony2015116/blogdown" alt="GitHub last commit"/>
+    </a>
     <a href="https://github.com/tony2015116/blog_comments" target="_blank">
         <img alt="Issues" src="https://img.shields.io/github/issues/tony2015116/blog_comments" />
     </a>
