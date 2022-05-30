@@ -30,20 +30,20 @@
     </a>
     <br/>
     <a href="#" target="_blank">
-        <img src="https://img.shields.io/badge/-Hugo-black?style=plastic&logo=Hugo&labelColor=5c5c5c&color=1182c3" alt="Hugo"/>
+        <img src="https://img.shields.io/badge/-Hugo-black?style=flat&logo=Hugo&labelColor=5c5c5c&color=1182c3" alt="Hugo"/>
     </a>
     <a href="#" target="_blank">
-        <img src="https://img.shields.io/badge/-GitHub-black?style=plastic&logo=GitHub&labelColor=5c5c5c&color=1182c3" alt="GitHub"/>
+        <img src="https://img.shields.io/badge/-GitHub-black?style=flat&logo=GitHub&labelColor=5c5c5c&color=1182c3" alt="GitHub"/>
     </a>
     <a href="#" target="_blank">
-        <img src="https://img.shields.io/badge/-Rstudio-black?style=plastic&logo=Rstudio&labelColor=5c5c5c&color=1182c3" alt="Rstudio"/>
+        <img src="https://img.shields.io/badge/-Rstudio-black?style=flat&logo=Rstudio&labelColor=5c5c5c&color=1182c3" alt="Rstudio"/>
     </a>
      </a>
     <a href="#" target="_blank">
-        <img src="https://img.shields.io/badge/-Netlify-black?style=plastic&logo=Netlify&labelColor=5c5c5c&color=1182c3" alt="Netlify"/>
+        <img src="https://img.shields.io/badge/-Netlify-black?style=flat&logo=Netlify&labelColor=5c5c5c&color=1182c3" alt="Netlify"/>
     </a>
     <a href="#" target="_blank">
-        <img src="https://img.shields.io/badge/-Cloudflare-black?style=plastic&logo=Cloudflare&labelColor=5c5c5c&color=1182c3" alt="Cloudflare"/>
+        <img src="https://img.shields.io/badge/-Cloudflare-black?style=flat&logo=Cloudflare&labelColor=5c5c5c&color=1182c3" alt="Cloudflare"/>
     </a>
     <a href="https://www.name.com/zh-cn/" target="_blank"><img src="https://img.shields.io/badge/website-name.com-1182c3"></a>
     <br/>
