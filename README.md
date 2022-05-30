@@ -47,7 +47,9 @@
     </a>
     <a href="https://www.name.com/zh-cn/" target="_blank"><img src="https://img.shields.io/badge/website-name.com-1182c3"></a>
     <br/>
-    <img alt="Uptime Robot ratio (7 days)" src="https://img.shields.io/uptimerobot/ratio/7/m791900776-81b654490f8261dfd9fefb9e">
+    <img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Frusersplace.com">
+    <img alt="Uptime Robot ratio (7 days)" src="https://img.shields.io/uptimerobot/ratio/7/m791900776-ed1a1390af61a95b31efa693">
+    <img alt="Uptime Robot status" src="https://img.shields.io/uptimerobot/status/m791900776-ed1a1390af61a95b31efa693">
  </p>
 
 <!--- #整段注释
