@@ -10,6 +10,9 @@
     <a href="https://github.com/tony2015116/blogdown" target="_blank">
         <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/tony2015116/blogdown">
     </a>
+    <a href="#">
+        <img src="https://img.shields.io/github/last-commit/tony2015116/blogdown" alt="GitHub last commit"/>
+    </a>
     <a href="https://github.com/tony2015116/blog_comments" target="_blank">
         <img alt="Issues" src="https://img.shields.io/github/issues/tony2015116/blog_comments" />
     </a>
@@ -27,22 +30,26 @@
     </a>
     <br/>
     <a href="#" target="_blank">
-        <img src="https://img.shields.io/badge/-Hugo-black?style=plastic&logo=Hugo&labelColor=5c5c5c&color=1182c3" alt="Hugo"/>
+        <img src="https://img.shields.io/badge/-Hugo-black?style=flat&logo=Hugo&labelColor=5c5c5c&color=1182c3" alt="Hugo"/>
     </a>
     <a href="#" target="_blank">
-        <img src="https://img.shields.io/badge/-GitHub-black?style=plastic&logo=GitHub&labelColor=5c5c5c&color=1182c3" alt="GitHub"/>
+        <img src="https://img.shields.io/badge/-GitHub-black?style=flat&logo=GitHub&labelColor=5c5c5c&color=1182c3" alt="GitHub"/>
     </a>
     <a href="#" target="_blank">
-        <img src="https://img.shields.io/badge/-Rstudio-black?style=plastic&logo=Rstudio&labelColor=5c5c5c&color=1182c3" alt="Rstudio"/>
+        <img src="https://img.shields.io/badge/-Rstudio-black?style=flat&logo=Rstudio&labelColor=5c5c5c&color=1182c3" alt="Rstudio"/>
     </a>
      </a>
     <a href="#" target="_blank">
-        <img src="https://img.shields.io/badge/-Netlify-black?style=plastic&logo=Netlify&labelColor=5c5c5c&color=1182c3" alt="Netlify"/>
+        <img src="https://img.shields.io/badge/-Netlify-black?style=flat&logo=Netlify&labelColor=5c5c5c&color=1182c3" alt="Netlify"/>
     </a>
     <a href="#" target="_blank">
-        <img src="https://img.shields.io/badge/-Cloudflare-black?style=plastic&logo=Cloudflare&labelColor=5c5c5c&color=1182c3" alt="Cloudflare"/>
+        <img src="https://img.shields.io/badge/-Cloudflare-black?style=flat&logo=Cloudflare&labelColor=5c5c5c&color=1182c3" alt="Cloudflare"/>
     </a>
-    <a href="https://www.name.com/zh-cn/" target="_blank"><img src="https://img.shields.io/badge/website-name.com-1182c3"></a>
+    <a href="https://www.name.com/zh-cn/" target="_blank"><img src="https://img.shields.io/badge/domain%20web-name.com-1182c3"></a>
+    <br/>
+    <img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Frusersplace.com">
+    <img alt="Uptime Robot ratio (7 days)" src="https://img.shields.io/uptimerobot/ratio/7/m791900776-ed1a1390af61a95b31efa693">
+    <img alt="Uptime Robot status" src="https://img.shields.io/uptimerobot/status/m791900776-ed1a1390af61a95b31efa693">
  </p>
 
 <!--- #整段注释
@@ -60,19 +67,20 @@
 
 <p align="center">如果你喜欢这个博客，可以考虑给个打赏嘛:pleading_face: :point_right: <a href="https://rusersplace.com/image/wechat-qr-code.jpg" target="_blank"><img src="https://img.shields.io/badge/Wechat-5fcd72.svg?logo=wechat&amp;logoColor=white" alt="wechat"/></a> :point_left:
 </p>
+<<<<<<< HEAD
 #### **前言**
 网络上有很多帖子
+=======
+
+#### **前言**
+想要一个我这样的一个静态博客嘛？心动不如行动，快来fork我的repo：**blogdown**源代码吧，通过对[Hugo-theme-jane](https://github.com/xianmin/hugo-theme-jane)主题的修改，现已经可以在Rstudio上通过R包blogdown来推送博客内容啦。对于想写博客，又不想折腾的，且对简洁美观有要求的朋友，仅仅修改.yaml文件的少许内容就可以实现和我一模一样的博客啦！是不是很方便，
+
+>>>>>>> 1cf75feb7fa2e18733ff3f35f2eea399ca54afe3
 #### **关于我的博客**
-我的博客是基于<font color=red>**Rstudio + blogdown + GitHub + Netlify**</font>构架搭建。[Hugo-theme-jane](https://github.com/xianmin/hugo-theme-jane)精美简洁👍🏻，同时又与blogdown比较契合的博客主题。我的博客在此基础上做了少许修改。我的博客访问地址:point_right::[https://www.rusersplace.com](https://www.rusersplace.com)。
+我的博客是基于<font color=red>**Rstudio + blogdown + GitHub + Netlify**</font>构架搭建。[Hugo-theme-jane](https://github.com/xianmin/hugo-theme-jane)精美简洁，同时又与**blogdown**比较契合的博客主题👍🏻。我的博客在此基础上做了少许修改。我的博客访问地址:point_right::[https://www.rusersplace.com](https://www.rusersplace.com)。
 
 #### **如何搭建和我一模一样的博客？**
-**1. 该博客适合什么样的同志使用？**
-- 特别想拥有一个自己的静态博客
-- 对R语言接触比较多，能熟练的使用Rstudio
-- 可以使用Git进行基础操作
-- 什么都不用想，直接开干
-
-**2. 相关软件及网站介绍**
+1. 相关软件及网站介绍
 - R版本为：Version 4.1.0 (2021-05-18)
 - Rstudio版本为：Version 1.4.1717
 - R包blogdown版本为：Version 1.9.1
