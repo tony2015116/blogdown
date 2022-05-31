@@ -1,6 +1,6 @@
 baseURL: http://www.rusersplace.com
 #https://rabc.netlify.app
-title: reading, learning and share
+title: reading, learning and sharing
 enableRobotsTXT: yes
 enableEmoji: yes
 theme: hugo-theme-jane

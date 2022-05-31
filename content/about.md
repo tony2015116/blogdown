@@ -18,6 +18,9 @@ reward: yes
     <a href="https://github.com/xianmin/hugo-theme-jane" target="_blank">
         <img alt="GitHub Workflow Status" src="https://img.shields.io/badge/blog%20theme-Hugo--theme--jane-orange">
     </a>
+    <a href="#">
+        <img src="https://img.shields.io/github/last-commit/tony2015116/blogdown" alt="GitHub last commit"/>
+    </a>
     <a href="https://github.com/tony2015116/blogdown" target="_blank">
         <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/tony2015116/blogdown">
     </a>
@@ -38,22 +41,26 @@ reward: yes
     </a>
     <br/>
     <a href="#" target="_blank">
-        <img src="https://img.shields.io/badge/-Hugo-black?style=plastic&logo=Hugo&labelColor=5c5c5c&color=1182c3" alt="Hugo"/>
+        <img src="https://img.shields.io/badge/-Hugo-black?style=flat&logo=Hugo&labelColor=5c5c5c&color=1182c3" alt="Hugo"/>
     </a>
     <a href="#" target="_blank">
-        <img src="https://img.shields.io/badge/-GitHub-black?style=plastic&logo=GitHub&labelColor=5c5c5c&color=1182c3" alt="GitHub"/>
+        <img src="https://img.shields.io/badge/-GitHub-black?style=flat&logo=GitHub&labelColor=5c5c5c&color=1182c3" alt="GitHub"/>
     </a>
     <a href="#" target="_blank">
-        <img src="https://img.shields.io/badge/-Rstudio-black?style=plastic&logo=Rstudio&labelColor=5c5c5c&color=1182c3" alt="Rstudio"/>
+        <img src="https://img.shields.io/badge/-Rstudio-black?style=flat&logo=Rstudio&labelColor=5c5c5c&color=1182c3" alt="Rstudio"/>
     </a>
      </a>
     <a href="#" target="_blank">
-        <img src="https://img.shields.io/badge/-Netlify-black?style=plastic&logo=Netlify&labelColor=5c5c5c&color=1182c3" alt="Netlify"/>
+        <img src="https://img.shields.io/badge/-Netlify-black?style=flat&logo=Netlify&labelColor=5c5c5c&color=1182c3" alt="Netlify"/>
     </a>
     <a href="#" target="_blank">
-        <img src="https://img.shields.io/badge/-Cloudflare-black?style=plastic&logo=Cloudflare&labelColor=5c5c5c&color=1182c3" alt="Cloudflare"/>
+        <img src="https://img.shields.io/badge/-Cloudflare-black?style=flat&logo=Cloudflare&labelColor=5c5c5c&color=1182c3" alt="Cloudflare"/>
     </a>
     <a href="https://www.name.com/zh-cn/" target="_blank"><img src="https://img.shields.io/badge/website-name.com-1182c3"></a>
+    <br/>
+    <img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Frusersplace.com">
+    <img alt="Uptime Robot ratio (7 days)" src="https://img.shields.io/uptimerobot/ratio/7/m791900776-ed1a1390af61a95b31efa693">
+    <img alt="Uptime Robot status" src="https://img.shields.io/uptimerobot/status/m791900776-ed1a1390af61a95b31efa693">
  </p>
 
 <!--- #整段注释
