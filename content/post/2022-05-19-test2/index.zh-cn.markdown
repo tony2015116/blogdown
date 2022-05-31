@@ -15,179 +15,272 @@ autoCollapseToc: no
 reward: yes
 mathjax: yes
 ---
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+<link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
 
-### test3
+1.  使用Python
 
+    
+    ```python
+    import pandas as pd
+    url = "C:/Users/Dell/Documents/R/win-library/4.1/readr/extdata/mtcars.csv"
+    df = pd.read_csv(url, sep = ",")
+    df.head()
+    ```
+    
+    ```
+    ##     mpg  cyl   disp   hp  drat     wt   qsec  vs  am  gear  carb
+    ## 0  21.0    6  160.0  110  3.90  2.620  16.46   0   1     4     4
+    ## 1  21.0    6  160.0  110  3.90  2.875  17.02   0   1     4     4
+    ## 2  22.8    4  108.0   93  3.85  2.320  18.61   1   1     4     1
+    ## 3  21.4    6  258.0  110  3.08  3.215  19.44   1   0     3     1
+    ## 4  18.7    8  360.0  175  3.15  3.440  17.02   0   0     3     2
+    ```
 
-```r
-summary(iris)
-```
+2.  使用R语言
 
-```
-##   Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   
-##  Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  
-##  1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  
-##  Median :5.800   Median :3.000   Median :4.350   Median :1.300  
-##  Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  
-##  3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  
-##  Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  
-##        Species  
-##  setosa    :50  
-##  versicolor:50  
-##  virginica :50  
-##                 
-##                 
-## 
-```
+    
+    ```r
+    library(readr)
+    df <- read_csv(readr_example("mtcars.csv"),comment = "")
+    head(df)
+    ```
+    
+    ```
+    ## # A tibble: 6 x 11
+    ##     mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb
+    ##   <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
+    ## 1  21       6   160   110  3.9   2.62  16.5     0     1     4     4
+    ## 2  21       6   160   110  3.9   2.88  17.0     0     1     4     4
+    ## 3  22.8     4   108    93  3.85  2.32  18.6     1     1     4     1
+    ## 4  21.4     6   258   110  3.08  3.22  19.4     1     0     3     1
+    ## 5  18.7     8   360   175  3.15  3.44  17.0     0     0     3     2
+    ## 6  18.1     6   225   105  2.76  3.46  20.2     1     0     3     1
+    ```
 
-### test4
+    <table class=" lightable-paper lightable-hover" style='font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;'>
+     <thead>
+    <tr>
+    <th style="empty-cells: hide;" colspan="1"></th>
+    <th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2"><div style="TRUE">Hello</div></th>
+    <th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2"><div style="TRUE">World</div></th>
+    </tr>
+      <tr>
+       <th style="text-align:left;"> car </th>
+       <th style="text-align:left;"> mpg </th>
+       <th style="text-align:left;"> cyl </th>
+       <th style="text-align:left;"> disp </th>
+       <th style="text-align:left;"> hp </th>
+      </tr>
+     </thead>
+    <tbody>
+      <tr>
+       <td style="text-align:left;"> Mazda RX4 </td>
+       <td style="text-align:left;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffcc6f">21.0</span> </td>
+       <td style="text-align:left;"> <span style="-webkit-transform: rotate(60deg); -moz-transform: rotate(60deg); -ms-transform: rotate(60deg); -o-transform: rotate(60deg); transform: rotate(60deg); display: inline-block; "><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: red !important;text-align: center;">6</span></span> </td>
+       <td style="text-align:left;"> <span style="  font-style: italic;   color: green !important;">160</span> </td>
+       <td style="text-align:left;width: 3cm; "> <span style="display: inline-block; direction: rtl; unicode-bidi: plaintext; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 62.86%">110</span> </td>
+      </tr>
+      <tr>
+       <td style="text-align:left;"> Mazda RX4 Wag </td>
+       <td style="text-align:left;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffcc6f">21.0</span> </td>
+       <td style="text-align:left;"> <span style="-webkit-transform: rotate(120deg); -moz-transform: rotate(120deg); -ms-transform: rotate(120deg); -o-transform: rotate(120deg); transform: rotate(120deg); display: inline-block; "><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: red !important;text-align: center;">6</span></span> </td>
+       <td style="text-align:left;"> <span style="  font-style: italic;   color: green !important;">160</span> </td>
+       <td style="text-align:left;width: 3cm; "> <span style="display: inline-block; direction: rtl; unicode-bidi: plaintext; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 62.86%">110</span> </td>
+      </tr>
+      <tr>
+       <td style="text-align:left;"> Datsun 710 </td>
+       <td style="text-align:left;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">22.8</span> </td>
+       <td style="text-align:left;"> <span style="-webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg); display: inline-block; "><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: red !important;text-align: center;">4</span></span> </td>
+       <td style="text-align:left;"> <span style="  font-style: italic;   color: green !important;">108</span> </td>
+       <td style="text-align:left;width: 3cm; "> <span style="display: inline-block; direction: rtl; unicode-bidi: plaintext; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 53.14%">93</span> </td>
+      </tr>
+      <tr>
+       <td style="text-align:left;"> Hornet 4 Drive </td>
+       <td style="text-align:left;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc357">21.4</span> </td>
+       <td style="text-align:left;"> <span style="-webkit-transform: rotate(240deg); -moz-transform: rotate(240deg); -ms-transform: rotate(240deg); -o-transform: rotate(240deg); transform: rotate(240deg); display: inline-block; "><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: red !important;text-align: center;">6</span></span> </td>
+       <td style="text-align:left;"> <span style=" font-weight: bold;    color: red !important;">258</span> </td>
+       <td style="text-align:left;width: 3cm; "> <span style="display: inline-block; direction: rtl; unicode-bidi: plaintext; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 62.86%">110</span> </td>
+      </tr>
+      <tr>
+       <td style="text-align:left;"> Hornet Sportabout </td>
+       <td style="text-align:left;"> <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">18.7</span> </td>
+       <td style="text-align:left;"> <span style="-webkit-transform: rotate(300deg); -moz-transform: rotate(300deg); -ms-transform: rotate(300deg); -o-transform: rotate(300deg); transform: rotate(300deg); display: inline-block; "><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: red !important;text-align: center;">8</span></span> </td>
+       <td style="text-align:left;"> <span style=" font-weight: bold;    color: red !important;">360</span> </td>
+       <td style="text-align:left;width: 3cm; "> <span style="display: inline-block; direction: rtl; unicode-bidi: plaintext; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 100.00%">175</span> </td>
+      </tr>
+    </tbody>
+    </table>
 
-##### test5
+3.  无序列表
 
-#### test6
+    -   注释
 
--   abc
+        
+        ```r
+        # R代码中的文本注释
+        head(mtcars[,1:5]) #总结数据
+        ```
+        
+        ```
+        ##                    mpg cyl disp  hp drat
+        ## Mazda RX4         21.0   6  160 110 3.90
+        ## Mazda RX4 Wag     21.0   6  160 110 3.90
+        ## Datsun 710        22.8   4  108  93 3.85
+        ## Hornet 4 Drive    21.4   6  258 110 3.08
+        ## Hornet Sportabout 18.7   8  360 175 3.15
+        ## Valiant           18.1   6  225 105 2.76
+        ```
 
--   efg
+    -   代码文本框
 
-1.  abc
+            b <- "this is normal code"
 
-2.  fac
+    -   代码高亮
 
-> fsad;f
->
-> fsdaf
+        
+        ```r
+        b <- "this is normal code"
+        ```
 
-------------------------------------------------------------------------
+4.  有序列表
 
-$$
-a/b
-$$
+    1.  各级标题
 
-~~jldsfjlfasdf~~
+        # 一级标题
 
-heihei
+        ## 二级标题
 
-🤣
+        ### 三级标题
 
-<!--# good! -->
+        #### 四级标题
 
-µ
+        ##### 五级标题
 
-$$
-y = f(x)/t^2*log2
-$$
+        ###### 六级标题
 
-<!--more-->
+    2.  *斜体*
 
-term
+    3.  **加粗**
 
-:   a
+    4.  `行内代码文本`
 
-    b
+    5.  ***粗斜体***
 
-    c
+    6.  行内公式
 
---
+        `\(y=f(x)/t^2\)` \#不可用
 
-------------------------------------------------------------------------
+    7.  公式块 `$$y=f(x)/t^2$$`
+
+    8.  特殊字符转义，如 { }
+
+    9.  [my blog](https://www.rusersplace.com)
+
+    10. 动图
+
+        <a href="https://www.animatedimages.org/cat-cats-209.htm"><img src="https://www.animatedimages.org/data/media/209/animated-cat-image-0167.gif" border="0" alt="animated-cat-image-0167" /></a>
+
+    11. 本地图片
+
+        ![猫](images/pexels-pixabay-57416.jpg)
+
+    12. 表情
+
+        🥰📷
+
+    13. 引用块
+
+        > "I thoroughly disapprove of duels. If a man should challenge me, I would take him kindly and forgivingly by the hand and lead him to a quiet place and kill him."
+        >
+        > --- Mark Twain
+
+    14. 字体
+
+        <span style="font-family:楷体;">楷体</span>显示为楷体 ，<span style="font-family:Times New Roman;">Times New Roman</span>显示为Times New Roman
+
+    15. 字号
+
+        <span style="font-size:5px;">字号25px</span>显示为字号25px
+
+    16. 文字颜色
+
+        <span style="color:red;">红色文字</span>显示为红色文字 ，<span style="color:#33C0FF;">文字色号\#33C0FF</span>显示为文字色号\#33C0FF
+
+    17. 文字背景
+
+        <span style="background-color:yellow;">背景为黄色</span>显示为背景为黄色 ，<span style="background-color:#33FF8B;">背景色号为\#33FF8B</span>
+
+    18. 下划线
+
+        <p style="text-decoration: underline;">下划线</p>
+
+    19. 删除线
+
+        <p style="text-decoration: line-through;">删除线</p>
+
+        ~~删除线~~
+
+    20. 上划线
+
+        <p style="text-decoration: overline;">上划线</p>
+
+    21. 积分了撒打发
+
+5.  首行缩进
+
+    <p style="text-indent:32px;">
+    子曰：<span style="color:red;">“学而时习之，不亦说乎？</span>有朋自远方来，不亦乐乎？人不知而不愠，不亦君子乎？”
+    </p>
+
+6.  悬挂缩进
+
+    <p style="text-indent:-2em;padding-left:2em;">
+    子曰：“学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知而不愠，不亦君子乎？”
+    </p>
+
+7.  整体左缩进
+
+    <p style="padding-left:2em;">
+    子曰：“学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知而不愠，不亦君子乎？”
+    </p>
+
+8.  整体左右均缩进
+
+    <p style="padding-left:2em;padding-right:2em">
+    子曰：“学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知而不愠，不亦君子乎？”
+    </p>
+
+9.  插入视频
+
+    <video controls>
+
+    <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+
+    </video>
+
+    <span style="font-size:12px;"> *来自网络的视频，网址为：<https://www.w3schools.com/html/movie.mp4>* </span>
+
+10. insert definition
+
+    term
+
+    :   1.  item1
+        2.  item2
+        3.  item3
+
+11. 待选框
+
+    term
+
+    :   1.  [ ] item1
+        2.  [ ] item2
+        3.  [ ] item3
+
+12. 待定
 
 | Col1 | Col2 | Col3 |
 |------|:----:|------|
 | a    |      |      |
 | bc   |      |      |
 | c    |      |      |
-
-[百度](www.baidu.com "众里寻他千百度")
-
-
-```r
-summary(iris)
-```
-
-```
-##   Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   
-##  Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  
-##  1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  
-##  Median :5.800   Median :3.000   Median :4.350   Median :1.300  
-##  Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  
-##  3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  
-##  Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  
-##        Species  
-##  setosa    :50  
-##  versicolor:50  
-##  virginica :50  
-##                 
-##                 
-## 
-```
-
-
-```python
-import pandas as pd
-df = pd.read_excel("C:/Users/Dell/Desktop/选配母猪档案/金泰一场/金泰一场7线-5.21-5.27断奶母猪档案.xlsx")
-print(df)
-```
-
-```
-##     序号        到场日期      猪只编码     耳号  ... 最新体重(kg) 最新背膘(mm) 初配日龄       来源场
-## 0    1  2021-12-02  LY007136   7136  ...    169.0       16  238    金泰一场9线
-## 1    2  2021-12-01   LY34869  34869  ...    212.0       12  241    金泰一场2线
-## 2    3  2021-12-01  LY002148   2148  ...    212.0       15  304    金泰一场2线
-## 3    4  2021-12-01  LY002149   2149  ...    212.0       16  294    金泰一场2线
-## 4    5  2021-12-01   LY35037  35037  ...    212.0       16  241    金泰一场2线
-## 5    6  2021-12-01  LY002161   2161  ...    212.0       14  305    金泰一场2线
-## 6    7  2021-12-01  LY002158   2158  ...    212.0       15  308    金泰一场2线
-## 7    8  2021-07-27  LY004816   4816  ...    131.0       16  279  瓦塘仁隆猪场一线
-## 8    9  2021-07-27  LY004928   4928  ...    135.0       17  275  瓦塘仁隆猪场一线
-## 9   10  2021-07-27  LY004949   4949  ...    131.0       16  279  瓦塘仁隆猪场一线
-## 10  11  2021-07-27  LY004971   4971  ...    133.0       14  235  瓦塘仁隆猪场一线
-## 11  12  2021-07-27  LY005007   5007  ...    131.0       13  279  瓦塘仁隆猪场一线
-## 12  13  2021-07-27  LY005058   5058  ...    135.0       17  275  瓦塘仁隆猪场一线
-## 13  14  2021-07-27  LY005088   5088  ...    130.0       16  279  瓦塘仁隆猪场一线
-## 14  15  2021-07-27  LY005101   5101  ...    132.0       17  279  瓦塘仁隆猪场一线
-## 15  16  2021-07-27  LY005111   5111  ...    131.0       16  279  瓦塘仁隆猪场一线
-## 16  17  2021-07-27  LY005115   5115  ...    130.0       16  279  瓦塘仁隆猪场一线
-## 17  18  2021-07-27  LY005168   5168  ...    130.0       14  273  瓦塘仁隆猪场一线
-## 18  19  2021-07-27  LY005176   5176  ...    132.0       14  279  瓦塘仁隆猪场一线
-## 19  20  2021-07-27  LY005178   5178  ...    133.0       14  278  瓦塘仁隆猪场一线
-## 20  21  2021-07-27  LY004834   4834  ...    136.0       16  240  瓦塘仁隆猪场一线
-## 21  22  2021-07-27  LY004858   4858  ...    132.0       14  270  瓦塘仁隆猪场一线
-## 22  23  2021-07-27  LY004872   4872  ...    135.0       15  263  瓦塘仁隆猪场一线
-## 23  24  2021-07-27  LY004881   4881  ...    135.0       16  270  瓦塘仁隆猪场一线
-## 24  25  2021-07-27  LY005254   5254  ...    135.0       14  263  瓦塘仁隆猪场一线
-## 25  26  2021-07-27  LY005255   5255  ...    165.0       16  275  瓦塘仁隆猪场一线
-## 26  27  2021-07-27  LY005296   5296  ...    131.0       16  271  瓦塘仁隆猪场一线
-## 27  28  2021-07-27  LY005302   5302  ...    131.0       14  274  瓦塘仁隆猪场一线
-## 28  29  2021-07-27  LY005419   5419  ...    131.0       16  276  瓦塘仁隆猪场一线
-## 29  30  2021-07-27  LY005421   5421  ...    132.0       13  271  瓦塘仁隆猪场一线
-## 30  31  2021-07-27  LY005319   5319  ...    130.0       14  267  瓦塘仁隆猪场一线
-## 31  32  2021-07-27  LY005322   5322  ...    132.0       16  271  瓦塘仁隆猪场一线
-## 32  33  2021-07-27  LY005349   5349  ...    131.0       16  272  瓦塘仁隆猪场一线
-## 
-## [33 rows x 16 columns]
-```
-
-**abc**
-
-**abc**
-
-**abc**
-
-<p style="text-indent:32px;">
-间发生的看风景但是放假啦士大夫就上的飞机<span style="color:red;">红色文字</span> 发生了卡大家分厘卡的是否第三方首行缩进附件是大楼附近发生巨大浪费就
-建立饭卡手动阀距离喀什地方就啊圣诞快乐房价看了撒打发就经理尽量发撒地方记录房间里啊士大夫艰苦撒旦解放；螺丝钉解放立刻撒旦
-</p>
-
-> **Note**
-
-x\~1\~^2^ \@cite
-
----
-杰拉德发撒旦
----
-
-    国安发生的几率收到房间里上的飞机水电开发经理士大夫艰苦拉萨地方点十六分就开始了的风景开始了的房间昆仑山搭街坊立刻附件是考虑打飞机了啥的开发空手道解放卢卡斯的附近开了
-
-A [green] word.
-

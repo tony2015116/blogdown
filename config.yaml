@@ -1,6 +1,6 @@
 baseURL: http://www.rusersplace.com
 #https://rabc.netlify.app
-title: Tony - A super concise theme for Hugo
+title: reading, learning and share
 enableRobotsTXT: yes
 enableEmoji: yes
 theme: hugo-theme-jane
@@ -40,7 +40,7 @@ defaultContentLanguage: zh-cn
 languageCode: zh-cn
 
 author:
-  name: tony
+  name: guoguo
   
 sitemap:
   changefreq: weekly
@@ -52,19 +52,19 @@ menu:
     - identifier: home
       name: 主页
       url: /
-      weight: 10
+      weight: 20
     - identifier: archives
       name: 归档
       url: /post/
-      weight: 20
+      weight: 30
     - identifier: tags
       name: 标签
       url: /tags/
-      weight: 30
+      weight: 40
     - identifier: categories
       name: 分类
       url: /categories/
-      weight: 40
+      weight: 50
     # - name: Twitter
     #   url: https://twitter.com/rstudio
     

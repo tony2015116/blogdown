@@ -16,102 +16,204 @@ reward: yes
 mathjax: yes
 ---
 
-### test3
+1.  使用Python
 
-```{r}
-summary(iris)
-```
+    ```{python}
+    import pandas as pd
+    url = "C:/Users/Dell/Documents/R/win-library/4.1/readr/extdata/mtcars.csv"
+    df = pd.read_csv(url, sep = ",")
+    df.head()
+    ```
 
-### test4
+2.  使用R语言
 
-##### test5
+    ```{r echo=TRUE, message=FALSE, warning=FALSE}
+    library(readr)
+    df <- read_csv(readr_example("mtcars.csv"),comment = "")
+    head(df)
+    ```
 
-#### test6
+    ```{r echo=FALSE, message=FALSE, warning=FALSE}
+    #以下测试代码引用自https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html#Insert_Images_into_Columns
+    library(kableExtra)
+    library(formattable)
+    ft_dt <- mtcars[1:5, 1:4]
+    ft_dt$car <- row.names(ft_dt)
+    row.names(ft_dt) <- NULL
+    ft_dt$mpg <- color_tile("white", "orange")(ft_dt$mpg)
+    ft_dt$cyl <- cell_spec(ft_dt$cyl, angle = (1:5)*60, 
+                          background = "red", color = "white", align = "center")
+    ft_dt$disp <- ifelse(
+      ft_dt$disp > 200,
+      cell_spec(ft_dt$disp, color = "red", bold = T),
+      cell_spec(ft_dt$disp, color = "green", italic = T)
+    )
+    ft_dt$hp <- color_bar("lightgreen")(ft_dt$hp)
+    ft_dt <- ft_dt[c("car", "mpg", "cyl", "disp", "hp")]
 
--   abc
+    kbl(ft_dt, escape = F) %>%
+      kable_paper("hover", full_width = F) %>%
+      column_spec(5, width = "3cm") %>%
+      add_header_above(c(" ", "Hello" = 2, "World" = 2))
+    ```
 
--   efg
+3.  无序列表
 
-1.  abc
+    -   注释
 
-2.  fac
+        ```{r}
+        # R代码中的文本注释
+        head(mtcars[,1:5]) #总结数据
+        ```
 
-> fsad;f
->
-> fsdaf
+    -   代码文本框
 
-------------------------------------------------------------------------
+            b <- "this is normal code"
 
-$$
-a/b
-$$
+    -   代码高亮
 
-~~jldsfjlfasdf~~
+        ```{r}
+        b <- "this is normal code"
+        ```
 
-heihei
+4.  有序列表
 
-🤣
+    1.  各级标题
 
-<!--# good! -->
+        # 一级标题
 
-µ
+        ## 二级标题
 
-$$
-y = f(x)/t^2*log2
-$$
+        ### 三级标题
 
-<!--more-->
+        #### 四级标题
 
-term
+        ##### 五级标题
 
-:   a
+        ###### 六级标题
 
-    b
+    2.  *斜体*
 
-    c
+    3.  **加粗**
 
---
+    4.  `行内代码文本`
 
-------------------------------------------------------------------------
+    5.  ***粗斜体***
+
+    6.  行内公式
+
+        $y=f(x)/t^2$ \#不可用
+
+    7.  公式块 $$y=f(x)/t^2$$
+
+    8.  特殊字符转义，如 { }
+
+    9.  [my blog](https://www.rusersplace.com)
+
+    10. 动图
+
+        <a href="https://www.animatedimages.org/cat-cats-209.htm"><img src="https://www.animatedimages.org/data/media/209/animated-cat-image-0167.gif" border="0" alt="animated-cat-image-0167" /></a>
+
+    11. 本地图片
+
+        ![猫](images/pexels-pixabay-57416.jpg)
+
+    12. 表情
+
+        🥰📷
+
+    13. 引用块
+
+        > "I thoroughly disapprove of duels. If a man should challenge me, I would take him kindly and forgivingly by the hand and lead him to a quiet place and kill him."
+        >
+        > --- Mark Twain
+
+    14. 字体
+
+        <span style="font-family:楷体;">楷体</span>显示为楷体 ，<span style="font-family:Times New Roman;">Times New Roman</span>显示为Times New Roman
+
+    15. 字号
+
+        <span style="font-size:5px;">字号25px</span>显示为字号25px
+
+    16. 文字颜色
+
+        <span style="color:red;">红色文字</span>显示为红色文字 ，<span style="color:#33C0FF;">文字色号\#33C0FF</span>显示为文字色号\#33C0FF
+
+    17. 文字背景
+
+        <span style="background-color:yellow;">背景为黄色</span>显示为背景为黄色 ，<span style="background-color:#33FF8B;">背景色号为\#33FF8B</span>
+
+    18. 下划线
+
+        <p style="text-decoration: underline;">下划线</p>
+
+    19. 删除线
+
+        <p style="text-decoration: line-through;">删除线</p>
+
+        ~~删除线~~
+
+    20. 上划线
+
+        <p style="text-decoration: overline;">上划线</p>
+
+    21. 积分了撒打发
+
+5.  首行缩进
+
+    <p style="text-indent:32px;">
+    子曰：<span style="color:red;">“学而时习之，不亦说乎？</span>有朋自远方来，不亦乐乎？人不知而不愠，不亦君子乎？”
+    </p>
+
+6.  悬挂缩进
+
+    <p style="text-indent:-2em;padding-left:2em;">
+    子曰：“学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知而不愠，不亦君子乎？”
+    </p>
+
+7.  整体左缩进
+
+    <p style="padding-left:2em;">
+    子曰：“学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知而不愠，不亦君子乎？”
+    </p>
+
+8.  整体左右均缩进
+
+    <p style="padding-left:2em;padding-right:2em">
+    子曰：“学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知而不愠，不亦君子乎？”
+    </p>
+
+9.  插入视频
+
+    <video controls>
+
+    <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+
+    </video>
+
+    <span style="font-size:12px;"> *来自网络的视频，网址为：<https://www.w3schools.com/html/movie.mp4>* </span>
+
+10. insert definition
+
+    term
+
+    :   1.  item1
+        2.  item2
+        3.  item3
+
+11. 待选框
+
+    term
+
+    :   1.  [ ] item1
+        2.  [ ] item2
+        3.  [ ] item3
+
+12. 待定
 
 | Col1 | Col2 | Col3 |
 |------|:----:|------|
 | a    |      |      |
 | bc   |      |      |
 | c    |      |      |
-
-[百度](www.baidu.com "众里寻他千百度")
-
-```{r}
-summary(iris)
-```
-
-```{python}
-import pandas as pd
-df = pd.read_excel("C:/Users/Dell/Desktop/选配母猪档案/金泰一场/金泰一场7线-5.21-5.27断奶母猪档案.xlsx")
-print(df)
-```
-
-**abc**
-
-**abc**
-
-**abc**
-
-<p style="text-indent:32px;">
-间发生的看风景但是放假啦士大夫就上的飞机<span style="color:red;">红色文字</span> 发生了卡大家分厘卡的是否第三方首行缩进附件是大楼附近发生巨大浪费就
-建立饭卡手动阀距离喀什地方就啊圣诞快乐房价看了撒打发就经理尽量发撒地方记录房间里啊士大夫艰苦撒旦解放；螺丝钉解放立刻撒旦
-</p>
-
-> **Note**
-
-x\~1\~^2^ \@cite
-
----
-杰拉德发撒旦
----
-
-    国安发生的几率收到房间里上的飞机水电开发经理士大夫艰苦拉萨地方点十六分就开始了的风景开始了的房间昆仑山搭街坊立刻附件是考虑打飞机了啥的开发空手道解放卢卡斯的附近开了
-
-A [green] word.
-
