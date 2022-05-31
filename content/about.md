@@ -33,12 +33,6 @@ reward: yes
     <a href="https://github.com/tony2015116/blogdown/network/members">
         <img src="https://img.shields.io/github/forks/tony2015116/blogdown" alt="Forks Badge"/>
     </a>
-    <a href="https://github.com/tony2015116/blogdown" target="_blank">
-        <img alt="GitHub" src="https://img.shields.io/github/license/tony2015116/blogdown"/>
-    </a>
-    <a href="#" target="_blank">
-        <img src="https://jaywcjlove.github.io/sb/lang/chinese.svg" alt="jaywcjlove/sb"/>
-    </a>
     <br/>
     <a href="#" target="_blank">
         <img src="https://img.shields.io/badge/-Hugo-black?style=flat&logo=Hugo&labelColor=5c5c5c&color=1182c3" alt="Hugo"/>
@@ -61,6 +55,12 @@ reward: yes
     <img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Frusersplace.com">
     <img alt="Uptime Robot ratio (7 days)" src="https://img.shields.io/uptimerobot/ratio/7/m791900776-ed1a1390af61a95b31efa693">
     <img alt="Uptime Robot status" src="https://img.shields.io/uptimerobot/status/m791900776-ed1a1390af61a95b31efa693">
+    <a href="https://github.com/tony2015116/blogdown" target="_blank">
+        <img alt="GitHub" src="https://img.shields.io/github/license/tony2015116/blogdown"/>
+    </a>
+    <a href="#" target="_blank">
+        <img src="https://jaywcjlove.github.io/sb/lang/chinese.svg" alt="jaywcjlove/sb"/>
+    </a>
  </p>
 
 <!--- #整段注释
@@ -75,6 +75,3 @@ reward: yes
 ![cloudflare](https://img.shields.io/badge/-Cloudflare-black?style=plastic&logo=Cloudflare&labelColor=5c5c5c&color=1182c3) 
 <a href="https://www.name.com/zh-cn/" target="_blank"><img src="https://img.shields.io/badge/website-name.com-1182c3"></a>
  --->
-
-<p align="center">如果你喜欢这个博客，可以考虑给个打赏嘛:pleading_face: :point_right: <a href="https://rusersplace.com/image/wechat-qr-code.jpg" target="_blank"><img src="https://img.shields.io/badge/Wechat-5fcd72.svg?logo=wechat&amp;logoColor=white" alt="wechat"/></a> :point_left:
-</p>

@@ -22,6 +22,12 @@
     <a href="https://github.com/tony2015116/blogdown/network/members">
         <img src="https://img.shields.io/github/forks/tony2015116/blogdown" alt="Forks Badge"/>
     </a>
+    <a href="https://github.com/tony2015116/blogdown" target="_blank">
+        <img alt="GitHub" src="https://img.shields.io/github/license/tony2015116/blogdown"/>
+    </a>
+    <a href="#" target="_blank">
+        <img src="https://jaywcjlove.github.io/sb/lang/chinese.svg" alt="jaywcjlove/sb"/>
+    </a>
     <br/>
     <a href="#" target="_blank">
         <img src="https://img.shields.io/badge/-Hugo-black?style=flat&logo=Hugo&labelColor=5c5c5c&color=1182c3" alt="Hugo"/>
@@ -44,13 +50,6 @@
     <img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Frusersplace.com">
     <img alt="Uptime Robot ratio (7 days)" src="https://img.shields.io/uptimerobot/ratio/7/m791900776-ed1a1390af61a95b31efa693">
     <img alt="Uptime Robot status" src="https://img.shields.io/uptimerobot/status/m791900776-ed1a1390af61a95b31efa693">
-    <a href="https://github.com/tony2015116/blogdown" target="_blank">
-        <img alt="GitHub" src="https://img.shields.io/github/license/tony2015116/blogdown"/>
-    </a>
-    <a href="#" target="_blank">
-        <img src="https://jaywcjlove.github.io/sb/lang/chinese.svg" alt="jaywcjlove/sb"/>
-    </a>
-    
  </p>
 
 <!--- #整段注释
