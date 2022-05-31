@@ -67,15 +67,13 @@
 
 <p align="center">如果你喜欢这个博客，可以考虑给个打赏嘛:pleading_face: :point_right: <a href="https://rusersplace.com/image/wechat-qr-code.jpg" target="_blank"><img src="https://img.shields.io/badge/Wechat-5fcd72.svg?logo=wechat&amp;logoColor=white" alt="wechat"/></a> :point_left:
 </p>
-<<<<<<< HEAD
+
 #### **前言**
 网络上有很多帖子
-=======
 
 #### **前言**
 想要一个我这样的一个静态博客嘛？心动不如行动，快来fork我的repo：**blogdown**源代码吧，通过对[Hugo-theme-jane](https://github.com/xianmin/hugo-theme-jane)主题的修改，现已经可以在Rstudio上通过R包blogdown来推送博客内容啦。对于想写博客，又不想折腾的，且对简洁美观有要求的朋友，仅仅修改.yaml文件的少许内容就可以实现和我一模一样的博客啦！是不是很方便，
 
->>>>>>> 1cf75feb7fa2e18733ff3f35f2eea399ca54afe3
 #### **关于我的博客**
 我的博客是基于<font color=red>**Rstudio + blogdown + GitHub + Netlify**</font>构架搭建。[Hugo-theme-jane](https://github.com/xianmin/hugo-theme-jane)精美简洁，同时又与**blogdown**比较契合的博客主题👍🏻。我的博客在此基础上做了少许修改。我的博客访问地址:point_right::[https://www.rusersplace.com](https://www.rusersplace.com)。
 
