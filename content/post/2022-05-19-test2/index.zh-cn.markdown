@@ -18,6 +18,8 @@ mathjax: yes
 <script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
 <link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
 
+![](images/pexels-jaime-reimer-2662116.jpg "nature")
+
 1.  使用Python
 
     
