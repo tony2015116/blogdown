@@ -5,7 +5,7 @@ enableRobotsTXT: yes
 enableEmoji: yes
 theme: hugo-theme-jane
 # hasCJKLanguage: yes
-paginate: 10
+paginate: 30
 rssLimit: 20
 enableGitInfo: yes
 disqusShortname: ''
