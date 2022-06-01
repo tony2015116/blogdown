@@ -26,10 +26,10 @@ permalinks:
 
 
 
-pygmentsOptions: linenos=table
-pygmentsCodefences: yes
-pygmentsUseClasses: yes
-pygmentsCodefencesGuessSyntax: no
+pygmentsOptions: linenos=table #kubebis=table
+pygmentsCodefences: yes #yes
+pygmentsUseClasses: yes #yes
+pygmentsCodefencesGuessSyntax: no #no
 
 
 
@@ -115,12 +115,15 @@ params:
   
   toc: no                                                                            # 是否开启目录
   autoCollapseToc: no   # Auto expand and collapse toc                              # 目录自动展开/折叠
-  fancybox: yes           # see https://github.com/fancyapps/fancybox                 # 是否启用fancybox（图片可点击）
+  fancybox: no           # see https://github.com/fancyapps/fancybox                 # 是否启用fancybox（图片可点击）
+  
+  #forkMeOnGithub: "https://github.com/tony2015116/blogdown"
 
   reward:                                         # 文章打赏
     enable: no
     wechat: "/image/wechat-qr-code.jpg"           # 微信二维码
-#    alipay: "/path/to/your/alipay-qr-code.png"           # 支付宝二维码
+#   alipay: "/path/to/your/alipay-qr-code.png"           # 支付宝二维码
+
 
 markup:
   defaultMarkdownHandler: goldmark
