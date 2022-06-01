@@ -1,17 +1,17 @@
 ---
-comment: yes
+comment: no
 date: "2022-05-04"
 lastmod: "2022-05-04"
-mathjax: false
+mathjax: yes
 menu: main
 title: Tony's blog
-weight: 10
+weight: 50
 toc: no
 reward: yes
 ---
 
 <p align="center">
-    <p align="center">头圆脸方，终身学习的数据分析爱好者 😘</p>
+    <p align="center">三观比五官正，思想比套路深，终身学习的数据分析爱好者 😘</p>
 </p>
 
 <p align="center">
@@ -27,11 +27,11 @@ reward: yes
     <a href="https://github.com/tony2015116/blog_comments" target="_blank">
         <img alt="Issues" src="https://img.shields.io/github/issues/tony2015116/blog_comments" />
     </a>
-    <a href="https://github.com/tony2015116/blogdown/stargazers">
-        <img src="https://img.shields.io/github/stars/tony2015116/blogdown" alt="Stars Badge"/>
+    <a href="https://github.com/tony2015116/blogdown" target="_blank">
+        <img alt="GitHub" src="https://img.shields.io/github/license/tony2015116/blogdown"/>
     </a>
-    <a href="https://github.com/tony2015116/blogdown/network/members">
-        <img src="https://img.shields.io/github/forks/tony2015116/blogdown" alt="Forks Badge"/>
+    <a href="#" target="_blank">
+        <img src="https://jaywcjlove.github.io/sb/lang/chinese.svg" alt="jaywcjlove/sb"/>
     </a>
     <br/>
     <a href="#" target="_blank">
@@ -55,12 +55,6 @@ reward: yes
     <img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Frusersplace.com">
     <img alt="Uptime Robot ratio (7 days)" src="https://img.shields.io/uptimerobot/ratio/7/m791900776-ed1a1390af61a95b31efa693">
     <img alt="Uptime Robot status" src="https://img.shields.io/uptimerobot/status/m791900776-ed1a1390af61a95b31efa693">
-    <a href="https://github.com/tony2015116/blogdown" target="_blank">
-        <img alt="GitHub" src="https://img.shields.io/github/license/tony2015116/blogdown"/>
-    </a>
-    <a href="#" target="_blank">
-        <img src="https://jaywcjlove.github.io/sb/lang/chinese.svg" alt="jaywcjlove/sb"/>
-    </a>
  </p>
 
 <!--- #整段注释
