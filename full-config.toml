@@ -21,10 +21,10 @@ PygmentsCodefencesGuessSyntax = true
 PygmentsOptions = "linenos=table"
 
 # Enable author pages
-#[taxonomies]
-#  author = "author"
-#  tag = "tags"
-#  category = "categories"
+[taxonomies]
+  author = "author"
+  tag = "tags"
+  category = "categories"
 
 # language support # en / zh-cn / other... translations present in i18n/
 defaultContentLanguage = "en"           # Default language to use

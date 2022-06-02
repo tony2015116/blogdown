@@ -32,7 +32,10 @@ pygmentsUseClasses: yes #yes
 pygmentsCodefencesGuessSyntax: no #no
 
 
-
+taxonomies:
+  author: "guoguo"
+  tag: "tags"
+  category: "categories"
 
 
 #defaultContentLanguage: en
@@ -123,7 +126,10 @@ params:
     enable: no
     wechat: "/image/wechat-qr-code.jpg"           # 微信二维码
 #   alipay: "/path/to/your/alipay-qr-code.png"           # 支付宝二维码
-
+  
+  gitInfo:
+    gitRepo: "https://github.com/tony2015116/blogdown"
+    showCommitMessage: yes
 
 markup:
   defaultMarkdownHandler: goldmark
