@@ -32,10 +32,10 @@ pygmentsUseClasses: yes #yes
 pygmentsCodefencesGuessSyntax: no #no
 
 
-taxonomies:
-  author: "guoguo"
-  tag: "tags"
-  category: "categories"
+#taxonomies:
+#  author: "guo"
+#  tag: "tags"
+#  category: "categories"
 
 
 #defaultContentLanguage: en
@@ -68,13 +68,17 @@ menu:
       name: 分类
       url: /categories/
       weight: 40
+    - identifier: about me
+      name: 关于我
+      weight: 50
+      url: /about/
     # - name: Twitter
     #   url: https://twitter.com/rstudio
     
     
 
 params:
-  customCSS: []
+  customCSS: [] #'douban.css' #'sspai.css'
   customJS: []
   dateFormatToUse: '2006-01-02'
 

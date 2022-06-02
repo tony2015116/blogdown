@@ -11,7 +11,7 @@ description: 'jlsfjlsdfjlfsdfjlsadf'
 comment: yes
 toc: no
 autoCollapseToc: no
-#contentCopyright: ""
+contentCopyright: "haha"
 reward: yes
 mathjax: yes
 ---

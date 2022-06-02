@@ -3,11 +3,12 @@ comment: no
 date: "2022-05-04"
 lastmod: "2022-05-04"
 mathjax: yes
-menu: main
-title: Tony's blog
-weight: 50
+#menu: main
+title: guoguo
+#weight: 50
 toc: no
 reward: yes
+draft: no
 ---
 
 <p align="center">
