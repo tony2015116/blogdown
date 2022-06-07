@@ -11,9 +11,20 @@ reward: yes
 draft: no
 ---
 
+
 <p align="center">
+    <img src="/./about_files/微信图片_20220607153202.png" alt="" width="20%"/>
     <p align="center">三观比五官正，思想比套路深，终身学习的数据分析爱好者 😘</p>
 </p>
+
+<!--- #整段注释
+<p align="center">
+    <img src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortFlat&accessoriesType=Blank&hairColor=Black&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Smile&skinColor=Light'
+/>
+</p>
+
+<img style="float: left;" src="/./about_files/微信图片_20220607153202.png" alt="" width="20%"/>
+--->
 
 <p align="center">
     <a href="https://github.com/xianmin/hugo-theme-jane" target="_blank">
@@ -70,3 +81,5 @@ draft: no
 ![cloudflare](https://img.shields.io/badge/-Cloudflare-black?style=plastic&logo=Cloudflare&labelColor=5c5c5c&color=1182c3) 
 <a href="https://www.name.com/zh-cn/" target="_blank"><img src="https://img.shields.io/badge/website-name.com-1182c3"></a>
  --->
+
+
