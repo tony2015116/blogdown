@@ -1,6 +1,6 @@
 baseURL: http://www.rusersplace.com
 #https://rabc.netlify.app
-title: reading, learning and sharing
+title: 一起来阅读和分享吧
 enableRobotsTXT: yes
 enableEmoji: yes
 theme: hugo-theme-jane
@@ -82,7 +82,7 @@ params:
   customJS: []
   dateFormatToUse: '2006-01-02'
 
-  logoTitle: guoguo
+  logoTitle: guoguo'blog
   photoswipe: no
   #rssFullContent: yes
   homeFullContent: no
