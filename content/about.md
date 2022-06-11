@@ -13,7 +13,7 @@ draft: no
 
 
 <p align="center">
-    <img src="/./about_files/微信图片_20220607153202.png" alt="" width="20%"/>
+    <img src="/./about_files/my_photo.png" alt="" width="20%"/>
     <p align="center">三观比五官正，思想比套路深，终身学习的数据分析爱好者 😘</p>
 </p>
 
@@ -82,4 +82,4 @@ draft: no
 <a href="https://www.name.com/zh-cn/" target="_blank"><img src="https://img.shields.io/badge/website-name.com-1182c3"></a>
  --->
 
-
+<a href="/./about_files/my_cv.pdf" download="/./about_files/my_cv.pdf">**点击下载我的简历**</a>
