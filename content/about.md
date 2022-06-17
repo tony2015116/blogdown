@@ -62,10 +62,6 @@ draft: no
         <img src="https://img.shields.io/badge/-Cloudflare-black?style=flat&logo=Cloudflare&labelColor=5c5c5c&color=1182c3" alt="Cloudflare"/>
     </a>
     <a href="https://www.name.com/zh-cn/" target="_blank"><img src="https://img.shields.io/badge/domain%20website-name.com-1182c3"></a>
-    <br/>
-    <img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Frusersplace.com">
-    <img alt="Uptime Robot ratio (7 days)" src="https://img.shields.io/uptimerobot/ratio/7/m791900776-ed1a1390af61a95b31efa693">
-    <img alt="Uptime Robot status" src="https://img.shields.io/uptimerobot/status/m791900776-ed1a1390af61a95b31efa693">
  </p>
 
 <!--- #整段注释
@@ -81,7 +77,8 @@ draft: no
 <a href="https://www.name.com/zh-cn/" target="_blank"><img src="https://img.shields.io/badge/website-name.com-1182c3"></a>
  --->
 
-> hi gys
+> 对数据感兴趣，喜欢数据分析嘛？喜欢R语言，喜欢tidyverse生态带来的丝滑体验嘛？对机器学习感兴趣，又想学一些python知识嘛？想摆脱刷视频带来的多巴胺快感，读点书、写点东西嘛？交个朋友吧！🍺
+
 
 
 <a href="/./about_files/my_cv.pdf" download="my_cv.pdf">**点击下载我的简历**</a>

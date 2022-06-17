@@ -108,7 +108,10 @@ params:
   social:
     a-email: mailto:tony2015116@163.com
     g-github: https://github.com/tony2015116
-    i-zhihu: http://localhost:1313
+    i-zhihu: https://www.zhihu.com/people/guo-meng-68-41
+    c-twitter: https://twitter.com/tonyituite
+    #d-facebook: "http://localhost:1313"
+    #e-linkedin: "http://localhost:1313"
     #c-twitter: http://localhost:1313
     #q-bilibili: http://localhost:1313
     #t-youtube: http://localhost:1313
