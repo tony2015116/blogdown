@@ -4,13 +4,12 @@ date: "2022-05-04"
 lastmod: "2022-05-04"
 mathjax: yes
 #menu: main
-title: "👋🏻欢迎来到我的博客"
+title: "👋🏻欢迎访问我的博客"
 #weight: 50
 toc: no
 reward: no
 draft: no
 ---
-
 
 <p align="center">
     <img src="/./about_files/my_photo.png" alt="" width="20%"/>
@@ -81,5 +80,8 @@ draft: no
 ![cloudflare](https://img.shields.io/badge/-Cloudflare-black?style=plastic&logo=Cloudflare&labelColor=5c5c5c&color=1182c3) 
 <a href="https://www.name.com/zh-cn/" target="_blank"><img src="https://img.shields.io/badge/website-name.com-1182c3"></a>
  --->
+
+> hi gys
+
 
 <a href="/./about_files/my_cv.pdf" download="my_cv.pdf">**点击下载我的简历**</a>
