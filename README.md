@@ -100,8 +100,3 @@
 -   [Create and publish a Website with R and Hugo](https://cosx.org/2018/01/build-blog-with-blogdown-hugo-netlify-github/) - 基本讲述了Rstudio+blogdown+netlify+github框架的构建
 -   [Up & running with blogdown in 2021](https://www.apreshill.com/blog/2020-12-new-year-new-blogdown/) - 基本讲述了Rstudio+blogdown+netlify+github框架的构建
 -   [Media Buy之免费且高速的Landing Page部署方案](https://maxjmac.com/affiliate-marketing/high-speed-landing-pages-host/#:~:text=Netlify%E6%9C%AC%E8%BA%AB%E6%98%AF%E4%B8%80%E4%B8%AA%E5%85%8D%E8%B4%B9%E7%9A%84%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88%EF%BC%8C%E4%B8%BB%E8%A6%81%E6%98%AF%E7%BB%99%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%EF%BC%8C%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%20https%3A%2F%2Fmaxjmac.com,%E6%9C%80%E5%88%9D%E4%B9%9F%E6%98%AF%E4%BD%BF%E7%94%A8Netlify%E4%BD%9C%E4%B8%BA%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88%E3%80%82%20%E5%AE%83%E6%AF%8F%E4%B8%AA%E6%9C%88%E6%9C%89100GB%E7%9A%84%E5%B8%A6%E5%AE%BD%E9%A2%9D%E5%BA%A6%EF%BC%8C%E7%9C%8B%E4%B8%8A%E5%8E%BB%E5%A5%BD%E5%83%8F%E4%B8%8D%E6%98%AF%E5%BE%88%E5%A4%9F%E7%94%A8%EF%BC%8C%E4%BD%86%E6%98%AF%E5%BD%93%E4%BD%A0%E9%85%8D%E5%90%88CloudFlare%E7%9A%84CDN%E8%BF%9B%E8%A1%8C%E4%BD%BF%E7%94%A8%E7%9A%84%E8%AF%9D%EF%BC%8C100GB%E6%98%AF%E5%AE%8C%E5%85%A8%E8%B6%B3%E5%A4%9F%E7%9A%84%E3%80%82) - Cloudflare相关使用介绍
-
-
-
-
-<a href="https://dun.mianbaoduo.com/@guoguo" target="_blank"><img src="https://img.niucodata.com/dundunfan-bt.png" width="300"></a>
