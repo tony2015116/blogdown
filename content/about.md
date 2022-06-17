@@ -4,7 +4,7 @@ date: "2022-05-04"
 lastmod: "2022-05-04"
 mathjax: yes
 #menu: main
-title: guoguo
+title: "关于我和我的博客"
 #weight: 50
 toc: no
 reward: yes
@@ -14,7 +14,7 @@ draft: no
 
 <p align="center">
     <img src="/./about_files/my_photo.png" alt="" width="20%"/>
-    <p align="center">三观比五官正，思想比套路深，终身学习的数据分析爱好者 😘</p>
+    <p align="center">👋🏻三观比五官正，思想比套路深，终身学习的数据分析爱好者 😘</p>
 </p>
 
 <!--- #整段注释

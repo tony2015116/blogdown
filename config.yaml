@@ -68,8 +68,8 @@ menu:
       name: 分类
       url: /categories/
       weight: 40
-    - identifier: about me
-      name: 关于我
+    - identifier: about
+      name: 关于
       weight: 50
       url: /about/
     # - name: Twitter
@@ -78,11 +78,11 @@ menu:
     
 
 params:
-  customCSS: [] #'douban.css' #'sspai.css'
+  customCSS: ['custom.css'] #'douban.css' #'sspai.css'
   customJS: []
   dateFormatToUse: '2006-01-02'
 
-  logoTitle: GuoGuo's Blog
+  logoTitle: guoguo's blog
   photoswipe: no
   #rssFullContent: yes
   homeFullContent: no
