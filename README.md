@@ -72,7 +72,8 @@
 我的博客是基于<font color=red>**Rstudio + blogdown + GitHub + Netlify**</font>构架搭建。[Hugo-theme-jane](https://github.com/xianmin/hugo-theme-jane)精美简洁，同时又与**blogdown**比较契合的博客主题👍🏻。我的博客在此基础上做了少许修改。我的博客访问地址:point_right::[https://www.rusersplace.com](https://www.rusersplace.com)。
 
 #### **如何搭建和我一模一样的博客？**
-1. 相关软件及网站介绍
+**1. 相关软件及网站介绍**
+
 - R版本为：Version 4.1.0 (2021-05-18)
 - Rstudio版本为：Version 1.4.1717
 - R包blogdown版本为：Version 1.9.1
@@ -83,13 +84,16 @@
 - Cloudflare： 加快博客访问速度
 - name.com：购买.com域名,可以使用支付宝付款,我购买的域名大概100多块钱
 
-2. 适合什么人搭建？
+**2. 适合什么人搭建？**
+
 如果你使用R语言，同时对Rstudio用的比较熟练，我墙裂推荐你使用我的方法搭建博客。心动不如行动，快来fork我的repo：**blogdown**源代码吧，通过对[Hugo-theme-jane](https://github.com/xianmin/hugo-theme-jane)主题的修改，现在已经可以在Rstudio上写博客了。对于想写博客，又不想折腾的，且对简洁美观有要求的朋友，仅仅修改需要将你下载的repo中/content/post内容删除掉就可以写博客了。
 
-3. 博客搭建思路
+**3. 博客搭建思路**
+
 网络上已经有很多帖子写关于如何搭建静态博客了，综合起来还是可以理出大致的建站头绪的。首先你得对R，Rstudio比较熟悉，并且在你电脑上已经安装了（建议都安装比较新的版本）；电脑上安装Git，有自己的GitHub账号，通过Rstudio可以调用Git，打通和GitHub的关系，可以实现版本控制；在Rstudio上安装R包~blogdown，通过blogdown的说明，安装Hugo，有时Hugo不同通过Rstudio安装，就需要下载到本地再安装；通过blogdown建站到你指定的文件夹下，使用Jane主题；将博客所在文件夹push到github；申请Netlify账号，将在GitHub上的博客repo部署到netlify；购买.com域名；通过Cloudflare加快博客访问速度。
 
-4. 博客搭建参考
+**4. 博客搭建参考**
+
 下面的五个建站参考，基本可以解决99%的问题，唯一未涉及到的就是如何在Rstudio中使用Git。
 -   [用 R 语言的 blogdown+hugo+netlify+github建博客](https://cosx.org/2018/01/build-blog-with-blogdown-hugo-netlify-github/) - 基本讲述了Rstudio+blogdown+netlify+github框架的构建
 -   [如何搭建静态个人博客](https://cosx.org/2018/01/build-blog-with-blogdown-hugo-netlify-github/) - 基本讲述了Rstudio+blogdown+netlify+github框架的构建
