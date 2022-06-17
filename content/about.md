@@ -4,17 +4,17 @@ date: "2022-05-04"
 lastmod: "2022-05-04"
 mathjax: yes
 #menu: main
-title: "关于我和我的博客"
+title: "👋🏻欢迎来到我的博客"
 #weight: 50
 toc: no
-reward: yes
+reward: no
 draft: no
 ---
 
 
 <p align="center">
     <img src="/./about_files/my_photo.png" alt="" width="20%"/>
-    <p align="center">👋🏻三观比五官正，思想比套路深，终身学习的数据分析爱好者 😘</p>
+    <p align="center">三观比五官正，思想比套路深，终身学习的数据分析爱好者 😘</p>
 </p>
 
 <!--- #整段注释
@@ -62,7 +62,7 @@ draft: no
     <a href="#" target="_blank">
         <img src="https://img.shields.io/badge/-Cloudflare-black?style=flat&logo=Cloudflare&labelColor=5c5c5c&color=1182c3" alt="Cloudflare"/>
     </a>
-    <a href="https://www.name.com/zh-cn/" target="_blank"><img src="https://img.shields.io/badge/website-name.com-1182c3"></a>
+    <a href="https://www.name.com/zh-cn/" target="_blank"><img src="https://img.shields.io/badge/domain%20website-name.com-1182c3"></a>
     <br/>
     <img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Frusersplace.com">
     <img alt="Uptime Robot ratio (7 days)" src="https://img.shields.io/uptimerobot/ratio/7/m791900776-ed1a1390af61a95b31efa693">
@@ -82,4 +82,4 @@ draft: no
 <a href="https://www.name.com/zh-cn/" target="_blank"><img src="https://img.shields.io/badge/website-name.com-1182c3"></a>
  --->
 
-<a href="/./about_files/my_cv.pdf" download="/./about_files/my_cv.pdf">**点击下载我的简历**</a>
+<a href="/./about_files/my_cv.pdf" download="my_cv.pdf">**点击下载我的简历**</a>
