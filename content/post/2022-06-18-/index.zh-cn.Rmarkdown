@@ -10,12 +10,12 @@ tags:
 lastmod: '2022-06-18T21:20:42+08:00'
 keywords: []
 description: ''
-comment: no
+comment: yes
 toc: no
 autoCollapseToc: no
 contentCopyright: no
 reward: no
-mathjax: no
+mathjax: yes
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">
@@ -106,11 +106,13 @@ mathjax: no
 
     5.  ***粗斜体***
 
-    6.  行内公式
+    6.  行内公式(.Rmd中可以，.Rmarkdown不可以)
 
-        $y=f(x)/t^2$
+        $ y=f(x)/t^2 $
 
-    7.  公式块 $$ y=f(x)/t^2 $$
+    7.  公式块 
+    
+        $$ y=f(x)/t^2 $$
 
     8.  特殊字符转义，如 { }
 

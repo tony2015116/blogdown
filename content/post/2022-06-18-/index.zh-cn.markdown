@@ -10,12 +10,12 @@ tags:
 lastmod: '2022-06-18T21:20:42+08:00'
 keywords: []
 description: ''
-comment: no
+comment: yes
 toc: no
 autoCollapseToc: no
 contentCopyright: no
 reward: no
-mathjax: no
+mathjax: yes
 ---
 <script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
 <link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
@@ -175,9 +175,11 @@ mathjax: no
 
     6.  行内公式
 
-        `\(y=f(x)/t^2\)`
+        $ y=f(x)/t^2 $
 
-    7.  公式块 $$ y=f(x)/t^2 $$
+    7.  公式块 
+    
+        $$ y=f(x)/t^2 $$
 
     8.  特殊字符转义，如 { }
 
