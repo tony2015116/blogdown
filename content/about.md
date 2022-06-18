@@ -99,7 +99,7 @@ comment: yes
 
 ##### 关于我的博客
 <p style="text-indent:32px;">
-    我的博客是基于<font color=red>Rstudio + blogdown + GitHub + Netlify</font> 构架搭建。<a href="https://github.com/xianmin/hugo-theme-jane">hugo-theme-jane</a> 精美简洁，同时又与blogdown 比较契合的博客主题👍🏻。我的博客在此基础上做了少许修改。有关建站的详细介绍，可以参考 <a href="https://github.com/tony2015116/blogdown">tony2015116/blogdown</a>。
+    我的博客是基于<font color=red>Rstudio + blogdown + GitHub + Netlify</font> 构架搭建。<a href="https://github.com/xianmin/hugo-theme-jane">hugo-theme-jane</a> 精美简洁，同时又与 blogdown 比较契合的博客主题👍🏻。我的博客在此基础上做了少许修改。有关建站的详细介绍，可以参考 <a href="https://github.com/tony2015116/blogdown">tony2015116/blogdown</a>。
     </p>
     
 ##### 写在最后    
