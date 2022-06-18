@@ -1,23 +1,25 @@
 ---
 title: 我的博客可以呈现哪些内容？
 author: guoguo
-date: '2022-05-19'
+date: '2022-06-18'
 slug: index.zh-cn
-categories: []
-tags: []
-lastmod: '2022-05-19T18:03:17+08:00'
+categories:
+  - 博客show
+tags:
+  - Rmarkdown
+lastmod: '2022-06-18T21:20:42+08:00'
 keywords: []
 description: ''
-comment: yes
+comment: no
 toc: no
 autoCollapseToc: no
-contentCopyright: ""
-reward: yes
-mathjax: yes
+contentCopyright: no
+reward: no
+mathjax: no
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">
-折腾了好些天了，终于我的博客是完全在Rstudio上写的，下面是我的博客可以实现的内容。经理放假拉省的积分链接发了卢卡斯的飞机离开发就拉萨的飞机了记录卡撒旦发几款卢卡斯的积分；理发师尽量扩大飞机离开附件就拉萨的飞机了就卢卡斯的积分发骄傲将发生大快捷方式大量经理据了解杰拉德JFK了经理。🤩
+第一篇博客肯定是要介绍一下博客可以呈现出哪些内容。简单点说，Markdown可以实现的内容Rmarkdown都可以实现。全程是在Rstudio上面写的，关键R和python代码都可以运行打印出结果。
 </p>
 
 <!--more-->
@@ -120,7 +122,7 @@ mathjax: yes
 
     11. 本地图片
 
-        ![猫](images/pexels-pixabay-57416.jpg)
+        ![](images/pexels-pixabay-57416.jpg)
 
     12. 表情
 
@@ -152,7 +154,7 @@ mathjax: yes
 
         <p style="text-decoration: underline;">下划线</p>
 
-    19. 删除线
+    19. 删除线（两种方式）
 
         <p style="text-decoration: line-through;">删除线</p>
 
@@ -224,10 +226,10 @@ mathjax: yes
 
     ♚
 
-14. 积分多少
+14. 其它
 
-| Col1 | Col2 | Col3 |
-|------|:----:|------|
-| a    |      |      |
-| bc   |      |      |
-| c    |      |      |
+| letter | number | values |
+|--------|:------:|-------:|
+| a      |   1    |    0.1 |
+| b      |   2    |    0.2 |
+| c      |   3    |    0.3 |

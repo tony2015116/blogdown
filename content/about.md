@@ -84,7 +84,7 @@ draft: no
 
 > 对数据感兴趣，喜欢数据分析嘛？喜欢R语言，喜欢tidyverse生态带来的丝滑体验嘛？对机器学习感兴趣，又想学一些python知识嘛？想摆脱刷视频带来的多巴胺快感，读点书、写点东西嘛？是个工具控，喜欢折腾嘛？😏交个朋友吧！🍺
 
-
+##### 关于我
 <p style="text-indent:32px;">
     我研究生毕业于华中农业大学，在校期间大多与数据打交道，做过生物信息，学过数量遗传学，唯独没搞过实验😂。从入学就确定走数据分析方向，至今已有6年R语言使用经验。熟悉tidyverse生态，喜欢purrr函数式编程，写过R包。可以简单操作linux命令行和使用Git。对基本的数据分析流程和一些常见的统计学方法有一定的了解。对于不懂的问题，遇到不熟悉的领域，喜欢从谷歌和stack overflow寻求答案。
     </p>
@@ -95,12 +95,16 @@ draft: no
 <!---#另一种简历下载按钮
 <p align="center"> <a href="/./about_files/my_cv.pdf" download="my_cv.pdf"> <strong>~点击下载我的简历~<strong> </a> </p>
 --->
+
+##### 关于我的博客
 <p style="text-indent:32px;">
-最后借用一下推友@OzolinsJanis的图勉励自己 ~ <span style="color:red;"><strong>走出舒适区，尝试新事物，对新的东西保持好奇心💪<strong></span>
+    我的博客是基于<font color=red>Rstudio + blogdown + GitHub + Netlify</font> 构架搭建。<a href="https://github.com/xianmin/hugo-theme-jane">hugo-theme-jane</a> 精美简洁，同时又与blogdown 比较契合的博客主题👍🏻。我的博客在此基础上做了少许修改。有关建站的详细介绍，可以参考 <a href="https://github.com/tony2015116/blogdown">tony2015116/blogdown</a>。
     </p>
-
-
     
+##### 写在最后    
+<p style="text-indent:32px;">
+借用一下推友@OzolinsJanis的图勉励自己 ~ <span style="color:red;"><strong>走出舒适区，敢于尝试新事物，永远保持好奇心💪<strong></span>
+    </p>
 <p align="center">
-    <img src="/./about_files/like1.png" alt="" width="60%"/>
+    <img src="/./about_files/like.png" alt="" width="60%"/>
 </p>
