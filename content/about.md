@@ -65,7 +65,7 @@ draft: no
     </a>
     <br/>
     <a href="/./about_files/my_cv.pdf" download="my_cv.pdf" target="_blank">
-        <img alt="GitHub Workflow Status" src="https://img.shields.io/badge/CV-点击下载我的简历-blueviolet">
+        <img alt="GitHub Workflow Status" src="https://img.shields.io/badge/CV-点击下载我的简历-red?style=flat">
     </a>
  </p>
 
@@ -92,13 +92,15 @@ draft: no
     数据分析之路魔幻的从养二师兄🐷开始，在养殖公司育种部门已有三年的工作经验。负责本部门部分数据分析工作，通过代码简化工作流程，实现数据处理自动化，至今已获取多项软件著作权。
     </p>
 
-
-
-<!---
+<!---#另一种简历下载按钮
 <p align="center"> <a href="/./about_files/my_cv.pdf" download="my_cv.pdf"> <strong>~点击下载我的简历~<strong> </a> </p>
 --->
+<p style="text-indent:32px;">
+最后借用一下推友@OzolinsJanis的图勉励自己 ~ <span style="color:red;"><strong>走出舒适区，尝试新事物，对新的东西保持好奇心💪<strong></span>
+    </p>
 
 
+    
 <p align="center">
-    <img src="/./about_files/like.png" alt="" width="60%"/>
+    <img src="/./about_files/like1.png" alt="" width="60%"/>
 </p>
