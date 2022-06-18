@@ -111,7 +111,7 @@ params:
     i-zhihu: https://www.zhihu.com/people/guo-meng-68-41
     c-twitter: https://twitter.com/tonyituite
     #d-facebook: "http://localhost:1313"
-    #e-linkedin: "http://localhost:1313"
+    e-linkedin: https://www.linkedin.cn/incareer/in/%E7%8C%9B-%E9%83%AD-71a51711a
     #c-twitter: http://localhost:1313
     #q-bilibili: http://localhost:1313
     #t-youtube: http://localhost:1313
