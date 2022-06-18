@@ -9,6 +9,7 @@ title: "👋🏻欢迎访问我的博客"
 toc: no
 reward: no
 draft: no
+comment: yes
 ---
 
 <p align="center">
