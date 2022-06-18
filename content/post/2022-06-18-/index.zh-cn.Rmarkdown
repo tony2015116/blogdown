@@ -19,7 +19,7 @@ mathjax: yes
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">
-第一篇博客肯定是要介绍一下博客可以呈现出哪些内容。简单点说，Markdown可以实现的内容Rmarkdown都可以实现。全程是在Rstudio上面写的，关键R和python代码都可以运行打印出结果。
+第一篇博客肯定是要介绍一下博客可以呈现出哪些内容。简单点说，Markdown可以实现的内容Rmarkdown都可以实现。全程是在Rstudio上面写的，值得高兴的是R和python代码都可以运行打印出结果。
 </p>
 
 <!--more-->
