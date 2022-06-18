@@ -40,6 +40,8 @@ mathjax: yes
     df <- read_csv(readr_example("mtcars.csv"),comment = "")
     head(df)
     ```
+    
+    
 
     ```{r echo=FALSE, message=FALSE, warning=FALSE}
     #以下测试代码引用自https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html#Insert_Images_into_Columns

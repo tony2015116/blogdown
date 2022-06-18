@@ -65,6 +65,8 @@ mathjax: yes
     ## 5  18.7     8   360   175  3.15  3.44  17.0     0     0     3     2
     ## 6  18.1     6   225   105  2.76  3.46  20.2     1     0     3     1
     ```
+    
+    
 
     <table class=" lightable-paper lightable-hover" style='font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;'>
      <thead>

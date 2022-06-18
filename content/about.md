@@ -28,7 +28,7 @@ comment: yes
 
 <p align="center">
     <a href="https://github.com/xianmin/hugo-theme-jane" target="_blank">
-        <img alt="GitHub Workflow Status" src="https://img.shields.io/badge/blog%20theme-Hugo--theme--jane-orange">
+        <img alt="GitHub Workflow Status" src="https://img.shields.io/badge/blog%20theme-hugo--theme--jane-orange">
     </a>
     <a href="#">
         <img src="https://img.shields.io/github/last-commit/tony2015116/blogdown" alt="GitHub last commit"/>
@@ -70,6 +70,56 @@ comment: yes
     </a>
  </p>
 
+<!---
+<p align="center">
+    <a href="https://github.com/xianmin/hugo-theme-jane" target="_blank">
+        <img alt="GitHub Workflow Status" src="https://img.shields.io/badge/blog%20theme-hugo--theme--jane-orange">
+    </a>
+    <a href="#">
+        <img src="https://img.shields.io/github/last-commit/tony2015116/blogdown" alt="GitHub last commit"/>
+    </a>
+    <a href="https://github.com/tony2015116/blogdown" target="_blank">
+        <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/tony2015116/blogdown">
+    </a>
+    <a href="https://github.com/tony2015116/blog_comments" target="_blank">
+        <img alt="Issues" src="https://img.shields.io/github/issues/tony2015116/blog_comments" />
+    </a>
+    <a href="https://github.com/tony2015116/blogdown" target="_blank">
+        <img alt="GitHub" src="https://img.shields.io/github/license/tony2015116/blogdown"/>
+    </a>
+    <a href="#" target="_blank">
+        <img src="https://jaywcjlove.github.io/sb/lang/chinese.svg" alt="jaywcjlove/sb"/>
+    </a>
+    <br/>
+    <a href="#" target="_blank">
+        <img src="https://img.shields.io/badge/-Hugo-black?style=flat&logo=Hugo&labelColor=5c5c5c&color=1182c3" alt="Hugo"/>
+    </a>
+    <a href="#" target="_blank">
+        <img src="https://img.shields.io/badge/-GitHub-black?style=flat&logo=GitHub&labelColor=5c5c5c&color=1182c3" alt="GitHub"/>
+    </a>
+    <a href="#" target="_blank">
+        <img src="https://img.shields.io/badge/-Rstudio-black?style=flat&logo=Rstudio&labelColor=5c5c5c&color=1182c3" alt="Rstudio"/>
+    </a>
+     </a>
+    <a href="#" target="_blank">
+        <img src="https://img.shields.io/badge/-Netlify-black?style=flat&logo=Netlify&labelColor=5c5c5c&color=1182c3" alt="Netlify"/>
+    </a>
+    <a href="#" target="_blank">
+        <img src="https://img.shields.io/badge/-Cloudflare-black?style=flat&logo=Cloudflare&labelColor=5c5c5c&color=1182c3" alt="Cloudflare"/>
+    </a>
+    <a href="https://www.name.com/zh-cn/" target="_blank"><img src="https://img.shields.io/badge/domain%20website-name.com-1182c3">
+    </a>
+    <br/>
+    <a href="/./about_files/my_cv.pdf" download="my_cv.pdf" target="_blank">
+        <img alt="GitHub Workflow Status" src="https://img.shields.io/badge/CV-点击下载我的简历-red?style=flat">
+    </a>
+ </p>
+
+--->
+
+
+
+
 <!--- #整段注释
 ![jaywcjlove/sb](https://jaywcjlove.github.io/sb/lang/chinese.svg) #国旗badge
  <a href="https://github.com/pudongping/pudongping.github.io/pulls" target="_blank"><img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/pudongping/pudongping.github.io" /></a> #github pull request badge
@@ -98,6 +148,7 @@ comment: yes
 --->
 
 ##### 关于我的博客
+
 <p style="text-indent:32px;">
     我的博客是基于<font color=red>Rstudio + blogdown + GitHub + Netlify</font> 构架搭建。<a href="https://github.com/xianmin/hugo-theme-jane">hugo-theme-jane</a> 精美简洁，同时又与 blogdown 比较契合的博客主题👍🏻。我的博客在此基础上做了少许修改。有关建站的详细介绍，可以参考 <a href="https://github.com/tony2015116/blogdown">tony2015116/blogdown</a>。
     </p>
