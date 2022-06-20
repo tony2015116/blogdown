@@ -65,8 +65,6 @@ mathjax: yes
     ## 5  18.7     8   360   175  3.15  3.44  17.0     0     0     3     2
     ## 6  18.1     6   225   105  2.76  3.46  20.2     1     0     3     1
     ```
-    
-    
 
     <table class=" lightable-paper lightable-hover" style='font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;'>
      <thead>
@@ -177,10 +175,10 @@ mathjax: yes
 
     6.  行内公式(.Rmd中可以，.Rmarkdown不可以)
 
-        $ y=f(x)/t^2 $
+        \$ y=f(x)/t^2 \$
 
-    7.  公式块 
-    
+    7.  公式块
+
         $$ y=f(x)/t^2 $$
 
     8.  特殊字符转义，如 { }
@@ -192,6 +190,10 @@ mathjax: yes
         <a href="https://www.animatedimages.org/cat-cats-209.htm"><img src="https://www.animatedimages.org/data/media/209/animated-cat-image-0167.gif" border="0" alt="animated-cat-image-0167" /></a>
 
     11. 本地图片
+
+        ![](images/test%20(1).svg)
+
+        ![](images/test.svg)
 
         ![](images/pexels-pixabay-57416.jpg)
 

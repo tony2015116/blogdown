@@ -40,8 +40,6 @@ mathjax: yes
     df <- read_csv(readr_example("mtcars.csv"),comment = "")
     head(df)
     ```
-    
-    
 
     ```{r echo=FALSE, message=FALSE, warning=FALSE}
     #以下测试代码引用自https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html#Insert_Images_into_Columns
@@ -110,10 +108,10 @@ mathjax: yes
 
     6.  行内公式(.Rmd中可以，.Rmarkdown不可以)
 
-        $ y=f(x)/t^2 $
+        \$ y=f(x)/t^2 \$
 
-    7.  公式块 
-    
+    7.  公式块
+
         $$ y=f(x)/t^2 $$
 
     8.  特殊字符转义，如 { }
