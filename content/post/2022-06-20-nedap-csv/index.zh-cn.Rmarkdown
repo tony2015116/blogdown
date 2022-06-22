@@ -1,0 +1,46 @@
+---
+title: 实现睿保乐nedap种猪性能测定数据自动下载
+author: guoguo
+date: '2022-06-20'
+slug: index.zh-cn
+categories:
+  - 爬虫
+  - 自动化
+tags:
+  - R
+  - selenium
+  - RSelenium
+  - chromedriver
+  - taskscheduleR
+  - purrr
+lastmod: '2022-06-20T23:48:26+08:00'
+keywords: []
+description: ''
+comment: no
+toc: no
+autoCollapseToc: no
+contentCopyright: no
+reward: no
+mathjax: no
+---
+
+<p style="text-indent:2em;font-size:;font-family:;">
+是否每天都要在同一个网站上下载几百份的excel文件？😱是否可虑过自动下载替代手动下载？再加上定时下载呢？是不是很cool?虽然这篇博文是讲的是实现对睿保乐种猪测定系统网站上csv数据自动、定时下载，但也可以作为参考应用到其它场景中。
+</p>
+
+<!--more-->
+
+<p align="center">
+    <img src="images/nedap1.png" alt="" width="60%"/>
+    <img src="images/images.png" alt="" width="20%"/>
+</p>
+
+<p style="text-indent:2em;font-size:;font-family:;">
+一般的做法那就是一台测定站每天每天的下载，要下载XXX台，因为不能一次性下载太多，选定日期和测定站范围太大会导致下载的数据不完整；其次，就是选定多台测定站一天或者一台测定站多天数据来下载。无论你怎么选择，都是要人工手动进行下载，如果每天下载几百台测定站，那你没个把小时还真难搞定。
+</p>
+
+------------------------------------------------------------------------
+
+<p style="text-indent:32px;">
+    我选择通过R平台<font color=red>Selenium + chromediriver + RSelenium + taskscheduleR + purrr</font> 来实现定时自动下载所有数据。
+    </p>
