@@ -50,22 +50,34 @@ mathjax: no
 
 ##### 下载相应的软件并安装
 
--   下载安装谷歌浏览器并安装；
+-   **下载安装谷歌浏览器并安装；**
 
--   下载和谷歌浏览器对应版本的chromedriver
+-   **下载和谷歌浏览器对应版本的chromedriver；**
 
-    <http://chromedriver.storage.googleapis.com/index.html>
+    [*http://chromedriver.storage.googleapis.com/index.html*](http://chromedriver.storage.googleapis.com/index.html)
 
-    <https://registry.npmmirror.com/binary.html?path=chromedriver/>
+    [*https://registry.npmmirror.com/binary.html?path=chromedriver/*](https://registry.npmmirror.com/binary.html?path=chromedriver/)
 
--   下载selenium-server，本地也必须已经安装java
+-   **下载selenium-server，本地也必须已经安装java**
 
-    <https://www.selenium.dev/downloads/>
+    [*https://www.selenium.dev/downloads/*](https://www.selenium.dev/downloads/)
 
     ![](images/selenium-server.png)
 
--   在R中安装RSelenium包，通过R代码指令控制谷歌浏览器，替代鼠标点击网站页面
+-   **在R中安装RSelenium包，通过R代码指令控制谷歌浏览器，替代鼠标点击网站页面；**
 
     ![](images/rselenium.svg)
 
--   待写...
+-   **使用谷歌浏览器打开网页，将光标放在所需要点击和输入的地方，点击鼠标右键，选择\~\~\~\~检查，拷贝xpath；**
+
+    ![](images/check.png)
+
+-   **按照点击顺序，分别获取xpath。模仿点击网页，输入文本等，最后组合成函数；**
+
+-   **必须运行Selenium后，将以下代码放到.bat文件中，直接双节运行，在R中才能使用RSelenium包；**
+
+    ![](images/run-selenium.svg)
+
+-   **使用purrr包循环运行编写的函数，生成R脚本，实现循环下载；**
+
+-   **使用taskscheduleR包实现定时运行R脚本；**
