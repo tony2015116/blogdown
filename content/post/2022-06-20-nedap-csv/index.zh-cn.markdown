@@ -64,7 +64,7 @@ mathjax: no
 
 -   在R中安装RSelenium包，通过R代码指令控制谷歌浏览器，替代鼠标点击网站页面；
 
-    ![](images/rselenium.svg)
+    ![](images/rselenium-1.svg)
 
 -   使用谷歌浏览器打开网页，将光标放在所需要点击和输入的地方，点击鼠标右键，选择\~\~\~\~检查，拷贝xpath；
 
