@@ -16,11 +16,11 @@ tags:
 lastmod: '2022-06-20T23:48:26+08:00'
 keywords: []
 description: ''
-comment: no
+comment: yes
 toc: no
 autoCollapseToc: no
-contentCopyright: no
-reward: no
+contentCopyright: "如需转载，请联系作者，谢谢"
+reward: yes
 mathjax: no
 ---
 
