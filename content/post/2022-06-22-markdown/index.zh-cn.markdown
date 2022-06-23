@@ -1,5 +1,5 @@
 ---
-title: 总结了自己使用markdown创作的几个方法
+title: 总结了自己使用markdown创作的几种方法
 author: guoguo
 date: '2022-06-22'
 slug: index.zh-cn
@@ -20,13 +20,15 @@ contentCopyright: no
 reward: yes
 mathjax: yes
 ---
+
 <p style="text-indent:2em;font-size:;font-family:;">
-工欲善其事必先利其器。使用markdown创作是我摆脱了排版中遇到的各种抓狂。但是使用markdown创作后，如何输出呢？我总结了我使用遇到和在使用的几种思路。关于具体的装好申请和软件安装使用等等，网上都能搜的到，我这里就不再做知识的搬运工了😄。
+工欲善其事必先利其器。使用markdown创作是我摆脱了排版中遇到的各种抓狂。但是使用markdown创作后，如何输出呢？我总结了我使用遇到和在使用的几种思路方法。关于设计的账号申请，软件安装和参数设置等，都能百度的到，我这里就不再做知识的搬运工了😄。
 </p>
- <!--more-->
+
+<!--more-->
+
+<p align="center"> <img src="images/markdown.jpg" alt="" width="100%"/> </p>
 
 <p align="center">
-    <img src="images/markdown.jpg" alt="" width="100%"/>
+  <a href="https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&edit=_blank&layers=1&nav=1&title=%E5%A6%82%E4%BD%95%E6%9B%B4%E5%A5%BD%E7%9A%84%E8%BF%9B%E8%A1%8C%E7%9F%A5%E8%AF%86%E8%BE%93%E5%87%BA#Uhttps%3A%2F%2Fraw.githubusercontent.com%2Ftony2015116%2Fflowchart%2Fmain%2F%25E5%25A6%2582%25E4%25BD%2595%25E6%259B%25B4%25E5%25A5%25BD%25E7%259A%2584%25E8%25BF%259B%25E8%25A1%258C%25E7%259F%25A5%25E8%25AF%2586%25E8%25BE%2593%25E5%2587%25BA">网页版点击此处</a>
 </p>
-
-
