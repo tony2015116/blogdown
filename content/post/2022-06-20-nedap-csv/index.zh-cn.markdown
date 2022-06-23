@@ -34,21 +34,19 @@ mathjax: no
 
 <!--more-->
 
-#### 常规方法下载的难点
+##### 常规方法下载的难点
 
 <p style="text-indent:2em;font-size:;font-family:;">
 一般的做法那就是一台测定站每天每天的下载，要下载几十上百台；其次，就是选定多台测定站一天或者一台测定站多天数据来下载。但因为不能一次性下载太多，选定日期和测定站范围太大会导致下载的数据不完整，无论你怎么选择，都是要人工手动进行下载，如果每天下载几百台测定站，没有个把小时是比较难搞定的。
 </p>
 
-#### 实现定时自动下载
+##### 实现定时自动下载
 
 <p style="text-indent:32px;">
 我的思路是依托R平台，使用<font color=red> Selenium + chromedriver + RSelenium + taskscheduleR + purrr</font> 来实现定时自动下载所有数据。
     </p>
 
 > Selenium 是一个用于Web应用程序测试的工具。Selenium测试直接运行在浏览器中，就像真正的用户在操作一样。
-
-##### 下载相应的软件并安装
 
 -   下载安装谷歌浏览器并安装；
 
@@ -82,4 +80,8 @@ mathjax: no
 
 -   使用taskscheduleR包实现定时运行R脚本；
 
-<!--more-->
+##### 参考连接：
+
+1.  <https://www.bilibili.com/video/BV1354y1p7GY?p=1>
+
+2.  <https://blog.csdn.net/qq_38984677/article/details/81353537>
