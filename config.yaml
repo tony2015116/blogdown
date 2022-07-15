@@ -70,8 +70,12 @@ menu:
       weight: 40
     - identifier: about
       name: 关于
-      weight: 50
+      weight: 60
       url: /about/
+    - identifier: python
+      name: python学习
+      weight: 50
+      url: /python学习/
     # - name: Twitter
     #   url: https://twitter.com/rstudio
     

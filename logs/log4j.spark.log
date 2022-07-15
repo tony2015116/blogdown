@@ -1,0 +1,89 @@
+22/07/15 14:49:12 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+22/07/15 14:49:14 INFO SparkContext: Running Spark version 2.4.3
+22/07/15 14:49:14 WARN SparkConf: Note that spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone/kubernetes and LOCAL_DIRS in YARN).
+22/07/15 14:49:14 INFO SparkContext: Submitted application: sparklyr
+22/07/15 14:49:14 INFO SecurityManager: Changing view acls to: Dell
+22/07/15 14:49:14 INFO SecurityManager: Changing modify acls to: Dell
+22/07/15 14:49:14 INFO SecurityManager: Changing view acls groups to: 
+22/07/15 14:49:14 INFO SecurityManager: Changing modify acls groups to: 
+22/07/15 14:49:14 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(Dell); groups with view permissions: Set(); users  with modify permissions: Set(Dell); groups with modify permissions: Set()
+22/07/15 14:49:14 INFO Utils: Successfully started service 'sparkDriver' on port 3060.
+22/07/15 14:49:14 INFO SparkEnv: Registering MapOutputTracker
+22/07/15 14:49:14 INFO SparkEnv: Registering BlockManagerMaster
+22/07/15 14:49:14 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+22/07/15 14:49:14 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+22/07/15 14:49:14 INFO DiskBlockManager: Created local directory at C:\Users\Dell\AppData\Local\spark\spark-2.4.3-bin-hadoop2.7\tmp\local\blockmgr-bd655557-fc83-4e78-adac-450ff0550eac
+22/07/15 14:49:14 INFO MemoryStore: MemoryStore started with capacity 912.3 MB
+22/07/15 14:49:14 INFO SparkEnv: Registering OutputCommitCoordinator
+22/07/15 14:49:14 WARN Utils: The configured local directories are not expected to be URIs; however, got suspicious values [C:/Users/Dell/AppData/Local/spark/spark-2.4.3-bin-hadoop2.7/tmp/local]. Please check your configured local directories.
+22/07/15 14:49:14 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+22/07/15 14:49:14 INFO SparkUI: Bound SparkUI to 127.0.0.1, and started at http://127.0.0.1:4040
+22/07/15 14:49:14 INFO SparkContext: Added JAR file:/C:/Users/Dell/Documents/R/win-library/4.1/sparklyr/java/sparklyr-2.4-2.11.jar at spark://127.0.0.1:3060/jars/sparklyr-2.4-2.11.jar with timestamp 1657867754957
+22/07/15 14:49:15 INFO Executor: Starting executor ID driver on host localhost
+22/07/15 14:49:15 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 3101.
+22/07/15 14:49:15 INFO NettyBlockTransferService: Server created on 127.0.0.1:3101
+22/07/15 14:49:15 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+22/07/15 14:49:15 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 3101, None)
+22/07/15 14:49:15 INFO BlockManagerMasterEndpoint: Registering block manager 127.0.0.1:3101 with 912.3 MB RAM, BlockManagerId(driver, 127.0.0.1, 3101, None)
+22/07/15 14:49:15 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 3101, None)
+22/07/15 14:49:15 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 127.0.0.1, 3101, None)
+22/07/15 14:49:15 INFO SharedState: loading hive config file: file:/C:/Users/Dell/AppData/Local/spark/spark-2.4.3-bin-hadoop2.7/conf/hive-site.xml
+22/07/15 14:49:15 INFO SharedState: Setting hive.metastore.warehouse.dir ('C:/Users/Dell/AppData/Local/spark/spark-2.4.3-bin-hadoop2.7/tmp/hive') to the value of spark.sql.warehouse.dir ('C:/Users/Dell/AppData/Local/spark/spark-2.4.3-bin-hadoop2.7/tmp/hive').
+22/07/15 14:49:15 INFO SharedState: Warehouse path is 'C:/Users/Dell/AppData/Local/spark/spark-2.4.3-bin-hadoop2.7/tmp/hive'.
+22/07/15 14:49:16 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+22/07/15 14:49:18 INFO HiveUtils: Initializing HiveMetastoreConnection version 1.2.1 using Spark classes.
+22/07/15 14:49:19 INFO HiveMetaStore: 0: Opening raw store with implemenation class:org.apache.hadoop.hive.metastore.ObjectStore
+22/07/15 14:49:19 INFO ObjectStore: ObjectStore, initialize called
+22/07/15 14:49:19 INFO Persistence: Property hive.metastore.integral.jdo.pushdown unknown - will be ignored
+22/07/15 14:49:19 INFO Persistence: Property datanucleus.cache.level2 unknown - will be ignored
+22/07/15 14:49:21 INFO ObjectStore: Setting MetaStore object pin classes with hive.metastore.cache.pinobjtypes="Table,StorageDescriptor,SerDeInfo,Partition,Database,Type,FieldSchema,Order"
+22/07/15 14:49:22 INFO Datastore: The class "org.apache.hadoop.hive.metastore.model.MFieldSchema" is tagged as "embedded-only" so does not have its own datastore table.
+22/07/15 14:49:22 INFO Datastore: The class "org.apache.hadoop.hive.metastore.model.MOrder" is tagged as "embedded-only" so does not have its own datastore table.
+22/07/15 14:49:22 INFO Datastore: The class "org.apache.hadoop.hive.metastore.model.MFieldSchema" is tagged as "embedded-only" so does not have its own datastore table.
+22/07/15 14:49:22 INFO Datastore: The class "org.apache.hadoop.hive.metastore.model.MOrder" is tagged as "embedded-only" so does not have its own datastore table.
+22/07/15 14:49:22 INFO MetaStoreDirectSql: Using direct SQL, underlying DB is DERBY
+22/07/15 14:49:22 INFO ObjectStore: Initialized ObjectStore
+22/07/15 14:49:23 WARN ObjectStore: Version information not found in metastore. hive.metastore.schema.verification is not enabled so recording the schema version 1.2.0
+22/07/15 14:49:23 WARN ObjectStore: Failed to get database default, returning NoSuchObjectException
+22/07/15 14:49:23 INFO HiveMetaStore: Added admin role in metastore
+22/07/15 14:49:23 INFO HiveMetaStore: Added public role in metastore
+22/07/15 14:49:23 INFO HiveMetaStore: No user is added in admin role, since config is empty
+22/07/15 14:49:23 INFO HiveMetaStore: 0: get_all_databases
+22/07/15 14:49:23 INFO audit: ugi=Dell	ip=unknown-ip-addr	cmd=get_all_databases	
+22/07/15 14:49:23 INFO HiveMetaStore: 0: get_functions: db=default pat=*
+22/07/15 14:49:23 INFO audit: ugi=Dell	ip=unknown-ip-addr	cmd=get_functions: db=default pat=*	
+22/07/15 14:49:23 INFO Datastore: The class "org.apache.hadoop.hive.metastore.model.MResourceUri" is tagged as "embedded-only" so does not have its own datastore table.
+22/07/15 14:49:23 INFO SessionState: Created local directory: C:/Users/Dell/AppData/Local/Temp/f502d23c-64b4-40c0-884c-01d97a07a2d3_resources
+22/07/15 14:49:23 INFO SessionState: Created HDFS directory: C:/Users/Dell/AppData/Local/spark/spark-2.4.3-bin-hadoop2.7/tmp/hive/Dell/f502d23c-64b4-40c0-884c-01d97a07a2d3
+22/07/15 14:49:23 INFO SessionState: Created local directory: C:/Users/Dell/AppData/Local/spark/spark-2.4.3-bin-hadoop2.7/tmp/hive/f502d23c-64b4-40c0-884c-01d97a07a2d3
+22/07/15 14:49:23 INFO SessionState: Created HDFS directory: C:/Users/Dell/AppData/Local/spark/spark-2.4.3-bin-hadoop2.7/tmp/hive/Dell/f502d23c-64b4-40c0-884c-01d97a07a2d3/_tmp_space.db
+22/07/15 14:49:23 INFO HiveClientImpl: Warehouse location for Hive client (version 1.2.2) is C:/Users/Dell/AppData/Local/spark/spark-2.4.3-bin-hadoop2.7/tmp/hive
+22/07/15 14:49:23 INFO HiveMetaStore: 0: get_database: default
+22/07/15 14:49:23 INFO audit: ugi=Dell	ip=unknown-ip-addr	cmd=get_database: default	
+22/07/15 14:49:23 INFO HiveMetaStore: 0: get_database: global_temp
+22/07/15 14:49:23 INFO audit: ugi=Dell	ip=unknown-ip-addr	cmd=get_database: global_temp	
+22/07/15 14:49:23 WARN ObjectStore: Failed to get database global_temp, returning NoSuchObjectException
+22/07/15 14:49:23 INFO HiveMetaStore: 0: get_database: default
+22/07/15 14:49:23 INFO audit: ugi=Dell	ip=unknown-ip-addr	cmd=get_database: default	
+22/07/15 14:49:23 INFO HiveMetaStore: 0: get_database: default
+22/07/15 14:49:23 INFO audit: ugi=Dell	ip=unknown-ip-addr	cmd=get_database: default	
+22/07/15 14:49:23 INFO HiveMetaStore: 0: get_tables: db=default pat=*
+22/07/15 14:49:23 INFO audit: ugi=Dell	ip=unknown-ip-addr	cmd=get_tables: db=default pat=*	
+22/07/15 14:49:24 INFO CodeGenerator: Code generated in 213.1745 ms
+22/07/15 14:49:32 INFO HiveMetaStore: 0: get_database: default
+22/07/15 14:49:32 INFO audit: ugi=Dell	ip=unknown-ip-addr	cmd=get_database: default	
+22/07/15 14:49:32 INFO HiveMetaStore: 0: get_database: default
+22/07/15 14:49:32 INFO audit: ugi=Dell	ip=unknown-ip-addr	cmd=get_database: default	
+22/07/15 14:49:32 INFO HiveMetaStore: 0: get_tables: db=default pat=*
+22/07/15 14:49:32 INFO audit: ugi=Dell	ip=unknown-ip-addr	cmd=get_tables: db=default pat=*	
+22/07/15 14:49:42 INFO SparkContext: Invoking stop() from shutdown hook
+22/07/15 14:49:42 INFO SparkUI: Stopped Spark web UI at http://127.0.0.1:4040
+22/07/15 14:49:42 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+22/07/15 14:49:42 INFO MemoryStore: MemoryStore cleared
+22/07/15 14:49:42 INFO BlockManager: BlockManager stopped
+22/07/15 14:49:42 INFO BlockManagerMaster: BlockManagerMaster stopped
+22/07/15 14:49:42 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+22/07/15 14:49:42 INFO SparkContext: Successfully stopped SparkContext
+22/07/15 14:49:42 INFO ShutdownHookManager: Shutdown hook called
+22/07/15 14:49:42 INFO ShutdownHookManager: Deleting directory C:\Users\Dell\AppData\Local\Temp\spark-777fafcd-ce0f-45a2-8b7f-afbb4a31364e
+22/07/15 14:49:42 INFO ShutdownHookManager: Deleting directory C:\Users\Dell\AppData\Local\spark\spark-2.4.3-bin-hadoop2.7\tmp\local\spark-70664406-d616-42b6-9074-4534fe8cb3bb

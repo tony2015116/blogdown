@@ -85,3 +85,20 @@ mathjax: no
 1.  <https://www.bilibili.com/video/BV1354y1p7GY?p=1>
 
 2.  <https://blog.csdn.net/qq_38984677/article/details/81353537>
+
+
+
+<ul>
+<li><p>下载安装谷歌浏览器并安装；</p>
+</li>
+<li><p>下载和谷歌浏览器对应版本的chromedriver；</p>
+<p><a href="http://chromedriver.storage.googleapis.com/index.html"><em>http://chromedriver.storage.googleapis.com/index.html</em></a></p>
+<p><a href="https://registry.npmmirror.com/binary.html?path=chromedriver/"><em>https://registry.npmmirror.com/binary.html?path=chromedriver/</em></a></p>
+</li>
+<li><p>下载selenium-server，本地也必须已经安装java；</p>
+<p><a href="https://www.selenium.dev/downloads/"><em>https://www.selenium.dev/downloads/</em></a></p>
+<p><img src="images/selenium-server.png" alt=""></p>
+</li>
+</ul>
+
+
