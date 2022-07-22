@@ -119,7 +119,6 @@ params:
     #c-twitter: http://localhost:1313
     #q-bilibili: http://localhost:1313
     #t-youtube: http://localhost:1313
-    m-instagram: "https://www.instagram.com/mguo2021/"
   
   utteranc:
    enable: yes
