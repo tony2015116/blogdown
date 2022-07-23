@@ -10,11 +10,11 @@ tags:
   - 日期格式
 lastmod: '2022-07-22T18:52:04+08:00'
 keywords: []
-description: 'R语言将同列数据中既有字符串日期格式又有字符串数字格式的列转为日期格式'
+description: 'R语言处理列为字符串格式的日期数据'
 comment: yes
 toc: no
 autoCollapseToc: no
-contentCopyright: ""
+contentCopyright: "如需转载，请联系作者，谢谢"
 reward: yes
 mathjax: yes
 ---

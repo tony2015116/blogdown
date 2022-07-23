@@ -14,7 +14,7 @@ description: 'excel中常用的字符串处理函数'
 comment: yes
 toc: no
 autoCollapseToc: no
-contentCopyright: no
+contentCopyright: "如需转载，请联系作者，谢谢"
 reward: yes
 mathjax: yes
 ---
