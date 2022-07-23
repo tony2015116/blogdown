@@ -1,7 +1,7 @@
 ---
 title: 总结几个excel中常用的字符串处理函数
 author: guoguo
-date: '2022-07-24'
+date: '2022-07-18'
 slug: index.zh-cn
 categories:
   - 数据处理
