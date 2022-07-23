@@ -1,5 +1,5 @@
 ---
-title: 使用R将日期和整数数字为字符串格式的同列转为日期格式
+title: 使用R语言处理多形式字符串格式的日期列
 author: guoguo
 date: '2022-07-22'
 slug: index.zh-cn
@@ -8,6 +8,7 @@ categories:
 tags:
   - R
   - 日期格式
+  - 字符串
 lastmod: '2022-07-22T18:52:04+08:00'
 keywords: []
 description: 'R语言处理列为字符串格式的日期数据'
