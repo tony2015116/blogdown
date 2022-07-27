@@ -1,0 +1,186 @@
+---
+title: ggplot2中与直方图的再次邂逅😉
+author: guoguo
+date: '2022-07-27'
+slug: index.zh-cn
+categories:
+  - 数据可视化
+tags:
+  - R
+  - ggplot2
+  - ggsci
+lastmod: '2022-07-27T21:49:41+08:00'
+keywords: []
+description: ''
+comment: yes
+toc: no
+autoCollapseToc: no
+contentCopyright: "如需转载，请联系作者，谢谢"
+reward: yes
+mathjax: yes
+---
+
+<p style="text-indent:2em;font-size:;font-family:;">
+直方图是我在展示连续性变量数据中最常用的可视化方式。它直观，可以一眼看出数据的分布方式、分布区间、最大值、最小值，可以展示出最为丰富的信息量，这也是我最喜欢使用直方图的原因。这篇文章中想再次使用ggplot2展示我工作中最常用的直方图的使用，直接show code吧。
+</p>
+
+<!--more-->
+
+
+```r
+# load packages
+library(tidyverse)
+library(rio)
+library(ggsci)
+
+# load data
+data <- import("C:/Users/Dell/Desktop/test/直方图_test.xlsx")
+
+# head data
+head(data)
+```
+
+```
+##      性状1    性状2  品种
+## 1 1037.581 1.696180 品种1
+## 2 1203.515 1.660862 品种1
+## 3 1343.965 1.609266 品种1
+## 4 1210.213 1.643525 品种1
+## 5 1243.049 1.640075 品种1
+## 6 1423.899 1.477895 品种1
+```
+
+#### 1. 单变量直方图
+
+
+```r
+#单变量直方图
+# plot
+data0 <- data %>%
+  filter(品种=="品种2")
+histgram_plot0 <- ggplot(data0, aes(x = 性状2)) +
+  geom_histogram(binwidth = 0.035, fill="#69b3a2", color="#e9ecef", alpha=0.9) +
+  scale_x_continuous(limits = c(1, 4),breaks = seq(1,4, 0.1))
+
+# 总体数据统计量
+summ0 <- data0 %>%
+  group_by(品种) %>%
+  rstatix::get_summary_stats(性状2, type = "common") %>%
+  mutate_at(4:11, round, digits=2) %>%
+  select(品种, n, min, max, median, mean_all = mean, sd) %>%
+  mutate(lab = paste("统计:","\nn = ", n,"\nmin = ", min, "\nmax = ", max, "\nmedian = ", median, "\nmean = ", mean_all,"\nsd = ", sd),
+         position=c(3.2)) %>%
+  select(品种, mean_all, lab, position)
+
+# 将统计量图层添加到histgram_plot中
+histgram_plot0 + 
+  geom_text(data = summ0, aes(x=position, label = lab), y=Inf, hjust=0, vjust=1.1, size=6, color = "black") +
+  geom_vline(data = summ0, aes(xintercept = mean_all, color = breed), size=1, color = "red3") +
+  theme_minimal() +
+  labs(y = "计数",title = paste0("品种2的性状2表型情况"),x = "性状2") +
+  theme(axis.title.x = element_text(vjust=0),
+        axis.title.y = element_text(vjust=1),
+        plot.title = element_text(color = "black", size = 22, face = "bold", vjust = 0.5, hjust = 0.5),
+        strip.text = element_text(size = 15, face = "bold"),
+        axis.title = element_text( size = 15, face = "bold" ),
+        legend.position = "bottom"
+  )
+```
+
+<img src="/post/2022-07-27-ggplot/index.zh-cn_files/figure-html/unnamed-chunk-2-1.png" width="1152" />
+
+#### 2. 单变量分组直方图
+
+
+```r
+# 单变量分组直方图
+# plot
+histgram_plot <- ggplot(data, aes(x = 性状2, fill = 品种)) +
+  geom_histogram(binwidth = 0.035) +
+  facet_grid(品种 ~ ., scales = "fixed", space = "free") +
+  scale_x_continuous(limits = c(1, 4),breaks = seq(1,4, 0.1)) +
+  ggsci::scale_fill_aaas()
+
+# 总体数据统计量
+summ1 <- data %>%
+  group_by(品种) %>%
+  rstatix::get_summary_stats(性状2, type = "common") %>%
+  mutate_at(4:11, round, digits=2) %>%
+  select(品种, n, min, max, median, mean_all = mean, sd) %>%
+  mutate(lab = paste("统计:","\nn = ", n,"\nmin = ", min, "\nmax = ", max, "\nmedian = ", median, "\nmean = ", mean_all,"\nsd = ", sd), position=c(3.2)) %>%
+  select(品种, mean_all, lab, position)
+
+# 将统计量图层添加到histgram_plot中
+histgram_plot + 
+  geom_text(data = summ1, aes(x=position, label = lab), y=Inf, hjust=0, vjust=1.1, size=5, color = "black") +
+  geom_vline(data = summ1, aes(xintercept = mean_all, color = 品种), size=1, color = "green3") +
+  theme_minimal() +
+  labs(y = "计数",title = paste0("品种1与品种2的性状2表型分布情况"),x = "性状2") +
+  theme(axis.title.x = element_text(vjust=0),
+        axis.title.y = element_text(vjust=1),
+        plot.title = element_text(color = "black", size = 22, face = "bold", vjust = 0.5, hjust = 0.5),
+        strip.text = element_text(size = 15, face = "bold"),
+        axis.title = element_text( size = 15, face = "bold" ),
+        legend.position = "bottom"
+  )
+```
+
+<img src="/post/2022-07-27-ggplot/index.zh-cn_files/figure-html/unnamed-chunk-3-1.png" width="1152" />
+
+#### 3. 多变量分组直方图
+
+
+```r
+# 将宽格式数据转为长格式
+data2 <- data %>%
+  pivot_longer(性状1:性状2, names_to = "性状", values_to = "表型值")
+
+# head data2
+head(data2)
+```
+
+```
+## # A tibble: 6 x 3
+##   品种  性状   表型值
+##   <chr> <chr>   <dbl>
+## 1 品种1 性状1 1038.  
+## 2 品种1 性状2    1.70
+## 3 品种1 性状1 1204.  
+## 4 品种1 性状2    1.66
+## 5 品种1 性状1 1344.  
+## 6 品种1 性状2    1.61
+```
+
+
+```r
+# 多变量分组直方图
+histgram_plot2 <- ggplot(data2, aes(x = 表型值, fill = 品种)) +
+  geom_histogram(bins = 50) +
+  facet_grid(品种 ~ 性状, scales = "free") +
+  ggsci::scale_fill_aaas()
+
+# 总体数据统计量
+summ2 <- data2 %>%
+  group_by(品种, 性状) %>%
+  rstatix::get_summary_stats(表型值, type = "common") %>%
+  mutate_at(4:11, round, digits=2) %>%
+  select(品种, 性状, n, min, max, median, mean_all = mean, sd) %>%
+  mutate(lab = paste("统计:","\nn = ", n,"\nmin = ", min, "\nmax = ", max, "\nmedian = ", median, "\nmean = ", mean_all,"\nsd = ", sd), position=c(2.7)) %>%
+  select(品种, 性状, mean_all, lab, position)
+
+# 将统计量图层添加到histgram_plot中
+histgram_plot2 + 
+  geom_text(data = summ2, aes(x=-Inf, y=Inf, label = lab), hjust=0, vjust=1.1, size=5, color = "purple", inherit.aes = FALSE) +
+  geom_vline(data = summ2, aes(xintercept = mean_all, color = 品种), size=1, color = "green3") +
+  theme_minimal()+
+  labs(y = "计数",title = "品种1和品种2的性状1和性状2表型分布情况",x = "表型值") +
+  theme(axis.title.x = element_text(vjust=0),
+        axis.title.y = element_text(vjust=1),
+        plot.title = element_text(color = "black", size = 22, face = "bold", vjust = 0.5, hjust = 0.5),
+        strip.text = element_text(size = 15, face = "bold"),
+        axis.title = element_text( size = 15, face = "bold" ),
+        legend.position = "bottom"
+  )
+```
+
+<img src="/post/2022-07-27-ggplot/index.zh-cn_files/figure-html/unnamed-chunk-5-1.png" width="1152" />
