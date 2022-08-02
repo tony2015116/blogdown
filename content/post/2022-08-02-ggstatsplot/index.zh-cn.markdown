@@ -1,0 +1,107 @@
+---
+title: 使用ggstatsplot画漂亮的多变量分组箱线图
+author: guoguo
+date: '2022-08-02'
+slug: index.zh-cn
+categories:
+  - 数据可视化
+tags:
+  - R
+  - ggstatsplot
+  - ggplot2
+  - boxplot
+lastmod: '2022-08-02T22:21:23+08:00'
+keywords: []
+description: 'ggstatsplot画漂亮的多变量分组箱线图'
+comment: yes
+toc: no
+autoCollapseToc: no
+contentCopyright: no
+reward: yes
+mathjax: yes
+---
+<p style="text-indent:2em;font-size:;font-family:;">
+R语言中比较常用的是ggplot2,使用facet_grid或者facet_wrap函数都可以达到多变量分组的目的。今天使用ggstatsplot包中的grouped_ggbetweenstats函数来实现漂亮的分组箱线图。
+</p>
+<!--more-->
+
+```r
+# load packages
+library(rio)
+library(ggstatsplot)
+library(patchwork)
+library(ggplot2)
+
+# import data 
+data <- import("C:/Users/Dell/Desktop/test/boxplot_test.xlsx")
+
+# head and str
+head(data)
+```
+
+```
+##   house    sex   group    表型1    表型2    表型3
+## 1   A栋 Female Control 1025.448 2590.417 2.320741
+## 2   A栋   Male Control 1259.911 2625.490 1.901759
+## 3   A栋   Male Control 1122.635 2652.478 2.167755
+## 4   A栋 Female Control 1118.958 2611.615 2.139318
+## 5   A栋 Female Control 1028.005 2470.417 2.200539
+## 6   A栋   Male Control 1208.472 3056.655 2.336606
+```
+
+```r
+str(data)
+```
+
+```
+## 'data.frame':	707 obs. of  6 variables:
+##  $ house: chr  "A栋" "A栋" "A栋" "A栋" ...
+##  $ sex  : chr  "Female" "Male" "Male" "Female" ...
+##  $ group: chr  "Control" "Control" "Control" "Control" ...
+##  $ 表型1: num  1025 1260 1123 1119 1028 ...
+##  $ 表型2: num  2590 2625 2652 2612 2470 ...
+##  $ 表型3: num  2.32 1.9 2.17 2.14 2.2 ...
+```
+
+```r
+## plot
+grouped_ggbetweenstats(
+  data = data,
+  x = group,
+  y = 表型3,
+  grouping.var     = house, ## grouping variable
+  pairwise.display = "significant", ## display only significant pairwise comparisons
+  p.adjust.method  = "fdr", ## method for adjusting p-values for multiple
+  ggplot.component = list(scale_y_continuous(breaks = seq(1.8, 2.8, 0.1),limits = (c(1.8, 2.8))),
+                          theme(axis.text.x = element_text(angle = 0),
+                                plot.title = element_text(color = "red", size = 18, face = "bold", vjust = 0, hjust = 0.5))),
+  outlier.label.args = list(color = "red"),
+  package = "yarrr", ## package from which color palette is to be taken
+  palette = "info2", ## choosing a different color palette
+  plotgrid.args    = list(nrow = 1),
+  #annotation.args  = list(title = "plot title"),
+  results.subtitle = F,
+  ylab = "fcr",
+  xlab = " ",
+  plot.type = "boxviolin",
+  ggtheme = theme(
+    axis.text = element_text(size = 10, color = "black"),
+    axis.title = element_text(size = 12),
+    #plot.title = element_text(color = "red", size = 18, face = "bold", vjust = 0, hjust = 0.5),
+    axis.ticks = element_blank(),
+    axis.line = element_line(colour = "grey50"),
+    panel.grid = element_line(color = "#b4aea9"),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(linetype = "dashed"),
+    panel.background = element_rect(fill = "#fbf9f4", color = "#fbf9f4"),
+    plot.background = element_rect(fill = "#fbf9f4", color = "#fbf9f4")
+  )
+) +
+  patchwork::plot_annotation('A栋-B栋-C栋表型3的小提琴-箱线图',
+                             caption = 'made with ggstatsplot and patchwork',
+                             theme = theme(plot.title = element_text(color = "black", size = 18, face = "bold", vjust = 1, hjust = 0.5)))
+```
+
+<img src="/post/2022-08-02-ggstatsplot/index.zh-cn_files/figure-html/unnamed-chunk-1-1.png" width="960" />
+
