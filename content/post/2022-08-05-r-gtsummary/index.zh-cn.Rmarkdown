@@ -1,0 +1,57 @@
+---
+title: 使用R包gtsummary计算基本统计量
+author: guoguo
+date: '2022-08-05'
+slug: index.zh-cn
+categories:
+  - 数据分析
+tags:
+  - R
+  - gtsummary
+  - 基本统计量
+lastmod: '2022-08-05T23:45:07+08:00'
+keywords: []
+description: ''
+comment: yes
+toc: no
+autoCollapseToc: no
+contentCopyright: no
+reward: yes
+mathjax: yes
+---
+
+<p style="text-indent:2em;font-size:;font-family:;">
+工作中经常遇到统计一些如数量、平均值、中位数、标准差等一些基本的统计量，通常会在R中试用summarise等函数统计好后导出到excel中，然后再在excel中整理美化表格，这种方式是比较麻烦的。简单一些的是通过一些R包将结果输出为html格式，然后截图。还比较少有R包可以将html格式的储存为图片格式的R包，但gtsummary包就是其中一个（其它的类似R包比较少见）集合统计和导出图片还可以设定图片主题的强大R包。
+</p>
+
+<!--more-->
+
+<p style="text-indent:2em;font-size:;font-family:;">
+gtsummary包中很多函数。刚接触，所以使用的比较少。但我相信后面会使用的多起来，我比较喜欢的是可以导出图片格式。详细的介绍可以看 <a href="https://www.danieldsjoberg.com/gtsummary/index.html">gtsummary reference</a>。
+</p>
+
+```{r message=FALSE, warning=FALSE}
+# load package
+library(tidyverse)
+library(gtsummary)
+library(gt)
+
+test <- iris %>%
+  tbl_summary(by = Species, missing = "no",
+              statistic = list(all_continuous() ~ "{mean}±{sd}", 
+                               #all_continuous() ~ c("{median} ({p25}, {p75})", "{min}, {max}")
+                               all_categorical() ~ "{n} ({p}%)")) 
+
+# output as html type in markdown
+test %>%
+  as_flex_table()
+
+# output as image(导出的图片如下)
+theme_gtsummary_journal(journal = "jama") # set output image theme
+test %>% 
+  as_gt() %>%
+  gt::gtsave(filename = "C:/Users/Dell/Desktop/my_table_image.png") #save table as image
+
+```
+
+
