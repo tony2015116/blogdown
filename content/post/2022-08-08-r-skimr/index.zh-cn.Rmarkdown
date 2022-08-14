@@ -20,7 +20,7 @@ reward: no
 mathjax: no
 ---
 <p style="text-indent:2em;font-size:;font-family:;">
-skimr是一个比较方便而且全面地汇总数据数据的R包。具体使用可以参考 <a href="https://docs.ropensci.org/skimr/reference/index.html">skimr reference</a>。
+skimr是一个比较方便汇总数据数据的R包。使用非常简单，具体使用可以参考 <a href="https://docs.ropensci.org/skimr/reference/index.html">skimr reference</a>。
 </p>
 <!--more-->
 ```{r message=FALSE, warning=FALSE}
