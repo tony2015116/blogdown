@@ -1,0 +1,39 @@
+---
+title: 使用R包skimr做描述性统计
+author: guoguo
+date: '2022-08-08'
+slug: index.zh-cn
+categories:
+  - 数据分析
+tags:
+  - R
+  - skimr
+  - 基本统计量
+lastmod: '2022-08-14T21:06:22+08:00'
+keywords: []
+description: ''
+comment: no
+toc: no
+autoCollapseToc: no
+contentCopyright: no
+reward: no
+mathjax: no
+---
+<p style="text-indent:2em;font-size:;font-family:;">
+skimr是一个比较方便而且全面地汇总数据数据的R包。具体使用可以参考 <a href="https://docs.ropensci.org/skimr/reference/index.html">skimr reference</a>。
+</p>
+<!--more-->
+```{r message=FALSE, warning=FALSE}
+# load packages
+library(tidyverse)
+library(skimr)
+library(flextable)
+
+# 受限于网站主题，输出格式不是很友好
+skimr::skim(iris)
+
+# 使用.html格式输出，将所有结果都汇总到了一个表上，缺乏了美感
+skim(iris) %>% 
+  flextable::flextable()
+```
+
