@@ -1,0 +1,47 @@
+---
+title: 使用R包crosstable计算基本统计量
+author: guoguo
+date: '2022-08-14'
+slug: index.zh-cn
+categories:
+  - 数据分析
+tags:
+  - R
+  - crosstable
+  - 基本统计量
+lastmod: '2022-08-14T18:57:18+08:00'
+keywords: []
+description: ''
+comment: yes
+toc: no
+autoCollapseToc: no
+contentCopyright: no
+reward: yes
+mathjax: yes
+---
+<p style="text-indent:2em;font-size:;font-family:;">
+crosstable包也可以实现基本统计量的计算，导出方式和gtsummary包的格式略有不同，但可以导出到docx文件中。具体的使用操作可以参考 <a href="https://www.danieldsjoberg.com/gtsummary/index.html">crosstable reference</a>。
+</p>
+<!--more-->
+```{r message=FALSE, warning=FALSE}
+# load packages
+library(tidyverse)
+library(crosstable)
+library(flextable)
+library(officer)
+
+test <- crosstable(iris, 1:4, by = c(Species),
+                   showNA = c("no"),
+                   num_digits = 2,
+                   funs=c(N, mean, median, sd))
+
+# output as html type in markdown
+test %>%
+  flextable::as_flextable()
+
+# 将结果导出到.docx文件中
+doc <- read_docx() %>% 
+  body_add_crosstable(test)
+write_and_open(doc, "C:/Users/Dell/Desktop/res_output.docx")
+```
+

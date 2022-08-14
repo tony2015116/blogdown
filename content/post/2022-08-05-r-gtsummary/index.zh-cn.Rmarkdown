@@ -19,7 +19,6 @@ contentCopyright: no
 reward: yes
 mathjax: yes
 ---
-
 <p style="text-indent:2em;font-size:;font-family:;">
 工作中经常遇到统计一些如数量、平均值、中位数、标准差等一些基本的统计量，通常会在R中试用summarise等函数统计好后导出到excel中，然后再在excel中整理美化表格，这种方式是比较麻烦的。简单一些的是通过一些R包将结果输出为html格式，然后截图。还比较少有R包可以将html格式的储存为图片格式的R包，但gtsummary包就是其中一个（其它的类似R包比较少见）集合统计和导出图片还可以设定图片主题的强大R包。
 </p>
