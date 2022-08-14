@@ -20,7 +20,7 @@ reward: yes
 mathjax: yes
 ---
 <p style="text-indent:2em;font-size:;font-family:;">
-crosstable包也可以实现基本统计量的计算，导出方式和gtsummary包的格式略有不同，但可以导出到docx文件中。具体的使用操作可以参考 <a href="https://www.danieldsjoberg.com/gtsummary/index.html">crosstable reference</a>。
+crosstable包也可以实现基本统计量的计算，导出方式和gtsummary包的格式略有不同，但可以导出到docx文件中。具体的使用操作可以参考 <a href="https://danchaltiel.github.io/crosstable/reference/index.html">crosstable reference</a>。
 </p>
 <!--more-->
 ```{r message=FALSE, warning=FALSE}
