@@ -1,0 +1,39 @@
+---
+title: 使用R包rstatix做描述性统计
+author: guoguo
+date: '2022-08-06'
+slug: index.zh-cn
+categories:
+  - 数据分析
+tags:
+  - R
+  - rstatix
+  - 基本统计量
+lastmod: '2022-08-14T20:47:16+08:00'
+keywords: []
+description: ''
+comment: yes
+toc: no
+autoCollapseToc: no
+contentCopyright: no
+reward: yes
+mathjax: yes
+---
+rstatix是我最常使用的R包了。主要使用其中的get_summary_stats函数对数据集做一个描述性统计。具体使用可以参考 <a href="https://rpkgs.datanovia.com/rstatix/reference/index.html">rstatix reference</a>。
+<!--more-->
+```{r message=FALSE, warning=FALSE}
+# load packages
+library(tidyverse)
+library(rstatix)
+library(flextable)
+
+test <- iris %>%
+  pivot_longer(-5, names_to = "Types", values_to = "Values") %>%
+  group_by(Species, Types) %>%
+  rstatix::get_summary_stats(Values, type = "common") 
+
+# output as html type in markdown
+test %>%
+  flextable::flextable()
+```
+
