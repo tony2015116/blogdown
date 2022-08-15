@@ -22,13 +22,13 @@ mathjax: yes
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">
-在张敬信老师《R语言编程》中接触到了了使用R语言链接MySQL数据库。MySQL很早被我视为必须技能之一，因为对大数据比较感兴趣，仅仅使用R语言可能应付不了太大的数据量。因为我对R语言很熟悉，所以这也是我学习MySQL的一个契机🤭。R语言是将数据载入内存再操作，但数据量超过内存限制时，将大数据存放在远程MySQL数据库中，通过R建立链接，再使用R命令进行数据探索。
+在张敬信老师《R语言编程》中接触到如何使用R语言链接MySQL数据库。因为我对数据分析比较感兴趣，所以我觉得MySQL是必备技能之一。仅仅使用R语言可能应付不了大数据，但我对R语言很熟悉，所以这也是我学习MySQL的一个契机🤭。
 </p>
 
 <!--more-->
 
 <p style="text-indent:2em;font-size:;font-family:;">
-MySQL、SQL Server都是常见的数据库软件，再R中可以通过RMySQL、RMariaDB、RSQLite、odbc等R包建立与数据库的链接。dplyr是tidyverse生态中操作数据的核心R包，dbplyr包可以让你操作数据库像使用dplyr包操作数据一样简单方便。
+R语言是将数据载入内存再操作，但数据量超过内存限制时，将大数据存放在远程MySQL数据库中，通过R建立链接，再使用R命令进行数据探索。MySQL、SQL Server都是常见的数据库软件，再R中可以通过RMySQL、RMariaDB、RSQLite、odbc等R包建立与数据库的链接。dplyr是tidyverse生态中操作数据的核心R包，dbplyr包可以让你操作数据库像使用dplyr包操作数据一样简单方便。
 </p>
 
 #### 1. 配置MySQL开发环境
@@ -69,7 +69,7 @@ dbListTables(con1) # 查看 con 连接下的数据表
 ```
 
 ```
-## [1] "exam" "iris"
+## [1] "exam"  "iris"  "iris2"
 ```
 
 
@@ -88,7 +88,7 @@ dbListTables(con2)
 ```
 
 ```
-## [1] "exam" "iris"
+## [1] "exam"  "iris"  "iris2"
 ```
 
 #### 4. 创建数据表
