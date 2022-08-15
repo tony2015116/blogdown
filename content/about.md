@@ -133,6 +133,8 @@ comment: yes
 <a href="https://www.name.com/zh-cn/" target="_blank"><img src="https://img.shields.io/badge/website-name.com-1182c3"></a>
  --->
 
+<img src="https://ghchart.rshah.org/00785D/tony2015116" alt="guoguo's Github Chart" />
+
 > 对数据感兴趣，喜欢数据分析嘛？喜欢R语言，喜欢 tidyverse 生态带来的丝滑体验嘛？对机器学习感兴趣，又想学一些 python 知识嘛？想摆脱刷视频带来的多巴胺快感，读点书、写点东西嘛？是个工具控，喜欢折腾嘛？😏交个朋友吧！🍺
 
 ##### 关于我
