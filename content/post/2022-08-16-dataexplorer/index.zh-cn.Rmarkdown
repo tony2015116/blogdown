@@ -1,0 +1,111 @@
+---
+title: 使用DataExplorer包进行数据探索性分析
+author: guoguo
+date: '2022-08-16'
+slug: index.zh-cn
+categories:
+  - 数据分析
+tags:
+  - R
+  - 数据探索性分析
+  - EDA
+  - DataExplorer
+lastmod: '2022-08-16T20:54:36+08:00'
+keywords: []
+description: ''
+comment: no
+toc: no
+autoCollapseToc: no
+contentCopyright: no
+reward: no
+mathjax: no
+---
+
+<p style="text-indent:2em;font-size:;font-family:;">
+我使用过DataExplorer包进行过数据探索性分析，对了解数据的基本情况很有帮助。具体操作可以参考 <a href="http://boxuancui.github.io/DataExplorer/articles/dataexplorer-intro.html">DataExplorer reference</a>。
+</p>
+
+<!--more-->
+
+```{r message=FALSE, warning=FALSE}
+# load packages
+library(DataExplorer)
+library(tidyverse)
+```
+
+#### 1. 数据结构可视化
+
+```{r echo=TRUE, fig.height=3, fig.width=4}
+plot_str(diamonds)
+```
+
+<p align="center">
+    <img src="images/data_str.png" alt="" width="100%"/>
+</p>
+
+#### 2. 数据集介绍
+
+```{r}
+introduce(diamonds) %>%
+  flextable::flextable()
+```
+
+```{r}
+# 对上述介绍可视化
+plot_intro(diamonds)
+```
+
+```{r}
+# 缺失值可视化
+plot_missing(diamonds)
+```
+
+#### 2. 离散型变量分布可视化
+
+```{r fig.height=6, fig.width=8}
+# 对所有离散型变量分布可视化
+plot_bar(diamonds)
+# 增加with参数，以with参数为横轴
+plot_bar(diamonds, with = "price")
+# 增加by参数,以by参数分组
+plot_bar(diamonds, by = "cut")
+plot_bar(diamonds, by = "cut", by_position = "dodge")
+```
+
+#### 3. 连续型变量可视化
+
+```{r fig.height=6, fig.width=10}
+plot_histogram(diamonds)
+```
+
+#### 4. QQ plot
+
+```{r fig.height=8, fig.width=10}
+plot_qq(diamonds)
+```
+
+#### 5. 相关性分析
+
+```{r}
+# 使用iris数据集
+plot_correlation(iris)
+```
+
+#### 6. 箱线图
+
+```{r fig.height=4, fig.width=8}
+plot_boxplot(iris, by = "Species")
+```
+
+#### 7. 散点图
+
+```{r}
+plot_scatterplot(iris, by = "Species")
+```
+
+#### 8. 生成数据探索性分析报告
+
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=FALSE, echo=TRUE}
+# 具体可以参考DataExplorer reference
+create_report(iris)
+```
