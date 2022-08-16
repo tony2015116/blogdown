@@ -52,7 +52,7 @@ introduce(diamonds) %>%
   flextable::flextable()
 ```
 
-<template id="d9dbbb36-c84a-460d-9178-281dd0fc7129"><style>
+<template id="3d15c8c1-8881-4acf-9177-5b2b99472151"><style>
 .tabwid table{
   border-spacing:0px !important;
   border-collapse:collapse;
@@ -86,12 +86,12 @@ introduce(diamonds) %>%
 .tabwid table tr {
 background-color: transparent;
 }
-</style><div class="tabwid"><style>.cl-a7326cfc{}.cl-a72ace84{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-a72afe40{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-a72b1c68{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a72b1c69{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class='cl-a7326cfc'>
-<thead><tr style="overflow-wrap:break-word;"><td class="cl-a72b1c69"><p class="cl-a72afe40"><span class="cl-a72ace84">rows</span></p></td><td class="cl-a72b1c69"><p class="cl-a72afe40"><span class="cl-a72ace84">columns</span></p></td><td class="cl-a72b1c69"><p class="cl-a72afe40"><span class="cl-a72ace84">discrete_columns</span></p></td><td class="cl-a72b1c69"><p class="cl-a72afe40"><span class="cl-a72ace84">continuous_columns</span></p></td><td class="cl-a72b1c69"><p class="cl-a72afe40"><span class="cl-a72ace84">all_missing_columns</span></p></td><td class="cl-a72b1c69"><p class="cl-a72afe40"><span class="cl-a72ace84">total_missing_values</span></p></td><td class="cl-a72b1c69"><p class="cl-a72afe40"><span class="cl-a72ace84">complete_rows</span></p></td><td class="cl-a72b1c69"><p class="cl-a72afe40"><span class="cl-a72ace84">total_observations</span></p></td><td class="cl-a72b1c69"><p class="cl-a72afe40"><span class="cl-a72ace84">memory_usage</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-a72b1c68"><p class="cl-a72afe40"><span class="cl-a72ace84">53,940</span></p></td><td class="cl-a72b1c68"><p class="cl-a72afe40"><span class="cl-a72ace84">10</span></p></td><td class="cl-a72b1c68"><p class="cl-a72afe40"><span class="cl-a72ace84">3</span></p></td><td class="cl-a72b1c68"><p class="cl-a72afe40"><span class="cl-a72ace84">7</span></p></td><td class="cl-a72b1c68"><p class="cl-a72afe40"><span class="cl-a72ace84">0</span></p></td><td class="cl-a72b1c68"><p class="cl-a72afe40"><span class="cl-a72ace84">0</span></p></td><td class="cl-a72b1c68"><p class="cl-a72afe40"><span class="cl-a72ace84">53,940</span></p></td><td class="cl-a72b1c68"><p class="cl-a72afe40"><span class="cl-a72ace84">539,400</span></p></td><td class="cl-a72b1c68"><p class="cl-a72afe40"><span class="cl-a72ace84">3,457,760</span></p></td></tr></tbody></table></div></template>
-<div class="flextable-shadow-host" id="12fe57e0-db3b-4ebb-800e-564a62a60718"></div>
+</style><div class="tabwid"><style>.cl-eaa7ab34{}.cl-eaa052e4{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-eaa052e5{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-eaa07896{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-eaa07897{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class='cl-eaa7ab34'>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-eaa07897"><p class="cl-eaa052e5"><span class="cl-eaa052e4">rows</span></p></td><td class="cl-eaa07897"><p class="cl-eaa052e5"><span class="cl-eaa052e4">columns</span></p></td><td class="cl-eaa07897"><p class="cl-eaa052e5"><span class="cl-eaa052e4">discrete_columns</span></p></td><td class="cl-eaa07897"><p class="cl-eaa052e5"><span class="cl-eaa052e4">continuous_columns</span></p></td><td class="cl-eaa07897"><p class="cl-eaa052e5"><span class="cl-eaa052e4">all_missing_columns</span></p></td><td class="cl-eaa07897"><p class="cl-eaa052e5"><span class="cl-eaa052e4">total_missing_values</span></p></td><td class="cl-eaa07897"><p class="cl-eaa052e5"><span class="cl-eaa052e4">complete_rows</span></p></td><td class="cl-eaa07897"><p class="cl-eaa052e5"><span class="cl-eaa052e4">total_observations</span></p></td><td class="cl-eaa07897"><p class="cl-eaa052e5"><span class="cl-eaa052e4">memory_usage</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-eaa07896"><p class="cl-eaa052e5"><span class="cl-eaa052e4">53,940</span></p></td><td class="cl-eaa07896"><p class="cl-eaa052e5"><span class="cl-eaa052e4">10</span></p></td><td class="cl-eaa07896"><p class="cl-eaa052e5"><span class="cl-eaa052e4">3</span></p></td><td class="cl-eaa07896"><p class="cl-eaa052e5"><span class="cl-eaa052e4">7</span></p></td><td class="cl-eaa07896"><p class="cl-eaa052e5"><span class="cl-eaa052e4">0</span></p></td><td class="cl-eaa07896"><p class="cl-eaa052e5"><span class="cl-eaa052e4">0</span></p></td><td class="cl-eaa07896"><p class="cl-eaa052e5"><span class="cl-eaa052e4">53,940</span></p></td><td class="cl-eaa07896"><p class="cl-eaa052e5"><span class="cl-eaa052e4">539,400</span></p></td><td class="cl-eaa07896"><p class="cl-eaa052e5"><span class="cl-eaa052e4">3,457,760</span></p></td></tr></tbody></table></div></template>
+<div class="flextable-shadow-host" id="2359ad6b-f682-4ac7-b0de-f5afb148e84b"></div>
 <script>
-var dest = document.getElementById("12fe57e0-db3b-4ebb-800e-564a62a60718");
-var template = document.getElementById("d9dbbb36-c84a-460d-9178-281dd0fc7129");
+var dest = document.getElementById("2359ad6b-f682-4ac7-b0de-f5afb148e84b");
+var template = document.getElementById("3d15c8c1-8881-4acf-9177-5b2b99472151");
 var caption = template.content.querySelector("caption");
 if(caption) {
   caption.style.cssText = "display:block;text-align:center;";
@@ -194,3 +194,207 @@ plot_scatterplot(iris, by = "Species")
 # 具体可以参考DataExplorer reference
 create_report(iris)
 ```
+
+    ## 
+      |                                                                            
+      |                                                                      |   0%
+      |                                                                            
+      |..                                                                    |   2%
+    ##    inline R code fragments
+    ## 
+    ## 
+      |                                                                            
+      |...                                                                   |   5%
+    ## label: global_options (with options) 
+    ## List of 1
+    ##  $ include: logi FALSE
+    ## 
+    ## 
+      |                                                                            
+      |.....                                                                 |   7%
+    ##   ordinary text without R code
+    ## 
+    ## 
+      |                                                                            
+      |.......                                                               |  10%
+    ## label: introduce
+    ## 
+      |                                                                            
+      |........                                                              |  12%
+    ##   ordinary text without R code
+    ## 
+    ## 
+      |                                                                            
+      |..........                                                            |  14%
+    ## label: plot_intro
+
+    ## 
+      |                                                                            
+      |............                                                          |  17%
+    ##   ordinary text without R code
+    ## 
+    ## 
+      |                                                                            
+      |.............                                                         |  19%
+    ## label: data_structure
+    ## 
+      |                                                                            
+      |...............                                                       |  21%
+    ##   ordinary text without R code
+    ## 
+    ## 
+      |                                                                            
+      |.................                                                     |  24%
+    ## label: missing_profile
+
+    ## 
+      |                                                                            
+      |..................                                                    |  26%
+    ##   ordinary text without R code
+    ## 
+    ## 
+      |                                                                            
+      |....................                                                  |  29%
+    ## label: univariate_distribution_header
+    ## 
+      |                                                                            
+      |......................                                                |  31%
+    ##   ordinary text without R code
+    ## 
+    ## 
+      |                                                                            
+      |.......................                                               |  33%
+    ## label: plot_histogram
+
+    ## 
+      |                                                                            
+      |.........................                                             |  36%
+    ##   ordinary text without R code
+    ## 
+    ## 
+      |                                                                            
+      |...........................                                           |  38%
+    ## label: plot_density
+    ## 
+      |                                                                            
+      |............................                                          |  40%
+    ##   ordinary text without R code
+    ## 
+    ## 
+      |                                                                            
+      |..............................                                        |  43%
+    ## label: plot_frequency_bar
+
+    ## 
+      |                                                                            
+      |................................                                      |  45%
+    ##   ordinary text without R code
+    ## 
+    ## 
+      |                                                                            
+      |.................................                                     |  48%
+    ## label: plot_response_bar
+    ## 
+      |                                                                            
+      |...................................                                   |  50%
+    ##   ordinary text without R code
+    ## 
+    ## 
+      |                                                                            
+      |.....................................                                 |  52%
+    ## label: plot_with_bar
+    ## 
+      |                                                                            
+      |......................................                                |  55%
+    ##   ordinary text without R code
+    ## 
+    ## 
+      |                                                                            
+      |........................................                              |  57%
+    ## label: plot_normal_qq
+
+    ## 
+      |                                                                            
+      |..........................................                            |  60%
+    ##   ordinary text without R code
+    ## 
+    ## 
+      |                                                                            
+      |...........................................                           |  62%
+    ## label: plot_response_qq
+    ## 
+      |                                                                            
+      |.............................................                         |  64%
+    ##   ordinary text without R code
+    ## 
+    ## 
+      |                                                                            
+      |...............................................                       |  67%
+    ## label: plot_by_qq
+    ## 
+      |                                                                            
+      |................................................                      |  69%
+    ##   ordinary text without R code
+    ## 
+    ## 
+      |                                                                            
+      |..................................................                    |  71%
+    ## label: correlation_analysis
+
+    ## 
+      |                                                                            
+      |....................................................                  |  74%
+    ##   ordinary text without R code
+    ## 
+    ## 
+      |                                                                            
+      |.....................................................                 |  76%
+    ## label: principal_component_analysis
+
+    ## 
+      |                                                                            
+      |.......................................................               |  79%
+    ##   ordinary text without R code
+    ## 
+    ## 
+      |                                                                            
+      |.........................................................             |  81%
+    ## label: bivariate_distribution_header
+    ## 
+      |                                                                            
+      |..........................................................            |  83%
+    ##   ordinary text without R code
+    ## 
+    ## 
+      |                                                                            
+      |............................................................          |  86%
+    ## label: plot_response_boxplot
+    ## 
+      |                                                                            
+      |..............................................................        |  88%
+    ##   ordinary text without R code
+    ## 
+    ## 
+      |                                                                            
+      |...............................................................       |  90%
+    ## label: plot_by_boxplot
+    ## 
+      |                                                                            
+      |.................................................................     |  93%
+    ##   ordinary text without R code
+    ## 
+    ## 
+      |                                                                            
+      |...................................................................   |  95%
+    ## label: plot_response_scatterplot
+    ## 
+      |                                                                            
+      |....................................................................  |  98%
+    ##   ordinary text without R code
+    ## 
+    ## 
+      |                                                                            
+      |......................................................................| 100%
+    ## label: plot_by_scatterplot
+    ## 
+    ## "C:/Program Files/RStudio/bin/pandoc/pandoc" +RTS -K512m -RTS "C:/Users/Dell/Documents/projects/blogdown/content/post/2022-08-16-dataexplorer/report.knit.md~" --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output pandoc48402f021561.html --lua-filter "C:\Users\Dell\Documents\R\win-library\4.1\rmarkdown\rmarkdown\lua\pagebreak.lua" --lua-filter "C:\Users\Dell\Documents\R\win-library\4.1\rmarkdown\rmarkdown\lua\latex-div.lua" --self-contained --variable bs3=TRUE --standalone --section-divs --table-of-contents --toc-depth 6 --template "C:\Users\Dell\Documents\R\win-library\4.1\rmarkdown\rmd\h\default.html" --no-highlight --variable highlightjs=1 --variable theme=yeti --mathjax --variable "mathjax-url=https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --include-in-header "C:\Users\Dell\AppData\Local\Temp\Rtmpq2N8Q8\rmarkdown-str484027c41ca4.html"
