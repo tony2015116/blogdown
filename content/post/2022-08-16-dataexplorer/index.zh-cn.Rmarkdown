@@ -105,7 +105,7 @@ plot_scatterplot(iris, by = "Species")
 
 #### 8. 生成数据探索性分析报告
 
-```{r eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
+```{r eval=FALSE, echo=TRUE, message=FALSE, warning=FALSE}
 # 具体可以参考DataExplorer reference
 create_report(iris)
 ```
