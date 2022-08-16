@@ -34,7 +34,11 @@ R语言是将数据载入内存再操作，但数据量超过内存限制时，�
 #### 1. 配置MySQL开发环境
 
 <p style="text-indent:2em;font-size:;font-family:;">
-我是参考张老师的方法。使用MySQL zip版和Navicat(用于数据库管理)，MySQL的安装可以参考知乎空白格的<a href="https://zhuanlan.zhihu.com/p/64055680">mysql-8.0.16-winx64安装教程</a>。
+我是参考张老师的方法。使用MySQL zip版和Navicat(用于数据库管理)，MySQL的安装可以参考知乎空白格的<a href="https://zhuanlan.zhihu.com/p/64055680">mysql-8.0.16-winx64安装教程</a>，直到cmd可以出现以下界面：
+</p>
+
+<p align="center">
+    <img src="images/cmd_mysql.png" alt="" width="100%"/>
 </p>
 
 #### 2. 新建MySQL链接和数据库
@@ -44,8 +48,7 @@ R语言是将数据载入内存再操作，但数据量超过内存限制时，�
 </p>
 
 <p align="center">
-    <img src="images/navicat.png" alt="" width="50%"/>
-    <img src="images/navicat2.png" alt="" width="50%"/>
+    <img src="images/navicat.png" alt="" width="50%"/><img src="images/navicat2.png" alt="" width="50%"/>
 </p>
 
 #### 3. 建立R与MySQL的链接
