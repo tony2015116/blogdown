@@ -20,7 +20,7 @@ reward: no
 mathjax: no
 ---
 <p style="text-indent:2em;font-size:;font-family:;">
-记录一下使用ggplot2对daimonds数据集中depth、table、price等三个连续性变量以离散型单变量cut或离散型双变量cut&color分组的boxplot。
+记录一下我常用的使用ggplot2画boxplot的方法。以daimonds数据集为例，选择其中depth、table、price等三个连续性变量，以及cut和color两个离散型变量，分别以单变量分组和双变量分组的方法画boxplot。
 </p>
 <!--more-->
 ```{r message=FALSE, warning=FALSE}
