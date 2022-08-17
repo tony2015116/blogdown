@@ -1,0 +1,67 @@
+---
+title: 使用ggplot2画boxplot
+author: guoguo
+date: '2022-08-17'
+slug: index.zh-cn
+categories:
+  - 数据可视化
+tags:
+  - R
+  - ggplot2
+  - boxplot
+lastmod: '2022-08-17T11:26:46+08:00'
+keywords: []
+description: ''
+comment: no
+toc: no
+autoCollapseToc: no
+contentCopyright: no
+reward: no
+mathjax: no
+---
+<p style="text-indent:2em;font-size:;font-family:;">
+记录一下使用ggplot2对daimonds数据集中depth、table、price等三个连续性变量以离散型单变量cut或离散型双变量cut&color分组的boxplot。
+</p>
+<!--more-->
+```{r message=FALSE, warning=FALSE}
+# load packages
+library(tidyverse)
+
+# using ggplot2 dataset ~ diamonds
+head(diamonds) %>%
+  flextable::flextable()
+```
+
+```{r}
+# wider data to long data
+data <- diamonds %>%
+  select(2:3, 5:7) %>%
+  pivot_longer(c(depth, table, price), names_to = "variables", values_to = "values")
+head(data) %>%
+  flextable::flextable()
+
+```
+
+```{r}
+# plot boxplot
+# cut单变量分组boxplot
+ggplot(data, aes(x = cut, y = values)) +
+  geom_boxplot(aes(color=variables)) +
+  facet_grid(variables~., scales = "free") +
+  theme_minimal() + 
+  theme(axis.text.x = element_text(angle = 0, hjust = 1)) +
+  ggsci::scale_color_npg()
+```
+
+```{r}
+# plot boxplot
+# cut和color双变量分组boxplot
+ggplot(data, aes(x = cut, y = values)) +
+  geom_boxplot(aes(color=variables)) +
+  facet_grid(variables~color, scales = "free") +
+  theme_minimal() + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  ggsci::scale_color_npg()
+```
+
+
