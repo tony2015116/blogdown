@@ -1,0 +1,81 @@
+---
+title: 使用ggplot2画多变量分组点线图
+author: guoguo
+date: '2022-08-09'
+slug: index.zh-cn
+categories:
+  - 数据可视化
+tags:
+  - R
+  - ggplot2
+  - line plot
+  - point plot
+lastmod: '2022-08-17T19:26:28+08:00'
+keywords: []
+description: ''
+comment: yes
+toc: no
+autoCollapseToc: no
+contentCopyright: no
+reward: yes
+mathjax: yes
+---
+
+<p style="text-indent:2em;font-size:;font-family:;">
+记录数据分析中常用到的点线图在R中的画法。针对y值的不同计算方法，有两种画法，一种是单独计算出所需要展示变量的y值，如平均值；一种是直接使用ggplot2中自带的stat_summary()函数直接计算中初始数据中的y值。两种方法都可以画出漂亮的点线图💯。
+</p>
+
+<!--more-->
+
+```{r message=FALSE, warning=FALSE}
+# load packages
+library(tidyverse)
+
+# using ggplot2 dataset ~ diamonds
+head(diamonds) %>%
+  flextable::flextable()
+```
+
+```{r}
+# wider data to long data
+data <- diamonds %>%
+  select(2:3, 5:7) %>%
+  pivot_longer(c(depth, table, price), names_to = "variables", values_to = "values")
+
+head(data) %>%
+  flextable::flextable()
+
+summary_data <- data %>%
+  group_by(cut, color, variables) %>%
+  rstatix::get_summary_stats(values, type = "mean_sd") 
+summary_data %>%
+  head() %>%
+  flextable::flextable()
+
+```
+
+```{r}
+# 双变量cut和color分组点线图~方法1
+ggplot(summary_data, aes(x = cut, y = mean, group = 1)) +
+  geom_line() +
+  geom_point(aes(color=cut)) +
+  facet_grid(variables~color, scales = "free") +
+  theme_minimal() +
+  ggsci::scale_color_aaas() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1),
+        legend.position="bottom")
+```
+
+```{r}
+# 双变量cut和color分组点线图~方法2
+data %>% 
+  ggplot(aes(x = cut, y = values, col = cut, group = 1)) +
+  stat_summary(fun = "mean", geom = "point") +
+  stat_summary(fun = "mean", geom = "line") +
+  #scale_color_manual("cut", values = c('slategray', 'rosybrown', 'darkred', 'gold', '#08306B')) +
+  facet_grid(variables~color, scales = "free") +
+  theme_minimal() +
+  ggsci::scale_color_aaas() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1),
+        legend.position="bottom")
+```
