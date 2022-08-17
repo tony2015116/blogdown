@@ -1,0 +1,43 @@
+---
+title: 使用gt包将data.frame格式导出为图片或pdf格式
+author: guoguo
+date: '2022-08-07'
+slug: index.zh-cn
+categories:
+  - 数据读取和导出
+tags:
+  - R
+  - gt
+  - png/pdf格式
+lastmod: '2022-08-17T16:18:30+08:00'
+keywords: []
+description: ''
+comment: yes
+toc: no
+autoCollapseToc: no
+contentCopyright: no
+reward: yes
+mathjax: yes
+---
+
+<p style="text-indent:2em;font-size:;font-family:;">
+数据分析中经常会遇到将data.frame格式的数据框或统计结果导出为图片或pdf的情况。gt包很好地解决了我这个问题💯。
+</p>
+
+<!--more-->
+
+
+```r
+# load packages
+library(gt)
+library(rstatix)
+library(tidyverse)
+
+# 将统计结果导出为png/pdf格式
+iris %>%
+  rstatix::get_summary_stats(type = "common") %>%
+  gt::gt() %>% # 将data.frame转为gt格式
+  gtsave("C:/Users/Dell/Desktop/test.png") #.pdf
+```
+
+<img src="/post/2022-08-07-gt-data-frame-pdf/index.zh-cn_files/figure-html/unnamed-chunk-1-1.png" width="672" />
