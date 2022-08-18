@@ -98,8 +98,8 @@ dbListTables(con) # 查看 con 连接下的数据表
 
 
 ```sql
-# 选择countries表
-SELECT * FROM countries;
+# 选择jobs表
+SELECT * FROM jobs;
 ```
 
 
@@ -108,18 +108,18 @@ SELECT * FROM countries;
 
 Table: Table 1: Displaying records 1 - 10
 
-|country_id |country_name | region_id|
-|:----------|:------------|---------:|
-|AR         |Argentina    |         2|
-|AU         |Australia    |         3|
-|BE         |Belgium      |         1|
-|BR         |Brazil       |         2|
-|CA         |Canada       |         2|
-|CH         |Switzerland  |         1|
-|CN         |China        |         3|
-|DE         |Germany      |         1|
-|DK         |Denmark      |         1|
-|EG         |Egypt        |         4|
+|job_id |job_title                      | min_salary| max_salary|
+|:------|:------------------------------|----------:|----------:|
+|1      |Public Accountant              |       4200|       9000|
+|2      |Accounting Manager             |       8200|      16000|
+|3      |Administration Assistant       |       3000|       6000|
+|4      |President                      |      20000|      40000|
+|5      |Administration Vice President  |      15000|      30000|
+|6      |Accountant                     |       4200|       9000|
+|7      |Finance Manager                |       8200|      16000|
+|8      |Human Resources Representative |       4000|       9000|
+|9      |Programmer                     |       4000|      10000|
+|10     |Marketing Manager              |       9000|      15000|
 
 </div>
 

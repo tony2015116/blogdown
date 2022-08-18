@@ -91,8 +91,8 @@ dbListTables(con) # 查看 con 连接下的数据表
 #### 4. 在R中使用SQL命令
 
 ```{sql connection=con}
-# 选择countries表
-SELECT * FROM countries;
+# 选择jobs表
+SELECT * FROM jobs;
 ```
 
 #### 5. 使用dbplyr包
