@@ -73,7 +73,7 @@ HR样本数据库一共有7个表：
 
 #### ![](images/sample_table.png)
 
-3. 从R中查看样本数据库的表
+从R中查看样本数据库的表
 
 
 ```r
@@ -94,7 +94,7 @@ dbListTables(con) # 查看 con 连接下的数据表
 ## [6] "locations"   "regions"
 ```
 
-#### 4. 在R中使用SQL命令
+#### 3. 在R中使用SQL命令
 
 
 ```sql
@@ -123,7 +123,7 @@ Table: Table 1: Displaying records 1 - 10
 
 </div>
 
-#### 5. 使用dbplyr包
+#### 4. 使用dbplyr包
 
 
 ```r
@@ -169,5 +169,3 @@ data %>%
 ## 1      4 President                          20000      40000
 ## 2      5 Administration Vice President      15000      30000
 ```
-
-#### 

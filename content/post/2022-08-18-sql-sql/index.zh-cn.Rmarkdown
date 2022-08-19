@@ -73,7 +73,7 @@ HR样本数据库一共有7个表：
 
 #### ![](images/sample_table.png)
 
-3. 从R中查看样本数据库的表
+从R中查看样本数据库的表
 
 ```{r message=FALSE, warning=FALSE}
 # load packages
@@ -88,14 +88,14 @@ con = dbConnect(MariaDB(),
 dbListTables(con) # 查看 con 连接下的数据表
 ```
 
-#### 4. 在R中使用SQL命令
+#### 3. 在R中使用SQL命令
 
 ```{sql connection=con}
 # 选择jobs表
 SELECT * FROM jobs;
 ```
 
-#### 5. 使用dbplyr包
+#### 4. 使用dbplyr包
 
 ```{r message=FALSE, warning=FALSE}
 # load packages
@@ -110,5 +110,3 @@ data
 data %>%
   filter(min_salary > 10000)
 ```
-
-#### 
