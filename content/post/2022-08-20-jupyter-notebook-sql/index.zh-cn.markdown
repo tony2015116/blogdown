@@ -1,0 +1,27 @@
+---
+title: 在jupyter notebook中学习SQL
+author: guoguo
+date: '2022-08-20'
+slug: index.zh-cn
+categories:
+  - 数据库操作
+tags:
+  - SQL
+  - MySQL
+  - jupyter notebook
+lastmod: '2022-08-20T16:39:26+08:00'
+keywords: []
+description: ''
+comment: no
+toc: no
+autoCollapseToc: no
+contentCopyright: no
+reward: no
+mathjax: no
+---
+
+<p style="text-indent:2em;font-size:;font-family:;">
+感觉自己太喜欢折腾了😂。明明学习SQL，任何一个工具都可以学，还是想把相关的使用途径都摸索清楚。目前已经搞清楚的是在vscode中可以直接建立SQL脚本使用，也可以在jupyter notebook中的.ipynb文件使用，在Rmarkdown中插入chunk感觉也挺好用。还没有摸清的是在R中的SQL脚本。顺便总结一些相关软件的使用经验，R和python两个软件，不管是单独下载安装还是在Anaconda中安装，都需要将软件路径添加入到系统环境变量中；不管是使用Rstuido还是jupyter notebook，都需要下载相关的R包和python库，vscode中也都需要下载相应的插件。上述的这些都可以在必应或谷歌中找到写的非常好的安装教程。
+</p>
+<!--more-->
+<iframe class="slide-deck" src="files/jupyter_sql.html" height="666" width="600" style="border: 0px solid #2e3846;"></iframe>
