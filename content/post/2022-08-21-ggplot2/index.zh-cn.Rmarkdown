@@ -95,7 +95,7 @@ data %>%
 
 #### 3. 使用flipbookr包对代码结果进行展示
 
-<iframe class="slide-deck" src="images/ggplot2-theme-system-flipbook.html" height="405" width="400" style="border: 0px solid #2e3846;">
+<iframe class="slide-deck" src="https://tony2015116.github.io/ggplot2_theme_system_flipbook/ggplot2-theme-system-flipbook.html" height="405" width="400" style="border: 0px solid #2e3846;">
 
 </iframe>
 
