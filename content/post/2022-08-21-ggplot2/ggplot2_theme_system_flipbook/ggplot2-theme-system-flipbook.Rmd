@@ -1,0 +1,120 @@
+---
+title: "ggplot2主题系统演示"
+subtitle: "A ggplot2 theme system flipbook"
+author: "guoguo"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: [default, hygge, ninjutsu]
+    nature:
+      ratio: 16:9
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+
+```{r, include = F}
+# This is the recommended set up for flipbooks
+# you might think about setting cache to TRUE as you gain practice --- building flipbooks from scratch can be time consuming
+knitr::opts_chunk$set(fig.width = 6, message = FALSE, warning = FALSE, comment = "", cache = F)
+library(flipbookr)
+library(tidyverse)
+```
+
+`r chunk_reveal("mpg")`
+
+```{r mpg, include = FALSE}
+mpg %>%
+  mutate(trans = case_when(
+    str_detect(trans, "auto") ~ "Automatic",
+    TRUE ~ "Manual"
+  )) -> data
+```
+
+---
+
+`r chunk_reveal("mpg1")`
+
+```{r mpg1, include = FALSE}
+data %>%
+  ggplot(aes(x = displ, y = hwy, size = displ, color = hwy)) +
+  geom_point() +
+  facet_wrap(.~trans) +
+  labs(title="This is the title",
+       subtitle="This is a subtitle",
+       caption="This is a caption",
+       tag = 'a'
+  ) -> p1
+
+p1
+```
+---
+
+`r chunk_reveal("mpg2")`
+
+```{r mpg2, include = FALSE}
+p1 +
+  theme(plot.title = element_text(colour = "green4")) +
+  theme(plot.subtitle = element_text(colour = "blue3", size = 10)) +
+  theme(plot.caption = element_text(colour = "red4", size = 8)) +
+  theme(plot.tag = element_text(colour = "black", face = "bold")) +
+  theme(plot.margin = margin(t = 0.5,b = 0.5,r = 0.5,l = 0.5,unit = "cm")) +
+  theme(plot.background = element_rect(colour = "black", fill = "pink", linetype = "dashed")) -> p2
+p2
+```
+
+---
+
+`r chunk_reveal("mpg3")`
+
+```{r mpg3, include = FALSE}
+p2 +
+  theme(panel.background = element_rect(color = "#2166AC", fill = "#FDDBC7", colour = "green")) +
+  theme(panel.grid.minor = element_line(linetype = "dotdash", color = "blue")) +
+  theme(panel.grid.major = element_line(color = "green")) -> p3
+p3
+```
+---
+
+`r chunk_reveal("mpg4")`
+
+```{r mpg4, include = FALSE}
+p3 +
+  theme(panel.spacing = unit(x = 5, units = "mm")) +
+  theme(strip.background = element_rect(color = "black", fill = "#92C5DE")) +
+  theme(strip.text = element_text(color = "red2", size = 10, face = "italic")) -> p4
+p4
+```
+---
+
+`r chunk_reveal("mpg5")`
+
+```{r mpg5, include = FALSE}
+p4 +
+  theme(legend.background = element_rect(fill = "green4", color = "black")) +
+  theme(legend.key = element_rect(fill = "gray", color = "white")) +
+  theme(legend.title = element_text(color = "purple", face = "bold.italic", hjust = 0, vjust = 0,angle = 0)) +
+  theme(legend.title.align = 1) +
+  theme(legend.text = element_text(color = "blue", size = 15)) +
+  theme(legend.text.align = 1) +
+  theme(legend.margin = margin(t = 0.5,b = 0.5,r = 0.5,l = 0.5,unit = "cm")) +
+  theme(legend.position = "bottom")-> p5
+p5
+```
+---
+
+`r chunk_reveal("mpg6")`
+
+```{r mpg6, include = FALSE}
+p5 +
+  theme(axis.line = element_line(size = 1, color = "orange", linetype = "longdash")) +
+  theme(axis.ticks = element_line(colour = "red3")) +
+  theme(axis.ticks.length = unit(2, units = "mm")) +
+  theme(axis.text = element_text(color = "white", face = "bold", angle = 45)) +
+  theme(axis.title = element_text(color = "yellow2", face = "bold", size = "18"))-> p6
+p6
+```
+
+
+

@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>ggplot2主题系统演示</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="guoguo" />
+    <script src="libs/header-attrs-2.14/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/hygge.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/ninjutsu.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# ggplot2主题系统演示
+]
+.subtitle[
+## A ggplot2 theme system flipbook
+]
+.author[
+### guoguo
+]
+
+---
+
+
+
+
+
+count: false
+ 
+
+.panel1-mpg-auto[
+
+```r
+*mpg
+```
+]
+ 
+.panel2-mpg-auto[
+
+```
+# A tibble: 234 x 11
+   manufacturer model      displ  year   cyl trans drv     cty   hwy fl    class
+   &lt;chr&gt;        &lt;chr&gt;      &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt;
+ 1 audi         a4           1.8  1999     4 auto~ f        18    29 p     comp~
+ 2 audi         a4           1.8  1999     4 manu~ f        21    29 p     comp~
+ 3 audi         a4           2    2008     4 manu~ f        20    31 p     comp~
+ 4 audi         a4           2    2008     4 auto~ f        21    30 p     comp~
+ 5 audi         a4           2.8  1999     6 auto~ f        16    26 p     comp~
+ 6 audi         a4           2.8  1999     6 manu~ f        18    26 p     comp~
+ 7 audi         a4           3.1  2008     6 auto~ f        18    27 p     comp~
+ 8 audi         a4 quattro   1.8  1999     4 manu~ 4        18    26 p     comp~
+ 9 audi         a4 quattro   1.8  1999     4 auto~ 4        16    25 p     comp~
+10 audi         a4 quattro   2    2008     4 manu~ 4        20    28 p     comp~
+# ... with 224 more rows
+# i Use `print(n = ...)` to see more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-mpg-auto[
+
+```r
+mpg %&gt;%
+* mutate(trans = case_when(
+*   str_detect(trans, "auto") ~ "Automatic",
+*   TRUE ~ "Manual"
+* )) -&gt; data
+```
+]
+ 
+.panel2-mpg-auto[
+
+]
+
+&lt;style&gt;
+.panel1-mpg-auto {
+  color: black;
+  width: 38.6060606060606%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-mpg-auto {
+  color: black;
+  width: 59.3939393939394%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-mpg-auto {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+---
+
+count: false
+ 
+
+.panel1-mpg1-auto[
+
+```r
+*data
+```
+]
+ 
+.panel2-mpg1-auto[
+
+```
+# A tibble: 234 x 11
+   manufacturer model      displ  year   cyl trans drv     cty   hwy fl    class
+   &lt;chr&gt;        &lt;chr&gt;      &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt;
+ 1 audi         a4           1.8  1999     4 Auto~ f        18    29 p     comp~
+ 2 audi         a4           1.8  1999     4 Manu~ f        21    29 p     comp~
+ 3 audi         a4           2    2008     4 Manu~ f        20    31 p     comp~
+ 4 audi         a4           2    2008     4 Auto~ f        21    30 p     comp~
+ 5 audi         a4           2.8  1999     6 Auto~ f        16    26 p     comp~
+ 6 audi         a4           2.8  1999     6 Manu~ f        18    26 p     comp~
+ 7 audi         a4           3.1  2008     6 Auto~ f        18    27 p     comp~
+ 8 audi         a4 quattro   1.8  1999     4 Manu~ 4        18    26 p     comp~
+ 9 audi         a4 quattro   1.8  1999     4 Auto~ 4        16    25 p     comp~
+10 audi         a4 quattro   2    2008     4 Manu~ 4        20    28 p     comp~
+# ... with 224 more rows
+# i Use `print(n = ...)` to see more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-mpg1-auto[
+
+```r
+data %&gt;%
+* ggplot(aes(x = displ, y = hwy, size = displ, color = hwy))
+```
+]
+ 
+.panel2-mpg1-auto[
+![](ggplot2-theme-system-flipbook_files/figure-html/mpg1_auto_02_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-mpg1-auto[
+
+```r
+data %&gt;%
+  ggplot(aes(x = displ, y = hwy, size = displ, color = hwy)) +
+* geom_point()
+```
+]
+ 
+.panel2-mpg1-auto[
+![](ggplot2-theme-system-flipbook_files/figure-html/mpg1_auto_03_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-mpg1-auto[
+
+```r
+data %&gt;%
+  ggplot(aes(x = displ, y = hwy, size = displ, color = hwy)) +
+  geom_point() +
+* facet_wrap(.~trans)
+```
+]
+ 
+.panel2-mpg1-auto[
+![](ggplot2-theme-system-flipbook_files/figure-html/mpg1_auto_04_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-mpg1-auto[
+
+```r
+data %&gt;%
+  ggplot(aes(x = displ, y = hwy, size = displ, color = hwy)) +
+  geom_point() +
+  facet_wrap(.~trans) +
+* labs(title="This is the title",
+*      subtitle="This is a subtitle",
+*      caption="This is a caption",
+*      tag = 'a'
+* ) -&gt; p1
+```
+]
+ 
+.panel2-mpg1-auto[
+
+]
+
+---
+count: false
+ 
+
+.panel1-mpg1-auto[
+
+```r
+data %&gt;%
+  ggplot(aes(x = displ, y = hwy, size = displ, color = hwy)) +
+  geom_point() +
+  facet_wrap(.~trans) +
+  labs(title="This is the title",
+       subtitle="This is a subtitle",
+       caption="This is a caption",
+       tag = 'a'
+  ) -&gt; p1
+
+*p1
+```
+]
+ 
+.panel2-mpg1-auto[
+![](ggplot2-theme-system-flipbook_files/figure-html/mpg1_auto_06_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-mpg1-auto {
+  color: black;
+  width: 38.6060606060606%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-mpg1-auto {
+  color: black;
+  width: 59.3939393939394%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-mpg1-auto {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+---
+
+count: false
+ 
+
+.panel1-mpg2-auto[
+
+```r
+*p1
+```
+]
+ 
+.panel2-mpg2-auto[
+![](ggplot2-theme-system-flipbook_files/figure-html/mpg2_auto_01_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-mpg2-auto[
+
+```r
+p1 +
+* theme(plot.title = element_text(colour = "green4"))
+```
+]
+ 
+.panel2-mpg2-auto[
+![](ggplot2-theme-system-flipbook_files/figure-html/mpg2_auto_02_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-mpg2-auto[
+
+```r
+p1 +
+  theme(plot.title = element_text(colour = "green4")) +
+* theme(plot.subtitle = element_text(colour = "blue3", size = 10))
+```
+]
+ 
+.panel2-mpg2-auto[
+![](ggplot2-theme-system-flipbook_files/figure-html/mpg2_auto_03_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-mpg2-auto[
+
+```r
+p1 +
+  theme(plot.title = element_text(colour = "green4")) +
+  theme(plot.subtitle = element_text(colour = "blue3", size = 10)) +
+* theme(plot.caption = element_text(colour = "red4", size = 8))
+```
+]
+ 
+.panel2-mpg2-auto[
+![](ggplot2-theme-system-flipbook_files/figure-html/mpg2_auto_04_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-mpg2-auto[
+
+```r
+p1 +
+  theme(plot.title = element_text(colour = "green4")) +
+  theme(plot.subtitle = element_text(colour = "blue3", size = 10)) +
+  theme(plot.caption = element_text(colour = "red4", size = 8)) +
+* theme(plot.tag = element_text(colour = "black", face = "bold"))
+```
+]
+ 
+.panel2-mpg2-auto[
+![](ggplot2-theme-system-flipbook_files/figure-html/mpg2_auto_05_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-mpg2-auto[
+
+```r
+p1 +
+  theme(plot.title = element_text(colour = "green4")) +
+  theme(plot.subtitle = element_text(colour = "blue3", size = 10)) +
+  theme(plot.caption = element_text(colour = "red4", size = 8)) +
+  theme(plot.tag = element_text(colour = "black", face = "bold")) +
+* theme(plot.margin = margin(t = 0.5,b = 0.5,r = 0.5,l = 0.5,unit = "cm"))
+```
+]
+ 
+.panel2-mpg2-auto[
+![](ggplot2-theme-system-flipbook_files/figure-html/mpg2_auto_06_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-mpg2-auto[
+
+```r
+p1 +
+  theme(plot.title = element_text(colour = "green4")) +
+  theme(plot.subtitle = element_text(colour = "blue3", size = 10)) +
+  theme(plot.caption = element_text(colour = "red4", size = 8)) +
+  theme(plot.tag = element_text(colour = "black", face = "bold")) +
+  theme(plot.margin = margin(t = 0.5,b = 0.5,r = 0.5,l = 0.5,unit = "cm")) +
+* theme(plot.background = element_rect(colour = "black", fill = "pink", linetype = "dashed")) -&gt; p2
+```
+]
+ 
+.panel2-mpg2-auto[
+
+]
+
+---
+count: false
+ 
+
+.panel1-mpg2-auto[
+
+```r
+p1 +
+  theme(plot.title = element_text(colour = "green4")) +
+  theme(plot.subtitle = element_text(colour = "blue3", size = 10)) +
+  theme(plot.caption = element_text(colour = "red4", size = 8)) +
+  theme(plot.tag = element_text(colour = "black", face = "bold")) +
+  theme(plot.margin = margin(t = 0.5,b = 0.5,r = 0.5,l = 0.5,unit = "cm")) +
+  theme(plot.background = element_rect(colour = "black", fill = "pink", linetype = "dashed")) -&gt; p2
+*p2
+```
+]
+ 
+.panel2-mpg2-auto[
+![](ggplot2-theme-system-flipbook_files/figure-html/mpg2_auto_08_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-mpg2-auto {
+  color: black;
+  width: 38.6060606060606%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-mpg2-auto {
+  color: black;
+  width: 59.3939393939394%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-mpg2-auto {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+---
+
+count: false
+ 
+
+.panel1-mpg3-auto[
+
+```r
+*p2
+```
+]
+ 
+.panel2-mpg3-auto[
+![](ggplot2-theme-system-flipbook_files/figure-html/mpg3_auto_01_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-mpg3-auto[
+
+```r
+p2 +
+* theme(panel.background = element_rect(color = "#2166AC", fill = "#FDDBC7", colour = "green"))
+```
+]
+ 
+.panel2-mpg3-auto[
+![](ggplot2-theme-system-flipbook_files/figure-html/mpg3_auto_02_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-mpg3-auto[
+
+```r
+p2 +
+  theme(panel.background = element_rect(color = "#2166AC", fill = "#FDDBC7", colour = "green")) +
+* theme(panel.grid.minor = element_line(linetype = "dotdash", color = "blue"))
+```
+]
+ 
+.panel2-mpg3-auto[
+![](ggplot2-theme-system-flipbook_files/figure-html/mpg3_auto_03_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-mpg3-auto[
+
+```r
+p2 +
+  theme(panel.background = element_rect(color = "#2166AC", fill = "#FDDBC7", colour = "green")) +
+  theme(panel.grid.minor = element_line(linetype = "dotdash", color = "blue")) +
+* theme(panel.grid.major = element_line(color = "green")) -&gt; p3
+```
+]
+ 
+.panel2-mpg3-auto[
+
+]
+
+---
+count: false
+ 
+
+.panel1-mpg3-auto[
+
+```r
+p2 +
+  theme(panel.background = element_rect(color = "#2166AC", fill = "#FDDBC7", colour = "green")) +
+  theme(panel.grid.minor = element_line(linetype = "dotdash", color = "blue")) +
+  theme(panel.grid.major = element_line(color = "green")) -&gt; p3
+*p3
+```
+]
+ 
+.panel2-mpg3-auto[
+![](ggplot2-theme-system-flipbook_files/figure-html/mpg3_auto_05_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-mpg3-auto {
+  color: black;
+  width: 38.6060606060606%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-mpg3-auto {
+  color: black;
+  width: 59.3939393939394%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-mpg3-auto {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+---
+
+count: false
+ 
+
+.panel1-mpg4-auto[
+
+```r
+*p3
+```
+]
+ 
+.panel2-mpg4-auto[
+![](ggplot2-theme-system-flipbook_files/figure-html/mpg4_auto_01_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-mpg4-auto[
+
+```r
+p3 +
+* theme(panel.spacing = unit(x = 5, units = "mm"))
+```
+]
+ 
+.panel2-mpg4-auto[
+![](ggplot2-theme-system-flipbook_files/figure-html/mpg4_auto_02_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-mpg4-auto[
+
+```r
+p3 +
+  theme(panel.spacing = unit(x = 5, units = "mm")) +
+* theme(strip.background = element_rect(color = "black", fill = "#92C5DE"))
+```
+]
+ 
+.panel2-mpg4-auto[
+![](ggplot2-theme-system-flipbook_files/figure-html/mpg4_auto_03_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-mpg4-auto[
+
+```r
+p3 +
+  theme(panel.spacing = unit(x = 5, units = "mm")) +
+  theme(strip.background = element_rect(color = "black", fill = "#92C5DE")) +
+* theme(strip.text = element_text(color = "red2", size = 10, face = "italic")) -&gt; p4
+```
+]
+ 
+.panel2-mpg4-auto[
+
+]
+
+---
+count: false
+ 
+
+.panel1-mpg4-auto[
+
+```r
+p3 +
+  theme(panel.spacing = unit(x = 5, units = "mm")) +
+  theme(strip.background = element_rect(color = "black", fill = "#92C5DE")) +
+  theme(strip.text = element_text(color = "red2", size = 10, face = "italic")) -&gt; p4
+*p4
+```
+]
+ 
+.panel2-mpg4-auto[
+![](ggplot2-theme-system-flipbook_files/figure-html/mpg4_auto_05_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-mpg4-auto {
+  color: black;
+  width: 38.6060606060606%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-mpg4-auto {
+  color: black;
+  width: 59.3939393939394%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-mpg4-auto {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+---
+
+count: false
+ 
+
+.panel1-mpg5-auto[
+
+```r
+*p4
+```
+]
+ 
+.panel2-mpg5-auto[
+![](ggplot2-theme-system-flipbook_files/figure-html/mpg5_auto_01_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-mpg5-auto[
+
+```r
+p4 +
+* theme(legend.background = element_rect(fill = "green4", color = "black"))
+```
+]
+ 
+.panel2-mpg5-auto[
+![](ggplot2-theme-system-flipbook_files/figure-html/mpg5_auto_02_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-mpg5-auto[
+
+```r
+p4 +
+  theme(legend.background = element_rect(fill = "green4", color = "black")) +
+* theme(legend.key = element_rect(fill = "gray", color = "white"))
+```
+]
+ 
+.panel2-mpg5-auto[
+![](ggplot2-theme-system-flipbook_files/figure-html/mpg5_auto_03_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-mpg5-auto[
+
+```r
+p4 +
+  theme(legend.background = element_rect(fill = "green4", color = "black")) +
+  theme(legend.key = element_rect(fill = "gray", color = "white")) +
+* theme(legend.title = element_text(color = "purple", face = "bold.italic", hjust = 0, vjust = 0,angle = 0))
+```
+]
+ 
+.panel2-mpg5-auto[
+![](ggplot2-theme-system-flipbook_files/figure-html/mpg5_auto_04_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-mpg5-auto[
+
+```r
+p4 +
+  theme(legend.background = element_rect(fill = "green4", color = "black")) +
+  theme(legend.key = element_rect(fill = "gray", color = "white")) +
+  theme(legend.title = element_text(color = "purple", face = "bold.italic", hjust = 0, vjust = 0,angle = 0)) +
+* theme(legend.title.align = 1)
+```
+]
+ 
+.panel2-mpg5-auto[
+![](ggplot2-theme-system-flipbook_files/figure-html/mpg5_auto_05_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-mpg5-auto[
+
+```r
+p4 +
+  theme(legend.background = element_rect(fill = "green4", color = "black")) +
+  theme(legend.key = element_rect(fill = "gray", color = "white")) +
+  theme(legend.title = element_text(color = "purple", face = "bold.italic", hjust = 0, vjust = 0,angle = 0)) +
+  theme(legend.title.align = 1) +
+* theme(legend.text = element_text(color = "blue", size = 15))
+```
+]
+ 
+.panel2-mpg5-auto[
+![](ggplot2-theme-system-flipbook_files/figure-html/mpg5_auto_06_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-mpg5-auto[
+
+```r
+p4 +
+  theme(legend.background = element_rect(fill = "green4", color = "black")) +
+  theme(legend.key = element_rect(fill = "gray", color = "white")) +
+  theme(legend.title = element_text(color = "purple", face = "bold.italic", hjust = 0, vjust = 0,angle = 0)) +
+  theme(legend.title.align = 1) +
+  theme(legend.text = element_text(color = "blue", size = 15)) +
+* theme(legend.text.align = 1)
+```
+]
+ 
+.panel2-mpg5-auto[
+![](ggplot2-theme-system-flipbook_files/figure-html/mpg5_auto_07_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-mpg5-auto[
+
+```r
+p4 +
+  theme(legend.background = element_rect(fill = "green4", color = "black")) +
+  theme(legend.key = element_rect(fill = "gray", color = "white")) +
+  theme(legend.title = element_text(color = "purple", face = "bold.italic", hjust = 0, vjust = 0,angle = 0)) +
+  theme(legend.title.align = 1) +
+  theme(legend.text = element_text(color = "blue", size = 15)) +
+  theme(legend.text.align = 1) +
+* theme(legend.margin = margin(t = 0.5,b = 0.5,r = 0.5,l = 0.5,unit = "cm"))
+```
+]
+ 
+.panel2-mpg5-auto[
+![](ggplot2-theme-system-flipbook_files/figure-html/mpg5_auto_08_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-mpg5-auto[
+
+```r
+p4 +
+  theme(legend.background = element_rect(fill = "green4", color = "black")) +
+  theme(legend.key = element_rect(fill = "gray", color = "white")) +
+  theme(legend.title = element_text(color = "purple", face = "bold.italic", hjust = 0, vjust = 0,angle = 0)) +
+  theme(legend.title.align = 1) +
+  theme(legend.text = element_text(color = "blue", size = 15)) +
+  theme(legend.text.align = 1) +
+  theme(legend.margin = margin(t = 0.5,b = 0.5,r = 0.5,l = 0.5,unit = "cm")) +
+* theme(legend.position = "bottom")-&gt; p5
+```
+]
+ 
+.panel2-mpg5-auto[
+
+]
+
+---
+count: false
+ 
+
+.panel1-mpg5-auto[
+
+```r
+p4 +
+  theme(legend.background = element_rect(fill = "green4", color = "black")) +
+  theme(legend.key = element_rect(fill = "gray", color = "white")) +
+  theme(legend.title = element_text(color = "purple", face = "bold.italic", hjust = 0, vjust = 0,angle = 0)) +
+  theme(legend.title.align = 1) +
+  theme(legend.text = element_text(color = "blue", size = 15)) +
+  theme(legend.text.align = 1) +
+  theme(legend.margin = margin(t = 0.5,b = 0.5,r = 0.5,l = 0.5,unit = "cm")) +
+  theme(legend.position = "bottom")-&gt; p5
+*p5
+```
+]
+ 
+.panel2-mpg5-auto[
+![](ggplot2-theme-system-flipbook_files/figure-html/mpg5_auto_10_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-mpg5-auto {
+  color: black;
+  width: 38.6060606060606%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-mpg5-auto {
+  color: black;
+  width: 59.3939393939394%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-mpg5-auto {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+---
+
+count: false
+ 
+
+.panel1-mpg6-auto[
+
+```r
+*p5
+```
+]
+ 
+.panel2-mpg6-auto[
+![](ggplot2-theme-system-flipbook_files/figure-html/mpg6_auto_01_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-mpg6-auto[
+
+```r
+p5 +
+* theme(axis.line = element_line(size = 1, color = "orange", linetype = "longdash"))
+```
+]
+ 
+.panel2-mpg6-auto[
+![](ggplot2-theme-system-flipbook_files/figure-html/mpg6_auto_02_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-mpg6-auto[
+
+```r
+p5 +
+  theme(axis.line = element_line(size = 1, color = "orange", linetype = "longdash")) +
+* theme(axis.ticks = element_line(colour = "red3"))
+```
+]
+ 
+.panel2-mpg6-auto[
+![](ggplot2-theme-system-flipbook_files/figure-html/mpg6_auto_03_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-mpg6-auto[
+
+```r
+p5 +
+  theme(axis.line = element_line(size = 1, color = "orange", linetype = "longdash")) +
+  theme(axis.ticks = element_line(colour = "red3")) +
+* theme(axis.ticks.length = unit(2, units = "mm"))
+```
+]
+ 
+.panel2-mpg6-auto[
+![](ggplot2-theme-system-flipbook_files/figure-html/mpg6_auto_04_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-mpg6-auto[
+
+```r
+p5 +
+  theme(axis.line = element_line(size = 1, color = "orange", linetype = "longdash")) +
+  theme(axis.ticks = element_line(colour = "red3")) +
+  theme(axis.ticks.length = unit(2, units = "mm")) +
+* theme(axis.text = element_text(color = "white", face = "bold", angle = 45))
+```
+]
+ 
+.panel2-mpg6-auto[
+![](ggplot2-theme-system-flipbook_files/figure-html/mpg6_auto_05_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-mpg6-auto[
+
+```r
+p5 +
+  theme(axis.line = element_line(size = 1, color = "orange", linetype = "longdash")) +
+  theme(axis.ticks = element_line(colour = "red3")) +
+  theme(axis.ticks.length = unit(2, units = "mm")) +
+  theme(axis.text = element_text(color = "white", face = "bold", angle = 45)) +
+* theme(axis.title = element_text(color = "yellow2", face = "bold", size = "18"))-&gt; p6
+```
+]
+ 
+.panel2-mpg6-auto[
+
+]
+
+---
+count: false
+ 
+
+.panel1-mpg6-auto[
+
+```r
+p5 +
+  theme(axis.line = element_line(size = 1, color = "orange", linetype = "longdash")) +
+  theme(axis.ticks = element_line(colour = "red3")) +
+  theme(axis.ticks.length = unit(2, units = "mm")) +
+  theme(axis.text = element_text(color = "white", face = "bold", angle = 45)) +
+  theme(axis.title = element_text(color = "yellow2", face = "bold", size = "18"))-&gt; p6
+*p6
+```
+]
+ 
+.panel2-mpg6-auto[
+![](ggplot2-theme-system-flipbook_files/figure-html/mpg6_auto_07_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-mpg6-auto {
+  color: black;
+  width: 38.6060606060606%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-mpg6-auto {
+  color: black;
+  width: 59.3939393939394%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-mpg6-auto {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

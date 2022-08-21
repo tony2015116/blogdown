@@ -25,10 +25,6 @@ mathjax: yes
 
 <!--more-->
 
-<p style="text-indent:2em;font-size:;font-family:;">
-
-</p>
-
 #### 1. 实现方法
 
 -   在Rmarkdown中直接复制粘贴以下代码：

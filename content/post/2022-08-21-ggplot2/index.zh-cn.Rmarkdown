@@ -1,0 +1,100 @@
+---
+title: 终于搞清楚了ggplot2主题
+author: guoguo
+date: '2022-08-21'
+slug: index.zh-cn
+categories:
+  - 数据可视化
+tags:
+  - R
+  - ggplot2
+  - theme system
+  - flipbookr
+lastmod: '2022-08-21T16:01:38+08:00'
+keywords: []
+description: ''
+comment: yes
+toc: no
+autoCollapseToc: no
+contentCopyright: no
+reward: yes
+mathjax: yes
+---
+
+<p style="text-indent:2em;font-size:;font-family:;">
+ggplot2包的内容比较多，并非经常使用，一般用法都没有刻意的去记忆过，往往需要用到的时候才在网上搜索怎么使用，不可避免的就导致了搜索——忘记——重复搜索的循环中。网上偶尔看到一张图片，是关于ggplot2的theme system的cheatsheet。我感觉做的非常棒，就自己找类似的数据集mpg跑了一遍，同时使用flipbookr包对代码的每一步的输出结果进行展示。算是对ggplot2的theme做了一个系统的学习。
+</p>
+
+<!--more-->
+
+#### 1. ggplot2 theme system cheatsheet
+
+[![](images/FabxzmnX0AEwau0.jpg)](https://www.udemy.com/course/learn-ggplot2-in-r-for-data-viz/?referralCode=E98592E4E943F800ECBB)
+
+#### 2. 使用ggplot2自带数据mpg重复cheatsheet内容
+
+```{r message=FALSE, warning=FALSE}
+# load packages
+library(tidyverse)
+
+# tidy data
+data <- mpg %>%
+  mutate(trans = case_when(
+    str_detect(trans, "auto") ~ "Automatic",
+    TRUE ~ "Manual"
+  ))
+
+# plot
+data %>%
+  ggplot(aes(x = displ, y = hwy, size = displ, color = hwy)) +
+  geom_point() +
+  facet_wrap(.~trans) +
+  labs(title="This is the title",
+       subtitle="This is a subtitle",
+       caption="This is a caption",
+       tag = 'a'
+  ) +
+  theme(
+    plot.title = element_text(colour = "green4"),
+    plot.subtitle = element_text(colour = "blue3", size = 10),
+    plot.caption = element_text(colour = "red4", size = 8),
+    plot.tag = element_text(colour = "black", face = "bold"),
+    plot.margin = margin(t = 0.5,b = 0.5,r = 0.5,l = 0.5,unit = "cm"),
+    plot.background = element_rect(colour = "black", fill = "pink", linetype = "dashed")
+  ) +
+  theme(
+    #panel.border = element_rect(colour = "#2166AC"),
+    panel.background = element_rect(color = "#2166AC", fill = "#FDDBC7", colour = "green"),
+    panel.grid.minor = element_line(linetype = "dotdash", color = "blue"),
+    panel.grid.major = element_line(color = "green")
+  ) +
+  theme(
+    panel.spacing = unit(x = 5, units = "mm"),
+    strip.background = element_rect(color = "black", fill = "#92C5DE"),
+    strip.text = element_text(color = "red2", size = 10, face = "italic")
+  ) +
+  theme(
+    legend.background = element_rect(fill = "green4", color = "black"),
+    legend.key = element_rect(fill = "gray", color = "white"),
+    legend.title = element_text(color = "purple", face = "bold.italic", hjust = 0, vjust = 0,angle = 0),
+    legend.title.align = 1,
+    legend.text = element_text(color = "blue", size = 15),
+    legend.text.align = 1,
+    legend.margin = margin(t = 0.5,b = 0.5,r = 0.5,l = 0.5,unit = "cm"),
+    legend.position = "bottom"
+  ) +
+  theme(
+    axis.line = element_line(size = 1, color = "orange", linetype = "longdash"),
+    axis.ticks = element_line(colour = "red3"),
+    axis.ticks.length = unit(2, units = "mm"),
+    axis.text = element_text(color = "white", face = "bold", angle = 45),
+    axis.title = element_text(color = "yellow2", face = "bold", size = "18")
+  )
+
+```
+
+#### 3. 使用flipbookr包对代码结果进行展示
+
+<iframe class="slide-deck" src="ggplot2_theme_system_flipbook/ggplot2-theme-system-flipbook.html" height="405" width="400" style="border: 0px solid #2e3846;"></iframe>
+
+<p><a href="ggplot2_theme_system_flipbook/ggplot2-theme-system-flipbook.Rmd">点击查看ggplot2-theme-system-flipbook.Rmd</a></p>
