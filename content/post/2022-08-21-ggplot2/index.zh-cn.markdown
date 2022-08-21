@@ -24,7 +24,6 @@ mathjax: yes
 <p style="text-indent:2em;font-size:;font-family:;">
 ggplot2包的内容比较多，并非经常使用，一般用法都没有刻意的去记忆过，往往需要用到的时候才在网上搜索怎么使用，不可避免的就导致了搜索——忘记——重复搜索的循环中。网上偶尔看到一张图片，是关于ggplot2的theme system的cheatsheet。我感觉做的非常棒，就自己找类似的数据集mpg跑了一遍，同时使用flipbookr包对代码的每一步的输出结果进行展示。算是对ggplot2的theme做了一个系统的学习。
 </p>
-
 <!--more-->
 
 #### 1. ggplot2 theme system cheatsheet
@@ -33,8 +32,7 @@ ggplot2包的内容比较多，并非经常使用，一般用法都没有刻意�
 
 #### 2. 使用ggplot2自带数据mpg重复cheatsheet内容
 
-
-```r
+``` r
 # load packages
 library(tidyverse)
 
@@ -97,8 +95,10 @@ data %>%
 
 #### 3. 使用flipbookr包对代码结果进行展示
 
-<iframe class="slide-deck" src="https://tony2015116.github.io/ggplot2_theme_system_flipbook/ggplot2-theme-system-flipbook.html" height="405" width="400" style="border: 0px solid #2e3846;">
-
-</iframe>
-
-<p><a href="images/ggplot2-theme-system-flipbook.Rmd">点击下载ggplot2-theme-system-flipbook.Rmd</a></p><p><a href="https://tony2015116.github.io/ggplot2_theme_system_flipbook/ggplot2-theme-system-flipbook.html#1">点击全屏查看</a></p>
+<iframe class="slide-deck" src="https://tony2015116.github.io/ggplot2_theme_system_flipbook/ggplot2-theme-system-flipbook.html#1" height="405" width="400" style="border: 1px solid #2e3846;"></iframe>
+<p>
+<a href="images/ggplot2-theme-system-flipbook.Rmd">点击下载ggplot2-theme-system-flipbook.Rmd</a>
+</p>
+<p>
+<a href="https://tony2015116.github.io/ggplot2_theme_system_flipbook/ggplot2-theme-system-flipbook.html#1">点击全屏查看</a>
+</p>
