@@ -1,0 +1,188 @@
+---
+title: 使用ggplot2实现添加error bar
+author: guoguo
+date: '2022-08-22'
+slug: index.zh-cn
+categories:
+  - 数据可视化
+tags:
+  - R
+  - ggplot2
+  - bar plot
+  - error bar
+lastmod: '2022-08-22T17:06:51+08:00'
+keywords: []
+description: ''
+comment: yes
+toc: no
+autoCollapseToc: no
+contentCopyright: no
+reward: yes
+mathjax: yes
+---
+
+<p style="text-indent:2em;font-size:;font-family:;">
+记录使用ggplot2在条形图和点线图中画误差棒的过程。其中受<a href="https://ggplot2tor.com/tutorials/">ggplot2tor</a>中Tutorials的启发并搬运部分代码🤪，<a href="images/errorbar.R">点击此处</a>下载文章中所用代码。 
+</p>
+
+<!--more-->
+
+#### 1. 使用R中iris数据集
+
+
+```r
+# load packages
+library(tidyverse)
+library(rstatix)
+
+# data
+str(iris)
+```
+
+```
+## 'data.frame':	150 obs. of  5 variables:
+##  $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
+##  $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
+##  $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
+##  $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
+##  $ Species     : Factor w/ 3 levels "setosa","versicolor",..: 1 1 1 1 1 1 1 1 1 1 ...
+```
+
+```r
+# data tidy
+data <- iris %>%
+  pivot_longer(1:4, names_to = "Types", values_to = "values") %>%
+  group_by(Species, Types) %>%
+  get_summary_stats(show = c("n","mean","sd","min","max")) %>%
+  mutate(Types = as_factor(Types) %>% fct_relevel("Petal.Length", "Petal.Width","Sepal.Length","Sepal.Width"))
+
+# stat result
+data %>%
+  gt::gt() %>% # 将data.frame转为gt格式
+  gt::gtsave("C:/Users/Dell/Desktop/iris_stat.png")
+```
+
+<img src="/post/2022-08-22-ggplot2-barplot-error-bar/index.zh-cn_files/figure-html/unnamed-chunk-1-1.png" width="672" />
+
+#### 2. 条形图中添加 error bar
+
+
+```r
+# barplot
+data %>% 
+  ggplot(aes(Species, mean,fill = Types,
+             ymin = mean-sd,
+             ymax = mean+sd)) +
+  geom_col(width = .5, position = position_dodge(.6),
+           color = "black") +
+  geom_errorbar(
+    color = "#22292F",
+    width = .1, position = position_dodge(.6)) +
+  scale_y_continuous(expand = expansion(0),
+                     limits = c(0, 10),
+                     breaks = seq(0, 10, 2)) +
+  ggsci::scale_fill_locuszoom() +
+  #scale_fill_grey() +
+  #scale_fill_brewer(palette="Set1")
+  #scale_fill_manual(values = c("#FAFAFA", "#D4D4D4", "#737373")) +
+  labs(
+    y = "Mean"
+  ) + 
+  theme(
+    plot.margin = unit(c(1, 1, 1, 1), "cm"),
+    panel.background = element_blank(),
+    plot.title = element_text(size = 22, face = "bold",
+                              hjust = 0.5,
+                              margin = margin(b = 15)),
+    axis.line = element_line(color = "black"),
+    axis.title = element_text(size = 22, color = "black",
+                              face = "bold"),
+    axis.text = element_text(size = 22, color = "black"),
+    axis.text.x = element_text(margin = margin(t = 10)),
+    axis.text.y = element_text(size = 17),
+    axis.title.y = element_text(margin = margin(r = 10)),
+    axis.ticks.x = element_blank(),
+    legend.title = element_blank(),
+    legend.position = c(.25, .8),
+    legend.background = element_rect(color = "black"),
+    legend.text = element_text(size = 15),
+    legend.margin = margin(t = 5, l = 5, r = 5, b = 5),
+    legend.key = element_rect(color = NA, fill = NA)
+  ) +
+  guides(
+    fill = guide_legend(
+      keywidth = 1,
+      keyheight = 1,
+      default.unit= "cm"
+    )
+  )
+```
+
+<img src="/post/2022-08-22-ggplot2-barplot-error-bar/index.zh-cn_files/figure-html/unnamed-chunk-2-1.png" width="672" />
+
+```r
+# export png
+ggsave("C:/Users/Dell/Desktop/barchart_error_bar.png", width = 10, height = 7, dpi = 300)
+```
+
+#### 3. 点线图添加 error bar
+
+
+```r
+data %>% 
+  ggplot(aes(Species, mean, color = Types, group = Types)) +
+  geom_point() +
+  geom_line() +
+  geom_errorbar(
+    aes(ymin = mean-sd,
+        ymax = mean+sd),
+    color = "#22292F",
+    width = .1) +
+  scale_y_continuous(expand = expansion(0),
+                     limits = c(0, 10),
+                     breaks = seq(0, 10, 2)) +
+  ggsci::scale_color_locuszoom() +
+  #scale_fill_grey() +
+  #scale_fill_brewer(palette="Set1")
+  #scale_fill_manual(values = c("#FAFAFA", "#D4D4D4", "#737373")) +
+  labs(
+    y = "Mean"
+  ) + 
+  theme(
+    plot.margin = unit(c(1, 1, 1, 1), "cm"),
+    panel.background = element_blank(),
+    plot.title = element_text(size = 22, face = "bold",
+                              hjust = 0.5,
+                              margin = margin(b = 15)),
+    axis.line = element_line(color = "black"),
+    axis.title = element_text(size = 22, color = "black",
+                              face = "bold"),
+    axis.text = element_text(size = 22, color = "black"),
+    axis.text.x = element_text(margin = margin(t = 10)),
+    axis.text.y = element_text(size = 17),
+    axis.title.y = element_text(margin = margin(r = 10)),
+    axis.ticks.x = element_blank(),
+    legend.title = element_blank(),
+    legend.position = c(.25, .8),
+    legend.background = element_rect(color = "black"),
+    legend.text = element_text(size = 15),
+    legend.margin = margin(t = 5, l = 5, r = 5, b = 5),
+    legend.key = element_rect(color = NA, fill = NA)
+  ) +
+  guides(
+    fill = guide_legend(
+      keywidth = 1,
+      keyheight = 1,
+      default.unit= "cm"
+    )
+  )
+```
+
+<img src="/post/2022-08-22-ggplot2-barplot-error-bar/index.zh-cn_files/figure-html/unnamed-chunk-3-1.png" width="672" />
+
+#### 4. 导出png
+
+
+```r
+ggsave("C:/Users/Dell/Desktop/barchart_error_bar.png", width = 10, height = 7, dpi = 300)
+```
