@@ -39,3 +39,10 @@ R中🐂🍺的📦太多了，很多可能都没听说过。不是这些R包不
     <img align="center" width="60%" src="https://www.danieldsjoberg.com/gtsummary/reference/figures/gt_output_formats.PNG"/></a>
     </p>
 </p>
+
+#### **3. crosstable package**
+<p align="center">
+    <a href="https://danchaltiel.github.io/crosstable/index.html"><img align="center" width="87px" src="https://danchaltiel.github.io/crosstable/logo.png"/></a>
+    <p align="left" style="text-indent:2em;font-size:;font-family:;">
+    crosstable包的核心函数只有一个crosstable(),同样是计算数据的描述性统计。可以结合officer包将结果报告导出到word中。可以结合gt包的as_gt()函数转为gt表格式，或者结合as_flextable()函数转为flextable格式。
+</p>
