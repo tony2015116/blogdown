@@ -20,7 +20,11 @@ reward: yes
 mathjax: yes
 ---
 
-先学习SQL中最简单的SELECT语句。因为和R中数据框的操作比较相似，所以我觉得自己接受的还是比较快的。这里主要是使用在MySQL中模拟的数据中熟悉SQL的操作，和R中的操作互相印证。 <!--more-->
+<p style="text-indent:2em;font-size:;font-family:;">
+先学习SQL中最简单的SELECT语句。因为和R中数据框的操作比较相似，所以我觉得自己接受的还是比较快的。这里主要是使用在MySQL中模拟的数据中熟悉SQL的操作，和R中的操作互相印证。
+</p>
+
+<!--more-->
 
 ```{r message=FALSE, warning=FALSE, include=FALSE}
 # load packages
