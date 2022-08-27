@@ -1,0 +1,70 @@
+---
+title: SQL数据表查询querying data
+author: guoguo
+date: '2022-08-27'
+slug: index.zh-cn
+categories:
+  - 数据库操作
+tags:
+  - SQL
+  - MySQL
+  - R
+lastmod: '2022-08-27T22:30:16+08:00'
+keywords: []
+description: ''
+comment: yes
+toc: no
+autoCollapseToc: no
+contentCopyright: no
+reward: yes
+mathjax: yes
+---
+
+先学习SQL中最简单的SELECT语句。因为和R中数据框的操作比较相似，所以我觉得自己接受的还是比较快的。这里主要是使用在MySQL中模拟的数据中熟悉SQL的操作，和R中的操作互相印证。 <!--more-->
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+# load packages
+library(RMariaDB)
+
+con = dbConnect(MariaDB(), 
+                 user = "root", 
+                 password = "123456", 
+                 dbname = "mydb", 
+                 host = "localhost")
+
+dbListTables(con) # 查看 con 连接下的数据表
+```
+
+#### 1. 查询数据表
+
+```{sql connection=con}
+SELECT * FROM jobs;
+```
+
+#### 2. 从数据表中挑选列
+
+```{sql connection=con}
+SELECT job_title, max_salary FROM jobs;
+```
+
+#### 3. SELECT语句中实现简单计算
+
+```{sql connection=con}
+SELECT job_title, max_salary*2 FROM jobs;
+```
+
+```{sql connection=con}
+# 通过 AS 实现生成新的变量
+SELECT job_title, max_salary, max_salary*2 AS double_salary FROM jobs;
+```
+
+#### 4. 在R中实现上述操作
+
+```{r message=FALSE, warning=FALSE}
+# 以上步骤都可以在R连接MySQL数据库的情况下，操作命令在R中实现
+library(dplyr)
+library(dbplyr)
+tbl(con, "jobs") %>% # 通过dplyr函数tbl()查询数据表
+  select(job_id, max_salary) %>% # 通过select()选择列
+  mutate(double_salary = max_salary*2) # 通过mutate()增加新的变量列
+```
