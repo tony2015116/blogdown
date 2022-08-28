@@ -1,0 +1,90 @@
+---
+title: SQL学习——排序ORDER BY
+author: guoguo
+date: '2022-08-28'
+slug: index.zh-cn
+categories:
+  - 数据库操作
+tags:
+  - SQL
+  - MySQL
+  - R
+lastmod: '2022-08-28T12:47:46+08:00'
+keywords: []
+description: ''
+comment: yes
+toc: no
+autoCollapseToc: no
+contentCopyright: no
+reward: yes
+mathjax: yes
+---
+
+<p style="text-indent:2em;font-size:;font-family:;">
+今日学习SQL中的ORDER BY关键字，结合昨日SELECT语句，对选择的结果进行排序。同样的，在R中也很好操作。
+</p>
+
+<!--more-->
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+# load packages
+library(RMariaDB)
+
+con = dbConnect(MariaDB(), 
+                 user = "root", 
+                 password = "123456", 
+                 dbname = "mydb", 
+                 host = "localhost")
+
+dbListTables(con) # 查看 con 连接下的数据表
+```
+
+#### 1. 选择employee数据表
+
+```{sql connection=con}
+SELECT employee_id, first_name, last_name, hire_date, salary FROM employees;
+```
+
+#### 2. 使用ORDER BY进行排序
+
+```{sql connection=con}
+# 按照日期顺序升序
+SELECT employee_id, first_name, last_name, hire_date, salary FROM employees ORDER BY hire_date;
+```
+
+```{sql connection=con}
+# 按照字母顺序降序
+SELECT employee_id, first_name, last_name, hire_date, salary FROM employees ORDER BY first_name DESC;
+```
+
+#### 3. 多列同时排序
+
+```{sql connection=con}
+# job_title升序，max_salary降序
+SELECT employee_id, first_name, last_name, hire_date, salary
+FROM employees
+ORDER BY first_name, last_name DESC;
+```
+
+#### 4. 在R中实现上述操作
+
+```{r message=FALSE, warning=FALSE}
+# 以上步骤都可以在R连接MySQL数据库的情况下，操作命令在R中实现
+library(dplyr)
+library(dbplyr)
+data <- tbl(con, "employees") %>% # 通过dplyr函数tbl()查询数据表
+  select(employee_id, first_name, last_name, hire_date, salary) # 通过select()选择列
+head(data)
+```
+
+```{r}
+# 按日期顺序升序
+data %>%
+    arrange(hire_date)
+# 按字母顺序降序
+data %>%
+  arrange(desc(first_name))
+# 多列同时排序
+data %>%
+  arrange(first_name, desc(last_name))
+```
