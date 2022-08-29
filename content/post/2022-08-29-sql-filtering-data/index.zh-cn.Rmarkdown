@@ -1,0 +1,102 @@
+---
+title: SQL学习——数据过滤Filtering Data
+author: guoguo
+date: '2022-08-29'
+slug: index.zh-cn
+categories:
+  - 数据库操作
+tags:
+  - SQL
+  - MySQL
+  - R
+lastmod: '2022-08-29T18:43:55+08:00'
+keywords: []
+description: ''
+comment: yes
+toc: no
+autoCollapseToc: no
+contentCopyright: no
+reward: yes
+mathjax: yes
+---
+
+<p style="text-indent:2em;font-size:;font-family:;">
+今日学习SQL中DISTINCT语句，类似R中的dplyr::distinct()函数。
+</p>
+
+<!--more-->
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+# load packages
+library(RMariaDB)
+
+con = dbConnect(MariaDB(), 
+                 user = "root", 
+                 password = "123456", 
+                 dbname = "mydb", 
+                 host = "localhost")
+
+dbListTables(con) # 查看 con 连接下的数据表
+```
+
+#### 1. 过滤重复值DISTINCT
+
+```{sql connection=con}
+# 从employees数据表选择salary列，按照从大到小顺序排列salary,并去除重复值
+SELECT 
+DISTINCT salary 
+FROM 
+employees 
+ORDER BY Salary DESC;
+```
+
+```{sql connection=con}
+# 从employees数据表选择多列，排序,并去除重复值
+SELECT 
+DISTINCT job_id, salary
+FROM 
+employees 
+ORDER BY job_id, salary DESC;
+```
+
+#### 2. 限制查询返回行数LIMIT
+
+```{sql connection=con}
+# 查询employees数据表，按照first_name排序，并返回排序后的前10行
+SELECT
+employee_id,
+first_name,
+last_name
+FROM
+employees
+ORDER BY
+first_name
+LIMIT 10;
+```
+
+```{sql connection=con}
+# 查询employees数据表，按照first_name排序，屏蔽掉前3行，从第4行起，返回后面的10行
+SELECT
+employee_id,
+first_name,
+last_name
+FROM
+employees
+ORDER BY
+first_name
+LIMIT 10 OFFSET 3;
+```
+
+#### 3. 在R中实现上述操作
+
+```{r message=FALSE, warning=FALSE}
+# 以上步骤都可以在R连接MySQL数据库的情况下，操作命令在R中实现
+library(dplyr)
+library(dbplyr)
+data <- tbl(con, "employees") %>% # 通过dplyr函数tbl()查询数据表
+  select(employee_id, first_name, last_name, salary) %>% # 选择对应列
+  distinct(first_name, .keep_all = TRUE) %>% # 去除该列重复值
+  arrange(salary) # 排序
+data
+head(data, n = 10) #返回查询结果的前10行，offset未找到对应函数
+```
