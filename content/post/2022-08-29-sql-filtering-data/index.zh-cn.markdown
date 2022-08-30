@@ -1,5 +1,5 @@
 ---
-title: SQL学习——数据过滤Filtering Data
+title: SQL学习——数据过滤Filtering Data——DISTINCT语句
 author: guoguo
 date: '2022-08-29'
 slug: index.zh-cn
