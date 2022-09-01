@@ -60,7 +60,7 @@ data %>%
 
 ![tidyquery and queryparser: Translating SQL Queries to dplyr Pipelines](images/sql2dplyr.png)
 
-```{r}
+```{r message=FALSE, warning=FALSE}
 # load packages
 library(queryparser)
 library(tidyquery)

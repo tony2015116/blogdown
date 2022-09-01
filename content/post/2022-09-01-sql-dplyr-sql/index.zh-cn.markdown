@@ -62,21 +62,7 @@ data %>%
 ```r
 # load packages
 library(queryparser)
-```
-
-```
-## Warning: 程辑包'queryparser'是用R版本4.1.3 来建造的
-```
-
-```r
 library(tidyquery)
-```
-
-```
-## Warning: 程辑包'tidyquery'是用R版本4.1.3 来建造的
-```
-
-```r
 employees = tbl(con, "employees") # 通过dplyr函数tbl()查询数据表
 show_dplyr("SELECT
 department_id, first_name, last_name, salary FROM employees
