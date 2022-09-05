@@ -91,7 +91,7 @@ data_table1 %>%
   tab_options(data_row.padding = px(3),
               heading.title.font.size = 15,
               heading.align = "center") %>%
-  gt::gtsave("C:/Users/Dell/Desktop/plot_table1.png", expand = 50)
+  gt::gtsave("C:/Users/Dell/Desktop/plot_table1.png", expand = 20)
 ```
 
 <img src="/post/2022-09-05-gtextras-gt/index.zh-cn_files/figure-html/unnamed-chunk-2-1.png" width="1152" />
@@ -113,7 +113,7 @@ data_table2 %>%
   tab_options(data_row.padding = px(3),
               heading.title.font.size = 15,
               heading.align = "center") %>%
-  gt::gtsave("C:/Users/Dell/Desktop/plot_table2.png", expand = 50)
+  gt::gtsave("C:/Users/Dell/Desktop/plot_table2.png", expand = 20)
 ```
 
 <img src="/post/2022-09-05-gtextras-gt/index.zh-cn_files/figure-html/unnamed-chunk-3-1.png" width="1152" />

@@ -38,7 +38,6 @@ data_table2 <- import("C:/Users/Dell/Desktop/test/plot-table.xlsx", sheet = 2)
 # head
 head(data_table1)
 head(data_table2)
-
 ```
 
 #### 1. 可视化猪场pig_farm1各批次后备猪的fcr描述性统计
@@ -68,8 +67,7 @@ data_table1 %>%
   tab_options(data_row.padding = px(3),
               heading.title.font.size = 15,
               heading.align = "center") %>%
-  gt::gtsave("C:/Users/Dell/Desktop/plot_table1.png", expand = 50)
-
+  gt::gtsave("C:/Users/Dell/Desktop/plot_table1.png", expand = 20)
 ```
 
 #### 2. 可视化pig_farm1猪场各批次测定站有效测定个体数量
@@ -88,5 +86,5 @@ data_table2 %>%
   tab_options(data_row.padding = px(3),
               heading.title.font.size = 15,
               heading.align = "center") %>%
-  gt::gtsave("C:/Users/Dell/Desktop/plot_table2.png", expand = 50)
+  gt::gtsave("C:/Users/Dell/Desktop/plot_table2.png", expand = 20)
 ```
