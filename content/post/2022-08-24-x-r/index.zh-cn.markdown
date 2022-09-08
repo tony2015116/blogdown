@@ -24,7 +24,7 @@ R中🐂🍺的📦太多了，很多可能都没听说过。不是这些R包不
 <!--more-->
 #### **1. gtExtras package**
 <p align="center">
-    <a href="https://jthomasmock.github.io/gtExtras/index.html"><img align="center" width="80px" src="https://jthomasmock.github.io/gtExtras/logo.png"/></a>
+    <a href="https://jthomasmock.github.io/gtExtras/index.html"><img align="center" width="87px" src="https://jthomasmock.github.io/gtExtras/logo.png"/></a>
     <p align="left" style="text-indent:2em;font-size:;font-family:;">
     gtExtras包是为{gt}包提供一些额外的辅助函数，来帮助使用gt包创建漂亮的表格。特点是可以在表格中增加图形，如折线图、密度图和条形图等；也可以修改表格主题样式、增加表头等；可以很好的将data.frame格式的表格导出为图片和pdf格式。
     </p>
@@ -45,4 +45,11 @@ R中🐂🍺的📦太多了，很多可能都没听说过。不是这些R包不
     <a href="https://danchaltiel.github.io/crosstable/index.html"><img align="center" width="87px" src="https://danchaltiel.github.io/crosstable/logo.png"/></a>
     <p align="left" style="text-indent:2em;font-size:;font-family:;">
     crosstable包的核心函数只有一个crosstable(),同样是计算数据的描述性统计。可以结合officer包将结果报告导出到word中。可以结合gt包的as_gt()函数转为gt表格式，或者结合as_flextable()函数转为flextable格式。
+</p>
+
+#### **4. rio package**
+<p align="center">
+    <a href="https://thomasleeper.com/rio/index.html"><img align="center" width="87px" src="https://thomasleeper.com/rio/reference/figures/logo.png"/></a>
+    <p align="left" style="text-indent:2em;font-size:;font-family:;">
+    rio包的核心函数有4个，分别是import()、import_list()、export()、export_list()。import()和export()函数可以单独导入/导出一个文件；import_list()和export_list()可以读取,如一个excel多个sheet或者多个excel文件并合并，export_list()可以导出列表到一个excel文件多个sheet或多个excel。相信以上几个函数就能满足90%以上的数据导入和导出功能需求了。rio包的特点是兼容并包，实现绝大多数的数据格式的导入和导出，将其它类似的R包功能整合到rio中。
 </p>
