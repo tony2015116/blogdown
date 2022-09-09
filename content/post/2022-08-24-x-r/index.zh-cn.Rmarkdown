@@ -53,3 +53,10 @@ R中🐂🍺的📦太多了，很多可能都没听说过。不是这些R包不
     <p align="left" style="text-indent:2em;font-size:;font-family:;">
     rio包的核心函数有4个，分别是import()、import_list()、export()、export_list()。import()和export()函数可以单独导入/导出一个文件；import_list()和export_list()可以读取,如一个excel多个sheet或者多个excel文件并合并，export_list()可以导出列表到一个excel文件多个sheet或多个excel。相信以上几个函数就能满足90%以上的数据导入和导出功能需求了。rio包的特点是兼容并包，实现绝大多数的数据格式的导入和导出，将其它类似的R包功能整合到rio中。
 </p>
+
+#### **5. janitor package**
+<p align="center">
+    <a href="https://sfirke.github.io/janitor/index.html"><img align="center" width="87px" src="https://cdn.jsdelivr.net/gh/tony2015116/PicGo/202209091552414.png"/></a>
+    <p align="left" style="text-indent:2em;font-size:;font-family:;">
+    janitor包是我经常的一个用来处理脏数据的R包。里面包含了很对简单的但很实用的函数。我经常使用的函数有获取重复值get_dupes(),清理对象名称clean_names,日期格式的转换convert_to_date()、convert_to_datetime()、excel_numeric_to_date(),去除空白行列remove_empty()、remove_empty_cols()、remove_empty_rows()，还有其它的一些我不经常使用的函数。janitor包的特点就是在不经意之间会用到它。
+</p>
