@@ -1,0 +1,64 @@
+---
+title: R函数:map()+mutate()+across()
+author: guoguo
+date: '2022-09-29'
+slug: index.zh-cn
+categories:
+  - 数据处理
+tags:
+  - R
+  - tidyverse
+  - purrr
+lastmod: '2022-09-29T23:08:42+08:00'
+keywords: []
+description: ''
+comment: yes
+toc: no
+autoCollapseToc: no
+contentCopyright: no
+reward: yes
+mathjax: yes
+---
+<p style="text-indent:2em;font-size:;font-family:;">
+R中很多常用又很牛掰的函数，还记得在推上有个牛人，每天一个R函数，整整写了一年，最后出了一本书。我在数据处理过程中会遇到很多方便且功能强大的函数，特别是不同R包中函数的组合功能就更加强大了，所以我也有一个想法，将我在数据处理过程中使用到的强大的R函数或函数组合也记录下来，不是每天一个函数，而是遇到哪个写哪个🤭。
+</p>
+<!--more-->
+<p style="text-indent:2em;font-size:;font-family:;">
+今日想分享一下列表中数据框变量类型的转换或其它类型，涉及purrr中的map()函数，dplyr中的mutate()函数和across()函数。如果仅仅是mutate()和across()函数，dplyr的reference都有详细介绍，这里是借助map()函数应用到列表中。
+</p>
+```{r warning=FALSE, paged.print=FALSE}
+# load packages
+library(tidyverse)
+
+# iris str
+str(iris)
+
+# 将列表中factor类型的Species和double类型的Petal.Length、Petal.Width变量转为字符串型
+# group_split()
+iris %>%
+  group_by(Species) %>%
+  group_split() %>%
+  map(mutate, across(where(is.factor) | !c(Sepal.Length, Sepal.Width), as.character))
+
+# group_nest()
+iris %>%
+  group_by(Species) %>%
+  group_nest() %>%
+  mutate(data = map(data, mutate, across(where(is.factor) | !c(Sepal.Length, Sepal.Width), as.character))) %>%
+  unnest(data)
+
+# 将列表中double类型且变量不为Sepal.Length、Sepal.Width的列四舍五入到给定位数
+# group_split()
+iris %>%
+  group_by(Species) %>%
+  group_split() %>%
+  map(mutate, across(where(is.double) & !c(Sepal.Length, Sepal.Width), round, digits = 0))
+
+# group_nest()
+iris %>%
+  group_by(Species) %>%
+  group_nest() %>%
+  mutate(data = map(data, mutate, across(where(is.double) & !c(Sepal.Length, Sepal.Width), round, digits = 0))) %>%
+  unnest(data)
+```
+
