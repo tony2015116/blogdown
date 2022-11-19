@@ -1,0 +1,54 @@
+---
+title: ggplot2+histgram+facet_grid
+author: guoguo
+date: '2022-11-19'
+slug: index.zh-cn
+categories:
+  - 数据可视化
+tags:
+  - R
+  - ggplot2
+  - histgram
+lastmod: '2022-11-19T20:12:47+08:00'
+keywords: []
+description: ''
+comment: yes
+toc: no
+autoCollapseToc: no
+contentCopyright: no
+reward: yes
+mathjax: no
+---
+
+<p style="text-indent:2em;font-size:;font-family:;">
+记录一下使用ggplot2在工作中画多品种多性状表型直方图。这种图的核心是要将多个性状的宽格式数据先转为长格式数据，这样才方便ggplot2进行可视化。
+</p>
+
+<!--more-->
+
+```{r message=FALSE, warning=FALSE}
+# load packages
+library(tidyverse)
+library(rio)
+
+# import data
+data <- import("C:/Users/Dell/Desktop/各品种相关表型.xlsx") #使用模拟数据
+
+# glimpse data
+glimpse(data)
+head(data) #该数据是三个表型性状的宽格式数据
+
+# transform wide data to long data
+data_long <- data %>%
+  pivot_longer(Trait1:Trait3, names_to = "Trait", values_to = "Values") 
+head(data_long)
+
+# plot histgram
+data_long %>%
+  ggplot(aes(Values, fill = Trait)) +
+  geom_histogram() +
+  facet_grid(Breed~Trait, scales = "free") + 
+  theme_minimal() +
+  ggsci::scale_fill_aaas() +
+  theme(legend.position = "bottom")
+```
