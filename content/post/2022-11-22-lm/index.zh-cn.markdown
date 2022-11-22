@@ -1,0 +1,66 @@
+---
+title: 简单线性回归lm可视化
+author: guoguo
+date: '2022-11-22'
+slug: index.zh-cn
+categories:
+  - 线性回归
+  - R
+  - 数据可视化
+tags:
+  - ggplot2
+  - ggxmean
+  - ggols
+lastmod: '2022-11-22T15:54:04+08:00'
+keywords: []
+description: ''
+comment: no
+toc: no
+autoCollapseToc: no
+contentCopyright: no
+reward: no
+mathjax: no
+---
+
+<p style="text-indent:2em;font-size:;font-family:;">
+最近在推特上看到了一个很有意思的R包~ggols，顺带发现了ggxmean包，两个包是同一个作者开发的。ggols和ggxmean目前都只能从github上安装，ggols的开发目的不详（The goal of ggols is to ...）作者应该还在完善中，ggxmean和平均值有关，大致目的是在可视化过程中增加平均值线，但也有对简单线性模型可视化的作用，两个包需要配合使用。以下记录两种方法对一般线性模型进行可视化。
+</p>
+
+<!--more-->
+
+
+```r
+# load packages
+library(ggplot2)
+library(broom)
+library(ggxmean)
+library(ggols)
+library(patchwork)
+
+# plot with ggplot2 and broom
+model = lm(mpg ~ wt, data = mtcars)
+p1 = model %>% augment() %>%
+  ggplot(aes(x = wt, y = mpg)) +
+  geom_point() +
+  geom_line(aes(y = .fitted), color = "blue") +
+  geom_segment(aes(xend = wt, yend = .fitted), color = "red") +
+  geom_point(aes(x = wt, y = .fitted), color = "green") +
+  labs(title = "plot with ggplot2 and broom")
+
+# plot with ggxmean and ggols, but also need ggplot2
+p2 = ggplot(mtcars) +
+  aes(x = wt, y = mpg) +
+  geom_point() +
+  geom_lm() +
+  #geom_lm_conf_int() +
+  geom_lm_residuals(color = "red") +
+  geom_lm_fitted(color = "green") +
+  geom_lm_formula() + 
+  ggols:::geom_lm_rsquared() +
+  labs(title = "plot with ggxmean and ggols")
+
+#combine plot p1 and plot p2
+p1 + p2
+```
+
+<img src="/post/2022-11-22-lm/index.zh-cn_files/figure-html/unnamed-chunk-1-1.png" width="672" />
