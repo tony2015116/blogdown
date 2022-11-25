@@ -72,8 +72,8 @@ menu:
       name: 关于
       weight: 60
       url: /about/
-    - identifier: python
-      name: python
+    - identifier: project
+      name: project
       weight: 50
       url: /python/
     # - name: Twitter
