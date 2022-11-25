@@ -75,7 +75,7 @@ menu:
     - identifier: project
       name: project
       weight: 50
-      url: /python/
+      url: /project/
     # - name: Twitter
     #   url: https://twitter.com/rstudio
     
