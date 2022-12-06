@@ -1,5 +1,5 @@
 ---
-title: record1和平精英生存心得
+title: record1-和平精英生存心得
 author: guoguo
 date: '2022-11-25'
 slug: index.zh-cn
