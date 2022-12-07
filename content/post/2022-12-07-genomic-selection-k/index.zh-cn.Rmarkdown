@@ -1,0 +1,140 @@
+---
+title: Genomic Selection-k折交叉验证可视化
+author: guoguo
+date: '2022-12-07'
+slug: index.zh-cn
+categories:
+  - Genomic Selection
+  - 数据可视化
+tags:
+  - k-fold cross validation
+  - R
+  - rsample
+  - caret
+  - naniar
+lastmod: '2022-12-07T23:17:37+08:00'
+keywords: []
+description: ''
+comment: yes
+toc: no
+autoCollapseToc: no
+contentCopyright: no
+reward: yes
+mathjax: no
+---
+
+<p style="text-indent:2em;font-size:;font-family:;">
+最近参加了有关基因组选择的ASReml-R培训，培训中实现交叉验证的工具和我使用的不同，我使用的是rsample包，属于tidymodels，培训中中使用的是机器学习包caret，这个包了解不多，应该已经被tidymodels包替代。虽然知道交叉验证的基本概念，但这就像一个黑盒子，不清楚到底是怎么分的。同时，我也想比较一下两个R包进行交叉验证划分的训练集和验证集有什么不同。刚好在Wx公众号《R语言和统计》上看到一个可以实现缺失值可视化的R包naniar，那就开始干吧！
+</p>
+
+<!--more-->
+
+```{r message=FALSE, warning=FALSE}
+# load packages
+library(caret)
+library(rsample)
+library(naniar)
+library(tidyverse)
+
+# import data
+data <- read.csv("C:/Users/Dell/Desktop/phe_gblup.csv")
+
+# head data
+head(data)
+
+```
+
+-   使用caret划分训练集和验证集
+
+```{r message=FALSE, warning=FALSE}
+# caret 5-fold cross-validation
+set.seed(123)
+w = createFolds(1:length(data$ID),k=5)
+id1 = w[[1]]
+id2 = w[[2]]
+id3 = w[[3]]
+id4 = w[[4]]
+id5 = w[[5]]
+
+d1 = d2 = d3 = d4 = d5 = data
+d1[id1,4] = NA
+d2[id2,4] = NA
+d3[id3,4] = NA
+d4[id4,4] = NA
+d5[id5,4] = NA
+
+# head d1
+head(d1) #已经将data中phe列的部分值转为NA，其中非NA为训练集，NA部分为验证集
+
+# 合并
+caret_res = list(d1, d2, d3, d4, d5) %>% 
+  reduce(left_join, by = "ID") %>%
+  select(1,d1=4,d2=7,d3=10,d4=13,d5=16) %>%
+  mutate(d1 = case_when(!is.na(d1) ~ "have", TRUE ~ "empty"),
+         d2 = case_when(!is.na(d2) ~ "have", TRUE ~ "empty"),
+         d3 = case_when(!is.na(d3) ~ "have", TRUE ~ "empty"),
+         d4 = case_when(!is.na(d4) ~ "have", TRUE ~ "empty"),
+         d5 = case_when(!is.na(d5) ~ "have", TRUE ~ "empty")) %>%
+  mutate(across(everything(), ~na_if(., "empty")))
+
+head(caret_res) #d1到d5都为phe列，只是把非NA替换为have,保持不变;ID列完整无缺失
+
+# 使用naniar对缺失值（验证集）可视化
+vis_miss(caret_res)
+
+# 对caret_res排序后再可视化
+caret_res %>%
+  arrange(d1,d2,d3,d4,d5) %>%
+  vis_miss()
+```
+
+-   使用caret划分训练集和验证集
+
+```{r message=FALSE, warning=FALSE}
+# rsample 5-fold cross-validation
+set.seed(123)
+rsample_divide <- data %>%
+  mutate(trait = "trait1") %>% #需要使用nest,所以新增一列trait(随便取的)
+  pretidy::w2l_nest_df(4, trait) %>%
+  mutate(data = map(data, ~filter(., !is.na(value)))) %>%
+  mutate(cv_split = map(data, ~vfold_cv(., v = 5, repeats = 1, strata = "value", pool = 0.5, breaks = 4))) %>% 
+  unnest_legacy(cv_split) %>%
+  mutate(reference = map(splits, training), #提取训练集
+         validate = map(splits, testing), .keep = "unused") #提取验证集
+
+head(rsample_divide)
+
+a1 = rsample_divide$validate[[1]]
+a2 = rsample_divide$validate[[2]]
+a3 = rsample_divide$validate[[3]]
+a4 = rsample_divide$validate[[4]]
+a5 = rsample_divide$validate[[5]]
+
+head(a5)
+
+rsample_res = list(a1,a2,a3,a4,a5) %>% reduce(full_join, by = "ID") %>%
+  select(1,a1=4,a2=7,a3=10,a4=13,a5=16) %>%
+  mutate(a1 = case_when(is.na(a1) ~ "have", TRUE ~ "empty"),
+         a2 = case_when(is.na(a2) ~ "have", TRUE ~ "empty"),
+         a3 = case_when(is.na(a3) ~ "have", TRUE ~ "empty"),
+         a4 = case_when(is.na(a4) ~ "have", TRUE ~ "empty"),
+         a5 = case_when(is.na(a5) ~ "have", TRUE ~ "empty")) %>%
+  mutate(across(everything(), ~na_if(., "empty")))
+
+head(rsample_res)
+
+# 使用naniar对缺失值（验证集）可视化
+vis_miss(rsample_res)
+```
+
+-   将caret和rsample结果合并
+
+<p style="text-indent:2em;font-size:;font-family:;">
+比较两个R包对训练集和验证集的划分，看起来差不多。我用的rsample比较多，可以调整参数，caret包也可以调节参数使数据集划分的更合理一些。同时，我也有一个疑问，基因组选择中的交叉验证能不能这样直接使用？
+</p>
+
+```{r}
+caret_res %>%
+  left_join(rsample_res, by = "ID") %>%
+  vis_miss()
+```
