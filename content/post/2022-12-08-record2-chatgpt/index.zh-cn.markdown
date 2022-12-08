@@ -1,5 +1,5 @@
 ---
-title: record2-chatGPT会不会让敲代码的人事业？
+title: record2-chatGPT会不会让敲代码的人失业？
 author: guoguo
 date: '2022-12-08'
 slug: index.zh-cn
