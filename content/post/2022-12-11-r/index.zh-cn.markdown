@@ -1,0 +1,79 @@
+---
+title: R中怎么定制字符串样式？
+author: guoguo
+date: '2022-12-11'
+slug: index.zh-cn
+categories:
+  - R
+tags:
+  - 字符串
+lastmod: '2022-12-11T17:07:54+08:00'
+keywords: []
+description: ''
+comment: no
+toc: no
+autoCollapseToc: no
+contentCopyright: no
+reward: no
+mathjax: no
+---
+
+<p style="text-indent:2em;font-size:;font-family:;">
+在bruceR包中注意到包中函数的打印结果很有意思，就单独将“Print()”函数拎出来研究研究。Print()函数主要利用了glue包中的glue()和glue_col()函数，可以改变打印结果的颜色和字体等。对Print()函数稍微修改了一下，方便理解，便重新命名了原函数中的字符。
+</p>
+
+<!--more-->
+
+
+```r
+# load package
+library(glue)
+library(stringr)
+
+# Print() changed to string_style_trans()
+string_style_trans <- function(...){
+  tryCatch(
+    {
+        replace_in_bracket = glue(..., .envir = parent.frame())
+        text_style_control = glue_col(str_replace_all(str_replace_all(replace_in_bracket, "<", "{"), ">", "}")) #gsub("<", "{", gsub(">", "}", replace_in_bracket))
+        print(text_style_control)
+    },
+    error=function(e) {
+      message(cli::col_red('An Error Occurred'))
+      print(e)
+    },
+    warning=function(w) {
+      message(cli::col_blue('A Warning Occurred'))
+      print(w)
+      return(NA)
+    }
+  )
+}
+
+# print something
+Function <- "string_style_trans()"
+string_style_trans("{Function} can like glue_col() show <red c<yellow o<green l<cyan o<blue r<magenta s <bold bold> <underline underline>>>>>>> too!")
+```
+
+```
+## string_style_trans() can like glue_col() show colors bold underline too!
+```
+
+```r
+# use glue only
+glue_col("glue_col() can show {red c{yellow o{green l{cyan o{blue r{magenta s {bold bold} {underline underline}}}}}}} too!")
+```
+
+```
+## glue_col() can show colors bold underline too!
+```
+
+```r
+# cli::col_blue等也有类似效果
+#cli::col_br_magenta("colors")
+```
+
+![](images/glue.png)
+<p style="text-indent:2em;font-size:;font-family:;">
+改编的函数string_style_trans()和glue_col()功能很近似，只不过string_style_trans()函数以<>替代了{},更方便区分。
+</p>
