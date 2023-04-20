@@ -1,0 +1,101 @@
+---
+title: 使用plink1.9替换个体ID以及格式转换
+author: guoguo
+date: '2023-04-20'
+slug: index.zh-cn
+categories:
+  - 数据处理
+  - Genomic Selection
+tags:
+  - plink1.9
+  - 生物芯片数据
+  - 格式转换
+  - 替换芯片个体ID
+lastmod: '2023-04-20T21:56:30+08:00'
+keywords: []
+description: '使用plink替换生物芯片个体ID'
+comment: yes
+toc: no
+autoCollapseToc: no
+contentCopyright: no
+reward: no
+mathjax: no
+---
+
+<p style="text-indent:2em;font-size:;font-family:;">
+刚好有芯片数据需要处理，就结合chatGPT重新整理了一下使用plink替换芯片中个体ID的方法。
+</p>
+
+<!--more-->
+
+#### 替换芯片个体ID
+
+<p style="text-indent:2em;font-size:;font-family:;">
+提前准备了测试文件toy.ped和toy.map。其中芯片个体ID在toy.ped中，分别为1000000000和1000000001。
+</p>
+
+```{bash}
+cd C:/Users/Dell/Downloads/plink
+ls -l
+less -S toy.map
+less -S toy.ped
+```
+
+```{bash}
+cd C:/Users/Dell/Downloads/plink
+awk '{print $1, $2}' toy.ped
+```
+
+<p style="text-indent:2em;font-size:;font-family:;">
+准备一个文本文件，这里是id_map.txt, 第1列是旧FID，第2列是旧IID，第3列是新FID，第4列是新IID，每列使用空格或tab隔开。对于空缺的，可以使用0替代。
+</p>
+
+```{bash}
+cd C:/Users/Dell/Downloads/plink
+less -S id_map.txt
+```
+
+<p style="text-indent:2em;font-size:;font-family:;">
+比较toy.ped和toy.updated.ped中的个体ID即IID，已替换为新的芯片ID。
+</p>
+
+```{bash}
+cd C:/Users/Dell/Downloads/plink
+plink --file toy --update-ids id_map.txt --recode --out toy.updated
+less -S toy.ped
+less -S toy.updated.ped
+```
+
+#### plink格式转换中容易忽略的问题及一些相关常用代码
+
+##### \--recode vcf 和 --recode vcf-iid的区别
+
+在 PLINK 1.9 中，--recode vcf 和 --recode vcf-iid 都用于将数据转换为 VCF 格式。但它们之间的主要区别在于生成的 VCF 文件中的样本 ID（individual ID）表示方式。
+
+--recode vcf：使用此选项时，PLINK 会在生成的 VCF 文件中将样本 ID 设置为 "FID_IID"，其中 FID 是家族 ID（Family ID），IID 是个体 ID（Individual ID）。在 PLINK 的 PED 文件和其他输入格式中，样本通常都有一个家族 ID 和一个个体 ID。如果家族 ID 和个体 ID 相同，生成的 VCF 文件中的样本 ID 将是 "IID_IID" 的形式。
+
+--recode vcf-iid：使用此选项时，PLINK 仅使用个体 ID（IID）作为生成的 VCF 文件中的样本 ID。即使样本具有家族 ID，也不会将其包含在 VCF 文件的样本 ID 中。
+
+```{bash}
+cd C:/Users/Dell/Downloads/plink
+plink --file toy --recode vcf --out a1
+plink --file toy --recode vcf-iid --out a2
+less -S a1.vcf
+less -S a2.vcf
+```
+
+##### 或许有用的一些代码
+
+```{bash}
+cd C:/Users/Dell/Downloads/plink
+plink --vcf a1.vcf --update-ids id_map.txt --recode --out toy.updated
+less -S toy.updated.ped
+plink --file toy --update-ids id_map.txt --recode vcf-iid --out a3
+less -S a3.vcf
+plink --file toy --update-ids id_map.txt --recode vcf --out a4
+less -S a4.vcf
+plink --file toy --recodeA --out a5
+less -S a5.vcf
+plink --file toy --update-ids id_map.txt --recodeA --out a6
+less -S a6.vcf
+```

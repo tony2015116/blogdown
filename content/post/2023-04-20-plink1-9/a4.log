@@ -1,0 +1,16 @@
+PLINK v1.90b6.26 64-bit (2 Apr 2022)
+Options in effect:
+  --file toy
+  --out a4
+  --recode vcf
+  --update-ids id_map.txt
+
+Hostname: DESKTOP-GMQH46N
+Working directory: C:\Users\Dell\Documents\projects\blogdown\content\post\2023-04-20-plink1-9
+Start time: Thu Apr 20 22:34:29 2023
+
+Random number seed: 1682001269
+32578 MB RAM detected; reserving 16289 MB for main workspace.
+Error: Failed to open toy.map.
+
+End time: Thu Apr 20 22:34:29 2023
