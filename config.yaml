@@ -73,7 +73,7 @@ menu:
       weight: 60
       url: /about/
     - identifier: project
-      name: project
+      name: 项目
       weight: 50
       url: /project/
     # - name: Twitter
