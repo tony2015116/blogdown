@@ -4,7 +4,7 @@ if (file.exists("~/.Rprofile")) {
 }
 
 options(
-  blogdown.hugo.version = "0.92.0",
+  blogdown.hugo.version = "0.170.0",
   blogdown.serve_site.startup = FALSE,
   blogdown.knit.on_save = FALSE,
   blogdown.author = "guoguo",

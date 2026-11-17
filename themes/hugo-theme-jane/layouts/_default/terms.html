@@ -69,7 +69,7 @@
         {{ with $.Site.GetPage "taxonomy" (printf "%s/%s" $type $tagName) }}
         <!--Current font size: {{$currentFontSize}}-->
         <a href="{{ .Permalink }}"
-          style="font-size:{{$currentFontSize}}{{$fontUnit}}">{{ $tagName }}</a>
+          style="font-size:{{$currentFontSize}}{{$fontUnit}}">{{ replace $tagName " " "-" }}</a>
         {{ end }}
       {{ end }}
       </div>
@@ -86,7 +86,7 @@
           <div class="collection-title">
             <h2 class="archive-year">
               <a href="{{ .Permalink }}">
-                {{- $author := (index ($.Site.Data.authors | default dict) $term) -}}
+                {{- $author := (index (hugo.Data.authors | default dict) $term) -}}
                 {{- $author_lang := (index ($author | default dict) $.Site.Language.Lang) -}}
                 {{- $author_name := $author_lang.name.display | default $author.name.display | default $term -}}
                 {{ i18n "author_item" }}{{ $author_name }}

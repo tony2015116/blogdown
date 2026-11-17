@@ -70,7 +70,7 @@
   {{- end }}
 
   <!-- Disqus -->
-  {{- if .Site.DisqusShortname -}}
+  {{- if .Site.Config.Services.Disqus.Shortname -}}
   <div class="disqus-comment">
   <div class="disqus-button" id="load_disqus" onclick="load_disqus()">
     {{ i18n "loadDisqus" }}
@@ -86,7 +86,7 @@
       if (window.location.hostname === 'localhost') return;
 
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      var disqus_shortname = '{{ .Site.DisqusShortname }}';
+      var disqus_shortname = '{{ .Site.Config.Services.Disqus.Shortname }}';
       dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 

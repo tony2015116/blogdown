@@ -1,14 +1,13 @@
 baseURL: https://blog.mguo.dpdns.org/
 title: MGUO 的博客
-enableRobotsTXT: yes
-enableEmoji: yes
+enableRobotsTXT: true
+enableEmoji: true
 theme: hugo-theme-jane
 # hasCJKLanguage: yes
-paginate: 30
+pagination:
+  pagerSize: 30
 rssLimit: 20
-enableGitInfo: yes
-disqusShortname: ''
-googleAnalytics: ''
+enableGitInfo: true
 copyright: ''
 
 
@@ -24,12 +23,6 @@ permalinks:
 
 
 
-pygmentsOptions: linenos=table #kubebis=table
-pygmentsCodefences: yes #yes
-pygmentsUseClasses: yes #yes
-pygmentsCodefencesGuessSyntax: no #no
-
-
 #taxonomies:
 #  author: "guo"
 #  tag: "tags"
@@ -38,11 +31,8 @@ pygmentsCodefencesGuessSyntax: no #no
 
 #defaultContentLanguage: en
 defaultContentLanguage: zh-cn
-languageCode: zh-cn
+locale: zh-cn
 
-author:
-  name: guoguo
-  
 sitemap:
   changefreq: weekly
   priority: 0.5
@@ -68,23 +58,25 @@ menu:
       weight: 40
 
 params:
+  authorInfo:
+    name: guoguo
   customCSS: ['custom.css'] #'douban.css' #'sspai.css'
   customJS: []
   dateFormatToUse: '2006-01-02'
 
-  photoswipe: no
+  photoswipe: false
   #rssFullContent: yes
-  homeFullContent: no
+  homeFullContent: false
   
   since: '2022'
   
-  mathjax: no 
-  katex: no
+  mathjax: false
+  katex: false
   #contentCopyright: '<a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a>'
   
-  moreMeta: no
+  moreMeta: false
   
-  baidu_push: yes        # baidu push                  # 百度
+  baidu_push: true        # baidu push                  # 百度
   baidu_analytics: ""      # Baidu Analytics
   baidu_verification: ""   # Baidu Verification
   google_verification: ""  # Google_Verification         # 谷歌
@@ -92,7 +84,7 @@ params:
   
   counter:
     busuanzi:
-      enable: no
+      enable: false
 
   social:
     a-email: mailto:tony2015116@163.com
@@ -105,25 +97,28 @@ params:
     #q-bilibili: http://localhost:1313
     #t-youtube: http://localhost:1313
   
-  showAuthorInfo: no
+  showAuthorInfo: false
   
-  toc: no                                                                            # 是否开启目录
-  autoCollapseToc: no   # Auto expand and collapse toc                              # 目录自动展开/折叠
-  fancybox: no           # see https://github.com/fancyapps/fancybox                 # 是否启用fancybox（图片可点击）
+  toc: false                                                                            # 是否开启目录
+  autoCollapseToc: false   # Auto expand and collapse toc                              # 目录自动展开/折叠
+  fancybox: false           # see https://github.com/fancyapps/fancybox                 # 是否启用fancybox（图片可点击）
   
   #forkMeOnGithub: "https://github.com/tony2015116/blogdown"
 
   reward:                                         # 文章打赏
-    enable: no
+    enable: false
     wechat: "/image/wechat-qr-code.jpg"           # 微信二维码
 #   alipay: "/path/to/your/alipay-qr-code.png"           # 支付宝二维码
   
   gitInfo:
     gitRepo: "https://github.com/tony2015116/blogdown"
-    showCommitMessage: yes
+    showCommitMessage: true
 
 markup:
   defaultMarkdownHandler: goldmark
+  highlight:
+    noClasses: false
+    lineNos: true
   goldmark:
     renderer:
-      unsafe: yes
+      unsafe: true

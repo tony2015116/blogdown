@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default "zh-cn" }}">
+<html lang="{{ .Site.Language.Locale | default "zh-cn" }}">
 <head>
   <meta charset="utf-8">
   <title>{{ block "title" . }}{{ if not .IsHome }}{{ .Title }} · {{ end }}{{ .Site.Title }}{{ end }}</title>

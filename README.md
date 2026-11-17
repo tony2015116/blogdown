@@ -16,13 +16,21 @@
 
 ## 二、在 RStudio 本地预览
 
-克隆仓库或拉取最新的 `main`，双击打开 `blogdown.Rproj`。博客由 blogdown 编写，在 [Hugo Jane](https://github.com/xianmin/hugo-theme-jane) 主题基础上定制。由于主题用 Sass 生成样式，本地和 GitHub Actions 都使用 **Hugo Extended 0.92.0**。
+克隆仓库或拉取最新的 `main`。双击打开 `blogdown.Rproj`，如果项目已打开，先在 RStudio 选择 **Session → Restart R**。博客使用 blogdown 和定制的 [Hugo Jane](https://github.com/xianmin/hugo-theme-jane) 主题。本地和 GitHub Actions 都固定使用 **Hugo 0.170.0**。
 
 首次使用时，在 RStudio 的 Console 安装依赖。
 
 ```r
 install.packages("blogdown")
-blogdown::install_hugo(version = "0.92.0", extended = TRUE)
+blogdown::install_hugo(version = "0.170.0", extended = FALSE)
+blogdown::hugo_version()
+```
+
+如果 Windows 64 位电脑提示找不到该版本，从 [Hugo 官方发布页下载兼容文件名的 ZIP](https://github.com/gohugoio/hugo/releases/download/v0.170.0/hugo_extended_0.170.0_windows-amd64.zip)。保留原文件名和 ZIP 格式，在 RStudio 运行以下命令并选择下载的文件。
+
+```r
+blogdown::install_hugo(version = file.choose(), extended = FALSE)
+blogdown::hugo_version()
 ```
 
 运行 `blogdown::serve_site()` 开启本地预览。保存普通 Markdown 后可看到更新。预览结束时运行 `blogdown::stop_server()`。
@@ -55,8 +63,11 @@ blogdown::install_hugo(version = "0.92.0", extended = TRUE)
 | 顶栏、作者侧栏和页脚 | [`layouts/_default/baseof.html`](layouts/_default/baseof.html) |
 | 首页文章列表 | [`layouts/index.html`](layouts/index.html) |
 | 站点样式与明暗切换 | [`static/css/custom.css`](static/css/custom.css)、[`static/js/blog-theme.js`](static/js/blog-theme.js) |
+| Jane 基础样式（已编译的 CSS） | [`assets/sass/jane.min.css`](assets/sass/jane.min.css) |
 | RStudio 博客项目选项 | [`.Rprofile`](.Rprofile) |
 | GitHub Pages 发布流程 | [`.github/workflows/pages.yml`](.github/workflows/pages.yml) |
+
+Hugo 直接读取并生成带内容指纹的 Jane 基础样式。写文章和日常修改 `static/css/custom.css` 无需安装 Sass。
 
 ## 五、GitHub Pages 与域名
 

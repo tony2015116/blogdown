@@ -25,16 +25,16 @@ jobs:
         id: pages
         uses: actions/configure-pages@v6
 
-      - name: Install Hugo Extended
+      - name: Install Hugo
         env:
-          HUGO_VERSION: '0.92.0'
-          HUGO_SHA256: c025201508ac9a44d5c461713f4d416eabb1dee45c9df3de0d634a167e2e2fbd
+          HUGO_VERSION: '0.170.0'
+          HUGO_SHA256: 0930754ec22ad2dd1a252f8c31a5e57faccc9d15f1c3d381ddafcb96eeb8aef0
         run: |
           archive="$RUNNER_TEMP/hugo.tar.gz"
           tools_dir="$RUNNER_TEMP/hugo-bin"
           mkdir -p "$tools_dir"
           curl --fail --silent --show-error --location --retry 3 \
-            "https://github.com/gohugoio/hugo/releases/download/v$HUGO_VERSION/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz" \
+            "https://github.com/gohugoio/hugo/releases/download/v$HUGO_VERSION/hugo_${HUGO_VERSION}_linux-amd64.tar.gz" \
             --output "$archive"
           printf '%s  %s\n' "$HUGO_SHA256" "$archive" | sha256sum --check
           tar -xzf "$archive" -C "$tools_dir" hugo
