@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "zh-cn" }}">
+<head>
+  <meta charset="utf-8">
+  <title>{{ block "title" . }}{{ if not .IsHome }}{{ .Title }} · {{ end }}{{ .Site.Title }}{{ end }}</title>
+  {{ partial "head.html" . }}
+  <script src="{{ "js/blog-theme.js" | relURL }}"></script>
+</head>
+<body class="minimal-site">
+  <a class="blog-skip" href="#content">跳到正文</a>
+  {{/* Jane's script uses these nodes for its mobile menu. The new navigation wraps on narrow screens. */}}
+  <div hidden>{{ partial "slideout.html" . }}</div>
+
+  <header id="header" class="blog-masthead">
+    <div class="blog-width blog-bar">
+      <a class="blog-name" href="{{ .Site.Home.RelPermalink }}">{{ .Site.Title }}</a>
+      <nav class="blog-menu" aria-label="博客导航">
+        {{ range .Site.Menus.main }}
+          {{ if ne .Identifier "home" }}
+            {{ $path := .URL | relLangURL }}
+            <a href="{{ $path }}"{{ if or (eq $.RelPermalink $path) (and (eq .Identifier "archives") (eq $.Section "post")) }} aria-current="{{ if eq $.RelPermalink $path }}page{{ else }}location{{ end }}"{{ end }}>{{ .Name }}</a>
+          {{ end }}
+        {{ end }}
+      </nav>
+      <button class="blog-theme" type="button" aria-label="深色模式" aria-pressed="false" hidden>
+        <span aria-hidden="true" class="blog-moon">☾</span><span aria-hidden="true" class="blog-sun">☀</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="mobile-panel">
+    <div class="blog-width blog-shell{{ if not .IsHome }} blog-shell-inner{{ end }}">
+      <aside class="blog-profile" aria-label="作者">
+        <img src="{{ "about_files/blog-avatar.png" | relURL }}" width="250" height="250" alt="郭猛">
+        <div>
+          <p class="blog-author">郭猛</p>
+          <p class="blog-role">育种经理 · 猪遗传育种</p>
+          <div class="blog-profile-links">
+            <a href="https://mguo.dpdns.org/">个人主页</a>
+            <a href="https://github.com/tony2015116">GitHub</a>
+            {{ with .Site.Home.OutputFormats.Get "RSS" }}<a href="{{ .RelPermalink }}">RSS</a>{{ end }}
+          </div>
+        </div>
+      </aside>
+      <main id="content">
+        {{ if or .Site.Params.photoswipe .Site.Params.fancybox }}{{ partial "photoswipe.html" . }}{{ end }}
+        {{ if .Site.Params.search.google.enable }}{{ partial "search_google.html" . }}{{ end }}
+        {{ block "content" . }}{{ end }}
+      </main>
+    </div>
+    <footer class="blog-footer">
+      <div class="blog-width">© {{ now.Format "2006" }} 郭猛 <span aria-hidden="true">·</span> <a href="https://gohugo.io/">Hugo</a> / <a href="https://bookdown.org/yihui/blogdown/">blogdown</a></div>
+    </footer>
+  </div>
+  {{ partial "scripts.html" . }}
+</body>
+</html>

@@ -1,5 +1,5 @@
 baseURL: https://blog.mguo.dpdns.org/
-title: 一起阅读和分享吧😊
+title: MGUO 的博客
 enableRobotsTXT: yes
 enableEmoji: yes
 theme: hugo-theme-jane
@@ -85,7 +85,6 @@ params:
   customJS: []
   dateFormatToUse: '2006-01-02'
 
-  logoTitle: guoguo's blog
   photoswipe: no
   #rssFullContent: yes
   homeFullContent: no
@@ -96,7 +95,7 @@ params:
   katex: no
   #contentCopyright: '<a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a>'
   
-  moreMeta: yes
+  moreMeta: no
   
   baidu_push: yes        # baidu push                  # 百度
   baidu_analytics: ""      # Baidu Analytics
@@ -106,7 +105,7 @@ params:
   
   counter:
     busuanzi:
-      enable: yes
+      enable: no
 
   social:
     a-email: mailto:tony2015116@163.com
@@ -124,7 +123,7 @@ params:
    repo: tony2015116/blog_comments   # The repo to store comments
    issueTerm: pathname
   
-  showAuthorInfo: yes
+  showAuthorInfo: no
   
   toc: no                                                                            # 是否开启目录
   autoCollapseToc: no   # Auto expand and collapse toc                              # 目录自动展开/折叠
