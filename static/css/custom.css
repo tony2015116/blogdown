@@ -120,6 +120,25 @@ body.minimal-site {
   object-fit: cover;
 }
 
+.blog-profile-details p { margin: 0; }
+.blog-profile-details .blog-author {
+  font: 700 20px/1.45 "Noto Serif CJK SC", "Songti SC", "SimSun", serif;
+}
+.blog-profile-details .blog-role { margin-top: 4px; color: var(--blog-muted); }
+.blog-profile-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+}
+.blog-profile-home:hover { text-decoration: underline; text-underline-offset: .25em; }
+.blog-profile-home-icon {
+  width: 14px;
+  height: 14px;
+  background: currentColor;
+  mask: url("../images/profile-home.svg") center / contain no-repeat;
+}
+
 .blog-index-head { margin-bottom: 12px; border-bottom: 1px solid var(--blog-line); }
 .blog-index-head h1, .minimal-site .post .post-title {
   margin: 0 0 15px;
@@ -233,6 +252,8 @@ body.minimal-site {
 @media (max-width: 924px) {
   .blog-profile { flex-direction: row; align-items: center; }
   .blog-profile img { width: 52px; height: 52px; padding: 0; border: 0; }
+  .blog-profile-details .blog-author { font-size: 17px; }
+  .blog-profile-home { margin-top: 6px; }
 }
 
 @media (max-width: 800px) {
