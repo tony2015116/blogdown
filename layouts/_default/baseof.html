@@ -23,23 +23,16 @@
         {{ end }}
       </nav>
       <button class="blog-theme" type="button" aria-label="深色模式" aria-pressed="false" hidden>
-        <span aria-hidden="true" class="blog-moon">☾</span><span aria-hidden="true" class="blog-sun">☀</span>
+        <span class="blog-theme-icon" aria-hidden="true"></span>
       </button>
     </div>
   </header>
 
   <div id="mobile-panel">
     <div class="blog-width blog-shell{{ if not .IsHome }} blog-shell-inner{{ end }}">
-      <aside class="blog-profile" aria-label="作者">
-        <div>
-          <p class="blog-author">郭猛</p>
-          <p class="blog-role">育种经理 · 猪遗传育种</p>
-          <div class="blog-profile-links">
-            <a href="https://mguo.dpdns.org/">个人主页</a>
-            <a href="https://github.com/tony2015116">GitHub</a>
-            {{ with .Site.Home.OutputFormats.Get "RSS" }}<a href="{{ .RelPermalink }}">RSS</a>{{ end }}
-          </div>
-        </div>
+      <aside class="blog-profile" aria-label="个人主页入口">
+        <img src="{{ "about_files/blog-avatar.png" | relURL }}" width="175" height="175" alt="郭猛">
+        <a href="https://mguo.dpdns.org/">个人主页</a>
       </aside>
       <main id="content">
         {{ if or .Site.Params.photoswipe .Site.Params.fancybox }}{{ partial "photoswipe.html" . }}{{ end }}

@@ -1,0 +1,19 @@
+{
+  "name": "MGUO 的博客",
+  "short_name": "MGUO 博客",
+  "description": "记录 R 语言、数据分析和猪遗传育种实践",
+  "start_url": "../",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
