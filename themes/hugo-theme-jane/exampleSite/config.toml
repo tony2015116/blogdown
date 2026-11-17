@@ -75,8 +75,10 @@ defaultContentLanguage = "en"           # Default language to use
 
   # Link custom CSS and JS assets
   #   (relative to /static/css and /static/js respectively)
-  customCSS = []            # if ['custom.css'], load '/static/css/custom.css' file
-  customJS = []             # if ['custom.js'], load '/static/js/custom.js' file
+  # Leave these unset unless custom assets are needed. Empty lists can break
+  # Hugo's TOML-to-YAML conversion when blogdown scans this example config.
+  # customCSS = ["custom.css"]  # Load /static/css/custom.css
+  # customJS = ["custom.js"]    # Load /static/js/custom.js
 
   [params.social]                                         # 社交链接
     a-email = "mailto:your@email.com"
