@@ -45,7 +45,10 @@ jobs:
           PAGES_BASE_URL: ${{ steps.pages.outputs.base_url }}
           HUGO_CANONIFYURLS: 'true'
         run: |
-          hugo --baseURL "${PAGES_BASE_URL%/}/"
+          # Pages can report an HTTP URL while HTTPS enforcement is disabled.
+          site_url="${PAGES_BASE_URL/#http:\/\//https://}"
+          test -n "$site_url"
+          hugo --baseURL "${site_url%/}/"
           test -s public/index.html
 
       - uses: actions/upload-pages-artifact@v5
