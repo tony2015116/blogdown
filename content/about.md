@@ -57,7 +57,7 @@ comment: yes
     </a>
      </a>
     <a href="#" target="_blank">
-        <img src="https://img.shields.io/badge/-Netlify-black?style=flat&logo=Netlify&labelColor=5c5c5c&color=1182c3" alt="Netlify"/>
+        <img src="https://img.shields.io/badge/-GitHub%20Pages-black?style=flat&logo=github&labelColor=5c5c5c&color=1182c3" alt="GitHub Pages"/>
     </a>
     <a href="#" target="_blank">
         <img src="https://img.shields.io/badge/-Cloudflare-black?style=flat&logo=Cloudflare&labelColor=5c5c5c&color=1182c3" alt="Cloudflare"/>
@@ -102,7 +102,7 @@ comment: yes
     </a>
      </a>
     <a href="#" target="_blank">
-        <img src="https://img.shields.io/badge/-Netlify-black?style=flat&logo=Netlify&labelColor=5c5c5c&color=1182c3" alt="Netlify"/>
+        <img src="https://img.shields.io/badge/-GitHub%20Pages-black?style=flat&logo=github&labelColor=5c5c5c&color=1182c3" alt="GitHub Pages"/>
     </a>
     <a href="#" target="_blank">
         <img src="https://img.shields.io/badge/-Cloudflare-black?style=flat&logo=Cloudflare&labelColor=5c5c5c&color=1182c3" alt="Cloudflare"/>

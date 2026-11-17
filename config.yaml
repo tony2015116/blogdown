@@ -1,5 +1,4 @@
-baseURL: http://www.rusersplace.com
-#https://rabc.netlify.app
+baseURL: https://blog.mguo.dpdns.org/
 title: 一起阅读和分享吧😊
 enableRobotsTXT: yes
 enableEmoji: yes
@@ -15,11 +14,11 @@ comment: yes
 
 
 ignoreFiles:
-  - \.Rmd$
-  - \.Rmarkdown$
-  - _cache$
-  - \.knit\.md$
-  - \.utf8\.md$
+  - '\.Rmd$'
+  - '\.Rmarkdown$'
+  - '_cache$'
+  - '\.(knit|utf8)\.md$'
+  - '\.lock~$'
 
 permalinks:
   post: /:year/:month/:day/:slug/
@@ -54,28 +53,28 @@ menu:
   main:
     - identifier: home
       name: 主页
-      url: /
+      url: ./
       weight: 10
     - identifier: archives
       name: 归档
-      url: /post/
+      url: post/
       weight: 20
     - identifier: tags
       name: 标签
-      url: /tags/
+      url: tags/
       weight: 30
     - identifier: categories
       name: 分类
-      url: /categories/
+      url: categories/
       weight: 40
     - identifier: about
       name: 关于
       weight: 60
-      url: /about/
+      url: about/
     - identifier: project
       name: 项目
       weight: 50
-      url: /project/
+      url: project/
     # - name: Twitter
     #   url: https://twitter.com/rstudio
     

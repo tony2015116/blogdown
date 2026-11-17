@@ -39,7 +39,7 @@ mathjax: yes
 -   在markdown中添加html block：
 
 ``` html
-<iframe class="slide-deck" src="https://www.rusersplace.com/about/" height="600" width="700" style="border: 1px solid #2e3846;"></iframe>
+<iframe class="slide-deck" src="/about/" height="600" width="700" style="border: 1px solid #2e3846;"></iframe>
 ```
 
 #### 2. 嵌套.html版的ppt
@@ -52,5 +52,5 @@ mathjax: yes
 
 #### 3. 嵌套我的博客
 
-<iframe class="slide-deck" src="https://www.rusersplace.com/about/" height="600" width="700" style="border: 1px solid #2e3846;">
+<iframe class="slide-deck" src="/about/" height="600" width="700" style="border: 1px solid #2e3846;">
 </iframe>

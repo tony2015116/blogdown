@@ -1,5 +1,5 @@
 <p align="center">
-    <h1 align="center"><a href="https://www.rusersplace.com">guoguo's blog</a></h1>
+    <h1 align="center"><a href="https://blog.mguo.dpdns.org/">guoguo's blog</a></h1>
     <p align="center">头圆脸方，终身学习的数据分析爱好者 😘</p>
 </p>
 
@@ -40,16 +40,14 @@
     </a>
      </a>
     <a href="#" target="_blank">
-        <img src="https://img.shields.io/badge/-Netlify-black?style=flat&logo=Netlify&labelColor=5c5c5c&color=1182c3" alt="Netlify"/>
+        <img src="https://img.shields.io/badge/-GitHub%20Pages-black?style=flat&logo=github&labelColor=5c5c5c&color=1182c3" alt="GitHub Pages"/>
     </a>
     <a href="#" target="_blank">
         <img src="https://img.shields.io/badge/-Cloudflare-black?style=flat&logo=Cloudflare&labelColor=5c5c5c&color=1182c3" alt="Cloudflare"/>
     </a>
     <a href="https://www.name.com/zh-cn/" target="_blank"><img src="https://img.shields.io/badge/domain%20web-name.com-1182c3"></a>
     <br/>
-    <img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Frusersplace.com">
-    <img alt="Uptime Robot ratio (7 days)" src="https://img.shields.io/uptimerobot/ratio/7/m791900776-ed1a1390af61a95b31efa693">
-    <img alt="Uptime Robot status" src="https://img.shields.io/uptimerobot/status/m791900776-ed1a1390af61a95b31efa693">
+    <img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Fblog.mguo.dpdns.org%2F">
  </p>
 
 <!--- #整段注释
@@ -69,30 +67,57 @@
 我想要一个简洁美观，不花里胡哨的静态博客已经有几年了，奈何一致没有找到中意的hugo主题。我比较熟悉R语言，日常工作也都是基于Rstudio开展的，想找到与blogdown适配的hugo中文主题又是难上加难。直到我遇到了[Hugo-theme-jane](https://github.com/xianmin/hugo-theme-jane)，我瞬间又燃气了做一个自己的静态博客的愿望。有关jane主题是否与blogdown适配的问题我放到了最后，先搞起来，但我对css等这些建站技术一点都不了解，只能通过谷歌一点一点的去搜索解决办法，一点点的和blogdown适配的主题做比较，一步一步修改config.yaml文件来达到我想要的博客主题效果。最终，竟真的被我搞出来了😀。
 
 #### **关于我的博客**
-我的博客是基于<font color=red>**Rstudio + blogdown + GitHub + Netlify**</font>构架搭建。[Hugo-theme-jane](https://github.com/xianmin/hugo-theme-jane)精美简洁，同时又与**blogdown**比较契合的博客主题👍🏻。我的博客在此基础上做了少许修改。我的博客访问地址:point_right::[https://www.rusersplace.com](https://www.rusersplace.com)。
+我的博客是基于<font color=red>**RStudio + blogdown + GitHub Pages**</font>构架搭建。[Hugo-theme-jane](https://github.com/xianmin/hugo-theme-jane)精美简洁，同时又与**blogdown**比较契合的博客主题👍🏻。我的博客在此基础上做了少许修改。我的博客访问地址:point_right::[https://blog.mguo.dpdns.org/](https://blog.mguo.dpdns.org/)。
 
-#### **如何搭建和我一模一样的博客？**
-**1. 相关软件及网站介绍**
+## 在 RStudio 写博客
 
-- R版本为：Version 4.1.0 (2021-05-18)
-- Rstudio版本为：Version 1.4.1717
-- R包blogdown版本为：Version 1.9.1
-- Hugo版本为：Version 0.92.0
-- GitHub：将你的博客内容托管到GitHub
-- Git版本为: version 2.31.1.windows.1
-- Netlify: 将博客内容静态部署到Netlify，使用GitHub账号登录部署即可
-- Cloudflare： 加快博客访问速度
-- name.com：购买.com域名,可以使用支付宝付款,我购买的域名大概100多块钱
+### 一、首次打开
 
-**2. 适合什么人搭建？**
+1. 将仓库克隆或拉取到本地，双击打开 `blogdown.Rproj`。
+2. 首次使用时，在 RStudio 的 Console 运行以下命令。当前主题用 Sass 生成样式，需要 Hugo **Extended**。项目和 GitHub Actions 统一使用 `0.92.0`。
 
-如果你使用R语言，同时对Rstudio用的比较熟练，我墙裂推荐你使用我的方法搭建博客。心动不如行动，快来fork我的repo：**blogdown**源代码吧，通过对[Hugo-theme-jane](https://github.com/xianmin/hugo-theme-jane)主题的修改，现在已经可以在Rstudio上写博客了。对于想写博客，又不想折腾的，且对简洁美观有要求的朋友，仅仅修改需要将你下载的repo中/content/post内容删除掉就可以写博客了。
+   ```r
+   install.packages("blogdown")
+   blogdown::install_hugo(version = "0.92.0", extended = TRUE)
+   ```
 
-**3. 博客搭建思路**
+3. 运行 `blogdown::serve_site()` 开启预览。网页会随 Markdown 保存刷新。需要关闭预览时，运行 `blogdown::stop_server()`。
 
-网络上已经有很多帖子写关于如何搭建静态博客了，综合起来还是可以理出大致的建站头绪的。首先你得对R，Rstudio比较熟悉，并且在你电脑上已经安装了（建议都安装比较新的版本）；电脑上安装Git，有自己的GitHub账号，通过Rstudio可以调用Git，打通和GitHub的关系，可以实现版本控制；在Rstudio上安装R包~blogdown，通过blogdown的说明，安装Hugo，有时Hugo不同通过Rstudio安装，就需要下载到本地再安装；通过blogdown建站到你指定的文件夹下，使用Jane主题；将博客所在文件夹push到github；申请Netlify账号，将在GitHub上的博客repo部署到netlify；购买.com域名；通过Cloudflare加快博客访问速度。
+### 二、新建与预览
 
-**4. 博客搭建参考**
+- **普通文章**选 RStudio 的 **Addins → New Post**，填写标题和简短的英文 Slug，格式选 **Markdown**。文章和配图放在同一个 `content/post/日期-短名/` 文件夹。在文章里用 `![说明](图片.png)` 引用同目录图片。
+- **需要运行 R 代码的文章**在同一个对话框里选 **R Markdown (.Rmarkdown)**。安装文章用到的 R 包后单击 **Knit**。也可在 Console 指定当前文件渲染。
+
+  ```r
+  blogdown::build_site(
+    build_rmd = "content/post/2026-11-17-my-post/index.Rmarkdown",
+    run_hugo = FALSE
+  )
+  ```
+
+  将示例路径换成实际路径。已有文章用已提交的 `.markdown` 和图片预览。如果只修改了一篇 R Markdown，单独 Knit 这一篇即可。
+
+- 新文章默认含 `draft: true`。本地可以预览草稿。准备发布时改成 `draft: false`，如果是 R Markdown，修改后再 Knit 一次。
+
+### 三、提交与发布
+
+提交并推送 Markdown 文章及配图。对于 R Markdown 文章，还需一并提交源文件和 Knit 生成的 `.markdown`。启用 GitHub Pages 后，推送到 `main` 会触发仓库里的 **Build and deploy blog** 工作流。GitHub Actions 运行 Hugo 并发布 `public/`。文章里的 R 代码在本地 Knit 时运行。
+
+### 四、首次开通 GitHub Pages
+
+1. 打开本仓库的 [Settings → Pages](https://github.com/tony2015116/blogdown/settings/pages)，把 **Build and deployment → Source** 设为 **GitHub Actions**。
+2. 在同一页面的 **Custom domain** 中填入 `blog.mguo.dpdns.org` 并保存。到管理 `mguo.dpdns.org` 的 DNS 控制台添加以下记录。
+
+   | 类型 | 名称 | 目标 |
+   | --- | --- | --- |
+   | CNAME | `blog` | `tony2015116.github.io` |
+
+3. 等待 GitHub 的 DNS 检查通过，确认 **Enforce HTTPS** 已勾选。可在 [Actions](https://github.com/tony2015116/blogdown/actions/workflows/pages.yml) 中手动运行 **Build and deploy blog**，用 Pages 设置页显示的地址验收。
+
+`config.yaml` 记录博客的正式地址。GitHub Actions 从 Pages 设置读取实际发布地址，构建时将导航、样式和文章链接指到该地址。
+
+### 博客搭建参考
+
 
 下面的五个建站参考，基本可以解决99%的问题，唯一未涉及到的就是如何在Rstudio中使用Git。
 -   [用 R 语言的 blogdown+hugo+netlify+github建博客](https://cosx.org/2018/01/build-blog-with-blogdown-hugo-netlify-github/) - 基本讲述了Rstudio+blogdown+netlify+github框架的构建
