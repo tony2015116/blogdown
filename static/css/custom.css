@@ -125,8 +125,9 @@ body.minimal-site {
   font: 700 20px/1.45 "Noto Serif CJK SC", "Songti SC", "SimSun", serif;
 }
 .blog-profile-details .blog-role { margin-top: 4px; color: var(--blog-muted); }
-.blog-profile-home {
+.minimal-site .blog-profile-home {
   display: inline-flex;
+  color: inherit;
   align-items: center;
   gap: 6px;
   margin-top: 10px;
@@ -253,7 +254,7 @@ body.minimal-site {
   .blog-profile { flex-direction: row; align-items: center; }
   .blog-profile img { width: 52px; height: 52px; padding: 0; border: 0; }
   .blog-profile-details .blog-author { font-size: 17px; }
-  .blog-profile-home { margin-top: 6px; }
+  .minimal-site .blog-profile-home { margin-top: 6px; }
 }
 
 @media (max-width: 800px) {
