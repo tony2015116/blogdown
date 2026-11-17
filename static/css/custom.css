@@ -125,17 +125,28 @@ body.minimal-site {
   font: 700 20px/1.45 "Noto Serif CJK SC", "Songti SC", "SimSun", serif;
 }
 .blog-profile-details .blog-role { margin-top: 4px; color: var(--blog-muted); }
-.minimal-site .blog-profile-home {
+.blog-profile-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  margin-top: 10px;
+}
+.minimal-site .blog-profile-link {
   display: inline-flex;
   color: inherit;
   align-items: center;
   gap: 6px;
-  margin-top: 10px;
 }
-.blog-profile-home:hover { text-decoration: underline; text-underline-offset: .25em; }
-.blog-profile-home-icon {
+.blog-profile-link:hover { text-decoration: underline; text-underline-offset: .25em; }
+.blog-profile-icon {
+  display: inline-flex;
   width: 14px;
   height: 14px;
+  flex: none;
+}
+.blog-profile-icon svg { width: 100%; height: 100%; fill: currentColor; }
+.blog-profile-home-icon {
   background: currentColor;
   mask: url("../images/profile-home.svg") center / contain no-repeat;
 }
@@ -254,7 +265,7 @@ body.minimal-site {
   .blog-profile { flex-direction: row; align-items: center; }
   .blog-profile img { width: 52px; height: 52px; padding: 0; border: 0; }
   .blog-profile-details .blog-author { font-size: 17px; }
-  .minimal-site .blog-profile-home { margin-top: 6px; }
+  .blog-profile-links { margin-top: 6px; }
 }
 
 @media (max-width: 800px) {
