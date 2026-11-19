@@ -101,7 +101,7 @@ params:
   autoCollapseToc: false   # Auto expand and collapse toc                              # 目录自动展开/折叠
   fancybox: false           # see https://github.com/fancyapps/fancybox                 # 是否启用fancybox（图片可点击）
   
-  #forkMeOnGithub: "https://github.com/tony2015116/blogdown"
+  #forkMeOnGithub: "https://github.com/tony2015116/tech-blog"
 
 
 markup:

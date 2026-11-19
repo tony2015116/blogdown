@@ -1,6 +1,6 @@
 # MGUO 的博客
 
-[![GitHub Pages 部署状态](https://github.com/tony2015116/blogdown/actions/workflows/pages.yml/badge.svg?branch=main)](https://github.com/tony2015116/blogdown/actions/workflows/pages.yml)
+[![GitHub Pages 部署状态](https://github.com/tony2015116/tech-blog/actions/workflows/pages.yml/badge.svg?branch=main)](https://github.com/tony2015116/tech-blog/actions/workflows/pages.yml)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
 
 [访问博客](https://blog.mguo.dpdns.org/) · [个人主页](https://mguo.dpdns.org/)
@@ -52,7 +52,7 @@ blogdown::hugo_version()
 
 6. 提交文章和配图。R Markdown 文章同时提交 `.Rmarkdown` 源文件、Knit 生成的 `.markdown` 文件及相关资源。推送到 `main` 后，GitHub Actions 用 Hugo 生成并发布网站。R 代码在本地 Knit 时执行。
 
-发布进度可在 [Build and deploy blog](https://github.com/tony2015116/blogdown/actions/workflows/pages.yml) 查看。部署完成后，在博客首页打开新文章，核对正文和图片。
+发布进度可在 [Build and deploy blog](https://github.com/tony2015116/tech-blog/actions/workflows/pages.yml) 查看。部署完成后，在博客首页打开新文章，核对正文和图片。
 
 ## 四、常用维护位置
 
@@ -73,7 +73,7 @@ Hugo 直接读取并生成带内容指纹的 Jane 基础样式。写文章和日
 
 ## 五、GitHub Pages 与域名
 
-仓库的 [Settings → Pages](https://github.com/tony2015116/blogdown/settings/pages) 使用 **GitHub Actions** 作为发布来源，自定义域名为 `blog.mguo.dpdns.org`。当前 DNS 配置如下。
+仓库的 [Settings → Pages](https://github.com/tony2015116/tech-blog/settings/pages) 使用 **GitHub Actions** 作为发布来源，自定义域名为 `blog.mguo.dpdns.org`。当前 DNS 配置如下。
 
 | 类型 | 名称 | 目标 | Cloudflare 代理 |
 | --- | --- | --- | --- |
