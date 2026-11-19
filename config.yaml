@@ -30,8 +30,6 @@ taxonomies:
 
 #defaultContentLanguage: en
 defaultContentLanguage: zh-cn
-# 标签、分类名保持原样（不把 ggplot2 改成 Ggplot2）
-titleCaseStyle: none
 locale: zh-cn
 
 sitemap:

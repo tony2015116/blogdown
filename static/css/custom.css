@@ -346,6 +346,3 @@ body.minimal-site {
 .minimal-site .series-page-list { padding-left: 1.5em; line-height: 1.7; }
 .minimal-site .series-page-list li { margin: .9em 0; }
 .minimal-site .series-page-list p { margin: .2em 0 0; color: var(--blog-muted); font-size: 14px; }
-
-/* Category before the #tags in post lists */
-.minimal-site .blog-entry .blog-entry-category { font-weight: 600; }

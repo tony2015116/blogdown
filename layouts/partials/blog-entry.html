@@ -1,14 +1,17 @@
-{{- /* One row in a post list: date, title, category, then #tags. Pass the page as context. */ -}}
+{{- /* One row in the home page list: date, title, category, then #tags. Pass the page as context. */ -}}
 <article class="blog-entry">
   <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
   <div>
     <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
     {{ $cats := .GetTerms "categories" }}
-    {{ $tags := .GetTerms "tags" }}
-    {{ if or $cats $tags }}
+    {{ if or $cats .Params.tags }}
       <ul aria-label="分类和标签">
-        {{ range $cats }}<li><a class="blog-entry-category" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>{{ end }}
-        {{ range $tags }}<li><a href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a></li>{{ end }}
+        {{ range $cats }}<li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>{{ end }}
+        {{- /* Tag names as written in the post's front matter, e.g. ggplot2 */ -}}
+        {{ range .Params.tags }}
+          {{ $name := . }}
+          <li><a href="{{ printf "tags/%s/" ($name | urlize) | relLangURL }}">#{{ $name }}</a></li>
+        {{ end }}
       </ul>
     {{ end }}
   </div>
