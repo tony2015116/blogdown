@@ -58,16 +58,18 @@ body.minimal-site {
   background: var(--blog-bg);
 }
 .blog-bar { display: flex; align-items: center; gap: 30px; min-height: 68px; }
+/* Same nav type as the personal homepage: 15px, 14px below 768px wide */
+.blog-masthead { --blog-nav-size: 15px; }
+@media (max-width: 767px) { .blog-masthead { --blog-nav-size: 14px; } }
 .blog-name {
   flex: none;
   color: var(--blog-text) !important;
-  font-size: 18px;
-  font-weight: 720;
-  letter-spacing: -.02em;
+  font-size: var(--blog-nav-size);
+  font-weight: 700;
 }
 
 .blog-menu { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 23px; }
-.blog-menu a { color: var(--blog-muted); font-size: 14px; }
+.blog-menu a { color: var(--blog-muted); font-size: var(--blog-nav-size); }
 .blog-menu a[aria-current], .blog-menu a:hover { color: var(--blog-accent); }
 .blog-menu a[aria-current] { text-decoration: underline; text-underline-offset: .38em; }
 .blog-theme {
