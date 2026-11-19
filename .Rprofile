@@ -10,5 +10,7 @@ options(
   blogdown.author = "郭猛",
   blogdown.ext = ".md",
   blogdown.subdir = "post",
-  blogdown.new_bundle = TRUE
+  blogdown.new_bundle = TRUE,
+  # R 运行结果前缀用 "#>"（knitr 默认是 "##"），和代码注释 "#" 区分开
+  knitr.chunk.comment = "#>"
 )
