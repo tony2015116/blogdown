@@ -16,7 +16,7 @@
 
 ## 二、在 RStudio 本地预览
 
-克隆仓库或拉取最新的 `main`。双击打开 `blogdown.Rproj`，如果项目已打开，先在 RStudio 选择 **Session → Restart R**。博客使用 blogdown 和定制的 [Hugo Jane](https://github.com/xianmin/hugo-theme-jane) 主题。本地和 GitHub Actions 都固定使用 **Hugo 0.170.0**。
+克隆仓库或拉取最新的 `main`。双击打开 `tech-blog.Rproj`，如果项目已打开，先在 RStudio 选择 **Session → Restart R**。博客使用 blogdown 和定制的 [Hugo Jane](https://github.com/xianmin/hugo-theme-jane) 主题。本地和 GitHub Actions 都固定使用 **Hugo 0.170.0**。
 
 首次使用时，在 RStudio 的 Console 安装依赖。
 
