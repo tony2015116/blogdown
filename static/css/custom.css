@@ -1,12 +1,13 @@
 :root {
   color-scheme: light;
-  scroll-padding-top: 80px;
+  scroll-padding-top: 72px;
   --blog-bg: #fff;
   --blog-text: #272e31;
   --blog-muted: #59646a;
   --blog-line: #e3e8e9;
   --blog-accent: #216c7a;
   --blog-soft: #f4f7f8;
+  --blog-serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -50,25 +51,48 @@ body.minimal-site {
 
 .blog-skip { position: fixed; top: -10rem; left: 1rem; z-index: 21; }
 .blog-skip:focus { top: 1rem; padding: .5rem 1rem; background: var(--blog-bg); }
+/* Masthead laid out like the personal homepage: 1280px wide, left-aligned,
+   no divider, 59px tall (56px below 768px), theme switch right after the links */
 .blog-masthead {
+  --blog-nav-pad: 7.5px 15px;
+  --blog-nav-height: 59px;
+  --blog-nav-gap: 30px;
+  --blog-nav-name-gap: 60px;
   position: sticky;
   top: 0;
   z-index: 20;
-  border-bottom: 1px solid var(--blog-line);
   background: var(--blog-bg);
 }
-.blog-bar { display: flex; align-items: center; gap: 30px; min-height: 68px; }
+@media (max-width: 767px) {
+  .blog-masthead {
+    --blog-nav-pad: 7px 10.5px;
+    --blog-nav-height: 56px;
+    --blog-nav-gap: 17px;
+    --blog-nav-name-gap: 29px;
+  }
+}
+.blog-masthead .blog-bar {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  width: auto;
+  max-width: 1280px;
+  min-height: var(--blog-nav-height);
+  margin-inline: auto;
+  padding: var(--blog-nav-pad);
+}
 /* Same nav type as the personal homepage: 15px, 14px below 768px wide */
 .blog-masthead { --blog-nav-size: 15px; }
 @media (max-width: 767px) { .blog-masthead { --blog-nav-size: 14px; } }
 .blog-name {
   flex: none;
+  margin-right: var(--blog-nav-name-gap);
   color: var(--blog-text) !important;
   font-size: var(--blog-nav-size);
   font-weight: 700;
 }
 
-.blog-menu { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 23px; }
+.blog-menu { display: flex; align-items: center; gap: var(--blog-nav-gap); }
 .blog-menu a { color: var(--blog-muted); font-size: var(--blog-nav-size); }
 .blog-menu a[aria-current], .blog-menu a:hover { color: var(--blog-accent); }
 .blog-menu a[aria-current] { text-decoration: underline; text-underline-offset: .38em; }
@@ -78,7 +102,7 @@ body.minimal-site {
   flex: none;
   width: 38px;
   height: 38px;
-  margin-left: auto;
+  margin-left: calc(var(--blog-nav-gap) - 10px);
   padding: 0;
   border: 0;
   background: transparent;
@@ -124,7 +148,7 @@ body.minimal-site {
 
 .blog-profile-details p { margin: 0; }
 .blog-profile-details .blog-author {
-  font: 700 20px/1.45 "Noto Serif CJK SC", "Songti SC", "SimSun", serif;
+  font: 700 20px/1.45 var(--blog-serif);
 }
 .blog-profile-details .blog-role { margin-top: 4px; color: var(--blog-muted); }
 .blog-profile-links {
@@ -156,11 +180,18 @@ body.minimal-site {
 .blog-index-head { margin-bottom: 12px; border-bottom: 1px solid var(--blog-line); }
 .blog-index-head h1, .minimal-site .post .post-title {
   margin: 0 0 15px;
-  font-family: "Noto Serif CJK SC", "Songti SC", "SimSun", serif;
+  font-family: var(--blog-serif);
   font-size: clamp(26px, 3vw, 34px);
   font-weight: 700;
   line-height: 1.35;
   overflow-wrap: anywhere;
+}
+
+.minimal-site .post .post-content :is(h1, h2, h3),
+.minimal-site .archive .archive-name,
+.minimal-site .series-page-title {
+  font-family: var(--blog-serif);
+  font-weight: 700;
 }
 
 .blog-entry {
@@ -216,6 +247,7 @@ body.minimal-site {
 .minimal-site .post .post-content p { margin-block: .8em 1em; text-indent: 0; }
 .minimal-site .post .post-content img { max-width: 100%; height: auto; }
 .minimal-site .post .post-content pre { overflow-x: auto; }
+.minimal-site .post .post-content :is(pre, pre code, .highlight > .chroma) { line-height: 1.5; }
 .minimal-site .post .post-content pre:not(.chroma) {
   margin-block: 1em;
   padding: 13px 15px;
@@ -281,10 +313,6 @@ body.minimal-site {
 }
 
 @media (max-width: 540px) {
-  :root { scroll-padding-top: 100px; }
-  .blog-bar { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; padding-block: 11px; }
-  .blog-menu { grid-column: 1 / -1; grid-row: 2; gap: 8px 17px; }
-  .blog-theme { grid-column: 2; grid-row: 1; }
   .blog-entry { grid-template-columns: 1fr; gap: 3px; padding-block: 13px; }
 }
 
