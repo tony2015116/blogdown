@@ -1,8 +1,10 @@
 ---
 title: 实现睿保乐nedap种猪性能测定数据自动下载
-author: guoguo
+author: 郭猛
 date: '2022-06-20'
-slug: index.zh-cn
+slug: nedap-auto-download
+aliases:
+  - /2022/06/20/index.zh-cn/
 categories:
   - 爬虫
   - 自动化
@@ -16,12 +18,10 @@ tags:
 lastmod: '2022-06-20T23:48:26+08:00'
 keywords: []
 description: ''
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: "如需转载，请联系作者，谢谢"
-reward: yes
-mathjax: no
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">

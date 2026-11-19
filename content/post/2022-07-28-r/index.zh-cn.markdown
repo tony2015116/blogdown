@@ -1,8 +1,10 @@
 ---
 title: R语言中数据的读取和导出
-author: guoguo
+author: 郭猛
 date: '2022-07-28'
-slug: index.zh-cn
+slug: r-import-export
+aliases:
+  - /2022/07/28/index.zh-cn/
 categories:
   - 数据读取和导出
 tags:
@@ -13,12 +15,10 @@ tags:
 lastmod: '2022-07-28T22:37:14+08:00'
 keywords: []
 description: 'R语言中实现数据的批量读取和导出'
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: "如需转载，请联系作者，谢谢"
-reward: yes
-mathjax: yes
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">

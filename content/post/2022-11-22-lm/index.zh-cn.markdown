@@ -1,8 +1,10 @@
 ---
 title: 简单线性回归lm可视化
-author: guoguo
+author: 郭猛
 date: '2022-11-22'
-slug: index.zh-cn
+slug: lm-visualization
+aliases:
+  - /2022/11/22/index.zh-cn/
 categories:
   - 线性回归
   - R
@@ -14,12 +16,10 @@ tags:
 lastmod: '2022-11-22T15:54:04+08:00'
 keywords: []
 description: ''
-comment: no
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: no
-mathjax: no
+comment: false
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">

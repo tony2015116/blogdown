@@ -1,8 +1,10 @@
 ---
 title: 学习在R中使用MySQL
-author: guoguo
+author: 郭猛
 date: '2022-08-15'
-slug: index.zh-cn
+slug: r-mysql
+aliases:
+  - /2022/08/15/index.zh-cn/
 categories:
   - 数据库操作
 tags:
@@ -13,12 +15,10 @@ tags:
 lastmod: '2022-08-15T19:33:31+08:00'
 keywords: []
 description: ''
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: yes
-mathjax: yes
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">

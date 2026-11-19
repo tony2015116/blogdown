@@ -1,8 +1,10 @@
 ---
 title: 使用ggplot2画堆叠柱形图
-author: guoguo
+author: 郭猛
 date: '2022-07-20'
-slug: index.zh-cn
+slug: ggplot2-stacked-bar
+aliases:
+  - /2022/07/20/index.zh-cn/
 categories:
   - 数据可视化
 tags:
@@ -12,12 +14,10 @@ tags:
 lastmod: '2022-07-20T21:01:33+08:00'
 keywords: []
 description: 'ggplot2画堆叠柱形图'
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: "如需转载，请联系作者，谢谢"
-reward: yes
-mathjax: yes
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">

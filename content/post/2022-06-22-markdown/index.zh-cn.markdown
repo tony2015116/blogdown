@@ -1,8 +1,10 @@
 ---
 title: 总结了自己使用markdown创作的几种方法
-author: guoguo
+author: 郭猛
 date: '2022-06-22'
-slug: index.zh-cn
+slug: markdown-writing-tools
+aliases:
+  - /2022/06/22/index.zh-cn/
 categories:
   - 创作
 tags:
@@ -13,12 +15,10 @@ tags:
 lastmod: '2022-06-22T22:03:38+08:00'
 keywords: []
 description: ''
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: yes
-mathjax: yes
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">

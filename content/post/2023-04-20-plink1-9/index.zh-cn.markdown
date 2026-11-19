@@ -1,8 +1,10 @@
 ---
 title: 使用plink1.9替换个体ID以及格式转换
-author: guoguo
+author: 郭猛
 date: '2023-04-20'
-slug: index.zh-cn
+slug: plink-update-ids
+aliases:
+  - /2023/04/20/index.zh-cn/
 categories:
   - 数据处理
   - Genomic Selection
@@ -14,12 +16,10 @@ tags:
 lastmod: '2023-04-20T21:56:30+08:00'
 keywords: []
 description: '使用plink替换生物芯片个体ID'
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: no
-mathjax: no
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">

@@ -1,8 +1,10 @@
 ---
 title: 使用R包crosstable计算基本统计量
-author: guoguo
+author: 郭猛
 date: '2022-08-14'
-slug: index.zh-cn
+slug: crosstable-descriptive-stats
+aliases:
+  - /2022/08/14/index.zh-cn/
 categories:
   - 数据分析
 tags:
@@ -12,12 +14,10 @@ tags:
 lastmod: '2022-08-14T18:57:18+08:00'
 keywords: []
 description: ''
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: yes
-mathjax: yes
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 <p style="text-indent:2em;font-size:;font-family:;">
 crosstable包也可以实现基本统计量的计算，导出方式和gtsummary包的格式略有不同，但可以导出到docx文件中。具体的使用操作可以参考 <a href="https://danchaltiel.github.io/crosstable/reference/index.html">crosstable reference</a>。

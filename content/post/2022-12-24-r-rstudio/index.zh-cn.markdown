@@ -1,8 +1,10 @@
 ---
 title: 折腾R和Rstudio
-author: guoguo
+author: 郭猛
 date: '2022-12-24'
-slug: index.zh-cn
+slug: r-rstudio-setup
+aliases:
+  - /2022/12/24/index.zh-cn/
 categories:
   - 生活记录
   - R
@@ -11,12 +13,10 @@ tags:
 lastmod: '2022-12-24T23:16:16+08:00'
 keywords: []
 description: ''
-comment: no
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: yes
-mathjax: no
+comment: false
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">

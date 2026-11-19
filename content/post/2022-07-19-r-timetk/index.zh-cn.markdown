@@ -1,8 +1,10 @@
 ---
 title: 漂亮的时间序列可视化R包timetk
-author: guoguo
+author: 郭猛
 date: '2022-07-19'
-slug: index.zh-cn
+slug: timetk-time-series
+aliases:
+  - /2022/07/19/index.zh-cn/
 categories:
   - 数据可视化
 tags:
@@ -11,12 +13,10 @@ tags:
 lastmod: '2022-07-19T22:45:52+08:00'
 keywords: []
 description: 'R语言时间序列可视乎'
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: "如需转载，请联系作者，谢谢"
-reward: yes
-mathjax: yes
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">

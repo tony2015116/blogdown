@@ -1,8 +1,10 @@
 ---
 title: 使用R语言提取指定week包含的date
-author: guoguo
+author: 郭猛
 date: '2022-10-10'
-slug: index.zh-cn
+slug: r-dates-in-week
+aliases:
+  - /2022/10/10/index.zh-cn/
 categories:
   - 数据处理
 tags:
@@ -12,12 +14,10 @@ tags:
 lastmod: '2022-10-10T08:17:51+08:00'
 keywords: []
 description: ''
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: yes
-mathjax: yes
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">

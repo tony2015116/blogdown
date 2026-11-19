@@ -1,8 +1,10 @@
 ---
 title: 使用DataExplorer包进行数据探索性分析
-author: guoguo
+author: 郭猛
 date: '2022-08-16'
-slug: index.zh-cn
+slug: dataexplorer-eda
+aliases:
+  - /2022/08/16/index.zh-cn/
 categories:
   - 数据分析
 tags:
@@ -13,12 +15,10 @@ tags:
 lastmod: '2022-08-16T20:54:36+08:00'
 keywords: []
 description: ''
-comment: no
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: no
-mathjax: no
+comment: false
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <link href="/rmarkdown-libs/tabwid/tabwid.css" rel="stylesheet" />

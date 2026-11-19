@@ -1,8 +1,10 @@
 ---
 title: 使用gt包将data.frame格式导出为图片或pdf格式
-author: guoguo
+author: 郭猛
 date: '2022-08-07'
-slug: index.zh-cn
+slug: gt-table-to-image-pdf
+aliases:
+  - /2022/08/07/index.zh-cn/
 categories:
   - 数据读取和导出
 tags:
@@ -12,12 +14,10 @@ tags:
 lastmod: '2022-08-17T16:18:30+08:00'
 keywords: []
 description: ''
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: yes
-mathjax: yes
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">

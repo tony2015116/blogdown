@@ -1,8 +1,10 @@
 ---
 title: SQL学习——生成SQL样本数据库
-author: guoguo
+author: 郭猛
 date: '2022-08-18'
-slug: index.zh-cn
+slug: sql-sample-database
+aliases:
+  - /2022/08/18/index.zh-cn/
 categories:
   - 数据库操作
 tags:
@@ -13,12 +15,10 @@ tags:
 lastmod: '2022-08-18T21:32:19+08:00'
 keywords: []
 description: ''
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: yes
-mathjax: no
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">

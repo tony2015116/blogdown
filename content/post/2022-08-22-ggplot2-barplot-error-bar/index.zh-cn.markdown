@@ -1,8 +1,10 @@
 ---
 title: 使用ggplot2实现添加error bar
-author: guoguo
+author: 郭猛
 date: '2022-08-22'
-slug: index.zh-cn
+slug: ggplot2-error-bar
+aliases:
+  - /2022/08/22/index.zh-cn/
 categories:
   - 数据可视化
 tags:
@@ -13,12 +15,10 @@ tags:
 lastmod: '2022-08-22T17:06:51+08:00'
 keywords: []
 description: ''
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: yes
-mathjax: yes
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">

@@ -7,7 +7,6 @@ theme: hugo-theme-jane
 pagination:
   pagerSize: 30
 rssLimit: 20
-enableGitInfo: true
 copyright: ''
 
 
@@ -59,7 +58,7 @@ menu:
 
 params:
   authorInfo:
-    name: guoguo
+    name: 郭猛
   customCSS: ['custom.css'] #'douban.css' #'sspai.css'
   customJS: []
   dateFormatToUse: '2006-01-02'
@@ -72,7 +71,6 @@ params:
   
   mathjax: false
   katex: false
-  #contentCopyright: '<a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a>'
   
   moreMeta: false
   
@@ -105,14 +103,6 @@ params:
   
   #forkMeOnGithub: "https://github.com/tony2015116/blogdown"
 
-  reward:                                         # 文章打赏
-    enable: false
-    wechat: "/image/wechat-qr-code.jpg"           # 微信二维码
-#   alipay: "/path/to/your/alipay-qr-code.png"           # 支付宝二维码
-  
-  gitInfo:
-    gitRepo: "https://github.com/tony2015116/blogdown"
-    showCommitMessage: true
 
 markup:
   defaultMarkdownHandler: goldmark

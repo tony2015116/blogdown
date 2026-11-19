@@ -1,8 +1,10 @@
 ---
 title: 我的博客可以呈现哪些内容？
-author: guoguo
+author: 郭猛
 date: '2022-06-18'
-slug: index.zh-cn
+slug: blog-features-demo
+aliases:
+  - /2022/06/18/index.zh-cn/
 categories:
   - 博客show
 tags:
@@ -10,12 +12,10 @@ tags:
 lastmod: '2022-06-18T21:20:42+08:00'
 keywords: []
 description: ''
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: no
-mathjax: yes
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: true
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">

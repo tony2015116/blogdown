@@ -1,8 +1,10 @@
 ---
 title: ggplot2+histgram+facet_grid
-author: guoguo
+author: 郭猛
 date: '2022-11-19'
-slug: index.zh-cn
+slug: ggplot2-histogram-facet-grid
+aliases:
+  - /2022/11/19/index.zh-cn/
 categories:
   - 数据可视化
 tags:
@@ -12,12 +14,10 @@ tags:
 lastmod: '2022-11-19T20:12:47+08:00'
 keywords: []
 description: ''
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: yes
-mathjax: no
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">

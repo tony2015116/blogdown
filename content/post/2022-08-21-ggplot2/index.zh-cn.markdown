@@ -1,8 +1,10 @@
 ---
 title: 终于搞清楚了ggplot2主题
-author: guoguo
+author: 郭猛
 date: '2022-08-21'
-slug: index.zh-cn
+slug: ggplot2-theme-system
+aliases:
+  - /2022/08/21/index.zh-cn/
 categories:
   - 数据可视化
 tags:
@@ -13,12 +15,10 @@ tags:
 lastmod: '2022-08-21T16:01:38+08:00'
 keywords: []
 description: ''
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: yes
-mathjax: yes
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">
@@ -95,10 +95,10 @@ data %>%
 
 #### 3. 使用flipbookr包对代码结果进行展示
 
-<iframe class="slide-deck" src="https://tony2015116.github.io/ggplot2_theme_system_flipbook/ggplot2-theme-system-flipbook.html#1" height="405" width="400" style="border: 1px solid #2e3846;"></iframe>
+<iframe class="slide-deck" src="images/ggplot2-theme-system-flipbook.html#1" height="405" width="400" style="border: 1px solid #2e3846;"></iframe>
 <p>
 <a href="images/ggplot2-theme-system-flipbook.Rmd">点击下载ggplot2-theme-system-flipbook.Rmd</a>
 </p>
 <p>
-<a href="https://tony2015116.github.io/ggplot2_theme_system_flipbook/ggplot2-theme-system-flipbook.html#1">点击全屏查看</a>
+<a href="images/ggplot2-theme-system-flipbook.html#1">点击全屏查看</a>
 </p>

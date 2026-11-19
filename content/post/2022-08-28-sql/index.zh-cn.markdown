@@ -1,8 +1,10 @@
 ---
 title: SQL学习——排序ORDER BY
-author: guoguo
+author: 郭猛
 date: '2022-08-28'
-slug: index.zh-cn
+slug: sql-order-by
+aliases:
+  - /2022/08/28/index.zh-cn/
 categories:
   - 数据库操作
 tags:
@@ -12,12 +14,10 @@ tags:
 lastmod: '2022-08-28T12:47:46+08:00'
 keywords: []
 description: ''
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: yes
-mathjax: yes
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">

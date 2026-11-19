@@ -1,8 +1,10 @@
 ---
 title: 管理nedap瑞保乐测定站的一些想法
-author: guoguo
+author: 郭猛
 date: '2022-10-30'
-slug: index.zh-cn
+slug: nedap-management-thoughts
+aliases:
+  - /2022/10/30/index.zh-cn/
 categories:
   - 睿保乐测定站
 tags:
@@ -12,12 +14,10 @@ tags:
 lastmod: '2022-10-30T17:52:25+08:00'
 keywords: []
 description: ''
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: "转载请注明出处，谢谢"
-reward: yes
-mathjax: yes
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">

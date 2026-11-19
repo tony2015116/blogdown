@@ -1,8 +1,10 @@
 ---
 title: 使用R语言处理多形式字符串格式的日期列
-author: guoguo
+author: 郭猛
 date: '2022-07-22'
-slug: index.zh-cn
+slug: r-parse-mixed-dates
+aliases:
+  - /2022/07/22/index.zh-cn/
 categories:
   - 数据处理
 tags:
@@ -12,12 +14,10 @@ tags:
 lastmod: '2022-07-22T18:52:04+08:00'
 keywords: []
 description: 'R语言处理列为字符串格式的日期数据'
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: "如需转载，请联系作者，谢谢"
-reward: yes
-mathjax: yes
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">

@@ -1,8 +1,10 @@
 ---
 title: R中怎么定制字符串样式？
-author: guoguo
+author: 郭猛
 date: '2022-12-11'
-slug: index.zh-cn
+slug: r-styled-strings
+aliases:
+  - /2022/12/11/index.zh-cn/
 categories:
   - R
 tags:
@@ -10,12 +12,10 @@ tags:
 lastmod: '2022-12-11T17:07:54+08:00'
 keywords: []
 description: ''
-comment: no
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: no
-mathjax: no
+comment: false
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">

@@ -1,8 +1,10 @@
 ---
 title: R中日期date处理——week&weekday
-author: guoguo
+author: 郭猛
 date: '2022-08-23'
-slug: index.zh-cn
+slug: r-date-week-weekday
+aliases:
+  - /2022/08/23/index.zh-cn/
 categories:
   - 数据处理
 tags:
@@ -12,12 +14,10 @@ tags:
 lastmod: '2022-08-23T10:03:14+08:00'
 keywords: []
 description: ''
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: yes
-mathjax: yes
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">

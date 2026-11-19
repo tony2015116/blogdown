@@ -1,8 +1,10 @@
 ---
 title: gtExtras和gt可视化漂亮的表格-升级
-author: guoguo
+author: 郭猛
 date: '2022-09-05'
-slug: index.zh-cn
+slug: gtextras-gt-tables
+aliases:
+  - /2022/09/05/index.zh-cn/
 categories:
   - 数据可视化
 tags:
@@ -12,12 +14,10 @@ tags:
 lastmod: '2022-09-05T10:58:29+08:00'
 keywords: []
 description: ''
-comment: no
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: no
-mathjax: no
+comment: false
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">
