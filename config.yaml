@@ -22,10 +22,10 @@ permalinks:
 
 
 
-#taxonomies:
-#  author: "guo"
-#  tag: "tags"
-#  category: "categories"
+taxonomies:
+  tag: tags
+  category: categories
+  series: series
 
 
 #defaultContentLanguage: en

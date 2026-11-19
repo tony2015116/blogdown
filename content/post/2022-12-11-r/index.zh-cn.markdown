@@ -1,29 +1,25 @@
 ---
-title: R中怎么定制字符串样式？
-author: 郭猛
-date: '2022-12-11'
-slug: r-styled-strings
+title: "R中怎么定制字符串样式？"
+author: "郭猛"
+date: "2022-12-11"
+slug: "r-styled-strings"
 aliases:
-  - /2022/12/11/index.zh-cn/
+  - "/2022/12/11/index.zh-cn/"
 categories:
-  - R
+  - "R 数据处理"
 tags:
-  - 字符串
-lastmod: '2022-12-11T17:07:54+08:00'
+  - "字符串"
+description: "参考 bruceR 包的 Print() 函数，用 glue 和 crayon 定制控制台字符串的颜色和样式。"
+lastmod: "2022-12-11T17:07:54+08:00"
 keywords: []
-description: ''
 comment: false
 toc: false
 autoCollapseToc: false
 mathjax: false
 ---
-
-<p style="text-indent:2em;font-size:;font-family:;">
 在bruceR包中注意到包中函数的打印结果很有意思，就单独将“Print()”函数拎出来研究研究。Print()函数主要利用了glue包中的glue()和glue_col()函数，可以改变打印结果的颜色和字体等。对Print()函数稍微修改了一下，方便理解，便重新命名了原函数中的字符。
-</p>
 
 <!--more-->
-
 
 ```r
 # load package
@@ -74,6 +70,6 @@ glue_col("glue_col() can show {red c{yellow o{green l{cyan o{blue r{magenta s {b
 ```
 
 ![](images/glue.png)
-<p style="text-indent:2em;font-size:;font-family:;">
+
 改编的函数string_style_trans()和glue_col()功能很近似，只不过string_style_trans()函数以<>替代了{},更方便区分。
-</p>
+

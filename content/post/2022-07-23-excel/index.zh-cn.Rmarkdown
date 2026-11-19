@@ -1,27 +1,24 @@
 ---
-title: 总结几个excel中常用的字符串处理函数
-author: 郭猛
-date: '2022-07-18'
-slug: excel-string-functions
+title: "总结几个excel中常用的字符串处理函数"
+author: "郭猛"
+date: "2022-07-18"
+slug: "excel-string-functions"
 aliases:
-  - /2022/07/18/index.zh-cn/
+  - "/2022/07/18/index.zh-cn/"
 categories:
-  - 数据处理
+  - "R 数据处理"
 tags:
-  - excel
-  - 字符串
-lastmod: '2022-07-23T22:27:08+08:00'
+  - "字符串"
+description: "Excel 中常用的几个字符串处理函数。"
+draft: true
+lastmod: "2022-07-23T22:27:08+08:00"
 keywords: []
-description: ''
 comment: true
 toc: false
 autoCollapseToc: false
 mathjax: false
 ---
-
-<p style="text-indent:2em;font-size:;font-family:;">
 在Excel中，总结了几个我常用的字符串处理函数。
-</p>
 
 <!--more-->
 

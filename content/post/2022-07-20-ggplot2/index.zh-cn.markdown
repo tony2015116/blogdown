@@ -1,31 +1,26 @@
 ---
-title: 使用ggplot2画堆叠柱形图
-author: 郭猛
-date: '2022-07-20'
-slug: ggplot2-stacked-bar
+title: "使用ggplot2画堆叠柱形图"
+author: "郭猛"
+date: "2022-07-20"
+slug: "ggplot2-stacked-bar"
 aliases:
-  - /2022/07/20/index.zh-cn/
+  - "/2022/07/20/index.zh-cn/"
 categories:
-  - 数据可视化
+  - "数据可视化"
 tags:
-  - R
-  - ggplot2
-  - ggsci
-lastmod: '2022-07-20T21:01:33+08:00'
+  - "ggplot2"
+  - "柱状图"
+description: "用 ggplot2 画堆叠柱形图，比较各部分在整体中的占比。"
+lastmod: "2022-07-20T21:01:33+08:00"
 keywords: []
-description: 'ggplot2画堆叠柱形图'
 comment: true
 toc: false
 autoCollapseToc: false
 mathjax: false
 ---
-
-<p style="text-indent:2em;font-size:;font-family:;">
 堆叠柱形图是我日常数据分析中常用的一种可视化图形。它是一种分解整体，比较各部分不同类别的数值的图。在每一类数值内部，又被划分多个子类别并用不同颜色指代，可以同时反应总量和类别结构。以二师兄的数据为例🐷，直接上代码吧😄
-</p>
 
 <!--more-->
-
 
 ```r
 #load packages

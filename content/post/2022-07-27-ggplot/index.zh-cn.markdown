@@ -1,31 +1,28 @@
 ---
-title: ggplot2中与直方图的再次邂逅😉
-author: 郭猛
-date: '2022-07-27'
-slug: ggplot2-histogram-revisited
+title: "ggplot2中与直方图的再次邂逅😉"
+author: "郭猛"
+date: "2022-07-27"
+slug: "ggplot2-histogram-revisited"
 aliases:
-  - /2022/07/27/index.zh-cn/
+  - "/2022/07/27/index.zh-cn/"
 categories:
-  - 数据可视化
+  - "数据可视化"
 tags:
-  - R
-  - ggplot2
-  - ggsci
-lastmod: '2022-07-27T21:49:41+08:00'
+  - "ggplot2"
+  - "直方图"
+series:
+  - "ggplot2-histogram"
+description: "进一步美化 ggplot2 直方图，展示连续型性状的分布。"
+lastmod: "2022-07-27T21:49:41+08:00"
 keywords: []
-description: ''
 comment: true
 toc: false
 autoCollapseToc: false
 mathjax: false
 ---
-
-<p style="text-indent:2em;font-size:;font-family:;">
 直方图是我在展示连续性变量数据中最常用的可视化方式。它直观，可以一眼看出数据的分布方式、分布区间、最大值、最小值，可以展示出最为丰富的信息量，这也是我最喜欢使用直方图的原因。这篇文章中想再次使用ggplot2展示我工作中最常用的直方图的使用，直接show code吧。
-</p>
 
 <!--more-->
-
 
 ```r
 # load packages
@@ -51,7 +48,6 @@ head(data)
 ```
 
 #### 1. 单变量直方图
-
 
 ```r
 #单变量直方图
@@ -91,7 +87,6 @@ histgram_plot0 +
 
 #### 2. 单变量分组直方图
 
-
 ```r
 # 单变量分组直方图
 # plot
@@ -129,7 +124,6 @@ histgram_plot +
 
 #### 3. 多变量分组直方图
 
-
 ```r
 # 将宽格式数据转为长格式
 data2 <- data %>%
@@ -150,7 +144,6 @@ head(data2)
 ## 5 品种1 性状1 1344.  
 ## 6 品种1 性状2    1.61
 ```
-
 
 ```r
 # 多变量分组直方图

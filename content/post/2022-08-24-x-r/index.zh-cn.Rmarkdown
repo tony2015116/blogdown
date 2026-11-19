@@ -1,26 +1,25 @@
 ---
-title: "盘点那些牛X的R包\U0001F496"
-author: 郭猛
-date: '2022-08-24'
-slug: awesome-r-packages
+title: "盘点那些牛X的R包💖"
+author: "郭猛"
+date: "2022-08-24"
+slug: "awesome-r-packages"
 aliases:
-  - /2022/08/24/盘点那些牛x的r包/
+  - "/2022/08/24/盘点那些牛x的r包/"
 categories:
-  - 数据分析工具
+  - "R 数据处理"
 tags:
-  - R
-  - R package
-lastmod: '2022-08-24T17:14:47+08:00'
+  - "R 包推荐"
+  - "表格"
+description: "推荐几个好用的 R 包：gtExtras、gtsummary、crosstable、rio、janitor 等。"
+lastmod: "2022-08-24T17:14:47+08:00"
 keywords: []
-description: ''
 comment: false
 toc: false
 autoCollapseToc: false
 mathjax: false
 ---
-<p style="text-indent:2em;font-size:;font-family:;">
 R中🐂🍺的📦太多了，很多可能都没听说过。不是这些R包不够好用，只是新的R包出来的速度太快太多了，而且小伙伴能接触到较新R包的机会也比较少，基本都是在知乎上了解到的。我是一个比较爱折腾的人，刚好喜欢R又在推特中关注了很多R包开发者和数据科学家，这让我有机会接触到最新的和最好用的R包。我的收藏夹了收藏好多R包参考网站，现在想整理出来分析给大家。
-</p>
+
 <!--more-->
 #### **1. gtExtras package**
 <p align="center">

@@ -1,27 +1,23 @@
 ---
-title: record1-第一次异地换身份证
-author: 郭猛
-date: '2022-11-20'
-slug: renew-id-card
+title: "第一次异地换身份证"
+author: "郭猛"
+date: "2022-11-20"
+slug: "renew-id-card"
 aliases:
-  - /2022/11/20/index.zh-cn/
+  - "/2022/11/20/index.zh-cn/"
 categories:
-  - 人生就那么几次
+  - "随笔"
 tags:
-  - 记录
-  - 一些想法
-lastmod: '2022-11-20T10:33:34+08:00'
+  - "生活"
+description: "在广西工作时异地换领河南身份证的经过和需要准备的材料。"
+lastmod: "2022-11-20T10:33:34+08:00"
 keywords: []
-description: ''
 comment: true
 toc: false
 autoCollapseToc: false
 mathjax: false
 ---
-
-<p style="text-indent:2em;font-size:;font-family:;">
 最近遇到了一个对我来说比较棘手的问题~~~身份证到期。远在广西工作，对于家在河南的我来回一趟是真不容易，尤其是处在新冠疫情时期。从研究生毕业到现在，刚好三年，新冠疫情也刚好三年。每年基本回家一次，还是挑在疫情比较松的时候🤣,庆幸的是没有一次被集中隔离过。不过，现在身份证到期，银行、支付宝等都给我发消息说我有效证件到期，需要重新认证。不想回家办身份证了，开动脑子，印象中好像异地也可以办身份证。原谅我去哪办理身份证都不知道😅，后面偶尔做公交看到派出所户籍室有自动办理身份证的机器......，我的经历也给在外地该换身份证的有缘人一个提示，记录如下。
-</p>
 
 <!--more-->
 

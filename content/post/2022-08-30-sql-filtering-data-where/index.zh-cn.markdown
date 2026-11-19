@@ -1,35 +1,29 @@
 ---
-title: SQL学习——数据过滤Filtering Data——WHERE子句
-author: 郭猛
-date: '2022-08-30'
-slug: sql-where
+title: "SQL 学习：WHERE 条件过滤"
+author: "郭猛"
+date: "2022-08-30"
+slug: "sql-where"
 aliases:
-  - /2022/08/30/index.zh-cn/
+  - "/2022/08/30/index.zh-cn/"
 categories:
-  - 数据库操作
+  - "SQL"
 tags:
-  - SQL
-  - MySQL
-  - R
-lastmod: '2022-08-30T21:48:34+08:00'
+  - "SQL"
+series:
+  - "sql"
+description: "用 WHERE 子句结合比较运算符和 AND、OR 过滤数据表。"
+lastmod: "2022-08-30T21:48:34+08:00"
 keywords: []
-description: ''
 comment: true
 toc: false
 autoCollapseToc: false
 mathjax: false
 ---
-
-<p style="text-indent:2em;font-size:;font-family:;">
 今日学习SQL中WHERE子句，类似R中的filter()函数。SQL中可以结合AND&OR和比较运算符实现对数据表的过滤。
-</p>
 
 <!--more-->
 
-
-
 #### 1. SQL中的WHERE使用方法
-
 
 ```sql
 # WHERE 结合 AND
@@ -46,9 +40,7 @@ ORDER BY
 salary DESC;
 ```
 
-
 <div class="knitsql-table">
-
 
 Table: Table 1: Displaying records 1 - 10
 
@@ -67,7 +59,6 @@ Table: Table 1: Displaying records 1 - 10
 
 </div>
 
-
 ```sql
 # WHERE 结合 or
 SELECT
@@ -83,9 +74,7 @@ ORDER BY
 salary DESC;
 ```
 
-
 <div class="knitsql-table">
-
 
 Table: Table 2: Displaying records 1 - 10
 
@@ -104,7 +93,6 @@ Table: Table 2: Displaying records 1 - 10
 
 </div>
 
-
 ```sql
 # WHERE 结合 BETWEEN
 SELECT
@@ -121,9 +109,7 @@ ORDER BY
 hire_date DESC;
 ```
 
-
 <div class="knitsql-table">
-
 
 Table: Table 3: 5 records
 
@@ -138,7 +124,6 @@ Table: Table 3: 5 records
 </div>
 
 #### 2. 在R中实现上述操作
-
 
 ```r
 # 以上步骤都可以在R连接MySQL数据库的情况下，操作命令在R中实现
@@ -163,7 +148,6 @@ data
 ## 4         178 Kimberely  Grant      1999-05-24
 ## 5         107 Diana      Lorentz    1999-02-07
 ```
-
 
 ```r
 # 以上步骤都可以在R连接MySQL数据库的情况下，操作命令在R中实现

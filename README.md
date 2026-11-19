@@ -39,8 +39,9 @@ blogdown::hugo_version()
 
 1. 在 RStudio 选择 **Addins → New Post**，填写标题和简短的英文 Slug。普通文章选 **Markdown**。需要运行 R 代码时选 **R Markdown (.Rmarkdown)**。
 2. 文章位于 `content/post/日期-短名/`。配图可以放在文章文件夹里，用 `![说明](图片.png)` 引用同目录图片。
-3. 新文章默认是草稿。本地确认后，将文章头部的 `draft: true` 改为 `draft: false`。
-4. R Markdown 文章在本地安装所需的 R 包，然后点击 **Knit**。修改正文或草稿状态后再 Knit 一次。也可以在 Console 指定单篇文件渲染，将下面的示例路径换成实际路径。
+3. 在文章头部填写一句话的 `description`，它会显示在搜索结果和分享卡片里。分类从「育种与测定站」「R 数据处理」「数据可视化」「统计与表格」「SQL」「随笔」中选一个。属于系列的文章再加一行 `series: [sql]` 或 `series: [ggplot2-histogram]`，文末会自动列出同系列的文章。开关类字段写 `true` 或 `false`，不要写 `yes` 或 `no`。
+4. 新文章默认是草稿。本地确认后，将文章头部的 `draft: true` 改为 `draft: false`。
+5. R Markdown 文章在本地安装所需的 R 包，然后点击 **Knit**。修改正文或草稿状态后再 Knit 一次。也可以在 Console 指定单篇文件渲染，将下面的示例路径换成实际路径。
 
    ```r
    blogdown::build_site(
@@ -49,7 +50,7 @@ blogdown::hugo_version()
    )
    ```
 
-5. 提交文章和配图。R Markdown 文章同时提交 `.Rmarkdown` 源文件、Knit 生成的 `.markdown` 文件及相关资源。推送到 `main` 后，GitHub Actions 用 Hugo 生成并发布网站。R 代码在本地 Knit 时执行。
+6. 提交文章和配图。R Markdown 文章同时提交 `.Rmarkdown` 源文件、Knit 生成的 `.markdown` 文件及相关资源。推送到 `main` 后，GitHub Actions 用 Hugo 生成并发布网站。R 代码在本地 Knit 时执行。
 
 发布进度可在 [Build and deploy blog](https://github.com/tony2015116/blogdown/actions/workflows/pages.yml) 查看。部署完成后，在博客首页打开新文章，核对正文和图片。
 
@@ -59,6 +60,7 @@ blogdown::hugo_version()
 | --- | --- |
 | 文章和配图 | [`content/post/`](content/post/) |
 | 「关于博客」正文 | [`content/about.md`](content/about.md) |
+| 系列导读（标题和简介） | [`content/series/`](content/series/) |
 | 博客地址、网站标题和导航项 | [`config.yaml`](config.yaml) |
 | 顶栏、作者侧栏和页脚 | [`layouts/_default/baseof.html`](layouts/_default/baseof.html) |
 | 首页文章列表 | [`layouts/index.html`](layouts/index.html) |

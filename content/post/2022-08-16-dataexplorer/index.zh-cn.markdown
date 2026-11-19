@@ -1,32 +1,27 @@
 ---
-title: 使用DataExplorer包进行数据探索性分析
-author: 郭猛
-date: '2022-08-16'
-slug: dataexplorer-eda
+title: "使用DataExplorer包进行数据探索性分析"
+author: "郭猛"
+date: "2022-08-16"
+slug: "dataexplorer-eda"
 aliases:
-  - /2022/08/16/index.zh-cn/
+  - "/2022/08/16/index.zh-cn/"
 categories:
-  - 数据分析
+  - "统计与表格"
 tags:
-  - R
-  - 数据探索性分析
-  - EDA
-  - DataExplorer
-lastmod: '2022-08-16T20:54:36+08:00'
+  - "描述性统计"
+description: "用 DataExplorer 包快速完成数据探索性分析并生成报告。"
+lastmod: "2022-08-16T20:54:36+08:00"
 keywords: []
-description: ''
 comment: false
 toc: false
 autoCollapseToc: false
 mathjax: false
 ---
-
 <link href="/rmarkdown-libs/tabwid/tabwid.css" rel="stylesheet" />
 <link href="/rmarkdown-libs/tabwid/scrool.css" rel="stylesheet" />
 
-<p style="text-indent:2em;font-size:;font-family:;">
 我使用过DataExplorer包进行过数据探索性分析，对了解数据的基本情况很有帮助。具体操作可以参考 <a href="http://boxuancui.github.io/DataExplorer/articles/dataexplorer-intro.html">DataExplorer reference</a>。
-</p>
+
 <!--more-->
 
 ``` r

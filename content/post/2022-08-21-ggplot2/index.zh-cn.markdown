@@ -1,29 +1,24 @@
 ---
-title: 终于搞清楚了ggplot2主题
-author: 郭猛
-date: '2022-08-21'
-slug: ggplot2-theme-system
+title: "终于搞清楚了ggplot2主题"
+author: "郭猛"
+date: "2022-08-21"
+slug: "ggplot2-theme-system"
 aliases:
-  - /2022/08/21/index.zh-cn/
+  - "/2022/08/21/index.zh-cn/"
 categories:
-  - 数据可视化
+  - "数据可视化"
 tags:
-  - R
-  - ggplot2
-  - theme system
-  - flipbookr
-lastmod: '2022-08-21T16:01:38+08:00'
+  - "ggplot2"
+description: "系统梳理 ggplot2 主题系统的各个元素，并用 flipbookr 逐步展示效果。"
+lastmod: "2022-08-21T16:01:38+08:00"
 keywords: []
-description: ''
 comment: true
 toc: false
 autoCollapseToc: false
 mathjax: false
 ---
-
-<p style="text-indent:2em;font-size:;font-family:;">
 ggplot2包的内容比较多，并非经常使用，一般用法都没有刻意的去记忆过，往往需要用到的时候才在网上搜索怎么使用，不可避免的就导致了搜索——忘记——重复搜索的循环中。网上偶尔看到一张图片，是关于ggplot2的theme system的cheatsheet。我感觉做的非常棒，就自己找类似的数据集mpg跑了一遍，同时使用flipbookr包对代码的每一步的输出结果进行展示。算是对ggplot2的theme做了一个系统的学习。
-</p>
+
 <!--more-->
 
 #### 1. ggplot2 theme system cheatsheet

@@ -1,35 +1,29 @@
 ---
-title: SQL学习——数据过滤Filtering Data——DISTINCT语句
-author: 郭猛
-date: '2022-08-29'
-slug: sql-distinct
+title: "SQL 学习：DISTINCT 去重"
+author: "郭猛"
+date: "2022-08-29"
+slug: "sql-distinct"
 aliases:
-  - /2022/08/29/index.zh-cn/
+  - "/2022/08/29/index.zh-cn/"
 categories:
-  - 数据库操作
+  - "SQL"
 tags:
-  - SQL
-  - MySQL
-  - R
-lastmod: '2022-08-29T18:43:55+08:00'
+  - "SQL"
+series:
+  - "sql"
+description: "SQL 中的 DISTINCT 语句，对应 R 中的 dplyr::distinct()。"
+lastmod: "2022-08-29T18:43:55+08:00"
 keywords: []
-description: ''
 comment: true
 toc: false
 autoCollapseToc: false
 mathjax: false
 ---
-
-<p style="text-indent:2em;font-size:;font-family:;">
 今日学习SQL中DISTINCT语句，类似R中的dplyr::distinct()函数。
-</p>
 
 <!--more-->
 
-
-
 #### 1. 过滤重复值DISTINCT
-
 
 ```sql
 # 从employees数据表选择salary列，按照从大到小顺序排列salary,并去除重复值
@@ -40,9 +34,7 @@ employees
 ORDER BY Salary DESC;
 ```
 
-
 <div class="knitsql-table">
-
 
 Table: Table 1: Displaying records 1 - 10
 
@@ -61,7 +53,6 @@ Table: Table 1: Displaying records 1 - 10
 
 </div>
 
-
 ```sql
 # 从employees数据表选择多列，排序,并去除重复值
 SELECT 
@@ -71,9 +62,7 @@ employees
 ORDER BY job_id, salary DESC;
 ```
 
-
 <div class="knitsql-table">
-
 
 Table: Table 2: Displaying records 1 - 10
 
@@ -94,7 +83,6 @@ Table: Table 2: Displaying records 1 - 10
 
 #### 2. 限制查询返回行数LIMIT
 
-
 ```sql
 # 查询employees数据表，按照first_name排序，并返回排序后的前10行
 SELECT
@@ -108,9 +96,7 @@ first_name
 LIMIT 10;
 ```
 
-
 <div class="knitsql-table">
-
 
 Table: Table 3: Displaying records 1 - 10
 
@@ -129,7 +115,6 @@ Table: Table 3: Displaying records 1 - 10
 
 </div>
 
-
 ```sql
 # 查询employees数据表，按照first_name排序，屏蔽掉前3行，从第4行起，返回后面的10行
 SELECT
@@ -143,9 +128,7 @@ first_name
 LIMIT 10 OFFSET 3;
 ```
 
-
 <div class="knitsql-table">
-
 
 Table: Table 4: Displaying records 1 - 10
 
@@ -165,7 +148,6 @@ Table: Table 4: Displaying records 1 - 10
 </div>
 
 #### 3. 在R中实现上述操作
-
 
 ```r
 # 以上步骤都可以在R连接MySQL数据库的情况下，操作命令在R中实现

@@ -1,0 +1,18 @@
+{{- /* Lists every post of the series this post belongs to, oldest first. */ -}}
+{{- with .GetTerms "series" }}
+  {{- range first 1 . }}
+    {{- $posts := .Pages.ByDate }}
+    <nav class="post-series" aria-label="系列文章">
+      <p class="post-series-title">本文属于系列 <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>（共 {{ len $posts }} 篇）</p>
+      <ol>
+        {{- range $posts }}
+          {{- if eq .RelPermalink $.RelPermalink }}
+          <li aria-current="page">{{ .Title }}</li>
+          {{- else }}
+          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+          {{- end }}
+        {{- end }}
+      </ol>
+    </nav>
+  {{- end }}
+{{- end }}

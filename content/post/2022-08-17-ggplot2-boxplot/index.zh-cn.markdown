@@ -1,32 +1,30 @@
 ---
-title: 使用ggplot2画boxplot
-author: 郭猛
-date: '2022-08-17'
-slug: ggplot2-boxplot
+title: "使用ggplot2画boxplot"
+author: "郭猛"
+date: "2022-08-17"
+slug: "ggplot2-boxplot"
 aliases:
-  - /2022/08/17/index.zh-cn/
+  - "/2022/08/17/index.zh-cn/"
 categories:
-  - 数据可视化
+  - "数据可视化"
 tags:
-  - R
-  - ggplot2
-  - boxplot
-lastmod: '2022-08-17T11:26:46+08:00'
+  - "ggplot2"
+  - "箱线图"
+description: "用 ggplot2 画多变量分组箱线图的常用写法。"
+lastmod: "2022-08-17T11:26:46+08:00"
 keywords: []
-description: ''
 comment: false
 toc: false
 autoCollapseToc: false
 mathjax: false
 ---
+<link href="/rmarkdown-libs/tabwid/tabwid.css" rel="stylesheet" />
+<link href="/rmarkdown-libs/tabwid/scrool.css" rel="stylesheet" />
+<link href="/rmarkdown-libs/tabwid/tabwid.css" rel="stylesheet" />
+<link href="/rmarkdown-libs/tabwid/scrool.css" rel="stylesheet" />
 
-<link href="/rmarkdown-libs/tabwid/tabwid.css" rel="stylesheet" />
-<link href="/rmarkdown-libs/tabwid/scrool.css" rel="stylesheet" />
-<link href="/rmarkdown-libs/tabwid/tabwid.css" rel="stylesheet" />
-<link href="/rmarkdown-libs/tabwid/scrool.css" rel="stylesheet" />
-<p style="text-indent:2em;font-size:;font-family:;">
 记录一下我常用的使用ggplot2画boxplot的方法。以daimonds数据集为例，选择其中depth、table、price等三个连续性变量，以及cut和color两个离散型变量，分别以单变量分组和双变量分组的方法画boxplot。
-</p>
+
 <!--more-->
 
 ``` r

@@ -1,43 +1,35 @@
 ---
-title: R语言中数据的读取和导出
-author: 郭猛
-date: '2022-07-28'
-slug: r-import-export
+title: "R语言中数据的读取和导出"
+author: "郭猛"
+date: "2022-07-28"
+slug: "r-import-export"
 aliases:
-  - /2022/07/28/index.zh-cn/
+  - "/2022/07/28/index.zh-cn/"
 categories:
-  - 数据读取和导出
+  - "R 数据处理"
 tags:
-  - R
-  - purrr
-  - readxl
-  - rio
-lastmod: '2022-07-28T22:37:14+08:00'
+  - "数据导入导出"
+  - "purrr"
+description: "R 中批量读取和导出 Excel、CSV 数据的常用方法。"
+lastmod: "2022-07-28T22:37:14+08:00"
 keywords: []
-description: 'R语言中实现数据的批量读取和导出'
 comment: true
 toc: false
 autoCollapseToc: false
 mathjax: false
 ---
-
-<p style="text-indent:2em;font-size:;font-family:;">
 在R语言中，我总结了比较常用的几种批量读取数据和导出数据的方式。主要是将常用的数据读取和导出R包和基础函数结合purrr包实现批量的读取和导出数据。
-</p>
 
 <!--more-->
 
 <div style="float: left; clear: both;" align="left">
 <img src="images/icon-rio_readxl_purrr.png" width="30%" alt="" align=right hspace="5" vspace="5"/>
-<p style="text-indent:2em;font-size:;font-family:;">
+
 数据的读取和导出是数据分析中重要的一环，做数据分析，要先学会如何读取数据，分析完成后要知道结果如何导出。readxl中的read_excel函数；rio中的import、import_list函数；readr中的read_csv函数；vroom中的vroom函数；data.table中的fread函数；基础函数read.table、read.csv都是比较常用的数据读取函数。rio中的export、export_list函数；readr中的write_csv函数；基础函数write.table、write.csv是常用的数据导出函数。这些R包中还有很多读取、导出各种格式的函数或其它R包中未介绍到的函数。我日常数据分析工作中比较常见的数据格式是.xlsx、.csv和.txt，所以上述介绍到的函数是完全足够我使用的。单个的数据读取基本就不用介绍了，参考各个R包的Reference中的列子足以。下面介绍一下怎么批量读取或导出数据。
-</p>
+
 </div>
 
-<p style="text-indent:2em;font-size:;font-family:;">
 在介绍如何批量读取数据之前，我们先介绍如何批量数据数据，也方便生成示列数据供后面介绍批量读取。这里我们使用R中自带的iris数据集，中文名叫安德森鸢尾花卉数据集。iris数据集中有三个品种的鸢尾花（第5列），每个样本包含了花萼长度、花萼宽度、花瓣长度、花瓣宽度四个特征（前4列）。
-</p>
-
 
 ```r
 head(iris)
@@ -53,7 +45,6 @@ head(iris)
 ## 6          5.4         3.9          1.7         0.4  setosa
 ```
 
-
 ```r
 # load packages
 library(tidyverse) #使用其中的purrr
@@ -66,7 +57,6 @@ library(gt)
 #### 一、批量导出数据
 
 ##### 方法1：使用group()和group_walk()函数，导出.csv和.pdf文件
-
 
 ```r
 # 批量导出csv文件
@@ -104,7 +94,6 @@ list.files("C:/Users/Dell/Downloads/data/test", pattern = ".pdf", full.names = T
 
 ##### 方法2：使用nest()和pwalk()函数，导出.xlsx文件
 
-
 ```r
 iris %>%    
   nest(-Species) %>%    
@@ -121,7 +110,6 @@ list.files("C:/Users/Dell/Downloads/data/test", pattern = ".xlsx", full.names = 
 ```
 
 ##### 方法3：针对列表，使用names()和walk()函数，导出.txt文件
-
 
 ```r
 # method1生成列表
@@ -155,7 +143,6 @@ list.files("C:/Users/Dell/Downloads/data/test", pattern = ".txt", full.names = T
 
 ##### 方法4：针对列表，使用rio包的export()或export_list()函数一步到位
 
-
 ```r
 # 将列表iris_list(方法3)导出到一个.xlsx中，列表名为sheet名
 rio::export(iris_list, "C:/Users/Dell/Downloads/data/test/iris.xlsx")
@@ -165,7 +152,6 @@ rio::export_list(iris_list, file = "C:/Users/Dell/Downloads/data/test/%s.csv")
 
 #### 二、批量导入数据
 
-
 ```r
 # 后面文件读取都已.xlsx格式文件为列
 all_files <- dir_ls("C:/Users/Dell/Downloads/data/test/read_data/",glob = "*xlsx")
@@ -173,7 +159,6 @@ all_files <- dir_ls("C:/Users/Dell/Downloads/data/test/read_data/",glob = "*xlsx
 ```
 
 ##### 方法1：使用import_list()函数
-
 
 ```r
 data <- rio::import_list(all_files, rbind = T, rbind_label = "Species")
@@ -198,7 +183,6 @@ head(data)
 ```
 
 ##### 方法2：读取多个.xlsx并合并
-
 
 ```r
 # 下面两种写法都可以, 可以添加read_excel相关的参数
@@ -239,7 +223,6 @@ head(data)
 
 ##### 方法3：读取多个.xlsx并合并
 
-
 ```r
 data <- map_dfr(all_files, readxl::read_excel, col_names = TRUE, .id = "Species")
 head(data)
@@ -277,7 +260,6 @@ head(data)
 
 ##### 方法4：读取读个csv并合并
 
-
 ```r
 # vroom 好像无法读取xlsx
 all_files_vroom <- dir_ls("C:/Users/Dell/Downloads/data/test/",glob = "*csv")
@@ -298,7 +280,6 @@ head(data)
 ```
 
 ##### 方法5：读取一个.xlsx多个sheet为列表
-
 
 ```r
 # 读取为列表
@@ -334,7 +315,6 @@ str(data)
 
 ##### 方法6：读取一个.xlsx中多个sheet，并合并
 
-
 ```r
 # 读取为数据框
 path <- "C:/Users/Dell/Downloads/data/test/iris.xlsx"
@@ -360,7 +340,6 @@ head(data)
 ##### 方法7：读取多个.xlsx文件，每个.xlsx文件中又有多个sheet
 
 ![](images/screenshots.gif)
-
 
 ```r
 all_files <- dir_ls("C:/Users/Dell/Downloads/data/test/read_mul_data/",glob = "*xlsx")
@@ -412,6 +391,5 @@ tail(data)
 
 #### 三、总结
 
-<p style="text-indent:2em;font-size:;font-family:;">
 批量读取和导出文件中包含的逻辑是以读取/导出函数读取一个文件为基础，将读取或导出函数的参数传递给purr中的循环函数，使用purrr包实现循环读取并合并。上述方法不仅限与文中所用到的格式，只要能想到的格式，都可以尝试使用对应读取或导出函数按照上述规则进行批量读取或导出。
-</p>
+

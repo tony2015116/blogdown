@@ -1,27 +1,23 @@
 ---
-title: record1-和平精英生存心得
-author: 郭猛
-date: '2022-11-25'
-slug: peace-elite-tips
+title: "和平精英生存心得"
+author: "郭猛"
+date: "2022-11-25"
+slug: "peace-elite-tips"
 aliases:
-  - /2022/11/25/index.zh-cn/
+  - "/2022/11/25/index.zh-cn/"
 categories:
-  - 生活记录
+  - "随笔"
 tags:
-  - 游戏
-  - 和平精英
-lastmod: '2022-11-25T18:51:37+08:00'
+  - "生活"
+description: "玩和平精英几年下来的一些操作和生存心得。"
+lastmod: "2022-11-25T18:51:37+08:00"
 keywords: []
-description: ''
 comment: true
 toc: false
 autoCollapseToc: false
 mathjax: false
 ---
-
-<p style="text-indent:2em;font-size:;font-family:;">
 玩和平精英好几年了，我一开始玩的时候还不叫和平精英，当时叫刺激战场。至今没有上过王牌，感觉匹配赛一局太长，还是喜欢玩快节奏的狙击模式和8分钟急速战场。这篇博客用于记录我的游戏苟活心得。
-</p>
 
 <!--more-->
 

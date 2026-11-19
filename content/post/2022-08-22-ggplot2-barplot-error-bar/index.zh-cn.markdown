@@ -1,34 +1,28 @@
 ---
-title: 使用ggplot2实现添加error bar
-author: 郭猛
-date: '2022-08-22'
-slug: ggplot2-error-bar
+title: "使用ggplot2实现添加error bar"
+author: "郭猛"
+date: "2022-08-22"
+slug: "ggplot2-error-bar"
 aliases:
-  - /2022/08/22/index.zh-cn/
+  - "/2022/08/22/index.zh-cn/"
 categories:
-  - 数据可视化
+  - "数据可视化"
 tags:
-  - R
-  - ggplot2
-  - bar plot
-  - error bar
-lastmod: '2022-08-22T17:06:51+08:00'
+  - "ggplot2"
+  - "柱状图"
+description: "用 ggplot2 在条形图和点线图中添加误差棒。"
+lastmod: "2022-08-22T17:06:51+08:00"
 keywords: []
-description: ''
 comment: true
 toc: false
 autoCollapseToc: false
 mathjax: false
 ---
-
-<p style="text-indent:2em;font-size:;font-family:;">
-记录使用ggplot2在条形图和点线图中画误差棒的过程。其中受<a href="https://ggplot2tor.com/tutorials/">ggplot2tor</a>中Tutorials的启发并搬运部分代码🤪，<a href="images/errorbar.R">点击此处</a>下载文章中所用代码。 
-</p>
+记录使用ggplot2在条形图和点线图中画误差棒的过程。其中受<a href="https://ggplot2tor.com/tutorials/">ggplot2tor</a>中Tutorials的启发并搬运部分代码🤪，<a href="images/errorbar.R">点击此处</a>下载文章中所用代码。
 
 <!--more-->
 
 #### 1. 使用R中iris数据集
-
 
 ```r
 # load packages
@@ -65,7 +59,6 @@ data %>%
 <img src="/post/2022-08-22-ggplot2-barplot-error-bar/index.zh-cn_files/figure-html/unnamed-chunk-1-1.png" width="672" />
 
 #### 2. 条形图中添加 error bar
-
 
 ```r
 # barplot
@@ -127,7 +120,6 @@ ggsave("C:/Users/Dell/Desktop/barchart_error_bar.png", width = 10, height = 7, d
 
 #### 3. 点线图添加 error bar
 
-
 ```r
 data %>% 
   ggplot(aes(Species, mean, color = Types, group = Types)) +
@@ -181,7 +173,6 @@ data %>%
 <img src="/post/2022-08-22-ggplot2-barplot-error-bar/index.zh-cn_files/figure-html/unnamed-chunk-3-1.png" width="672" />
 
 #### 4. 导出png
-
 
 ```r
 ggsave("C:/Users/Dell/Desktop/barchart_error_bar.png", width = 10, height = 7, dpi = 300)

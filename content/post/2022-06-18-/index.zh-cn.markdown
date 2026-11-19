@@ -1,17 +1,18 @@
 ---
-title: 我的博客可以呈现哪些内容？
-author: 郭猛
-date: '2022-06-18'
-slug: blog-features-demo
+title: "我的博客可以呈现哪些内容？"
+author: "郭猛"
+date: "2022-06-18"
+slug: "blog-features-demo"
 aliases:
-  - /2022/06/18/index.zh-cn/
+  - "/2022/06/18/index.zh-cn/"
 categories:
-  - 博客show
+  - "随笔"
 tags:
-  - Rmarkdown
-lastmod: '2022-06-18T21:20:42+08:00'
+  - "R Markdown"
+description: "建站时测试博客能呈现哪些 R Markdown 内容。"
+draft: true
+lastmod: "2022-06-18T21:20:42+08:00"
 keywords: []
-description: ''
 comment: true
 toc: false
 autoCollapseToc: false
@@ -20,9 +21,7 @@ mathjax: true
 <script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
 <link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
 
-<p style="text-indent:2em;font-size:;font-family:;">
 第一篇博客肯定是要介绍一下博客可以呈现出哪些内容。简单点说，Markdown可以实现的内容Rmarkdown都可以实现。全程是在Rstudio上面写的，值得高兴的是R和python代码都可以运行打印出结果。
-</p>
 
 <!--more-->
 
@@ -237,9 +236,9 @@ mathjax: true
 
 5.  首行缩进
 
-    <p style="text-indent:32px;">
-    子曰：<span style="color:red;">“学而时习之，不亦说乎？</span>有朋自远方来，不亦乐乎？人不知而不愠，不亦君子乎？”
-    </p>
+    
+
+子曰：<span style="color:red;">“学而时习之，不亦说乎？</span>有朋自远方来，不亦乐乎？人不知而不愠，不亦君子乎？”
 
 6.  悬挂缩进
 
