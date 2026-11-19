@@ -1,33 +1,26 @@
 ---
-title: 简单线性回归lm可视化
-author: 郭猛
-date: '2022-11-22'
-slug: lm-visualization
+title: "简单线性回归lm可视化"
+author: "郭猛"
+date: "2022-11-22"
+slug: "lm-visualization"
 aliases:
-  - /2022/11/22/index.zh-cn/
+  - "/2022/11/22/index.zh-cn/"
 categories:
-  - 线性回归
-  - R
-  - 数据可视化
+  - "统计与表格"
 tags:
-  - ggplot2
-  - ggxmean
-  - ggols
-lastmod: '2022-11-22T15:54:04+08:00'
+  - "ggplot2"
+  - "线性回归"
+description: "用 ggols 和 ggxmean 包可视化简单线性回归的原理。"
+lastmod: "2022-11-22T15:54:04+08:00"
 keywords: []
-description: ''
 comment: false
 toc: false
 autoCollapseToc: false
 mathjax: false
 ---
-
-<p style="text-indent:2em;font-size:;font-family:;">
 最近在推特上看到了一个很有意思的R包~ggols，顺带发现了ggxmean包，两个包是同一个作者开发的。ggols和ggxmean目前都只能从github上安装，ggols的开发目的不详（The goal of ggols is to ...）作者应该还在完善中，ggxmean和平均值有关，大致目的是在可视化过程中增加平均值线，但也有对简单线性模型可视化的作用，两个包需要配合使用。以下记录两种方法对一般线性模型进行可视化。
-</p>
 
 <!--more-->
-
 
 ```r
 # load packages

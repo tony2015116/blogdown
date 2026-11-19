@@ -1,28 +1,25 @@
 ---
-title: SQL学习——数据过滤Filtering Data——DISTINCT语句
-author: 郭猛
-date: '2022-08-29'
-slug: sql-distinct
+title: "SQL 学习：DISTINCT 去重"
+author: "郭猛"
+date: "2022-08-29"
+slug: "sql-distinct"
 aliases:
-  - /2022/08/29/index.zh-cn/
+  - "/2022/08/29/index.zh-cn/"
 categories:
-  - 数据库操作
+  - "SQL"
 tags:
-  - SQL
-  - MySQL
-  - R
-lastmod: '2022-08-29T18:43:55+08:00'
+  - "SQL"
+series:
+  - "sql"
+description: "SQL 中的 DISTINCT 语句，对应 R 中的 dplyr::distinct()。"
+lastmod: "2022-08-29T18:43:55+08:00"
 keywords: []
-description: ''
 comment: true
 toc: false
 autoCollapseToc: false
 mathjax: false
 ---
-
-<p style="text-indent:2em;font-size:;font-family:;">
 今日学习SQL中DISTINCT语句，类似R中的dplyr::distinct()函数。
-</p>
 
 <!--more-->
 

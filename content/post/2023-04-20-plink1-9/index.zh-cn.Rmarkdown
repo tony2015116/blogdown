@@ -1,38 +1,29 @@
 ---
-title: 使用plink1.9替换个体ID以及格式转换
-author: 郭猛
-date: '2023-04-20'
-slug: plink-update-ids
+title: "使用plink1.9替换个体ID以及格式转换"
+author: "郭猛"
+date: "2023-04-20"
+slug: "plink-update-ids"
 aliases:
-  - /2023/04/20/index.zh-cn/
+  - "/2023/04/20/index.zh-cn/"
 categories:
-  - 数据处理
-  - Genomic Selection
+  - "育种与测定站"
 tags:
-  - plink1.9
-  - 生物芯片数据
-  - 格式转换
-  - 替换芯片个体ID
-lastmod: '2023-04-20T21:56:30+08:00'
+  - "育种数据"
+description: "用 plink 1.9 批量替换芯片数据中的个体 ID，并在 ped/map 与 bed 等格式之间转换。"
+lastmod: "2023-04-20T21:56:30+08:00"
 keywords: []
-description: '使用plink替换生物芯片个体ID'
 comment: true
 toc: false
 autoCollapseToc: false
 mathjax: false
 ---
-
-<p style="text-indent:2em;font-size:;font-family:;">
 刚好有芯片数据需要处理，就结合chatGPT重新整理了一下使用plink替换芯片中个体ID的方法。
-</p>
 
 <!--more-->
 
 #### 替换芯片个体ID
 
-<p style="text-indent:2em;font-size:;font-family:;">
 提前准备了测试文件toy.ped和toy.map。其中芯片个体ID在toy.ped中，分别为1000000000和1000000001。
-</p>
 
 ```{bash}
 cd C:/Users/Dell/Downloads/plink
@@ -46,18 +37,14 @@ cd C:/Users/Dell/Downloads/plink
 awk '{print $1, $2}' toy.ped
 ```
 
-<p style="text-indent:2em;font-size:;font-family:;">
 准备一个文本文件，这里是id_map.txt, 第1列是旧FID，第2列是旧IID，第3列是新FID，第4列是新IID，每列使用空格或tab隔开。对于空缺的，可以使用0替代。
-</p>
 
 ```{bash}
 cd C:/Users/Dell/Downloads/plink
 less -S id_map.txt
 ```
 
-<p style="text-indent:2em;font-size:;font-family:;">
 比较toy.ped和toy.updated.ped中的个体ID即IID，已替换为新的芯片ID。
-</p>
 
 ```{bash}
 cd C:/Users/Dell/Downloads/plink

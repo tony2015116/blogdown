@@ -1,33 +1,27 @@
 ---
-title: 漂亮的时间序列可视化R包timetk
-author: 郭猛
-date: '2022-07-19'
-slug: timetk-time-series
+title: "漂亮的时间序列可视化R包timetk"
+author: "郭猛"
+date: "2022-07-19"
+slug: "timetk-time-series"
 aliases:
-  - /2022/07/19/index.zh-cn/
+  - "/2022/07/19/index.zh-cn/"
 categories:
-  - 数据可视化
+  - "数据可视化"
 tags:
-  - R
-  - 时间序列
-lastmod: '2022-07-19T22:45:52+08:00'
+  - "时间序列"
+description: "用 timetk 包对环境监控数据做时间序列可视化。"
+lastmod: "2022-07-19T22:45:52+08:00"
 keywords: []
-description: 'R语言时间序列可视乎'
 comment: true
 toc: false
 autoCollapseToc: false
 mathjax: false
 ---
-
-<p style="text-indent:2em;font-size:;font-family:;">
 timetk包做出的时间序列可视化非常漂亮！😍
-</p>
 
 <!--more-->
 
-<p style="text-indent:2em;font-size:;font-family:;">
 使用timetk包对环境监控数据进行时间序列可视化的过程中有几个重要的步骤。先使用rio包读取数据；使用tidyverse包对数据进行整理，转变数据类型，将宽格式数据转为长格式数据；按照分组变量进行分组，再使用timetk中的函数plot_time_series做时间序列图，函数参数可以参考timetk的reference，横坐标按照日进行break，横坐标标签以月-日格式展示。
-</p>
 
 ```{r message=FALSE, warning=FALSE}
 library(tidyverse)

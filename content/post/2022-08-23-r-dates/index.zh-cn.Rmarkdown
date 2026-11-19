@@ -1,34 +1,63 @@
 ---
-title: R中日期date处理——week&weekday
-author: 郭猛
-date: '2022-08-23'
-slug: r-date-week-weekday
+title: "R 日期处理常见问题：混合格式与周次换算"
+author: "郭猛"
+date: "2022-08-23"
+slug: "r-date-handling"
 aliases:
-  - /2022/08/23/index.zh-cn/
+  - "/2022/08/23/index.zh-cn/"
+  - "/2022/08/23/r-date-week-weekday/"
+  - "/2022/07/22/index.zh-cn/"
+  - "/2022/07/22/r-parse-mixed-dates/"
+  - "/2022/10/10/index.zh-cn/"
+  - "/2022/10/10/r-dates-in-week/"
 categories:
-  - 数据处理
+  - "R 数据处理"
 tags:
-  - R
-  - 日期格式
-  - lubridate
-lastmod: '2022-08-23T10:03:14+08:00'
+  - "日期处理"
+description: "处理一列中混杂的两种日期格式、日期与周次互相转换，以及按中国习惯生成周次表。"
+lastmod: "2026-11-19"
 keywords: []
-description: ''
 comment: true
 toc: false
 autoCollapseToc: false
 mathjax: false
 ---
-
-<p style="text-indent:2em;font-size:;font-family:;">
-有关日期格式的转换困扰了我一段时间，特别是从周次倒推日期。这篇文章记录周日和日期之间的相互转换。
-</p>
+日期是数据处理中最容易出错的地方之一。这篇整理了我遇到过的三类问题：Excel 里一列日期混着两种格式；日期和周次的相互转换；以及按中国习惯（周一是一周的第一天）生成周次表。
 
 <!--more-->
 
-<p style="text-indent:2em;font-size:;font-family:;">
+
+## 1. 一列里混着两种日期格式
+
+在R语言中读取excel/csv数据的过程中经常会遇到日期格式的列变为了字符串，特别是有的字符串是日期形式，有的字符串是数字形式，出现这种情况很大可能是数据本身整理错误的原因。可以利用case_when()和convert_to_date()函数手动进行处理，将字符串日期转为正常的日期格式。
+
+```{r message=FALSE, warning=FALSE}
+# load packages
+library(rio)
+library(tidyverse)
+
+# import data
+data <- import("C:/Users/Dell/Desktop/test/日期错处处理test.xlsx")
+
+# data head()
+head(data)
+
+# data glimpse()
+glimpse(data)
+
+# data process
+data %>%
+  mutate(出生日期_new = case_when(
+    str_detect(出生日期, "-") ~ lubridate::as_date(出生日期),
+    TRUE ~ janitor::convert_to_date(出生日期)
+  ))
+```
+
+## 2. 日期与周次互相转换
+
+有关日期格式的转换困扰了我一段时间，特别是从周次倒推日期。这篇文章记录周日和日期之间的相互转换。
+
 将日期”年-月-日“其转为“年-周-第几天”的格式。其中%Y返回年；%U返回以周日为开始的周号，%u返回从1到7的weekday，1表示周一；%W返回从周一开始的周号，%w返回从0到6的weekday，0表示周日。
-</p>
 
 ```{r message=FALSE, warning=FALSE}
 # load packages
@@ -36,7 +65,7 @@ library(tidyverse)
 library(lubridate)
 ```
 
-#### 1. 日期转周次
+### 日期转周次
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 # 国内习惯以周一为一周的开始，周日为一周的结束
@@ -53,7 +82,7 @@ seq(as.Date("2022-08-21"), as.Date("2022-08-23"), by = "1 days") %>%
   map_chr(., ~format(., format = "国外：%Y年%U周第%w天"))
 ```
 
-#### 2. 周次转日期
+### 周次转日期
 
 ```{r echo=TRUE, message=FALSE, warning=FALSE}
 # 国内习惯
@@ -75,7 +104,7 @@ c("2022-33-6","2022-34-0","2022-34-1","2022-34-2") %>%
   as_date()
 ```
 
-#### 3. 以27周为列，展示周次与日期的转换
+### 以27周为列，展示周次与日期的转换
 
 ```{r}
 # *_C:China
@@ -120,13 +149,11 @@ cross3(2022, 26:27, 1:7) %>% map_chr(paste, collapse = "-") %>%
   gt::gtsave("C:/Users/Dell/Desktop/test2.png")
 ```
 
-<p style="text-indent:2em;font-size:;font-family:;">
 根据上表和下图，比较2022-6-26到2022-07-09之间所有日期对应的周次、一周内第几天、星期几都是一一对应的💯。
-</p>
 
 ![](images/2022weeks.png)
 
-#### 4. 周次转日期中，日期的几种形式
+### 周次转日期中，日期的几种形式
 
 ```{r}
 year <- 2022
@@ -139,7 +166,7 @@ as.Date(paste(year, week, "1", sep="-"), "%Y-%U-%u")
 #> [1] "2015-01-05"
 ```
 
-#### 5. 调取对应日期，比较常用
+### 调取对应日期，比较常用
 
 ```{r}
 # 1
@@ -151,3 +178,33 @@ cross3(2022, 32, 1:7) %>% map_chr(paste, collapse = "-") %>%
 # 3
 #对于日期列，使用mutate()函数，mutate(week = format(value, format = "%Y-%W-%u"))
 ```
+
+## 3. 按中国习惯生成周次表
+
+使用R语言将日期转化为周次📅，总感觉和中国的习惯不太一样，我找了很多周次表，基本都是每年的第1天开始就算作一年的第1周了，这和国外的好像不同，国外的可能会算做每一年的第0周或去年的第52或53周。我的观念中是每周的第1天从周一开始的，看也有从周日开始的。所以，记录一下R语言中看着顺眼的中国date格式。
+
+```{r fig.width=15, message=FALSE, warning=FALSE}
+#load
+library("lubridate")
+library("tidyverse")
+library("gt")
+
+# defining start date
+start_date <- ymd("2022/01/01")
+# defining end date
+end_date <- ymd("2022/12/31")
+
+# generating range of dates
+data.frame(date = seq(start_date, end_date,"days")) %>%
+  mutate(week_other = format(date, format = "%W"), #Week with Monday as first day of the week 00-53
+         week_China = as.integer(week_other)+1,
+         weekday = format(date, format = "%u"), #Weekday Monday is 1
+         century = format(date, format = "%C"),
+         day_of_year = format(date, format = "%j")) %>%
+  filter(week_China == 27) %>%
+  gt() %>%
+  cols_align("center") %>% 
+  gtsave("C:/Users/Dell/Desktop/date_table.png")
+```
+
+![](images/week27.png)

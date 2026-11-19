@@ -1,31 +1,28 @@
 ---
-title: ggplot2+histgram+facet_grid
-author: 郭猛
-date: '2022-11-19'
-slug: ggplot2-histogram-facet-grid
+title: "ggplot2 分面直方图：多品种多性状的表型分布"
+author: "郭猛"
+date: "2022-11-19"
+slug: "ggplot2-histogram-facet-grid"
 aliases:
-  - /2022/11/19/index.zh-cn/
+  - "/2022/11/19/index.zh-cn/"
 categories:
-  - 数据可视化
+  - "数据可视化"
 tags:
-  - R
-  - ggplot2
-  - histgram
-lastmod: '2022-11-19T20:12:47+08:00'
+  - "ggplot2"
+  - "直方图"
+series:
+  - "ggplot2-histogram"
+description: "把多性状宽格式数据转为长格式，用 facet_grid 画多品种多性状表型直方图。"
+lastmod: "2022-11-19T20:12:47+08:00"
 keywords: []
-description: ''
 comment: true
 toc: false
 autoCollapseToc: false
 mathjax: false
 ---
-
-<p style="text-indent:2em;font-size:;font-family:;">
 记录一下使用ggplot2在工作中画多品种多性状表型直方图。这种图的核心是要将多个性状的宽格式数据先转为长格式数据，这样才方便ggplot2进行可视化。
-</p>
 
 <!--more-->
-
 
 ```r
 # load packages

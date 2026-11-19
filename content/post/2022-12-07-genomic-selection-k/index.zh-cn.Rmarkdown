@@ -1,31 +1,23 @@
 ---
-title: Genomic Selection-k折交叉验证可视化
-author: 郭猛
-date: '2022-12-07'
-slug: gs-k-fold-cv
+title: "基因组选择：k 折交叉验证的划分与可视化"
+author: "郭猛"
+date: "2022-12-07"
+slug: "gs-k-fold-cv"
 aliases:
-  - /2022/12/07/index.zh-cn/
+  - "/2022/12/07/index.zh-cn/"
 categories:
-  - Genomic Selection
-  - 数据可视化
+  - "育种与测定站"
 tags:
-  - k-fold cross validation
-  - R
-  - rsample
-  - caret
-  - naniar
-lastmod: '2022-12-07T23:17:37+08:00'
+  - "育种数据"
+description: "用 rsample 和 caret 为基因组选择划分 k 折交叉验证数据集，并可视化各折的分布。"
+lastmod: "2022-12-07T23:17:37+08:00"
 keywords: []
-description: ''
 comment: true
 toc: false
 autoCollapseToc: false
 mathjax: false
 ---
-
-<p style="text-indent:2em;font-size:;font-family:;">
 最近参加了有关基因组选择的ASReml-R培训，培训中实现交叉验证的工具和我使用的不同，我使用的是rsample包，属于tidymodels，培训中中使用的是机器学习包caret，这个包了解不多，应该已经被tidymodels包替代。虽然知道交叉验证的基本概念，但这就像一个黑盒子，不清楚到底是怎么分的。同时，我也想比较一下两个R包进行交叉验证划分的训练集和验证集有什么不同。刚好在Wx公众号《R语言和统计》上看到一个可以实现缺失值可视化的R包naniar，那就开始干吧！
-</p>
 
 <!--more-->
 
@@ -129,9 +121,7 @@ vis_miss(rsample_res)
 
 -   将caret和rsample结果合并
 
-<p style="text-indent:2em;font-size:;font-family:;">
 比较两个R包对训练集和验证集的划分，看起来差不多。我用的rsample比较多，可以调整参数，caret包也可以调节参数使数据集划分的更合理一些。同时，我也有一个疑问，基因组选择中的交叉验证能不能这样直接使用？
-</p>
 
 ```{r}
 caret_res %>%

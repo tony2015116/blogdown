@@ -1,0 +1,14 @@
+{{ define "content" }}
+<section class="archive series-page">
+  <h1 class="series-page-title">{{ .Title }}</h1>
+  {{ with .Content }}<div class="series-page-intro">{{ . }}</div>{{ end }}
+  <ol class="series-page-list">
+    {{ range .Pages.ByDate }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ with .Description }}<p>{{ . }}</p>{{ end }}
+      </li>
+    {{ end }}
+  </ol>
+</section>
+{{ end }}

@@ -1,40 +1,30 @@
 ---
-title: 图表组合可视化plot+table
-author: 郭猛
-date: '2022-11-24'
-slug: plot-with-table
+title: "图表组合可视化plot+table"
+author: "郭猛"
+date: "2022-11-24"
+slug: "plot-with-table"
 aliases:
-  - /2022/11/24/index.zh-cn/
+  - "/2022/11/24/index.zh-cn/"
 categories:
-  - 数据可视化
-  - R
-  - 数据分析
+  - "统计与表格"
 tags:
-  - R
-  - modelsummary
-  - flextable
-  - ggplot2
-lastmod: '2022-11-24T17:23:39+08:00'
+  - "ggplot2"
+  - "表格"
+description: "在 ggplot2 图中嵌入统计表格，把图和表组合在一起展示。"
+lastmod: "2022-11-24T17:23:39+08:00"
 keywords: []
-description: ''
 comment: true
 toc: false
 autoCollapseToc: false
 mathjax: false
 ---
-
-<p style="text-indent:2em;font-size:;font-family:;">
 这篇文章是主要是记录图片中插入表格，是在推特中看到的，觉得做的很漂亮，这里想按照原作者的code重新跑一下（实在抵挡不住漂亮图表的诱惑🤣）。看到中间的统计表格，想起了今天看到的modelsummary包中也有类似的统计函数，之前的几篇有关描述性统计的文章也有其他包具有类似的函数（只有你想不到的包），顺便也使用iris数据集来可视化统计表格。
-</p>
 
 <!--more-->
 
-<p style="text-indent:2em;font-size:;font-family:;">
 从github<a href="https://gist.github.com/davidgohel/eaebc7d00f63166976fd2b29f8cb0abf">该网址处</a>复制粘贴运行，中间稍微修改了一下，感觉原作者图中使用的颜色不好看😁。
-</p>
 
 下面是我运行的代码：
-
 
 ```r
 library(ggplot2)
@@ -74,7 +64,6 @@ ragg::agg_png(filename = "C:/Users/Dell/Desktop/flextable.png", width = 10, heig
 ```
 
 ------------------------------------------------------------------------
-
 
 ```r
 # load packages

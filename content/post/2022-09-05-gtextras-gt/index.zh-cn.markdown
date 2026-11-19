@@ -1,31 +1,27 @@
 ---
-title: gtExtras和gt可视化漂亮的表格-升级
-author: 郭猛
-date: '2022-09-05'
-slug: gtextras-gt-tables
+title: "gtExtras和gt可视化漂亮的表格-升级"
+author: "郭猛"
+date: "2022-09-05"
+slug: "gtextras-gt-tables"
 aliases:
-  - /2022/09/05/index.zh-cn/
+  - "/2022/09/05/index.zh-cn/"
 categories:
-  - 数据可视化
+  - "统计与表格"
 tags:
-  - R
-  - gtExtras
-  - gt
-lastmod: '2022-09-05T10:58:29+08:00'
+  - "gt"
+  - "gtExtras"
+  - "表格"
+description: "用 gt 和 gtExtras 把分析结果做成美观的表格。"
+lastmod: "2022-09-05T10:58:29+08:00"
 keywords: []
-description: ''
 comment: false
 toc: false
 autoCollapseToc: false
 mathjax: false
 ---
-
-<p style="text-indent:2em;font-size:;font-family:;">
 最近是越来越喜欢使用gtExtras包对data.frame数据分析结果进行可视化了🥰。
-</p>
 
 <!--more-->
-
 
 ```r
 # load packages
@@ -65,7 +61,6 @@ head(data_table2)
 
 #### 1. 可视化猪场pig_farm1各批次后备猪的fcr描述性统计
 
-
 ```r
 data_table1 %>%
   rename(栋舍 = house, 批次 = batch) %>%
@@ -97,7 +92,6 @@ data_table1 %>%
 <img src="/post/2022-09-05-gtextras-gt/index.zh-cn_files/figure-html/unnamed-chunk-2-1.png" width="1152" />
 
 #### 2. 可视化pig_farm1猪场各批次测定站有效测定个体数量
-
 
 ```r
 data_table2 %>%

@@ -1,28 +1,27 @@
 ---
-title: ggplot2漂亮的条形图和直方图-升级
-author: 郭猛
-date: '2022-09-03'
-slug: ggplot2-bar-histogram
+title: "ggplot2漂亮的条形图和直方图-升级"
+author: "郭猛"
+date: "2022-09-03"
+slug: "ggplot2-bar-histogram"
 aliases:
-  - /2022/09/03/index.zh-cn/
+  - "/2022/09/03/index.zh-cn/"
 categories:
-  - 数据可视化
+  - "数据可视化"
 tags:
-  - R
-  - ggplot2
-  - ggsci
-lastmod: '2022-09-03T20:03:19+08:00'
+  - "ggplot2"
+  - "直方图"
+  - "柱状图"
+series:
+  - "ggplot2-histogram"
+description: "在实际使用中继续完善 ggplot2 条形图和直方图的样式。"
+lastmod: "2022-09-03T20:03:19+08:00"
 keywords: []
-description: ''
 comment: false
 toc: false
 autoCollapseToc: false
 mathjax: false
 ---
-
-<p style="text-indent:2em;font-size:;font-family:;">
 我之前是写过关于bar plot和histgram plot的博客的，但是在实际应用的过程中总是忍不住要完善它们，让它们变得更漂亮一些😅。在这个过程中，还是有一些收获，对一些参数的使用更加清晰了。
-</p>
 
 <!--more-->
 

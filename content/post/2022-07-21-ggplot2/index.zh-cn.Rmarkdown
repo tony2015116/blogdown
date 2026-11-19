@@ -1,27 +1,26 @@
 ---
-title: ggplot2实现带统计量可高亮的直方图
-author: 郭猛
-date: '2022-07-21'
-slug: ggplot2-highlight-histogram
+title: "ggplot2实现带统计量可高亮的直方图"
+author: "郭猛"
+date: "2022-07-21"
+slug: "ggplot2-highlight-histogram"
 aliases:
-  - /2022/07/21/index.zh-cn/
+  - "/2022/07/21/index.zh-cn/"
 categories:
-  - 数据可视化
+  - "数据可视化"
 tags:
-  - R
-  - ggplot2
-lastmod: '2022-07-21T22:56:04+08:00'
+  - "ggplot2"
+  - "直方图"
+series:
+  - "ggplot2-histogram"
+description: "用 ggplot2 画分组直方图，标出统计量，并高亮某一时间段的数据。"
+lastmod: "2022-07-21T22:56:04+08:00"
 keywords: []
-description: 'ggplot2实现选定时间段在总时间段内分组单变量直方图可视化'
 comment: false
 toc: false
 autoCollapseToc: false
 mathjax: false
 ---
-
-<p style="text-indent:2em;font-size:;font-family:;">
 老板让我对这个月猪只的某个连续型性状表型和过去一个季度的该性状表型作比较，我改怎么做呢？对于展示连续型数据，我选择使用ggplot2中的直方图，凸显数据选择使用gghighlight包。但这样就完了么？直方图虽然可以一目了然的看出选定时间段在整个时间段的分布情况，但却无法清晰的知道各统计量的数值，那么，我在直方图上加上各统计量呢🤔顺便再加上两条平均值线。
-</p>
 
 <!--more-->
 

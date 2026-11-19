@@ -1,37 +1,31 @@
 ---
-title: SQL学习——dplyr与SQL语言互转
-author: 郭猛
-date: '2022-09-01'
-slug: dplyr-sql-translation
+title: "SQL 学习：dplyr 与 SQL 互相转换"
+author: "郭猛"
+date: "2022-09-01"
+slug: "dplyr-sql-translation"
 aliases:
-  - /2022/09/01/index.zh-cn/
+  - "/2022/09/01/index.zh-cn/"
 categories:
-  - 数据库操作
+  - "SQL"
 tags:
-  - SQL
-  - MySQL
-  - R
-lastmod: '2022-09-01T20:24:54+08:00'
+  - "SQL"
+series:
+  - "sql"
+description: "用 dbplyr 把 dplyr 语句转成 SQL，用 tidyquery 把 SQL 转成 dplyr。"
+lastmod: "2022-09-01T20:24:54+08:00"
 keywords: []
-description: ''
 comment: true
 toc: false
 autoCollapseToc: false
 mathjax: false
 ---
-
-<p style="text-indent:2em;font-size:;font-family:;">
 dplyr和dbplyr结合可以将dplyr语句转为SQL语句；queryparser和tidyquery结合可以将SQL语句转为dplyr语句，但是对于复杂的SQL语句，无法转为dplyr语句。
-</p>
 
 <!--more-->
-
-
 
 #### 1. dplyr转SQL语句
 
 [![](images/dplyr2sql.png)](https://rstd.io/global2021/irenesteves)
-
 
 ```r
 # 以上步骤都可以在R连接MySQL数据库的情况下，操作命令在R中实现
@@ -57,7 +51,6 @@ data %>%
 #### 2. SQL转dplyr
 
 ![tidyquery and queryparser: Translating SQL Queries to dplyr Pipelines](images/sql2dplyr.png)
-
 
 ```r
 # load packages

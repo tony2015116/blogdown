@@ -1,27 +1,24 @@
 ---
-title: 在博客中嵌入.html
-author: 郭猛
-date: '2022-08-19'
-slug: embed-html-in-blog
+title: "在博客中嵌入.html"
+author: "郭猛"
+date: "2022-08-19"
+slug: "embed-html-in-blog"
 aliases:
-  - /2022/08/19/index.zh-cn/
+  - "/2022/08/19/index.zh-cn/"
 categories:
-  - 博客show
+  - "随笔"
 tags:
-  - markdown
-  - .html
-lastmod: '2022-08-19T10:55:14+08:00'
+  - "R Markdown"
+description: "在博客文章中用 iframe 嵌入 HTML 页面和幻灯片。"
+draft: true
+lastmod: "2022-08-19T10:55:14+08:00"
 keywords: []
-description: ''
 comment: true
 toc: false
 autoCollapseToc: false
 mathjax: false
 ---
-
-<p style="text-indent:2em;font-size:;font-family:;">
 怎么样实现网页套网页并可以可以滚动浏览？今日在 <a href="https://rstudio-conf-2022.github.io/ggplot2-graphic-design/">ggplot2-graphic-design</a> 源代码中get到了我想要的答案🤏。举两个例子，一个是使用<a href="https://rstudio-conf-2022.github.io/ggplot2-graphic-design/">flipbookr</a> 包中的flipbook slides；一个例子是使用自己的网站。
-</p>
 
 <!--more-->
 

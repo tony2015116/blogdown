@@ -1,26 +1,22 @@
 ---
-title: 使用ggplot2画多变量分组点线图
-author: 郭猛
-date: '2022-08-09'
-slug: ggplot2-grouped-point-line
+title: "使用ggplot2画多变量分组点线图"
+author: "郭猛"
+date: "2022-08-09"
+slug: "ggplot2-grouped-point-line"
 aliases:
-  - /2022/08/09/index.zh-cn/
+  - "/2022/08/09/index.zh-cn/"
 categories:
-  - 数据可视化
+  - "数据可视化"
 tags:
-  - R
-  - ggplot2
-  - line plot
-  - point plot
-lastmod: '2022-08-17T19:26:28+08:00'
+  - "ggplot2"
+description: "用 ggplot2 画多变量分组点线图的两种方法。"
+lastmod: "2022-08-17T19:26:28+08:00"
 keywords: []
-description: ''
 comment: true
 toc: false
 autoCollapseToc: false
 mathjax: false
 ---
-
 <link href="/rmarkdown-libs/tabwid/tabwid.css" rel="stylesheet" />
 <link href="/rmarkdown-libs/tabwid/scrool.css" rel="stylesheet" />
 <link href="/rmarkdown-libs/tabwid/tabwid.css" rel="stylesheet" />
@@ -28,9 +24,8 @@ mathjax: false
 <link href="/rmarkdown-libs/tabwid/tabwid.css" rel="stylesheet" />
 <link href="/rmarkdown-libs/tabwid/scrool.css" rel="stylesheet" />
 
-<p style="text-indent:2em;font-size:;font-family:;">
 记录数据分析中常用到的点线图在R中的画法。针对y值的不同计算方法，有两种画法，一种是单独计算出所需要展示变量的y值，如平均值；一种是直接使用ggplot2中自带的stat\_summary()函数直接计算中初始数据中的y值。两种方法都可以画出漂亮的点线图💯。
-</p>
+
 <!--more-->
 
 ``` r

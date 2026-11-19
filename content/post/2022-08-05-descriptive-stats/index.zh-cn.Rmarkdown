@@ -1,0 +1,182 @@
+---
+title: "R 里做描述性统计：5 个包怎么选"
+author: "郭猛"
+date: "2022-08-05"
+slug: "descriptive-stats-packages"
+aliases:
+  - "/2022/08/05/index.zh-cn/"
+  - "/2022/08/05/gtsummary-descriptive-stats/"
+  - "/2022/08/06/index.zh-cn/"
+  - "/2022/08/06/rstatix-descriptive-stats/"
+  - "/2022/08/08/index.zh-cn/"
+  - "/2022/08/08/skimr-descriptive-stats/"
+  - "/2022/08/14/index.zh-cn/"
+  - "/2022/08/14/crosstable-descriptive-stats/"
+  - "/2022/09/02/index.zh-cn/"
+  - "/2022/09/02/gtextras-descriptive-stats/"
+categories:
+  - "统计与表格"
+tags:
+  - "描述性统计"
+  - "表格"
+  - "gtExtras"
+description: "比较 rstatix、skimr、gtsummary、crosstable、gtExtras 五个描述性统计包的用法和适用场景。"
+lastmod: "2026-11-19"
+keywords: []
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
+---
+做数据分析时，几乎每次都要先算一遍样本量、均值、标准差这些基本统计量。R 里能做这件事的包很多，我先后用过 5 个，这里放在一起比较，方便按场景挑选。示例都用 R 自带的 `iris` 数据集。
+
+<!--more-->
+
+| 包 | 适合场景 | 结果形式 |
+| --- | --- | --- |
+| rstatix | 分组计算统计量，结果还要继续处理 | 数据框 |
+| skimr | 拿到新数据时快速看一眼整体情况 | 摘要 / 数据框 |
+| gtsummary | 报告或论文用的表格，可导出图片 | gt / flextable 表格 |
+| crosstable | 需要把结果交成 Word 文件 | flextable 表格、docx |
+| gtExtras | 汇报用的表格，表内带分布图 | gt 表格、png |
+
+
+## 1. rstatix：最常用的分组统计
+
+rstatix是我最常使用的R包了。主要使用其中的get_summary_stats函数对数据集做一个描述性统计。具体使用可以参考 <a href="https://rpkgs.datanovia.com/rstatix/reference/index.html">rstatix reference</a>。
+
+```{r message=FALSE, warning=FALSE}
+# load packages
+library(tidyverse)
+library(rstatix)
+library(flextable)
+
+test <- iris %>%
+  pivot_longer(-5, names_to = "Types", values_to = "Values") %>%
+  group_by(Species, Types) %>%
+  rstatix::get_summary_stats(Values, type = "common") 
+
+# output as html type in markdown
+test %>%
+  flextable::flextable()
+```
+
+## 2. skimr：快速浏览整份数据
+
+skimr是一个比较方便汇总数据数据的R包。使用非常简单，具体使用可以参考 <a href="https://docs.ropensci.org/skimr/reference/index.html">skimr reference</a>。
+
+```{r message=FALSE, warning=FALSE}
+# load packages
+library(tidyverse)
+library(skimr)
+library(flextable)
+
+# 受限于网站主题，输出格式不是很友好
+skimr::skim(iris)
+
+# 使用.html格式输出，将所有结果都汇总到了一个表上，缺乏了美感
+skim(iris) %>% 
+  flextable::flextable()
+```
+
+## 3. gtsummary：直接生成报告表格
+
+工作中经常遇到统计一些如数量、平均值、中位数、标准差等一些基本的统计量，通常会在R中试用summarise等函数统计好后导出到excel中，然后再在excel中整理美化表格，这种方式是比较麻烦的。简单一些的是通过一些R包将结果输出为html格式，然后截图。还比较少有R包可以将html格式的储存为图片格式的R包，但gtsummary包就是其中一个（其它的类似R包比较少见）集合统计和导出图片还可以设定图片主题的强大R包。
+
+gtsummary包中很多函数。刚接触，所以使用的比较少。但我相信后面会使用的多起来，我比较喜欢的是可以导出图片格式。详细的介绍可以看 <a href="https://www.danieldsjoberg.com/gtsummary/index.html">gtsummary reference</a>。
+
+```{r message=FALSE, warning=FALSE}
+# load package
+library(tidyverse)
+library(gtsummary)
+library(gt)
+
+test <- iris %>%
+  tbl_summary(by = Species, missing = "no",
+              statistic = list(all_continuous() ~ "{mean}±{sd}", 
+                               #all_continuous() ~ c("{median} ({p25}, {p75})", "{min}, {max}")
+                               all_categorical() ~ "{n} ({p}%)")) 
+
+# output as html type in markdown
+test %>%
+  as_flex_table()
+
+# output as image(导出的图片如下)
+theme_gtsummary_journal(journal = "jama") # set output image theme
+test %>% 
+  as_gt() %>%
+  gt::gtsave(filename = "C:/Users/Dell/Desktop/my_table_image.png") #save table as image
+
+```
+
+## 4. crosstable：结果导出到 Word
+
+crosstable包也可以实现基本统计量的计算，导出方式和gtsummary包的格式略有不同，但可以导出到docx文件中。具体的使用操作可以参考 <a href="https://danchaltiel.github.io/crosstable/reference/index.html">crosstable reference</a>。
+
+```{r message=FALSE, warning=FALSE}
+# load packages
+library(tidyverse)
+library(crosstable)
+library(flextable)
+library(officer)
+
+test <- crosstable(iris, 1:4, by = c(Species),
+                   showNA = c("no"),
+                   num_digits = 2,
+                   funs=c(N, mean, median, sd))
+
+# output as html type in markdown
+test %>%
+  flextable::as_flextable()
+
+# 将结果导出到.docx文件中
+doc <- read_docx() %>% 
+  body_add_crosstable(test)
+write_and_open(doc, "C:/Users/Dell/Desktop/res_output.docx")
+```
+
+## 5. gtExtras：带分布图的汇报表格
+
+之前有介绍过gtExtras包，结合gt包能发挥出了1+1>2的效果。在做月度总结汇报中需要用到比较漂亮的描述性统计图表，为了方便后续其它分析中继续用到，现整理代码，以iris数据集为示例，对变量Sepal.Length进行描述性统计。
+
+```{r message=FALSE, warning=FALSE}
+# load packages
+library(tidyverse)
+library(gtExtras)
+library(gt)
+
+# head iris data
+head(iris)
+
+# 描述性统计
+iris %>% 
+  select(Species, Sepal.Length) %>%
+  dplyr::group_by(Species) %>% # 分组
+  dplyr::summarize( # 汇总
+    N = n(),
+    mean = mean(Sepal.Length),
+    sd = sd(Sepal.Length),
+    Sepal.Length_data = list(Sepal.Length),
+    .groups = "drop"
+  ) %>%
+  gt() %>% # 转为gt格式
+  gtExtras::gt_plt_dist(Sepal.Length_data, type = "density", line_color = "blue",
+                        fill_color = "red") %>% # 添加密度图
+  fmt_number(columns = mean:sd, decimals = 2) %>% # 保留小数点后两位
+  gt_theme_pff() %>% # 改变表格主题
+  #cols_align("center") %>% # 居中对齐
+  tab_header(
+    title = md("**iris数据中关于Sepal.Length的描述性统计**") # 添加md格式表头
+  ) %>%
+  tab_options(data_row.padding = px(3),
+              heading.title.font.size = 15, # 改变表头字体大小
+              heading.align = "center") %>% # 表头居中
+  gt::gtsave("C:/Users/Dell/Desktop/iris_stats.png") # 将表格导出为png格式图片
+```
+
+## 怎么选
+
+- 统计结果还要接着筛选、合并或画图，用 rstatix，它返回的是普通数据框。
+- 刚拿到数据，只想快速了解变量分布和缺失情况，用 skimr。
+- 要直接放进报告或论文，用 gtsummary；需要交 Word 文件，用 crosstable。
+- 月度汇报这类需要美观、带图的表格，用 gt 加 gtExtras。

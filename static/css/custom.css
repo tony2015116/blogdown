@@ -285,3 +285,21 @@ body.minimal-site {
   .blog-theme { grid-column: 2; grid-row: 1; }
   .blog-entry { grid-template-columns: 1fr; gap: 3px; padding-block: 13px; }
 }
+
+/* Series box at the end of a post, and the series overview page */
+.minimal-site .post-series {
+  margin: 2.5em 0 1em;
+  padding: 1em 1.25em;
+  border: 1px solid var(--blog-line);
+  border-radius: 6px;
+  font-size: 15px;
+}
+.minimal-site .post-series-title { margin: 0 0 .5em; font-weight: 650; }
+.minimal-site .post-series ol { margin: 0; padding-left: 1.5em; }
+.minimal-site .post-series li { margin: .2em 0; }
+.minimal-site .post-series li[aria-current] { color: var(--blog-muted); }
+.minimal-site .series-page-title { font-size: 24px; margin: 0 0 .75em; }
+.minimal-site .series-page-intro { line-height: 1.8; }
+.minimal-site .series-page-list { padding-left: 1.5em; line-height: 1.7; }
+.minimal-site .series-page-list li { margin: .9em 0; }
+.minimal-site .series-page-list p { margin: .2em 0 0; color: var(--blog-muted); font-size: 14px; }

@@ -1,36 +1,79 @@
 ---
-title: 睿保乐nedap测定站csv数据自动下载
-author: 郭猛
-date: '2022-07-23'
-slug: nedap-csv-download
+title: "睿保乐 Nedap 测定站 CSV 数据定时自动下载"
+author: "郭猛"
+date: "2022-07-23"
+slug: "nedap-auto-download"
 aliases:
-  - /2022/07/23/index.zh-cn/
+  - "/2022/07/23/index.zh-cn/"
+  - "/2022/07/23/nedap-csv-download/"
+  - "/2022/06/20/index.zh-cn/"
+  - "/2022/06/20/nedap-auto-download/"
 categories:
-  - 爬虫
-  - 自动化
-  - 睿保乐测定站
+  - "育种与测定站"
 tags:
-  - R
-  - purrr
-  - RSelenium
-lastmod: '2022-07-23T21:24:48+08:00'
+  - "测定站"
+  - "自动化"
+description: "用 R + RSelenium 模拟网页操作，按测定站编号和日期批量下载睿保乐 Nedap 测定站的 CSV 数据，并自动重命名归档。"
+lastmod: "2026-11-19"
 keywords: []
-description: '使用R实现睿保乐nedap测定站csv数据自动下载'
 comment: true
 toc: false
 autoCollapseToc: false
 mathjax: false
 ---
-
-<p style="text-indent:2em;font-size:;font-family:;">
 一直都想实现睿保乐nedap测定站的csv数据自动下载，实在是每天都要从睿保乐系统中下载数据，修改文件名比较麻烦，尤其是很多台测定站同时工作的时候，下载数据都会占用较多的时间又容易搞乱。为了解决这个问题，我使用R语言对睿保乐系统实行动态爬取（姑且这样叫吧😂，因为和平时遇到的爬虫不太相同）。希望这篇文章可以为育种行业中涉及测定站的人提供一些提高工作效率的方法，也为其他人有类似的需要的人提供参考。
-</p>
 
 <!--more-->
 
-<p style="text-indent:2em;font-size:;font-family:;">
-千言万语，不如直接show code。通过下面的代码，可以实现如下效果：
+<p align="center">
+    <img src="images/nedap.png" alt="" width="100%"/>
 </p>
+
+## 手动下载的难点
+
+一般的做法那就是一台测定站每天每天的下载，要下载几十上百台；其次，就是选定多台测定站一天或者一台测定站多天数据来下载。但因为不能一次性下载太多，选定日期和测定站范围太大会导致下载的数据不完整，无论你怎么选择，都是要人工手动进行下载，如果每天下载几百台测定站，没有个把小时是比较难搞定的。
+
+## 思路与环境准备
+
+我的思路是依托R平台，使用<font color=red> Selenium + chromedriver + RSelenium + taskscheduleR + purrr</font> 来实现定时自动下载所有数据。
+
+> Selenium 是一个用于Web应用程序测试的工具。Selenium测试直接运行在浏览器中，就像真正的用户在操作一样。
+
+-   下载安装谷歌浏览器并安装；
+
+-   下载和谷歌浏览器对应版本的chromedriver；
+
+    [*http://chromedriver.storage.googleapis.com/index.html*](http://chromedriver.storage.googleapis.com/index.html)
+
+    [*https://registry.npmmirror.com/binary.html?path=chromedriver/*](https://registry.npmmirror.com/binary.html?path=chromedriver/)
+
+-   下载selenium-server，本地也必须已经安装java；
+
+    [*https://www.selenium.dev/downloads/*](https://www.selenium.dev/downloads/)
+
+    ![](images/selenium-server.png)
+
+-   在R中安装RSelenium包，通过R代码指令控制谷歌浏览器，替代鼠标点击网站页面；
+
+    ![](images/rselenium-1.svg)
+
+-   使用谷歌浏览器打开网页，将光标放在所需要点击和输入的地方，点击鼠标右键，选择\~\~\~\~检查，拷贝xpath；
+
+    ![](images/nedap-01.png)
+
+-   按照点击顺序，分别获取xpath。模仿点击网页，输入文本等，最后组合成函数；
+
+-   将以下代码放到.bat文件中，双击运行，必须运行Selenium后，在R中才能使用RSelenium包；
+
+    ![](images/run-selenium.svg)
+
+-   使用purrr包循环运行编写的函数，生成R脚本，实现循环下载；
+
+-   使用taskscheduleR包实现定时运行R脚本；
+
+## 实现效果
+
+通过下面的代码，可以实现如下效果：
 
 1.  按照设置的测定站编号范围和日期范围，自动下载
 
@@ -39,6 +82,8 @@ mathjax: false
 2.  自动将下载的csv数据修改文件名后移动到指定文件夹
 
     ![](images/screenshots%20(1).gif)
+
+## 完整代码
 
 ``` r
 # load packages
@@ -169,3 +214,9 @@ all_csv_download <- function(date_download){
 }
 map(date_download, all_csv_download)
 ```
+
+## 参考链接
+
+1.  <https://www.bilibili.com/video/BV1354y1p7GY?p=1>
+
+2.  <https://blog.csdn.net/qq_38984677/article/details/81353537>

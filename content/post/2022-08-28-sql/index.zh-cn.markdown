@@ -1,43 +1,35 @@
 ---
-title: SQL学习——排序ORDER BY
-author: 郭猛
-date: '2022-08-28'
-slug: sql-order-by
+title: "SQL 学习：ORDER BY 排序"
+author: "郭猛"
+date: "2022-08-28"
+slug: "sql-order-by"
 aliases:
-  - /2022/08/28/index.zh-cn/
+  - "/2022/08/28/index.zh-cn/"
 categories:
-  - 数据库操作
+  - "SQL"
 tags:
-  - SQL
-  - MySQL
-  - R
-lastmod: '2022-08-28T12:47:46+08:00'
+  - "SQL"
+series:
+  - "sql"
+description: "用 ORDER BY 对查询结果排序，并在 R 中实现同样的操作。"
+lastmod: "2022-08-28T12:47:46+08:00"
 keywords: []
-description: ''
 comment: true
 toc: false
 autoCollapseToc: false
 mathjax: false
 ---
-
-<p style="text-indent:2em;font-size:;font-family:;">
 今日学习SQL中的ORDER BY关键字，结合昨日SELECT语句，对选择的结果进行排序。同样的，在R中也很好操作。
-</p>
 
 <!--more-->
 
-
-
 #### 1. 选择employee数据表
-
 
 ```sql
 SELECT employee_id, first_name, last_name, hire_date, salary FROM employees;
 ```
 
-
 <div class="knitsql-table">
-
 
 Table: Table 1: Displaying records 1 - 10
 
@@ -58,15 +50,12 @@ Table: Table 1: Displaying records 1 - 10
 
 #### 2. 使用ORDER BY进行排序
 
-
 ```sql
 # 按照日期顺序升序
 SELECT employee_id, first_name, last_name, hire_date, salary FROM employees ORDER BY hire_date;
 ```
 
-
 <div class="knitsql-table">
-
 
 Table: Table 2: Displaying records 1 - 10
 
@@ -85,15 +74,12 @@ Table: Table 2: Displaying records 1 - 10
 
 </div>
 
-
 ```sql
 # 按照字母顺序降序
 SELECT employee_id, first_name, last_name, hire_date, salary FROM employees ORDER BY first_name DESC;
 ```
 
-
 <div class="knitsql-table">
-
 
 Table: Table 3: Displaying records 1 - 10
 
@@ -114,7 +100,6 @@ Table: Table 3: Displaying records 1 - 10
 
 #### 3. 多列同时排序
 
-
 ```sql
 # job_title升序，max_salary降序
 SELECT employee_id, first_name, last_name, hire_date, salary
@@ -122,9 +107,7 @@ FROM employees
 ORDER BY first_name, last_name DESC;
 ```
 
-
 <div class="knitsql-table">
-
 
 Table: Table 4: Displaying records 1 - 10
 
@@ -144,7 +127,6 @@ Table: Table 4: Displaying records 1 - 10
 </div>
 
 #### 4. 在R中实现上述操作
-
 
 ```r
 # 以上步骤都可以在R连接MySQL数据库的情况下，操作命令在R中实现
@@ -167,7 +149,6 @@ head(data)
 ## 5         104 Bruce      Ernst     1991-05-21   6000
 ## 6         105 David      Austin    1997-06-25   4800
 ```
-
 
 ```r
 # 按日期顺序升序
