@@ -11,7 +11,6 @@
       <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
       <div>
         <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-        {{ with .Description }}<p class="blog-entry-desc">{{ . }}</p>{{ end }}
         {{ with .GetTerms "categories" }}
           <ul aria-label="分类">
             {{ range . }}<li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>{{ end }}

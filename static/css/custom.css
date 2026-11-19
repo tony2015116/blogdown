@@ -216,7 +216,6 @@ body.minimal-site {
   font-size: 12px;
 }
 .blog-entry ul a { color: var(--blog-muted); }
-.blog-entry .blog-entry-desc { margin: 4px 0 0; color: var(--blog-muted); font-size: 14px; line-height: 1.6; }
 .blog-entry ul a:hover { color: var(--blog-accent); }
 
 .minimal-site .post,
