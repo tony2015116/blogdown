@@ -1,8 +1,10 @@
 ---
 title: 在jupyter notebook中学习SQL
-author: guoguo
+author: 郭猛
 date: '2022-08-20'
-slug: index.zh-cn
+slug: sql-in-jupyter-notebook
+aliases:
+  - /2022/08/20/index.zh-cn/
 categories:
   - 数据库操作
 tags:
@@ -12,12 +14,10 @@ tags:
 lastmod: '2022-08-20T16:39:26+08:00'
 keywords: []
 description: ''
-comment: no
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: no
-mathjax: no
+comment: false
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">

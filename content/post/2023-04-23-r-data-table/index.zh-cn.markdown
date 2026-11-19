@@ -1,8 +1,10 @@
 ---
 title: 解决制作R包中data.table::`:=`函数报错问题
-author: guoguo
+author: 郭猛
 date: '2023-04-23'
-slug: index.zh-cn
+slug: data-table-walrus-in-packages
+aliases:
+  - /2023/04/23/index.zh-cn/
 categories:
   - R
   - R包开发
@@ -12,12 +14,10 @@ tags:
 lastmod: '2023-04-23T22:40:57+08:00'
 keywords: []
 description: ''
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: no
-mathjax: no
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 在制作R包过程中使用了data.table包中的":="函数，但总是报错，今日终于解决。困惑了我一天的问题，chatGPT没给我想要的答案，反倒是谷歌搜出来了！🤣 <!--more-->

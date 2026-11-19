@@ -1,8 +1,10 @@
 ---
 title: 总结几个excel中常用的字符串处理函数
-author: guoguo
+author: 郭猛
 date: '2022-07-18'
-slug: index.zh-cn
+slug: excel-string-functions
+aliases:
+  - /2022/07/18/index.zh-cn/
 categories:
   - 数据处理
 tags:
@@ -11,12 +13,10 @@ tags:
 lastmod: '2022-07-23T22:27:08+08:00'
 keywords: []
 description: ''
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: yes
-mathjax: yes
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">

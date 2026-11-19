@@ -1,8 +1,10 @@
 ---
 title: 利用gtExtras包做漂亮的描述性统计
-author: guoguo
+author: 郭猛
 date: '2022-09-02'
-slug: index.zh-cn
+slug: gtextras-descriptive-stats
+aliases:
+  - /2022/09/02/index.zh-cn/
 categories:
   - 数据分析
 tags:
@@ -12,12 +14,10 @@ tags:
 lastmod: '2022-09-02T17:56:04+08:00'
 keywords: []
 description: ''
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: yes
-mathjax: yes
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 <p style="text-indent:2em;font-size:;font-family:;">
 之前有介绍过gtExtras包，结合gt包能发挥出了1+1>2的效果。在做月度总结汇报中需要用到比较漂亮的描述性统计图表，为了方便后续其它分析中继续用到，现整理代码，以iris数据集为示例，对变量Sepal.Length进行描述性统计。

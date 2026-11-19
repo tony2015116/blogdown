@@ -1,8 +1,10 @@
 ---
 title: 图表组合可视化plot+table
-author: guoguo
+author: 郭猛
 date: '2022-11-24'
-slug: index.zh-cn
+slug: plot-with-table
+aliases:
+  - /2022/11/24/index.zh-cn/
 categories:
   - 数据可视化
   - R
@@ -15,12 +17,10 @@ tags:
 lastmod: '2022-11-24T17:23:39+08:00'
 keywords: []
 description: ''
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: yes
-mathjax: no
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">

@@ -1,8 +1,10 @@
 ---
 title: record2-chatGPT会不会让敲代码的人失业？
-author: guoguo
+author: 郭猛
 date: '2022-12-08'
-slug: index.zh-cn
+slug: chatgpt-and-coders
+aliases:
+  - /2022/12/08/index.zh-cn/
 categories:
   - 生活记录
 tags:
@@ -11,12 +13,10 @@ tags:
 lastmod: '2022-12-08T11:10:34+08:00'
 keywords: []
 description: ''
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: yes
-mathjax: no
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">

@@ -1,8 +1,10 @@
 ---
 title: R函数:map()+mutate()+across()
-author: guoguo
+author: 郭猛
 date: '2022-09-29'
-slug: index.zh-cn
+slug: map-mutate-across
+aliases:
+  - /2022/09/29/index.zh-cn/
 categories:
   - 数据处理
 tags:
@@ -12,12 +14,10 @@ tags:
 lastmod: '2022-09-29T23:08:42+08:00'
 keywords: []
 description: ''
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: yes
-mathjax: yes
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 <p style="text-indent:2em;font-size:;font-family:;">
 R中很多常用又很牛掰的函数，还记得在推上有个牛人，每天一个R函数，整整写了一年，最后出了一本书。我在数据处理过程中会遇到很多方便且功能强大的函数，特别是不同R包中函数的组合功能就更加强大了，所以我也有一个想法，将我在数据处理过程中使用到的强大的R函数或函数组合也记录下来，不是每天一个函数，而是遇到哪个写哪个🤭。

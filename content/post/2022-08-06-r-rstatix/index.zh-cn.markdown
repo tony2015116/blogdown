@@ -1,8 +1,10 @@
 ---
 title: 使用R包rstatix做描述性统计
-author: guoguo
+author: 郭猛
 date: '2022-08-06'
-slug: index.zh-cn
+slug: rstatix-descriptive-stats
+aliases:
+  - /2022/08/06/index.zh-cn/
 categories:
   - 数据分析
 tags:
@@ -12,12 +14,10 @@ tags:
 lastmod: '2022-08-14T20:47:16+08:00'
 keywords: []
 description: ''
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: yes
-mathjax: yes
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <link href="/rmarkdown-libs/tabwid/tabwid.css" rel="stylesheet" />

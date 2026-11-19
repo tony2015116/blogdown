@@ -1,8 +1,10 @@
 ---
 title: SQL学习——dplyr与SQL语言互转
-author: guoguo
+author: 郭猛
 date: '2022-09-01'
-slug: index.zh-cn
+slug: dplyr-sql-translation
+aliases:
+  - /2022/09/01/index.zh-cn/
 categories:
   - 数据库操作
 tags:
@@ -12,12 +14,10 @@ tags:
 lastmod: '2022-09-01T20:24:54+08:00'
 keywords: []
 description: ''
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: yes
-mathjax: yes
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">

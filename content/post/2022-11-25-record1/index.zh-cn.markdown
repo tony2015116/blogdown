@@ -1,8 +1,10 @@
 ---
 title: record1-和平精英生存心得
-author: guoguo
+author: 郭猛
 date: '2022-11-25'
-slug: index.zh-cn
+slug: peace-elite-tips
+aliases:
+  - /2022/11/25/index.zh-cn/
 categories:
   - 生活记录
 tags:
@@ -11,12 +13,10 @@ tags:
 lastmod: '2022-11-25T18:51:37+08:00'
 keywords: []
 description: ''
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: yes
-mathjax: no
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">

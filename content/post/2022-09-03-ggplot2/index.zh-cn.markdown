@@ -1,8 +1,10 @@
 ---
 title: ggplot2漂亮的条形图和直方图-升级
-author: guoguo
+author: 郭猛
 date: '2022-09-03'
-slug: index.zh-cn
+slug: ggplot2-bar-histogram
+aliases:
+  - /2022/09/03/index.zh-cn/
 categories:
   - 数据可视化
 tags:
@@ -12,12 +14,10 @@ tags:
 lastmod: '2022-09-03T20:03:19+08:00'
 keywords: []
 description: ''
-comment: no
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: no
-mathjax: no
+comment: false
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">

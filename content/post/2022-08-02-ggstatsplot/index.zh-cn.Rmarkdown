@@ -1,8 +1,10 @@
 ---
 title: 使用ggstatsplot画漂亮的多变量分组箱线图
-author: guoguo
+author: 郭猛
 date: '2022-08-02'
-slug: index.zh-cn
+slug: ggstatsplot-grouped-boxplot
+aliases:
+  - /2022/08/02/index.zh-cn/
 categories:
   - 数据可视化
 tags:
@@ -13,12 +15,10 @@ tags:
 lastmod: '2022-08-02T22:21:23+08:00'
 keywords: []
 description: 'ggstatsplot画漂亮的多变量分组箱线图'
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: yes
-mathjax: yes
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 <p style="text-indent:2em;font-size:;font-family:;">
 R语言中比较常用的是ggplot2,使用facet_grid或者facet_wrap函数都可以达到多变量分组的目的。今天使用ggstatsplot包中的grouped_ggbetweenstats函数来实现漂亮的分组箱线图。

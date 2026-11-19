@@ -1,8 +1,10 @@
 ---
 title: SQL学习——数据过滤Filtering Data——WHERE子句
-author: guoguo
+author: 郭猛
 date: '2022-08-30'
-slug: index.zh-cn
+slug: sql-where
+aliases:
+  - /2022/08/30/index.zh-cn/
 categories:
   - 数据库操作
 tags:
@@ -12,12 +14,10 @@ tags:
 lastmod: '2022-08-30T21:48:34+08:00'
 keywords: []
 description: ''
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: yes
-mathjax: yes
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">

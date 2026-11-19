@@ -1,8 +1,10 @@
 ---
 title: 我的博客可以呈现哪些内容？
-author: guoguo
+author: 郭猛
 date: '2022-06-18'
-slug: index.zh-cn
+slug: blog-features-demo
+aliases:
+  - /2022/06/18/index.zh-cn/
 categories:
   - 博客show
 tags:
@@ -10,12 +12,10 @@ tags:
 lastmod: '2022-06-18T21:20:42+08:00'
 keywords: []
 description: ''
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: no
-mathjax: yes
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: true
 ---
 <script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
 <link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
@@ -190,10 +190,6 @@ mathjax: yes
         <a href="https://www.animatedimages.org/cat-cats-209.htm"><img src="https://www.animatedimages.org/data/media/209/animated-cat-image-0167.gif" border="0" alt="animated-cat-image-0167" /></a>
 
     11. 本地图片
-
-        ![](images/test%20(1).svg)
-
-        ![](images/test.svg)
 
         ![](images/pexels-pixabay-57416.jpg)
 

@@ -1,8 +1,10 @@
 ---
 title: 使用ggplot2画boxplot
-author: guoguo
+author: 郭猛
 date: '2022-08-17'
-slug: index.zh-cn
+slug: ggplot2-boxplot
+aliases:
+  - /2022/08/17/index.zh-cn/
 categories:
   - 数据可视化
 tags:
@@ -12,12 +14,10 @@ tags:
 lastmod: '2022-08-17T11:26:46+08:00'
 keywords: []
 description: ''
-comment: no
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: no
-mathjax: no
+comment: false
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <link href="/rmarkdown-libs/tabwid/tabwid.css" rel="stylesheet" />

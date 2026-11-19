@@ -1,8 +1,10 @@
 ---
 title: Genomic Selection-k折交叉验证可视化
-author: guoguo
+author: 郭猛
 date: '2022-12-07'
-slug: index.zh-cn
+slug: gs-k-fold-cv
+aliases:
+  - /2022/12/07/index.zh-cn/
 categories:
   - Genomic Selection
   - 数据可视化
@@ -15,12 +17,10 @@ tags:
 lastmod: '2022-12-07T23:17:37+08:00'
 keywords: []
 description: ''
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: yes
-mathjax: no
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">

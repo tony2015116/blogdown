@@ -1,8 +1,10 @@
 ---
 title: 睿保乐nedap测定站csv数据自动下载
-author: guoguo
+author: 郭猛
 date: '2022-07-23'
-slug: index.zh-cn
+slug: nedap-csv-download
+aliases:
+  - /2022/07/23/index.zh-cn/
 categories:
   - 爬虫
   - 自动化
@@ -14,12 +16,10 @@ tags:
 lastmod: '2022-07-23T21:24:48+08:00'
 keywords: []
 description: '使用R实现睿保乐nedap测定站csv数据自动下载'
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: "如需转载或商业用途，请联系作者，谢谢"
-reward: yes
-mathjax: yes
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">

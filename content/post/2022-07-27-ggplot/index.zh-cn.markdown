@@ -1,8 +1,10 @@
 ---
 title: ggplot2中与直方图的再次邂逅😉
-author: guoguo
+author: 郭猛
 date: '2022-07-27'
-slug: index.zh-cn
+slug: ggplot2-histogram-revisited
+aliases:
+  - /2022/07/27/index.zh-cn/
 categories:
   - 数据可视化
 tags:
@@ -12,12 +14,10 @@ tags:
 lastmod: '2022-07-27T21:49:41+08:00'
 keywords: []
 description: ''
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: "如需转载，请联系作者，谢谢"
-reward: yes
-mathjax: yes
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">

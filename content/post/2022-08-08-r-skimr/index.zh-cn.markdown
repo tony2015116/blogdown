@@ -1,8 +1,10 @@
 ---
 title: 使用R包skimr做描述性统计
-author: guoguo
+author: 郭猛
 date: '2022-08-08'
-slug: index.zh-cn
+slug: skimr-descriptive-stats
+aliases:
+  - /2022/08/08/index.zh-cn/
 categories:
   - 数据分析
 tags:
@@ -12,12 +14,10 @@ tags:
 lastmod: '2022-08-14T21:06:22+08:00'
 keywords: []
 description: ''
-comment: no
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: no
-mathjax: no
+comment: false
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <link href="/rmarkdown-libs/tabwid/tabwid.css" rel="stylesheet" />

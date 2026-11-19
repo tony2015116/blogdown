@@ -1,8 +1,10 @@
 ---
 title: 在博客中嵌入.html
-author: guoguo
+author: 郭猛
 date: '2022-08-19'
-slug: index.zh-cn
+slug: embed-html-in-blog
+aliases:
+  - /2022/08/19/index.zh-cn/
 categories:
   - 博客show
 tags:
@@ -11,12 +13,10 @@ tags:
 lastmod: '2022-08-19T10:55:14+08:00'
 keywords: []
 description: ''
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: yes
-mathjax: yes
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">

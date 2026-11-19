@@ -1,8 +1,10 @@
 ---
 title: record1-第一次异地换身份证
-author: guoguo
+author: 郭猛
 date: '2022-11-20'
-slug: index.zh-cn
+slug: renew-id-card
+aliases:
+  - /2022/11/20/index.zh-cn/
 categories:
   - 人生就那么几次
 tags:
@@ -11,12 +13,10 @@ tags:
 lastmod: '2022-11-20T10:33:34+08:00'
 keywords: []
 description: ''
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: yes
-mathjax: no
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">

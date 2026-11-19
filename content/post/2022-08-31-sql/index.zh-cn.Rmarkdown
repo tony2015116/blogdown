@@ -1,8 +1,10 @@
 ---
 title: SQL学习——逻辑运算符
-author: guoguo
+author: 郭猛
 date: '2022-08-31'
-slug: index.zh-cn
+slug: sql-logical-operators
+aliases:
+  - /2022/08/31/index.zh-cn/
 categories:
   - 数据库操作
 tags:
@@ -12,12 +14,10 @@ tags:
 lastmod: '2022-08-31T17:40:15+08:00'
 keywords: []
 description: ''
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: yes
-mathjax: yes
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 
 <p style="text-indent:2em;font-size:;font-family:;">

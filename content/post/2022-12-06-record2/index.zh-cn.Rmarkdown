@@ -1,8 +1,10 @@
 ---
 title: record2-新冠这三年...
-author: guoguo
+author: 郭猛
 date: '2022-12-06'
-slug: index.zh-cn
+slug: three-years-of-covid
+aliases:
+  - /2022/12/06/index.zh-cn/
 categories:
   - 人生就那么几次
 tags:
@@ -11,12 +13,10 @@ tags:
 lastmod: '2022-12-06T21:27:09+08:00'
 keywords: []
 description: ''
-comment: yes
-toc: no
-autoCollapseToc: no
-contentCopyright: no
-reward: no
-mathjax: no
+comment: true
+toc: false
+autoCollapseToc: false
+mathjax: false
 ---
 <p style="text-indent:2em;font-size:;font-family:;">
 从19年毕业到现在，整整三年，这是新冠的三年，对于我，也是经历非洲猪瘟的第三年。因为非洲猪瘟对养猪行业的冲击，养殖企业都很注重生物安全，在双疫情的影响下，猪场反而是最安全的地方。在猪场的日子和居家隔离没差别，新冠对我的影响也要比社会其他行业的影响小的多。宅是一方面，对于来说可能也就是少回几次家，少旅游几次。
